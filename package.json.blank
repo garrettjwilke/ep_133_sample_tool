@@ -1,8 +1,8 @@
 {
   "name": "ep133sampletool",
-  "productName": "ep-133 sample tool - 1.2.3",
-  "version": "1.2.3",
-  "description": "ep-133 K.O. II - sample tool - 1.2.3",
+  "productName": "ep-133 sample tool - VERSION_NUMBER",
+  "version": "VERSION_NUMBER",
+  "description": "ep-133 K.O. II - sample tool - VERSION_NUMBER",
   "main": "main.js",
   "scripts": {
     "start": "electron . --no-sandbox",
