@@ -95,7 +95,7 @@ build_check() {
   echo "Yes or No (y/N)"
   read YESNO
   case $YESNO in
-    y|Y|yes|Yes|YES) temp_message "building project to dist directory.";npm run package;;
+    y|Y|yes|Yes|YES) temp_message "building project to dist directory.";npm install;npm run package;;
     n|N|no|No|NO) temp_message "exiting.";exit;;
     q|Q|quit|Quit|QUIT) temp_message "exiting.";exit;;
     "") temp_message "exiting.";exit;;
