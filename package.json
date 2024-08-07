@@ -1,0 +1,17 @@
+{
+  "name": "ep133sampletool",
+  "productName": "ep-133 sample tool",
+  "version": "1.2.3",
+  "description": "ep-133 K.O. II - sample tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "hmls": "echo working123"
+  },
+  "repository": "",
+  "keywords": ["teenage","engineering","ep-133","sample","tool"],
+  "author": "homeless.wtf",
+  "devDependencies": {
+    "electron": "^31.3.1"
+  }
+}
