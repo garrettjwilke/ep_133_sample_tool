@@ -9,7 +9,10 @@
     "package": "electron-builder"
   },
   "build": {
-    "appId": "com.homeless.sampletool"
+    "appId": "com.homeless.sampletool",
+    "win": {
+      "target": ["zip"]
+    }
   },
   "keywords": [
     "teenage",
