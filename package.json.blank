@@ -1,6 +1,6 @@
 {
   "name": "ep133sampletool",
-  "productName": "ep-133 sample tool - VERSION_NUMBER",
+  "productName": "ep-133 sample tool",
   "version": "VERSION_NUMBER",
   "description": "ep-133 K.O. II - sample tool - VERSION_NUMBER",
   "main": "main.js",
