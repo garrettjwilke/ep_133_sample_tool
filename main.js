@@ -9,11 +9,13 @@ function createWindow () {
     height: 1024,
     icon: path.join(__dirname + 'icon.ico'),
     webPreferences: {
+      devTools: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
   // and load the index.html of the app.
+  mainWindow.setMenuBarVisibility(false)
   mainWindow.loadFile('data/index.html')
 
   // Open the DevTools.
