@@ -11,7 +11,9 @@
   "build": {
     "appId": "com.ep133.toolthingy",
     "win": {
-      "target": ["zip"]
+      "target": [
+        "zip"
+      ]
     }
   },
   "keywords": [
@@ -24,7 +26,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.3.1",
+    "electron": "^31.3.0",
     "electron-builder": "^24.13.3"
   }
 }

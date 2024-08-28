@@ -2,6 +2,18 @@
 
 VERSION_NUMBER=$(cat .version_number)
 
+deps_check() {
+  for i in nvm node npm electron electron-builder
+  do
+    DEP_CHECK=$(which $i)
+    if [ "$DEP_CHECK" == "" ]
+    then
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+      npm install electron electron-builder
+    fi
+  done
+}
+
 write_version_number() {
   sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" data/.index.html.blank > data/index.html
   sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" .package.json.blank > package.json
@@ -103,6 +115,7 @@ build_check() {
   esac
 }
 
+deps_check
 run_check
 if [ "$RUN_LOCAL" == "true" ]
 then
