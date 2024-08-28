@@ -5,7 +5,7 @@
   "description": "ep-133 tool thingy - 1.1.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --ozone-platform=wayland --force-device-scale-factor=1.25",
+    "start": "electron . --no-sandbox --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {
