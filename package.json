@@ -1,15 +1,15 @@
 {
-  "name": "ep133sampletool",
-  "productName": "EP-133 Sample Tool",
+  "name": "hmlsep133sampletool",
+  "productName": "hmls ep-133 tool thingy",
   "version": "1.1.0",
-  "description": "EP-133 K.O. II - Sample Tool - 1.1.0",
+  "description": "hmls ep-133 tool thingy - 1.1.0",
   "main": "main.js",
   "scripts": {
     "start": "electron . --no-sandbox --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {
-    "appId": "com.homeless.sampletool",
+    "appId": "com.homeless.hmlstoolthingy",
     "win": {
       "target": ["zip"]
     }
@@ -18,8 +18,9 @@
     "teenage",
     "engineering",
     "ep-133",
-    "sample",
-    "tool"
+    "hmls",
+    "tool",
+    "thingy"
   ],
   "author": "homeless.wtf",
   "devDependencies": {
