@@ -11,7 +11,9 @@
   "build": {
     "appId": "com.homeless.sampletool",
     "win": {
-      "target": ["zip"]
+      "target": [
+        "zip"
+      ]
     }
   },
   "keywords": [
@@ -21,9 +23,9 @@
     "sample",
     "tool"
   ],
-  "author": "homeless.wtf",
+  "author": "homeless",
   "devDependencies": {
-    "electron": "^31.3.1",
+    "electron": "^31.4.0",
     "electron-builder": "^24.13.3"
   }
 }
