@@ -3,8 +3,8 @@
 VERSION_NUMBER=$(cat .version_number)
 
 write_version_number() {
-  sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" data/index.html.blank > data/index.html
-  sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" package.json.blank > package.json
+  sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" data/.index.html.blank > data/index.html
+  sed "s/VERSION_NUMBER/$VERSION_NUMBER/g" .package.json.blank > package.json
   temp_message "Version number changed to: $VERSION_NUMBER"
   echo $VERSION_NUMBER > .version_number
 }
@@ -54,7 +54,7 @@ change_version_number() {
 temp_message() {
   clear
   echo "$1"
-  sleep 1
+  sleep 0.5
 }
 
 version_number_check() {

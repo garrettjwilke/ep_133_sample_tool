@@ -1,11 +1,11 @@
 {
   "name": "ep133sampletool",
-  "productName": "ep-133 sample tool",
+  "productName": "EP-133 Sample Tool",
   "version": "VERSION_NUMBER",
-  "description": "ep-133 K.O. II - sample tool - VERSION_NUMBER",
+  "description": "EP-133 K.O. II - Sample Tool - VERSION_NUMBER",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox",
+    "start": "electron . --no-sandbox --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {

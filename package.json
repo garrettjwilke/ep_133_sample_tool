@@ -1,8 +1,8 @@
 {
   "name": "ep133sampletool",
-  "productName": "ep-133 sample tool",
-  "version": "1.2.3",
-  "description": "ep-133 K.O. II - sample tool - 1.2.3",
+  "productName": "EP-133 Sample Tool",
+  "version": "1.1.0",
+  "description": "EP-133 K.O. II - Sample Tool - 1.1.0",
   "main": "main.js",
   "scripts": {
     "start": "electron . --no-sandbox --ozone-platform=wayland",
