@@ -5,7 +5,7 @@
   "description": "ep-133 tool thingy - 1.1.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --ozone-platform=wayland",
+    "start": "electron . --no-sandbox --ozone-platform=wayland --force-device-scale-factor=1.25",
     "package": "electron-builder"
   },
   "build": {
@@ -26,7 +26,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.3.0",
+    "electron": "^31.4.0",
     "electron-builder": "^24.13.3"
   }
 }

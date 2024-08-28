@@ -3,15 +3,11 @@
 VERSION_NUMBER=$(cat .version_number)
 
 deps_check() {
-  for i in nvm node npm electron electron-builder
-  do
-    DEP_CHECK=$(which $i)
-    if [ "$DEP_CHECK" == "" ]
-    then
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-      npm install electron electron-builder
-    fi
-  done
+  if ! [ -d ~/.nvm ]
+  then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+    npm install electron electron-builder
+  fi
 }
 
 write_version_number() {
