@@ -7,10 +7,10 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1180,
     height: 900,
-    title: "hmls-133",
+    title: "ep-133 tool thingy",
     icon: path.join(__dirname + 'icon.ico'),
     webPreferences: {
-      //devTools: false,
+      devTools: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
