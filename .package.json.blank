@@ -1,15 +1,15 @@
 {
-  "name": "ep133toolthingy",
-  "productName": "ep-133 tool thingy",
+  "name": "ep133sampletool",
+  "productName": "EP-133 Sample Tool",
   "version": "VERSION_NUMBER",
-  "description": "ep-133 tool thingy - VERSION_NUMBER",
+  "description": "EP-133 Sample Tool - VERSION_NUMBER",
   "main": "main.js",
   "scripts": {
     "start": "electron . --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {
-    "appId": "com.ep133.toolthingy",
+    "appId": "com.ep133.sampletool",
     "win": {
       "target": ["zip"]
     }
@@ -19,8 +19,7 @@
     "engineering",
     "ep-133",
     "sample",
-    "tool",
-    "thingy"
+    "tool"
   ],
   "author": "homeless",
   "devDependencies": {
