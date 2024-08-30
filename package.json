@@ -10,8 +10,15 @@
   },
   "build": {
     "appId": "com.ep133.sampletool",
+    "linux": {
+      "category": "tool",
+      "executableName": "ep133sampletool",
+      "artifactName": "${productName}-${version}.${ext}"
+    },
     "win": {
-      "target": ["zip"]
+      "target": [
+        "zip"
+      ]
     }
   },
   "keywords": [
@@ -23,7 +30,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.3.1",
+    "electron": "^31.4.0",
     "electron-builder": "^24.13.3"
   }
 }
