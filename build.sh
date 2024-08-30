@@ -71,6 +71,7 @@ version_number_check() {
 }
 
 run_locally() {
+  npm update
   npm start 
 }
 
