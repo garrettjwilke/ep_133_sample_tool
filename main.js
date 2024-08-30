@@ -10,14 +10,32 @@ function createWindow () {
     title: "ep-133 tool thingy",
     icon: path.join(__dirname + 'icon.ico'),
     webPreferences: {
-      devTools: false,
+      //devTools: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
   // and load the index.html of the app.
   //mainWindow.setMenuBarVisibility(false)
   mainWindow.loadFile('data/index.html')
+  mainWindow.webContents.session.setPermissionRequestHandler((webContents, permission, callback, details) => {
+    console.log('Permission request:', permission);
 
+    if (permission === 'midi' || permission === 'midiSysex') {
+      callback(true);
+    } else {
+      callback(false);
+    }
+  })
+
+  mainWindow.webContents.session.setPermissionCheckHandler((webContents, permission, requestingOrigin) => {
+    console.log('Permission check:', permission);
+
+    if (permission === 'midi' || permission === 'midiSysex') {
+      return true;
+    }
+
+    return false;
+  });
   // Open the DevTools.
   //mainWindow.webContents.openDevTools()
 }

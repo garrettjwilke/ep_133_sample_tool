@@ -5,15 +5,13 @@
   "description": "ep-133 tool thingy - 1.1.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --ozone-platform=wayland",
+    "start": "electron . --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {
     "appId": "com.ep133.toolthingy",
     "win": {
-      "target": [
-        "zip"
-      ]
+      "target": ["zip"]
     }
   },
   "keywords": [
@@ -26,7 +24,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.4.0",
+    "electron": "^31.4.1",
     "electron-builder": "^24.13.3"
   }
 }

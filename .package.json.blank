@@ -5,7 +5,7 @@
   "description": "ep-133 tool thingy - VERSION_NUMBER",
   "main": "main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --ozone-platform=wayland",
+    "start": "electron . --ozone-platform=wayland",
     "package": "electron-builder"
   },
   "build": {
