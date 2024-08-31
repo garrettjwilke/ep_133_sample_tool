@@ -2,11 +2,9 @@
 
 ## Requirements
 
-npm
-
-electron
-
-electron-builder~~
+`npm`
+`electron`
+`electron-builder`
 
 ## How to build
 
