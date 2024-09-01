@@ -1,3 +1,40 @@
+var VersionNumber = "v 1.1.0 - offline";
+var OriginalOrange = "#eb3622";
+var ColorSound = "#FF00E0";
+var ColorSpeaker = "#b3a1b7";
+var ColorButtons = "#ef4e27";
+var ColorMain = "#d95d5d";
+var ColorSecondary = "#a282a8";
+var ColorTertiary = "#96abde";
+var Color0 = "#8c959f";
+var Color1 = "#218bff";
+var Color2 = "#2da44e";
+var Color3 = "#faff4a";
+var Color4 = "#47f3e3";
+var Color5 = "#fa4549";
+var Color6 = "#a475f9";
+var Color7 = "#ff00dc";
+var Color8 = "#ffaa00";
+var Color9 = "#000000";
+var GridColor = "#c7be8b";
+var FontColorLight = "#e5e6e6";
+var FontColorDark = "#000000";
+var FontColorLogo1 = "#FF0000";
+var FontColorLogo2 = "#32e013";
+
+var Bank0 = "Kick";
+var Bank1 = "Snare";
+var Bank2 = "Cymb";
+var Bank3 = "Perc";
+var Bank4 = "Bass";
+var Bank5 = "Melod";
+var Bank6 = "Loop";
+var Bank7 = "User 1";
+var Bank8 = "User 2";
+var Bank9 = "SFX";
+
+var LibraryTitle = "EP-133 Library"
+
 var Ir = Object.defineProperty;
 var Tr = (s, a, o) => a in s ? Ir(s, a, {
   enumerable: true,
@@ -33215,17 +33252,17 @@ const createTotalElement = (s, a, o) => {
   $.setAttribute("y", a.toString());
   $.setAttribute("width", "10");
   $.setAttribute("height", "5");
-  $.setAttribute("fill", "#ef4e27");
+  $.setAttribute("fill", ColorMain);
   $.setAttribute("stroke", "#221f1f");
   $.setAttribute("stroke-miterlimit", "10");
   $.setAttribute("stroke-width", ".125");
   $.setAttribute("opacity", "1");
   const _e = document.createElementNS(_, "text");
   _e.setAttribute("transform", `translate(${1.176} ${a + 3.75})`);
-  _e.setAttribute("fill", "#e5e6e6");
+  _e.setAttribute("fill", FontColorLight);
   _e.setAttribute("font-size", "3.438");
   _e.setAttribute("letter-spacing", ".08em");
-  _e.setAttribute("stroke", "#e5e6e6");
+  _e.setAttribute("stroke", FontColorLight);
   _e.setAttribute("stroke-miterlimit", "10");
   _e.setAttribute("stroke-width", ".062");
   const tt = document.createTextNode(o.toString());
@@ -33262,7 +33299,7 @@ function createSVGElement({
   nt.setAttribute("y", a);
   nt.setAttribute("width", rt.toString());
   nt.setAttribute("height", "5");
-  nt.setAttribute("fill", "#e5e6e6");
+  nt.setAttribute("fill", FontColorLight);
   nt.setAttribute("stroke", "#221f1f");
   nt.setAttribute("stroke-miterlimit", "10");
   nt.setAttribute("stroke-width", ".125");
@@ -33281,10 +33318,10 @@ function createSVGElement({
   ut.setAttribute("stroke-width", ".125");
   const Et = document.createElementNS(j, "text");
   Et.setAttribute("transform", `translate(${1.176} ${_e + 3.75})`);
-  Et.setAttribute("fill", "#e5e6e6");
+  Et.setAttribute("fill", FontColorLight);
   Et.setAttribute("font-size", "3.438");
   Et.setAttribute("letter-spacing", ".08em");
-  Et.setAttribute("stroke", "#e5e6e6");
+  Et.setAttribute("stroke", FontColorLight);
   Et.setAttribute("stroke-miterlimit", "10");
   Et.setAttribute("stroke-width", ".062");
   const ct = document.createTextNode(_);
@@ -42487,7 +42524,7 @@ const BackupProvider = ({
                   status: "in progress"
                 });
               });
-              const Ct = `/sounds/${formatNumberWithLeadingZeros(Lt.id, 3)} ${Lt.meta.name || "bank9"}`;
+              const Ct = `/sounds/${formatNumberWithLeadingZeros(Lt.id, 3)} ${Lt.meta.name || "EP-133_sample"}`;
               const Wt = new File([Pt], `${Ct}.wav`);
               const Vt = new BlobReader(Wt);
               await gt.add(Wt.name, Vt);
@@ -42919,8 +42956,8 @@ for (const s in buttons) {
   style.push(`#buttons-synth-interactive.${s}-on     g#${s} circle[data-name="led-on"] { display: block; }`);
   style.push(`#buttons-synth-interactive.${s}-red    g#${s} rect[data-name="red"] { display: block; }`);
   style.push(`#buttons-synth-interactive.${s}-select g#${s} g[data-name="select"] { display: block; }`);
-  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] polyline { stroke: #ef4e27; }`);
-  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] line { stroke: #ef4e27; }`);
+  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] polyline { stroke: OriginalOrange; }`);
+  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] line { stroke: OriginalOrange; }`);
 }
 const STYLE = style.join(`
 `);
@@ -43122,9 +43159,9 @@ const Buttons = ({
         style: {
           cursor: "pointer"
         },
-        transform: "translate(126.04 216.436)",
+        transform: "translate(122.04 217)",
         fill: "#d9dbda",
-        fontSize: 3.438,
+        fontSize: 5.5,
         letterSpacing: ".08em",
         stroke: "#d9dbda",
         strokeMiterlimit: 10,
@@ -43132,7 +43169,7 @@ const Buttons = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "pro."
+          children: "PROJ"
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43153,7 +43190,7 @@ const Buttons = ({
         y: 328.818,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43173,7 +43210,7 @@ const Buttons = ({
         cy: 325.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43184,14 +43221,14 @@ const Buttons = ({
         cy: 325.468,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
         id: "legend-D",
         children: jsxRuntimeExports$1.jsx("path", {
           d: "M96.629,334.63v1.491c0,.795-.647,1.442-1.442,1.442h-1.939v-4.376h1.939c.795,0,1.442,.647,1.442,1.442Zm-.398,0c0-.576-.469-1.044-1.044-1.044h-1.541v3.58h1.541c.576,0,1.044-.469,1.044-1.044v-1.491Z",
-          fill: "#f1f2f2"
+          fill: FontColorDark
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43213,7 +43250,7 @@ const Buttons = ({
         y: 298.816,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43234,7 +43271,7 @@ const Buttons = ({
         cy: 295.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43245,14 +43282,14 @@ const Buttons = ({
         cy: 295.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
         id: "legend-C",
         children: jsxRuntimeExports$1.jsx("path", {
           d: "M96.243,306.135l.39,.079-.04,.195c-.135,.668-.73,1.154-1.413,1.154h-.497c-.795,0-1.442-.647-1.442-1.442v-1.492c0-.795,.647-1.442,1.442-1.442h.497c.4,0,.785,.168,1.057,.462,.181,.194,.304,.434,.356,.692l.04,.195-.39,.079-.04-.195c-.038-.187-.127-.36-.258-.501-.197-.212-.476-.334-.766-.334h-.497c-.576,0-1.044,.469-1.044,1.044v1.491c0,.576,.469,1.044,1.044,1.044h.497c.495,0,.925-.351,1.023-.835l.039-.195Z",
-          fill: "#f1f2f2"
+          fill: FontColorDark
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43274,7 +43311,7 @@ const Buttons = ({
         y: 268.814,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43295,7 +43332,7 @@ const Buttons = ({
         cy: 265.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43306,14 +43343,14 @@ const Buttons = ({
         cy: 265.464,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
         id: "legend-B",
         children: jsxRuntimeExports$1.jsx("path", {
           d: "M96.629,276.369c0,.658-.535,1.193-1.194,1.193h-2.188v-4.376h2.188c.658,0,1.193,.535,1.193,1.193,0,.415-.214,.781-.536,.995,.322,.214,.536,.579,.536,.994Zm-2.983-1.194h1.791c.438,0,.794-.357,.794-.795s-.357-.795-.795-.795h-1.79v1.591Zm2.585,1.194c0-.438-.356-.795-.794-.795h-1.791v1.59h1.79c.439,0,.796-.357,.796-.795Z",
-          fill: "#f1f2f2"
+          fill: FontColorDark
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43335,7 +43372,7 @@ const Buttons = ({
         y: 238.812,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43359,7 +43396,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43370,14 +43407,14 @@ const Buttons = ({
         cy: 235.463,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
         id: "legend-A",
         children: jsxRuntimeExports$1.jsx("path", {
           d: "M97.004,247.226v.338h-.398v-.26l-.505-1.232h-2.039l-.538,1.234v.257h-.398v-.34l1.759-4.036h.463l1.656,4.039Zm-1.067-1.552l-.825-2.012-.877,2.012h1.702Z",
-          fill: "#f1f2f2"
+          fill: FontColorDark
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43390,7 +43427,7 @@ const Buttons = ({
         y: 238.812,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43480,7 +43517,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43490,7 +43527,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -43527,7 +43564,7 @@ const Buttons = ({
         y: 238.812,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43618,7 +43655,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43628,7 +43665,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -43665,7 +43702,7 @@ const Buttons = ({
         y: 238.812,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43756,7 +43793,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43766,7 +43803,7 @@ const Buttons = ({
         cy: 235.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -43801,7 +43838,7 @@ const Buttons = ({
         y: 268.814,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43892,7 +43929,7 @@ const Buttons = ({
         cy: 265.468,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43902,7 +43939,7 @@ const Buttons = ({
         cy: 265.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -43939,7 +43976,7 @@ const Buttons = ({
         y: 268.814,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44030,7 +44067,7 @@ const Buttons = ({
         cy: 265.468,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44040,7 +44077,7 @@ const Buttons = ({
         cy: 265.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44077,7 +44114,7 @@ const Buttons = ({
         y: 268.814,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44168,7 +44205,7 @@ const Buttons = ({
         cy: 265.468,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44178,7 +44215,7 @@ const Buttons = ({
         cy: 265.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44215,7 +44252,7 @@ const Buttons = ({
         y: 298.816,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44306,7 +44343,7 @@ const Buttons = ({
         cy: 295.47,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44316,7 +44353,7 @@ const Buttons = ({
         cy: 295.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44353,7 +44390,7 @@ const Buttons = ({
         y: 298.816,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44444,7 +44481,7 @@ const Buttons = ({
         cy: 295.47,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44454,7 +44491,7 @@ const Buttons = ({
         cy: 295.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44491,7 +44528,7 @@ const Buttons = ({
         y: 298.816,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44582,7 +44619,7 @@ const Buttons = ({
         cy: 295.47,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44592,7 +44629,7 @@ const Buttons = ({
         cy: 295.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44629,7 +44666,7 @@ const Buttons = ({
         y: 328.818,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44720,7 +44757,7 @@ const Buttons = ({
         cy: 325.472,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44730,7 +44767,7 @@ const Buttons = ({
         cy: 325.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44767,7 +44804,7 @@ const Buttons = ({
         y: 328.818,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44858,7 +44895,7 @@ const Buttons = ({
         cy: 325.472,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -44868,7 +44905,7 @@ const Buttons = ({
         cy: 325.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -44905,7 +44942,7 @@ const Buttons = ({
         y: 328.818,
         width: 22.5,
         height: 22.5,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44996,7 +45033,7 @@ const Buttons = ({
         cy: 325.472,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -45006,7 +45043,7 @@ const Buttons = ({
         cy: 325.466,
         r: 1.25,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -45564,7 +45601,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 142.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45573,7 +45610,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 147.563,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45582,7 +45619,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 152.563,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45591,7 +45628,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 157.563,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45600,7 +45637,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 162.564,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45609,7 +45646,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 167.564,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45618,7 +45655,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 172.564,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45627,7 +45664,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 177.565,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45636,7 +45673,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 182.565,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45645,7 +45682,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 232.563,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45654,7 +45691,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 227.562,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45663,7 +45700,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 222.562,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45672,7 +45709,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 217.562,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45681,7 +45718,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 212.561,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45690,7 +45727,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 207.561,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45699,7 +45736,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 202.561,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45708,7 +45745,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 197.56,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45717,7 +45754,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 192.56,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45726,7 +45763,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 187.56,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45735,7 +45772,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 182.559,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45744,7 +45781,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 177.559,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45753,7 +45790,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 172.559,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45762,7 +45799,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 167.558,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45771,7 +45808,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 162.558,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45780,7 +45817,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 157.558,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45789,7 +45826,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 152.557,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45798,7 +45835,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 147.557,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45807,7 +45844,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 142.557,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45816,7 +45853,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 137.557,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45825,7 +45862,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 132.556,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45834,7 +45871,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 127.556,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45843,7 +45880,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 122.556,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45852,7 +45889,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 117.555,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45861,7 +45898,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 112.555,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45870,7 +45907,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 107.555,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45879,7 +45916,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 102.554,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45888,7 +45925,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 97.554,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45897,7 +45934,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 92.554,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45906,7 +45943,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 87.553,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45915,7 +45952,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 82.553,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45924,7 +45961,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 77.553,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45933,7 +45970,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.563,
       y2: 182.562,
       fill: "none",
-      stroke: "#4f4059",
+      stroke: GridColor,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     })]
@@ -46122,10 +46159,10 @@ const Display$1 = reactExports.memo(({
         id: "sound-name",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(132.991 192.562)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46138,10 +46175,10 @@ const Display$1 = reactExports.memo(({
         id: "sound-duration",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(206.955 191.312)",
-          fill: "#e5e6e6",
-          fontSize: 3.438,
+          fill: FontColorLight,
+          fontSize: 5.5,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46154,9 +46191,9 @@ const Display$1 = reactExports.memo(({
         id: "sound-size",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(224.462 191.312)",
-          fill: "#00a69c",
-          fontSize: 3.438,
-          stroke: "#00a69c",
+          fill: ColorSound,
+          fontSize: 4.5,
+          stroke: ColorSound,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46169,25 +46206,25 @@ const Display$1 = reactExports.memo(({
       }), jsxRuntimeExports$1.jsx("text", {
         id: "project",
         transform: "translate(248.031 191.312)",
-        fill: "#ef4f2a",
-        fontSize: 3.438,
+        fill: ColorButtons,
+        fontSize: 4.5,
         letterSpacing: ".08em",
-        stroke: "#ef4f2a",
+        stroke: ColorButtons,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsxs("tspan", {
           x: 0,
           y: 0,
-          children: ["pro. ", Et]
+          children: ["PROJ ", Et]
         })
       }), jsxRuntimeExports$1.jsx("g", {
         id: "sound-no",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(105.753 192.562)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46200,10 +46237,10 @@ const Display$1 = reactExports.memo(({
         id: "group",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(80.312 192.562)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46216,8 +46253,8 @@ const Display$1 = reactExports.memo(({
         id: "wave",
         className: "animate",
         d: j,
-        stroke: "#01a79d",
-        fill: "#01a79d",
+        stroke: ColorSound,
+        fill: ColorSound,
         strokeWidth: 0.3
       }), jsxRuntimeExports$1.jsx("line", {
         id: "baseline-sound",
@@ -46225,8 +46262,8 @@ const Display$1 = reactExports.memo(({
         y1: 162.481,
         x2: 260.774,
         y2: 162.481,
-        fill: "#00a69c",
-        stroke: "#00a69c",
+        fill: ColorSound,
+        stroke: ColorSound,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -46236,17 +46273,17 @@ const Display$1 = reactExports.memo(({
         width: 10,
         height: 10,
         fill: "none",
-        stroke: "#ef4e27",
+        stroke: ColorMain,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("g", {
         id: "pad",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(90.459 192.562)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46263,7 +46300,7 @@ const Display$1 = reactExports.memo(({
         width: 10,
         height: 10,
         fill: "none",
-        stroke: "#ef4e27",
+        stroke: ColorMain,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46271,11 +46308,11 @@ const Display$1 = reactExports.memo(({
         transform: `translate(${rt.translate_in.toFixed(3)})`,
         children: [jsxRuntimeExports$1.jsx("rect", {
           id: "IN",
-          x: 67.562,
+          x: 66.562,
           y: 142.562,
-          width: 10,
-          height: 5,
-          fill: "#ef4e27",
+          width: 11,
+          height: 6,
+          fill: OriginalOrange,
           onPointerDown: at,
           onPointerUp: lt,
           onPointerMove: nt
@@ -46284,23 +46321,23 @@ const Display$1 = reactExports.memo(({
           y1: 142.562,
           x2: 77.562,
           y2: 182.562,
-          fill: "#ef4e27",
-          stroke: "#ef4e27",
+          fill: OriginalOrange,
+          stroke: OriginalOrange,
           strokeMiterlimit: 10,
           strokeWidth: 0.441
         }), jsxRuntimeExports$1.jsx("text", {
           pointerEvents: "none",
-          transform: "translate(71.071 146.312)",
-          fill: "#e5e6e6",
-          fontSize: 3.438,
+          transform: "translate(69 147.312)",
+          fill: FontColorLight,
+          fontSize: 5,
           letterSpacing: ".095em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "IN"
+            children: "ST"
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46310,9 +46347,9 @@ const Display$1 = reactExports.memo(({
           id: "OUT",
           x: 237.562,
           y: 142.562,
-          width: 10,
-          height: 5,
-          fill: "#ef4e27",
+          width: 11,
+          height: 6,
+          fill: OriginalOrange,
           onPointerDown: at,
           onPointerUp: lt,
           onPointerMove: nt
@@ -46321,23 +46358,23 @@ const Display$1 = reactExports.memo(({
           y1: 142.562,
           x2: 237.562,
           y2: 182.562,
-          fill: "#ef4e27",
-          stroke: "#ef4e27",
+          fill: OriginalOrange,
+          stroke: OriginalOrange,
           strokeMiterlimit: 10,
           strokeWidth: 0.441
         }), jsxRuntimeExports$1.jsx("text", {
           pointerEvents: "none",
-          transform: "translate(238.931 146.312)",
-          fill: "#e5e6e6",
-          fontSize: 3.438,
+          transform: "translate(236.931 147.312)",
+          fill: FontColorLight,
+          fontSize: 5,
           letterSpacing: ".095em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "OUT"
+            children: "END"
           })
         })]
       })]
@@ -46385,23 +46422,23 @@ const Tabs = reactExports.memo(({
         style: j("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank9"),
-          d: "M490.001,190.062h28.687c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.687v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000000",
+          d: "M490,190.062h28.687c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.687v-10h0Z",
+          fill: Color9,
+          stroke: Color9,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495.162 196.313)",
-          fill: "#000000",
+          transform: "translate(495 196.313)",
+          fill: FontColorLight,
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000000",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank9"
+            children: Bank9
           })
         }), jsxRuntimeExports$1.jsx("line", {
           x1: 490.001,
@@ -46409,7 +46446,7 @@ const Tabs = reactExports.memo(({
           x2: 490,
           y2: 190.062,
           fill: "#9aa0a9",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46418,22 +46455,22 @@ const Tabs = reactExports.memo(({
         style: j("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user2"),
-          d: "M490.001,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color8,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(493.124 186.313)",
+          transform: "translate(495 186.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank8"
+            children: Bank8
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46441,22 +46478,22 @@ const Tabs = reactExports.memo(({
         style: j("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user1"),
-          d: "M488.812,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color7,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(491.936 176.313)",
+          transform: "translate(495 176.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank7"
+            children: Bank7
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46464,22 +46501,22 @@ const Tabs = reactExports.memo(({
         style: j("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank6"),
-          d: "M487.562,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color6,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(490.687 166.313)",
+          transform: "translate(495 166.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank6"
+            children: Bank6
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46487,22 +46524,22 @@ const Tabs = reactExports.memo(({
         style: j("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank5"),
-          d: "M486.312,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color5,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(489.437 156.313)",
+          transform: "translate(495 156.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank5"
+            children: Bank5
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46510,22 +46547,22 @@ const Tabs = reactExports.memo(({
         style: j("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank4"),
-          d: "M485.062,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color4,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(488.186 146.313)",
+          transform: "translate(495 146.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank4"
+            children: Bank4
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46533,22 +46570,22 @@ const Tabs = reactExports.memo(({
         style: j("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank3"),
-          d: "M483.812,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color3,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(486.936 136.312)",
+          transform: "translate(495 136.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank3"
+            children: Bank3
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46556,22 +46593,22 @@ const Tabs = reactExports.memo(({
         style: j("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank2"),
-          d: "M482.562,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color2,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(485.687 126.312)",
+          transform: "translate(495 126.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank2"
+            children: Bank2
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46579,22 +46616,22 @@ const Tabs = reactExports.memo(({
         style: j("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank1"),
-          d: "M481.312,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color1,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(484.437 116.312)",
+          transform: "translate(495 116.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank1"
+            children: Bank1
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46602,23 +46639,23 @@ const Tabs = reactExports.memo(({
         style: j("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank0"),
-          d: "M480.062,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-          fill: "#d2d3d4",
-          stroke: "#000",
+          d: "M490,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: Color0,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(483.187 106.312)",
-          fill: "#000005",
+          transform: "translate(495 106.312)",
+          fill: FontColorLight,
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000005",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank0"
+            children: Bank0
           })
         })]
       })]
@@ -46633,7 +46670,7 @@ const Tabs = reactExports.memo(({
         style: _("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.376,190.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46641,20 +46678,20 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.537 196.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank9"
+            children: Bank9
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker",
           cx: 481.063,
           cy: 195.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color9,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46665,7 +46702,7 @@ const Tabs = reactExports.memo(({
         style: _("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.376,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46673,13 +46710,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.374 186.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank8"
+            children: Bank8
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-2",
@@ -46687,7 +46724,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 185.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color8,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46698,7 +46735,7 @@ const Tabs = reactExports.memo(({
         style: _("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.438,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46706,13 +46743,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.436 176.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank7"
+            children: Bank7
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-3",
@@ -46720,7 +46757,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 175.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color7,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46731,7 +46768,7 @@ const Tabs = reactExports.memo(({
         style: _("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.438,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46739,13 +46776,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.437 166.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank6"
+            children: Bank6
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-4",
@@ -46753,7 +46790,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 165.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color6,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46764,7 +46801,7 @@ const Tabs = reactExports.memo(({
         style: _("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46772,13 +46809,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.437 156.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank5"
+            children: Bank5
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-5",
@@ -46786,7 +46823,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 155.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color5,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46797,7 +46834,7 @@ const Tabs = reactExports.memo(({
         style: _("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46805,13 +46842,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.436 146.313)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank4"
+            children: Bank4
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-6",
@@ -46819,7 +46856,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 145.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color4,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46830,7 +46867,7 @@ const Tabs = reactExports.memo(({
         style: _("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46838,13 +46875,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.436 136.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank3"
+            children: Bank3
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-7",
@@ -46852,7 +46889,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 135.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color3,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46863,21 +46900,21 @@ const Tabs = reactExports.memo(({
         style: _("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
-          stroke: "#000",
+          fill: FontColorLight,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 126.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank2"
+            children: Bank2
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-8",
@@ -46885,7 +46922,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 125.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color2,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46896,7 +46933,7 @@ const Tabs = reactExports.memo(({
         style: _("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46904,13 +46941,13 @@ const Tabs = reactExports.memo(({
           transform: "translate(484.437 116.312)",
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank1"
+            children: Bank1
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-9",
@@ -46918,7 +46955,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 115.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color1,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46929,7 +46966,7 @@ const Tabs = reactExports.memo(({
         style: _("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46944,7 +46981,7 @@ const Tabs = reactExports.memo(({
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank0"
+            children: Bank0
           })
         }), jsxRuntimeExports$1.jsx("circle", {
           id: "marker-10",
@@ -46952,7 +46989,7 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 105.062,
           r: 2.25,
-          fill: "#ef4e27",
+          fill: Color0,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -47125,7 +47162,7 @@ const UploadStatus = ({
       transform: "translate(441.363 276.418)",
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47170,9 +47207,9 @@ const UploadStatus = ({
     transform: "translate(0 -160)",
     children: [jsxRuntimeExports$1.jsxs("text", {
       transform: "translate(441.363 246.77)",
-      fill: "#ef4e27",
+      fill: ColorMain,
       fontSize: 3.438,
-      stroke: "#ef4e27",
+      stroke: ColorMain,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -47256,7 +47293,7 @@ const DownloadProvider = ({
               total: et.length
             });
           });
-          const it = new File([_t], `${formatNumberWithLeadingZeros(ct.id, 3)} ${ct.meta.name || "bank9"}.wav`);
+          const it = new File([_t], `${formatNumberWithLeadingZeros(ct.id, 3)} ${ct.meta.name || "EP-133_Sample"}.wav`);
           if (et.length === 1) {
             downloadFile(it, it.name);
             return;
@@ -47315,27 +47352,21 @@ const MessageBox = ({
      }
      
      `
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "480.062 52.562 477.562 50.062 477.562 20.062 480.062 22.562 480.062 52.562",
-    fill: "#000005",
-    stroke: "#8a959a",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("rect", {
-    x: 290.062,
-    y: 20.062,
+    x: 50.062,
+    y: 88.062,
     width: 187.5,
     height: 30,
-    fill: "#ef4e27",
-    stroke: "#000",
+    fill: ColorMain,
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsxs("text", {
-    transform: "translate(325.063 30.063)",
-    fill: "#e5e6e6",
+    transform: "translate(85.063 98.063)",
+    fill: FontColorLight,
     fontSize: fontsizes[j],
     letterSpacing: ".08em",
-    stroke: "#e5e6e6",
+    stroke: FontColorLight,
     strokeMiterlimit: 10,
     strokeWidth: 0.125,
     children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -47354,19 +47385,13 @@ const MessageBox = ({
       onClick: _,
       children: o
     })]
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "292.562 52.562 290.062 50.062 477.562 50.062 480.062 52.562 292.562 52.562",
-    fill: "#000005",
-    stroke: "#8a959a",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("rect", {
-    x: 290.062,
-    y: 20.062,
+    x: 50.062,
+    y: 88.062,
     width: 30,
     height: 30,
     fill: "#dbdddb",
-    stroke: "#000",
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("g", {
@@ -47374,21 +47399,21 @@ const MessageBox = ({
     "data-name": "!",
     children: jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("line", {
-        x1: 305.062,
-        y1: 27.563,
-        x2: 305.062,
-        y2: 38.813,
+        x1: 65.062,
+        y1: 95.563,
+        x2: 65.062,
+        y2: 106.813,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeLinecap: "square",
         strokeWidth: 2
       }), jsxRuntimeExports$1.jsx("line", {
-        x1: 305.062,
-        y1: 42.562,
-        x2: 305.062,
-        y2: 41.813,
+        x1: 65.062,
+        y1: 110.562,
+        x2: 65.062,
+        y2: 109.813,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeLinecap: "square",
         strokeWidth: 2
       })]
@@ -47632,7 +47657,7 @@ const Row = reactExports.memo(({
       document.removeEventListener("keydown", Kt);
     };
   }, [zt, pt == null ? undefined : pt.path, Vt, Gt, mt, jt.row, o.id, o.path]);
-  const Er = o.file ? $ != null ? "#ef4e27" : getAllFilesWithProperties(kt, "status", ["complete"]).some(Kt => Kt.id === o.id) ? "#00a69c" : "#b0babe" : "transparent";
+  const Er = o.file ? $ != null ? ColorMain : getAllFilesWithProperties(kt, "status", ["complete"]).some(Kt => Kt.id === o.id) ? ColorSound : "#b0babe" : "transparent";
   let qt = "";
   if ((Pt == null ? undefined : Pt.status) === "failed") {
     qt = Pt.file.name;
@@ -47660,7 +47685,7 @@ const Row = reactExports.memo(({
         y: 160.115,
         width: 170,
         height: 10.011,
-        fill: bt ? "grey" : "#ef4e27",
+        fill: bt ? "grey" : ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -47698,7 +47723,7 @@ const Row = reactExports.memo(({
               }), jsxRuntimeExports$1.jsx("polyline", {
                 points: "467.205 145.063 464.711 147.557 462.216 145.062",
                 fill: "none",
-                stroke: "#e5e6e6",
+                stroke: FontColorLight,
                 strokeLinecap: "square",
                 strokeWidth: 0.706
               }), jsxRuntimeExports$1.jsx("line", {
@@ -47707,7 +47732,7 @@ const Row = reactExports.memo(({
                 x2: 464.711,
                 y2: 147.557,
                 fill: "none",
-                stroke: "#e5e6e6",
+                stroke: FontColorLight,
                 strokeLinecap: "square",
                 strokeWidth: 0.706
               })]
@@ -47718,7 +47743,7 @@ const Row = reactExports.memo(({
                 x2: 457.227,
                 y2: 147.557,
                 fill: "none",
-                stroke: "#e5e6e6",
+                stroke: FontColorLight,
                 strokeLinecap: "square",
                 strokeWidth: 0.706
               }), jsxRuntimeExports$1.jsx("line", {
@@ -47727,17 +47752,17 @@ const Row = reactExports.memo(({
                 x2: 457.227,
                 y2: 142.568,
                 fill: "none",
-                stroke: "#e5e6e6",
+                stroke: FontColorLight,
                 strokeLinecap: "square",
                 strokeWidth: 0.706
               })]
             })]
           }), o.file ? jsxRuntimeExports$1.jsx("path", {
             d: "M449.303,140.513v9.099h-148.3v-9.099h148.3m.44-.44h-149.3v9.979h149.3v-9.979h0Z",
-            fill: "#ef4e27"
+            fill: ColorMain
           }) : jsxRuntimeExports$1.jsx("path", {
             d: "M469.0,140.513v9.099h-168.1v-9.099h168.1m.44-.44h-169.1v9.979h169.1v-9.979h0Z",
-            fill: "#ef4e27"
+            fill: ColorMain
           }), ot.length > 1 ? jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("polygon", {
               points: "287.339 141.312 287.339 148.812 295.062 148.812 298.812 145.062 295.062 141.312 287.339 141.312",
@@ -47758,7 +47783,7 @@ const Row = reactExports.memo(({
                 transform: "translate(288.337 146.428)",
                 fill: "none",
                 fontSize: 3.438,
-                stroke: "#000",
+                stroke: FontColorDark,
                 strokeMiterlimit: 10,
                 strokeWidth: 0.062,
                 children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47770,7 +47795,7 @@ const Row = reactExports.memo(({
             })]
           }) : jsxRuntimeExports$1.jsx("polygon", {
             points: "291.312 141.312 291.312 148.812 295.062 148.812 298.812 145.062 295.062 141.312 291.312 141.312",
-            fill: "#dbdddb",
+            fill: ColorTertiary,
             stroke: "#221f1f",
             strokeMiterlimit: 10,
             strokeWidth: 0.125
@@ -47781,7 +47806,7 @@ const Row = reactExports.memo(({
             transform: "translate(415.782 86.312)",
             fontSize: 3.438,
             letterSpacing: ".08em",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.062,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47793,7 +47818,7 @@ const Row = reactExports.memo(({
             transform: "translate(431.238 86.312)",
             fontSize: 3.438,
             letterSpacing: ".08em",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.062,
             style: {
@@ -47820,15 +47845,15 @@ const Row = reactExports.memo(({
             fill: "none"
           }), jsxRuntimeExports$1.jsx("path", {
             d: "M305.064,247.704c-.13,0-.259-.009-.385-.028l.042-.28c.22,.033,.453,.034,.683,0l.04,.28c-.126,.018-.254,.027-.379,.027Zm.972-.185l-.104-.264c.209-.083,.407-.196,.586-.337l.178,.221-.012,.009c-.192,.151-.413,.278-.648,.372Zm-1.948-.001c-.239-.095-.462-.223-.663-.382l.177-.222c.178,.142,.377,.256,.59,.34l-.104,.264Zm-1.091-.811l-.016-.02c-.152-.194-.279-.413-.372-.645l.264-.105c.083,.208,.195,.403,.334,.581l-.21,.19Zm4.136-.002l-.222-.177c.142-.178,.257-.377,.342-.59l.264,.105c-.096,.239-.225,.461-.384,.662Zm.542-1.252l-.28-.042c.018-.116,.026-.233,.026-.35,0-.111-.008-.223-.023-.333l.28-.04c.018,.124,.026,.249,.026,.373,0,.131-.01,.263-.029,.392Zm-5.226-.002c-.019-.127-.028-.257-.028-.387,0-.125,.009-.252,.027-.378l.28,.04c-.016,.113-.024,.227-.024,.338,0,.116,.009,.232,.025,.345l-.28,.042Zm4.809-1.251c-.083-.212-.198-.412-.34-.592l.207-.195,.016,.021c.159,.202,.287,.425,.381,.664l-.264,.104Zm-4.39-.002l-.264-.104c.094-.239,.222-.463,.38-.664l.223,.176c-.141,.179-.255,.378-.339,.592Zm.739-.991l-.191-.21,.021-.016c.193-.151,.409-.276,.64-.37l.106,.263c-.206,.083-.399,.195-.575,.333Zm2.907-.003c-.18-.141-.379-.254-.592-.338l.103-.264c.239,.093,.463,.22,.665,.378l-.175,.224Zm-1.804-.473l-.042-.28c.253-.038,.513-.039,.764-.003l-.04,.28c-.224-.033-.456-.032-.682,.003Z",
-            fill: "#ef4e27"
+            fill: ColorMain
           })]
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(313.812 87.562)",
-        fill: (Pt == null ? undefined : Pt.status) === "failed" ? "#ef4e27" : "#221f1f",
+        fill: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#221f1f",
         fontSize: 6.25,
         letterSpacing: ".08em",
-        stroke: (Pt == null ? undefined : Pt.status) === "failed" ? "#ef4e27" : "#221f1f",
+        stroke: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47922,7 +47947,7 @@ const Row = reactExports.memo(({
             }) : jsxRuntimeExports$1.jsx("span", {
               className: handleClassName([styles$5.name]),
               style: {
-                color: (Pt == null ? undefined : Pt.status) === "failed" ? "#ef4e27" : "#9aa0a9"
+                color: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#9aa0a9"
               },
               children: qt
             })
@@ -48036,7 +48061,7 @@ const LibraryUI = ({
       children: [jsxRuntimeExports$1.jsx("polygon", {
         points: "490.062 380.062 309.962 380.062 309.962 79.861 489.962 79.861 490.062 380.062",
         fill: "#9aa0a9",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48045,7 +48070,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#9aa0a9",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48054,7 +48079,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48063,7 +48088,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48072,7 +48097,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48081,7 +48106,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48090,7 +48115,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48099,7 +48124,7 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48107,19 +48132,19 @@ const LibraryUI = ({
         y: 70.062,
         width: 180,
         height: 300.202,
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polyline", {
         points: "290.062 301.312 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polyline", {
         points: "290.062 301.312 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48127,7 +48152,7 @@ const LibraryUI = ({
         transform: "translate(525.062 106.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48139,7 +48164,7 @@ const LibraryUI = ({
         transform: "translate(525.062 116.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48151,7 +48176,7 @@ const LibraryUI = ({
         transform: "translate(525.062 126.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48163,7 +48188,7 @@ const LibraryUI = ({
         transform: "translate(525.062 136.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48175,7 +48200,7 @@ const LibraryUI = ({
         transform: "translate(525.062 146.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48187,7 +48212,7 @@ const LibraryUI = ({
         transform: "translate(525.062 156.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48199,7 +48224,7 @@ const LibraryUI = ({
         transform: "translate(525.062 166.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48211,7 +48236,7 @@ const LibraryUI = ({
         transform: "translate(525.062 176.35)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48223,7 +48248,7 @@ const LibraryUI = ({
         transform: "translate(525.062 196.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48235,7 +48260,7 @@ const LibraryUI = ({
         transform: "translate(525.062 186.312)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48260,22 +48285,22 @@ const LibraryUI = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("text", {
         transform: "translate(305.062 77.562)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 6.25,
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: [jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
           letterSpacing: ".08em",
-          children: "EP-133 Content Library"
+          children: LibraryTitle
         })]
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(420.66 76.312)",
         fontSize: 6,
         letterSpacing: ".08em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48285,10 +48310,10 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(450.317 76.312)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 4.5,
         letterSpacing: ".08em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48342,7 +48367,7 @@ const LibraryUI = ({
         x2: 470.062,
         y2: 80.062,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48351,7 +48376,7 @@ const LibraryUI = ({
         x2: 460.062,
         y2: 80.062,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48360,12 +48385,12 @@ const LibraryUI = ({
         x2: 449.062,
         y2: 80.062,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: _e,
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         strokeWidth: 0
       }), jsxRuntimeExports$1.jsx("line", {
         x1: 470.062,
@@ -48661,7 +48686,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 80.062,
         fill: "#f05323",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })]
@@ -48696,20 +48721,20 @@ const DeleteModal = ({
           fill: "url(#_10_lpi_40_2)",
           strokeWidth: 0
         }), jsxRuntimeExports$1.jsx("rect", {
-          x: 290.062,
-          y: 200.062,
+          x: 50.062,
+          y: 88.062,
           width: 187.5,
           height: 30,
-          fill: "#ef4e27",
-          stroke: "#000",
+          fill: ColorMain,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(325.063 210.063)",
-          fill: "#e5e6e6",
+          transform: "translate(85.063 98.063)",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48718,12 +48743,12 @@ const DeleteModal = ({
             children: `DELETING ${a.length} FILES.`
           })
         }), jsxRuntimeExports$1.jsx("rect", {
-          x: 290.062,
-          y: 200.062,
+          x: 50.062,
+          y: 88.062,
           width: 30,
           height: 30,
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
@@ -48731,21 +48756,21 @@ const DeleteModal = ({
           "data-name": "!",
           children: jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("line", {
-              x1: 305.062,
-              y1: 207.563,
-              x2: 305.062,
-              y2: 218.813,
+              x1: 65.062,
+              y1: 95.563,
+              x2: 65.062,
+              y2: 106.813,
               fill: "none",
-              stroke: "#000",
+              stroke: FontColorDark,
               strokeLinecap: "square",
               strokeWidth: 2
             }), jsxRuntimeExports$1.jsx("line", {
-              x1: 305.062,
-              y1: 222.562,
-              x2: 305.062,
-              y2: 221.813,
+              x1: 65.062,
+              y1: 110.562,
+              x2: 65.062,
+              y2: 109.813,
               fill: "none",
-              stroke: "#000",
+              stroke: FontColorDark,
               strokeLinecap: "square",
               strokeWidth: 2
             })]
@@ -48754,8 +48779,8 @@ const DeleteModal = ({
           id: "label-out-3",
           "data-name": "label-out",
           children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 452.563,
-            y: 215.063,
+            x: 212.563,
+            y: 103.063,
             width: 20,
             height: 10,
             fill: "#000005",
@@ -48763,11 +48788,11 @@ const DeleteModal = ({
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(458.139 222.562)",
-            fill: "#e5e6e6",
+            transform: "translate(218.139 110.562)",
+            fill: FontColorLight,
             fontSize: 6.875,
             letterSpacing: ".005em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48780,20 +48805,20 @@ const DeleteModal = ({
           id: "label-in-3",
           "data-name": "label-in",
           children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 427.562,
-            y: 215.063,
+            x: 187.562,
+            y: 103.063,
             width: 20,
             height: 10,
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(432.939 222.562)",
-            fill: "#e5e6e6",
+            transform: "translate(192.939 110.562)",
+            fill: FontColorLight,
             fontSize: 6.875,
             letterSpacing: ".095em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48805,8 +48830,8 @@ const DeleteModal = ({
         })]
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "reject",
-        x: 427.562,
-        y: 215.063,
+        x: 187.562,
+        y: 103.063,
         width: 20,
         height: 10,
         onClick: () => {
@@ -48814,8 +48839,8 @@ const DeleteModal = ({
         }
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "confirm",
-        x: 452.563,
-        y: 215.063,
+        x: 212.563,
+        y: 103.063,
         width: 20,
         height: 10,
         onClick: async () => {
@@ -48868,7 +48893,7 @@ const UploadProgress = () => {
       id: "progress-indicator",
       children: [jsxRuntimeExports$1.jsx("rect", {
         x: 50.062,
-        y: 20.062,
+        y: 88.062,
         width: 187.5,
         height: 30,
         fill: "#abb5ba",
@@ -48877,16 +48902,16 @@ const UploadProgress = () => {
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 53.062,
-        y: 22.062,
+        y: 90.062,
         width: 170,
         height: 10,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 53.062,
-        y: 22.062,
+        y: 90.062,
         width: nt,
         height: 10,
         fill: "#000005",
@@ -48895,18 +48920,18 @@ const UploadProgress = () => {
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 53.062,
-        y: 37.062,
+        y: 105.062,
         width: 160,
         height: 10,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(300.063 46.522)",
-        fontSize: 3.438,
-        stroke: et && et.error ? "#ef4e27" : "#000",
-        fill: et && et.error ? "#ef4e27" : "#000",
+        transform: "translate(55.063 112.522)",
+        fontSize: 6,
+        stroke: et && et.error ? ColorMain : "#000",
+        fill: et && et.error ? ColorMain : "#000",
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48916,20 +48941,20 @@ const UploadProgress = () => {
           children: st
         })
       }), jsxRuntimeExports$1.jsx("rect", {
-        x: 450.062,
-        y: 40.062,
+        x: 207.062,
+        y: 105.062,
         width: 27.5,
         height: 10,
-        fill: _e && j ? "#9aa0a9" : "#ef4e27",
+        fill: _e && j ? "#9aa0a9" : ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(457.481 46.522)",
-        fill: "#e5e6e6",
-        fontSize: 3.438,
+        transform: "translate(212.481 112.522)",
+        fill: FontColorLight,
+        fontSize: 6,
         letterSpacing: ".08em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48941,9 +48966,9 @@ const UploadProgress = () => {
         style: {
           mixBlendMode: "difference"
         },
-        transform: "translate(304.032 31.449)",
+        transform: "translate(55.032 96.449)",
         fill: "#d2d3d4",
-        fontSize: 3.438,
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -48957,9 +48982,9 @@ const UploadProgress = () => {
         style: {
           mixBlendMode: "difference"
         },
-        transform: "translate(446.926 31.449)",
+        transform: "translate(100.926 96.449)",
         fill: "#d2d3d4",
-        fontSize: 3.438,
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -48973,8 +48998,8 @@ const UploadProgress = () => {
         style: {
           cursor: _e && j ? "auto" : "pointer"
         },
-        x: 450.062,
-        y: 40.062,
+        x: 207.062,
+        y: 105.062,
         width: 27.5,
         height: 10,
         onClick: ut
@@ -49020,7 +49045,7 @@ const DownloadProgress = () => {
       width: 170,
       height: 10,
       fill: "#d2d3d4",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -49038,13 +49063,13 @@ const DownloadProgress = () => {
       width: 187.5,
       height: 10,
       fill: "#d2d3d4",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(300.063 46.522)",
       fontSize: 3.438,
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -49397,30 +49422,30 @@ const Version = ({
 }) => s ? jsxRuntimeExports$1.jsxs("g", {
   id: "version-os",
   children: [jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(40.062 330.062) rotate(-90)",
+    transform: "translate(40.062 300.062) rotate(-90)",
     fill: "#000",
-    fontSize: 3.438,
+    fontSize: 6,
     letterSpacing: ".08em",
-    stroke: "#000",
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.062,
     children: jsxRuntimeExports$1.jsx("tspan", {
       x: 0,
       y: 0,
-      children: `os ${a || "unknown"}`
+      children: `OS: ${a || "unknown"}`
     })
   }), jsxRuntimeExports$1.jsx("text", {
     transform: "translate(40.062 370.062) rotate(-90)",
     fill: "#000",
-    fontSize: 3.438,
+    fontSize: 6,
     letterSpacing: ".08em",
-    stroke: "#000",
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.062,
     children: jsxRuntimeExports$1.jsx("tspan", {
       x: 0,
       y: 0,
-      children: `serial ${"hmls-133" || "hmls-133"}`
+      children: `SERIAL: ${o || "EP-133"}`
     })
   })]
 }) : null;
@@ -51040,10 +51065,10 @@ const BackupBackground = () => jsxRuntimeExports$1.jsxs("g", {
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("text", {
     transform: "translate(213.982 73.812)",
-    fill: "#e5e6e6",
+    fill: FontColorLight,
     fontSize: 3.438,
     letterSpacing: ".08em",
-    stroke: "#e5e6e6",
+    stroke: FontColorLight,
     strokeMiterlimit: 10,
     strokeWidth: 0.062,
     children: jsxRuntimeExports$1.jsx("tspan", {
@@ -52900,7 +52925,7 @@ const BackupBackground = () => jsxRuntimeExports$1.jsxs("g", {
     cx: 125.062,
     cy: 335.062,
     r: 0.625,
-    fill: "#e5e6e6",
+    fill: FontColorLight,
     strokeWidth: 0
   }), jsxRuntimeExports$1.jsx("rect", {
     x: 120.062,
@@ -55471,10 +55496,10 @@ const BackupBackground = () => jsxRuntimeExports$1.jsxs("g", {
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(243.418 202.562)",
-      fill: "#e5e6e6",
+      fill: FontColorLight,
       fontSize: 6.875,
       letterSpacing: ".005em",
-      stroke: "#e5e6e6",
+      stroke: FontColorLight,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55497,10 +55522,10 @@ const BackupBackground = () => jsxRuntimeExports$1.jsxs("g", {
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(217.079 202.562)",
-      fill: "#e5e6e6",
+      fill: FontColorLight,
       fontSize: 6.875,
       letterSpacing: ".095em",
-      stroke: "#e5e6e6",
+      stroke: FontColorLight,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55533,19 +55558,19 @@ const BackupRestoreButton = ({
       width: 77.5,
       height: 10,
       fill: "#9aa0a9",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "480.062 400.062 477.562 397.563 477.562 387.562 480.062 390.063 480.062 400.062",
       fill: "#9aa0a9",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "400.062 397.562 402.562 400.062 480.062 400.062 477.562 397.562 410.062 397.562",
       fill: "#9aa0a9",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
@@ -55553,7 +55578,7 @@ const BackupRestoreButton = ({
       fill: "#000",
       fontSize: 6.25,
       letterSpacing: ".06em",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55589,7 +55614,7 @@ const BackButton = ({
       y: 387.562,
       width: 47.5,
       height: 10,
-      fill: "#000005",
+      fill: ColorSecondary,
       stroke: "#8a959a",
       strokeMiterlimit: 10,
       strokeWidth: 0.125
@@ -55607,10 +55632,10 @@ const BackButton = ({
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(444.609 395.062)",
-      fill: "#e5e6e6",
+      fill: FontColorLight,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#e5e6e6",
+      stroke: FontColorLight,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55638,13 +55663,13 @@ const FactoryRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
   transform: "translate(0 -40)",
   children: [jsxRuntimeExports$1.jsx("polyline", {
     points: "296.423 136.138 300.173 134.263 300.173 136.138 303.923 134.263 303.923 136.138 307.673 134.263 307.673 136.138 313.898 136.138 313.898 141.763 296.423 141.763 296.423 136.138",
-    fill: "#ef4e27",
+    fill: ColorMain,
     stroke: "#221f1f",
     strokeMiterlimit: 10,
     strokeWidth: 0.094
   }), jsxRuntimeExports$1.jsx("polygon", {
     points: "312.235 126.763 309.336 126.763 308.698 135.114 312.873 135.114 312.235 126.763",
-    fill: "#ef4e27",
+    fill: ColorMain,
     stroke: "#221f1f",
     strokeMiterlimit: 10,
     strokeWidth: 0.094
@@ -55660,7 +55685,7 @@ const LocalRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 193.664,
       fill: "none",
-      stroke: "#818e95",
+      stroke: ColorSecondary,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55670,7 +55695,7 @@ const LocalRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 186.164,
       fill: "none",
-      stroke: "#818e95",
+      stroke: ColorSecondary,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55680,7 +55705,7 @@ const LocalRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 186.164,
       fill: "none",
-      stroke: "#818e95",
+      stroke: ColorSecondary,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55692,8 +55717,8 @@ const LocalRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
     height: 6.437,
     rx: 0.691,
     ry: 0.691,
-    fill: "#818e95",
-    stroke: "#000",
+    fill: ColorSecondary,
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("text", {
@@ -55753,7 +55778,7 @@ const LocalBackupIcon = () => jsxRuntimeExports$1.jsxs("g", {
     rx: 0.691,
     ry: 0.691,
     fill: "#dbdddb",
-    stroke: "#000",
+    stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("text", {
@@ -55898,17 +55923,17 @@ const Modal = ({
 };
 const COLORS = {
   white: {
-    background: "#dbdddb",
-    subtitle: "#818E95",
-    text: "#000"
+    background: ColorTertiary,
+    subtitle: FontColorDark,
+    text: FontColorDark
   },
   orange: {
-    background: "#ef4e27",
+    background: ColorMain,
     subtitle: "#dbdddb",
     text: "#dbdddb"
   },
   grey: {
-    background: "#818E95",
+    background: ColorSecondary,
     subtitle: "#dbdddb",
     text: "#dbdddb"
   },
@@ -56042,15 +56067,15 @@ const ConfirmationModal = ({
             y: 150.063,
             width: 167.5,
             height: 100,
-            fill: "#ef4e27",
-            stroke: "#000",
+            fill: ColorMain,
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            fill: "#e5e6e6",
+            fill: FontColorLight,
             fontSize: 6.25,
             letterSpacing: ".08em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -56060,10 +56085,10 @@ const ConfirmationModal = ({
             })
           }), jsxRuntimeExports$1.jsxs("text", {
             transform: "translate(200.063 190.063)",
-            fill: "#e5e6e6",
+            fill: FontColorLight,
             fontSize: 6.25,
             letterSpacing: ".08em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -56096,7 +56121,7 @@ const ConfirmationModal = ({
             width: 30,
             height: 30,
             fill: "#dbdddb",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("g", {
@@ -56109,7 +56134,7 @@ const ConfirmationModal = ({
                 x2: 207.562,
                 y2: 168.813,
                 fill: "none",
-                stroke: "#000",
+                stroke: FontColorDark,
                 strokeLinecap: "square",
                 strokeWidth: 2
               }), jsxRuntimeExports$1.jsx("line", {
@@ -56118,7 +56143,7 @@ const ConfirmationModal = ({
                 x2: 207.562,
                 y2: 171.813,
                 fill: "none",
-                stroke: "#000",
+                stroke: FontColorDark,
                 strokeLinecap: "square",
                 strokeWidth: 2
               })]
@@ -56138,7 +56163,7 @@ const ConfirmationModal = ({
             width: 95,
             height: 20,
             fill: "#dbdddb",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -56147,7 +56172,7 @@ const ConfirmationModal = ({
             width: 20,
             height: 10,
             fill: $ ? COLORS.confirmed.background : COLORS.unconfirmed.background,
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
@@ -56169,14 +56194,14 @@ const ConfirmationModal = ({
             width: 30,
             height: 10,
             fill: "#d2d3d4",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
             transform: "translate(303.863 242.33)",
             fontSize: 6.25,
             letterSpacing: ".06em",
-            stroke: "#000",
+            stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -56192,6 +56217,7 @@ const ConfirmationModal = ({
           height: 100,
           children: jsxRuntimeExports$1.jsxs("div", {
             style: {
+              cursor: "pointer",
               width: "100%",
               height: "100%",
               position: "relative"
@@ -56295,7 +56321,7 @@ const BackupProgress = ({
       width: 187.5,
       height: 40,
       fill: COLORS[_].background,
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -56312,7 +56338,7 @@ const BackupProgress = ({
         width: 177.5,
         height: 10,
         fill: "#d2d3d4",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -56332,7 +56358,7 @@ const BackupProgress = ({
       width: 187.5,
       height: 10,
       fill: "#d2d3d4",
-      stroke: "#000",
+      stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -56341,25 +56367,25 @@ const BackupProgress = ({
         id: "progress-text",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(295.063 156.522)",
-          fontSize: 3.438,
+          fontSize: 5.5,
           letterSpacing: ".08em",
-          stroke: et || $.status === "failed" ? "#ef4e27" : "#000",
-          fill: et || $.status === "failed" ? "#ef4e27" : "",
+          stroke: et || $.status === "failed" ? ColorMain : "#000",
+          fill: et || $.status === "failed" ? ColorMain : "",
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: $.current > 0 && $.total > 0 ? `${$.type ? $.type === "sound" ? "bank9" : $.type : "file"} ${$.current} of ${$.total}` : rt
+            children: $.current > 0 && $.total > 0 ? `${$.type ? $.type === "sound" ? "sample" : $.type : "file"} ${$.current} of ${$.total}` : rt
           })
         })
       }), jsxRuntimeExports$1.jsx("g", {
         id: "filename",
         children: jsxRuntimeExports$1.jsx("text", {
           transform: "translate(473.202 156.522)",
-          fontSize: 3.438,
+          fontSize: 5.5,
           letterSpacing: ".08em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           textAnchor: "end",
@@ -56377,7 +56403,7 @@ const BackupProgress = ({
       },
       children: [jsxRuntimeExports$1.jsx("text", {
         transform: "translate(295.063 140.063)",
-        fontSize: 3.438,
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: COLORS[_].text,
         fill: COLORS[_].text,
@@ -56389,8 +56415,8 @@ const BackupProgress = ({
           children: `${s} in progress. do not close browser window!`
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(295.063 145.063)",
-        fontSize: 3.438,
+        transform: "translate(295.063 148.063)",
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: COLORS[_].text,
         fill: COLORS[_].text,
@@ -56409,7 +56435,7 @@ const BackupProgress = ({
       },
       children: [jsxRuntimeExports$1.jsx("text", {
         transform: "translate(295.063 127.063)",
-        fontSize: 3.438,
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: COLORS[_].text,
         fill: COLORS[_].text,
@@ -56421,8 +56447,8 @@ const BackupProgress = ({
           children: j == null ? "something went wrong." : j.failedSounds && j.failedSounds.length > 0 ? `${j.failedSounds.length}/${j.totalSounds} samples failed!` : `all ${j.totalSounds} samples successfully ${s === "backup" ? "backed up" : "restored"}.`
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(295.063 132.063)",
-        fontSize: 3.438,
+        transform: "translate(295.063 135.063)",
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: COLORS[_].text,
         fill: COLORS[_].text,
@@ -56441,16 +56467,16 @@ const BackupProgress = ({
         y: 150.062,
         width: 27.5,
         height: 10,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(457.481 156.522)",
-        fill: "#e5e6e6",
-        fontSize: 3.438,
+        fill: FontColorLight,
+        fontSize: 5.5,
         letterSpacing: ".08em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -56559,7 +56585,7 @@ const Display = ({
           width: 187.5,
           height: 30,
           fill: COLORS[_e].background,
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsxs("text", {
@@ -56570,7 +56596,7 @@ const Display = ({
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: [jsxRuntimeExports$1.jsx("tspan", {
-            stroke: "#000",
+            stroke: FontColorDark,
             className: "title",
             children: jsxRuntimeExports$1.jsx("tspan", {
               x: 0,
@@ -56599,7 +56625,7 @@ const Display = ({
           y1: 110.062,
           x2: 320.063,
           y2: 80.062,
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -56620,26 +56646,26 @@ const Display = ({
           width: 47.5,
           height: 10,
           fill: COLORS[_e].background,
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "480.063 132.562 477.563 130.062 477.563 120.062 480.063 122.562 480.063 132.562",
           fill: COLORS[_e].background,
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "430.062 130.062 432.562 132.562 480.063 132.562 477.562 130.062 430.062 130.062",
           fill: COLORS[_e].background,
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(453.812 127.562)",
           fontSize: 6.25,
           letterSpacing: ".06em",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           textAnchor: "middle",
@@ -56894,8 +56920,8 @@ const Backup = ({
     return jsxRuntimeExports$1.jsxs(jsxRuntimeExports$1.Fragment, {
       children: [a && jsxRuntimeExports$1.jsx(BackupBackground, {}), a && jsxRuntimeExports$1.jsx(MessageBox, {
         line1: "BETA PREVIEW RELEASE",
-        line2: "USE AT OWN RISK, DATA LOSS MIGHT OCCUR",
-        line3: "RECORD YOUR SONGS BEFORE TESTING"
+        line2: "USE AT OWN RISK.",
+        line3: "Track into a DAW first."
       }), !a && jsxRuntimeExports$1.jsx(BackupRestoreButton, {
         disabled: !j,
         handleClick: () => {
@@ -57162,27 +57188,27 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "V 1.1.0"
+          children: VersionNumber
         })
       })
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "title-block",
       children: [jsxRuntimeExports$1.jsx("polygon", {
         points: "110.062 50.063 107.562 47.562 107.562 17.562 110.062 20.062 110.062 50.063",
-        fill: "#ef4e27",
-        stroke: "#000",
+        fill: ColorMain,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "50.063 50.063 47.563 47.563 107.562 47.563 110.062 50.063 50.063 50.063",
-        fill: "#ef4e27",
+        fill: OriginalOrange,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "110.062 50.063 107.562 47.563 157.562 47.563 160.062 50.063 110.062 50.063",
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -57206,21 +57232,21 @@ const GreyBackground = ({
         width: 50,
         height: 20,
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "160.062 50.062 157.562 47.562 157.562 27.562 160.062 30.062 160.062 50.062",
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(119.66 25.062)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 6.25,
         letterSpacing: ".06em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -57232,7 +57258,7 @@ const GreyBackground = ({
         transform: "translate(124.238 40.062)",
         fontSize: 6.25,
         letterSpacing: ".06em",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -57245,15 +57271,15 @@ const GreyBackground = ({
         y: 17.562,
         width: 60,
         height: 30,
-        fill: "#ef4e27",
+        fill: ColorMain,
         stroke: "#221f1f",
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("text", {
         transform: "translate(60.391 43.812)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 31.25,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -58957,10 +58983,10 @@ const GreyBackground = ({
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(213.982 73.812)",
-      fill: "#e5e6e6",
+      fill: FontColorLight,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#e5e6e6",
+      stroke: FontColorLight,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -60782,7 +60808,7 @@ const GreyBackground = ({
       cx: 125.062,
       cy: 335.062,
       r: 0.625,
-      fill: "#e5e6e6"
+      fill: FontColorLight
     }), jsxRuntimeExports$1.jsx("rect", {
       x: 120.062,
       y: 330.062,
@@ -63855,7 +63881,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank9"
+          children: Bank9
         })
       }), jsxRuntimeExports$1.jsx("line", {
         x1: 490.001,
@@ -63886,7 +63912,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank8"
+          children: Bank8
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -63908,7 +63934,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank7"
+          children: Bank7
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -63930,7 +63956,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank6"
+          children: Bank6
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -63952,7 +63978,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank5"
+          children: Bank5
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -63974,7 +64000,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank4"
+          children: Bank4
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -63996,7 +64022,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank3"
+          children: Bank3
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -64018,7 +64044,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank2"
+          children: Bank2
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -64040,7 +64066,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank1"
+          children: Bank1
         })
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -64062,7 +64088,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank0"
+          children: Bank0
         })
       })]
     }), jsxRuntimeExports$1.jsx("circle", {
@@ -64664,10 +64690,10 @@ const GreyBackground = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(243.418 202.562)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 6.875,
         letterSpacing: ".005em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64689,10 +64715,10 @@ const GreyBackground = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(217.079 202.562)",
-        fill: "#e5e6e6",
+        fill: FontColorLight,
         fontSize: 6.875,
         letterSpacing: ".095em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64751,7 +64777,7 @@ const Help = () => {
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "467.557 145.063 465.062 147.557 462.568 145.062",
             fill: "none",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeLinecap: "square",
             strokeWidth: 0.706
           }), jsxRuntimeExports$1.jsx("line", {
@@ -64760,7 +64786,7 @@ const Help = () => {
             x2: 465.062,
             y2: 147.16,
             fill: "none",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeLinecap: "square",
             strokeWidth: 0.706
           })]
@@ -64771,7 +64797,7 @@ const Help = () => {
             x2: 457.557,
             y2: 147.557,
             fill: "none",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeLinecap: "square",
             strokeWidth: 0.706
           }), jsxRuntimeExports$1.jsx("line", {
@@ -64780,7 +64806,7 @@ const Help = () => {
             x2: 457.557,
             y2: 142.568,
             fill: "none",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeLinecap: "square",
             strokeWidth: 0.706
           })]
@@ -64800,35 +64826,35 @@ const Help = () => {
         children: [jsxRuntimeExports$1.jsxs("g", {
           children: [jsxRuntimeExports$1.jsx("polygon", {
             points: "540.062 259.964 540.062 269.964 413.69 269.964 413.69 274.964 398.69 264.964 413.69 254.964 413.69 259.964 540.062 259.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "413.69 269.964 414.94 271.214 414.94 275.817 413.69 274.964 413.69 269.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "413.69 254.964 414.94 256.214 414.94 259.964 413.69 259.964 413.69 254.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "414.94 271.214 413.69 269.964 540.062 269.964 540.062 271.214 414.94 271.214",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           })]
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(415.062 266.964)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64842,41 +64868,41 @@ const Help = () => {
         children: [jsxRuntimeExports$1.jsxs("g", {
           children: [jsxRuntimeExports$1.jsx("polygon", {
             points: "338.727 239.964 338.727 249.964 213.727 249.964 213.727 254.964 198.727 244.964 213.727 234.964 213.727 239.964 338.727 239.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "213.727 249.964 214.977 251.214 214.977 255.817 213.727 254.964 213.727 249.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "213.727 234.964 214.977 236.214 214.977 239.964 213.727 239.964 213.727 234.964",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "339.977 251.214 338.727 249.964 338.727 239.964 339.977 241.214 339.977 251.214",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "214.977 251.214 213.727 249.964 338.727 249.964 339.977 251.214 214.977 251.214",
-            fill: "#ef4e27",
+            fill: ColorMain,
             stroke: "#221f1f",
             strokeLinejoin: "round",
             strokeWidth: 0.125
           })]
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(215.099 246.964)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64889,22 +64915,22 @@ const Help = () => {
         className: a ? styles["bounce-horizontal"] : "",
         children: [jsxRuntimeExports$1.jsx("polygon", {
           points: "396.312 109.964 395.062 108.714 460.062 108.714 461.312 109.964 396.312 109.964",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeLinejoin: "round",
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "460.062 113.714 460.062 108.714 395.062 108.714 395.062 98.714 460.062 98.714 460.062 93.714 475.062 103.714 460.062 113.714",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(400.062 105.714)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64914,7 +64940,7 @@ const Help = () => {
           })
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "475.062 103.714 460.062 113.714 461.312 114.964 476.312 104.964 475.062 103.714",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -64923,22 +64949,22 @@ const Help = () => {
         className: a ? styles["bounce-horizontal"] : "",
         children: [jsxRuntimeExports$1.jsx("polygon", {
           points: "156.312 149.964 155.062 148.714 303.812 148.714 305.062 149.964 156.312 149.964",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeLinejoin: "round",
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "303.812 153.714 303.812 148.714 155.062 148.714 155.062 138.714 303.812 138.714 303.812 133.714 318.812 143.714 303.812 153.714",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(160.062 145.714)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64948,7 +64974,7 @@ const Help = () => {
           })
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "318.812 143.714 303.812 153.714 305.062 154.964 320.062 144.964 318.812 143.714",
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -64968,10 +64994,10 @@ const Help = () => {
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
             transform: "translate(376.16 142.464)",
-            fill: "#e5e6e6",
+            fill: FontColorLight,
             fontSize: 6.25,
             letterSpacing: ".06em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64996,7 +65022,7 @@ const Help = () => {
             children: [jsxRuntimeExports$1.jsx("polyline", {
               points: "327.562 154.964 325.062 157.464 322.562 154.964",
               fill: "none",
-              stroke: "#e5e6e6",
+              stroke: FontColorLight,
               strokeLinecap: "square",
               strokeWidth: 0.707
             }), jsxRuntimeExports$1.jsx("line", {
@@ -65005,7 +65031,7 @@ const Help = () => {
               x2: 325.062,
               y2: 157.464,
               fill: "none",
-              stroke: "#e5e6e6",
+              stroke: FontColorLight,
               strokeLinecap: "square",
               strokeWidth: 0.707
             })]
@@ -65027,7 +65053,7 @@ const Help = () => {
             children: [jsxRuntimeExports$1.jsx("polyline", {
               points: "322.562 134.964 325.062 132.464 327.562 134.964",
               fill: "none",
-              stroke: "#e5e6e6",
+              stroke: FontColorLight,
               strokeLinecap: "square",
               strokeWidth: 0.707
             }), jsxRuntimeExports$1.jsx("line", {
@@ -65036,7 +65062,7 @@ const Help = () => {
               x2: 325.062,
               y2: 132.464,
               fill: "none",
-              stroke: "#e5e6e6",
+              stroke: FontColorLight,
               strokeLinecap: "square",
               strokeWidth: 0.707
             })]
@@ -65073,10 +65099,10 @@ const Help = () => {
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
             transform: "translate(65.412 397.562)",
-            fill: "#e5e6e6",
+            fill: FontColorLight,
             fontSize: 6.25,
             letterSpacing: ".08em",
-            stroke: "#e5e6e6",
+            stroke: FontColorLight,
             strokeMiterlimit: 10,
             strokeWidth: 0.125,
             children: jsxRuntimeExports$1.jsx("tspan", {
@@ -65387,208 +65413,6 @@ const Background = ({
         fill: "none"
       })
     }), jsxRuntimeExports$1.jsxs("g", {
-      id: "extras",
-      children: [jsxRuntimeExports$1.jsx("g", {
-        id: "version",
-        children: jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(56.055 56.312)",
-          fill: "#000005",
-          fontSize: 3.438,
-          letterSpacing: ".095em",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.062,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "V 1.1.0"
-          })
-        })
-      }), jsxRuntimeExports$1.jsxs("g", {
-        id: "title-block",
-        children: [jsxRuntimeExports$1.jsx("polygon", {
-          points: "110.062 50.063 107.562 47.562 107.562 17.562 110.062 20.062 110.062 50.063",
-          fill: "#ef4e27",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "50.063 50.063 47.563 47.563 107.562 47.563 110.062 50.063 50.063 50.063",
-          fill: "#ef4e27",
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "110.062 50.063 107.562 47.563 157.562 47.563 160.062 50.063 110.062 50.063",
-          fill: "#dbdddb",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.562,
-          y: 17.562,
-          width: 50,
-          height: 10,
-          fill: "#000005",
-          stroke: "#8a959a",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "160.062 30.062 157.562 27.562 157.562 17.562 160.062 20.062 160.062 30.062",
-          fill: "#000005",
-          stroke: "#8a959a",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.562,
-          y: 27.562,
-          width: 50,
-          height: 20,
-          fill: "#dbdddb",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "160.062 50.062 157.562 47.562 157.562 27.562 160.062 30.062 160.062 50.062",
-          fill: "#dbdddb",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(119.66 25.062)",
-          fill: "#e5e6e6",
-          fontSize: 6.25,
-          letterSpacing: ".06em",
-          stroke: "#e5e6e6",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "SAMPLE"
-          })
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(124.238 40.062)",
-          fontSize: 6.25,
-          letterSpacing: ".06em",
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "TOOL"
-          })
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 47.563,
-          y: 17.562,
-          width: 60,
-          height: 30,
-          fill: "#ef4e27",
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsxs("text", {
-          transform: "translate(60.391 43.812)",
-          fill: "#e5e6e6",
-          fontSize: 31.25,
-          stroke: "#000",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: [jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            letterSpacing: "-.055em",
-            children: "E"
-          }), jsxRuntimeExports$1.jsx("tspan", {
-            x: 16.812,
-            y: 0,
-            letterSpacing: ".06em",
-            children: "P"
-          })]
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 102.562,
-          cy: 22.563,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 102.562,
-          cy: 42.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 52.562,
-          cy: 22.563,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 112.562,
-          cy: 22.563,
-          r: 2.5,
-          fill: "none",
-          stroke: "#abb5ba",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 152.562,
-          cy: 22.563,
-          r: 2.5,
-          fill: "none",
-          stroke: "#abb5ba",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 112.562,
-          cy: 32.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 152.562,
-          cy: 32.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 112.562,
-          cy: 42.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 152.562,
-          cy: 42.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("circle", {
-          cx: 52.562,
-          cy: 42.562,
-          r: 2.5,
-          fill: "none",
-          stroke: "#000005",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
       id: "usb-cable",
       transform: "translate(0, -25)",
       className: handleClassName([styles$1["usb-cable"], s ? styles$1.connected : ""]),
@@ -65601,13 +65425,13 @@ const Background = ({
           width: 12.5,
           height: 17.5,
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "225.062 70.062 225.062 52.562 227.562 55.062 227.562 72.562 225.062 70.062",
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("line", {
@@ -65616,19 +65440,19 @@ const Background = ({
           x2: 220.062,
           y2: -10000.062,
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 3.75
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M220.063,38.812c-2.071,0-3.75,.56-3.75,1.25v17.5h5v-5h2.5v-12.5c0-.69-1.679-1.25-3.75-1.25Z",
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "212.562 70.062 215.062 72.563 227.562 72.562 225.062 70.062 212.562 70.062",
           fill: "#dbdddb",
-          stroke: "#000",
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("path", {
@@ -65651,15 +65475,15 @@ const Background = ({
           y: 42.563,
           width: 40,
           height: 5,
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsxs("text", {
           transform: "translate(202.716 46.313)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 3.438,
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -65698,13 +65522,13 @@ const Background = ({
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M50.062,370.062l7.5,7.5h220V77.562l-7.5-7.5V370.062s-220,.427-220,0Z",
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M57.562,377.562l2.5,2.5h220V80.062l-2.5-2.5V377.562s-220,.202-220,0Z",
         fill: "#424143",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65713,7 +65537,7 @@ const Background = ({
         x2: 280.062,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65722,7 +65546,7 @@ const Background = ({
         x2: 277.925,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65731,7 +65555,7 @@ const Background = ({
         x2: 275.788,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65740,7 +65564,7 @@ const Background = ({
         x2: 273.651,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65749,7 +65573,7 @@ const Background = ({
         x2: 271.514,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65758,7 +65582,7 @@ const Background = ({
         x2: 269.377,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65767,7 +65591,7 @@ const Background = ({
         x2: 267.24,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65776,7 +65600,7 @@ const Background = ({
         x2: 265.103,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65785,7 +65609,7 @@ const Background = ({
         x2: 262.966,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65794,7 +65618,7 @@ const Background = ({
         x2: 260.829,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65803,7 +65627,7 @@ const Background = ({
         x2: 258.692,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65812,7 +65636,7 @@ const Background = ({
         x2: 256.555,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65821,7 +65645,7 @@ const Background = ({
         x2: 254.418,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65830,7 +65654,7 @@ const Background = ({
         x2: 252.281,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65839,7 +65663,7 @@ const Background = ({
         x2: 250.144,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65848,7 +65672,7 @@ const Background = ({
         x2: 248.007,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65857,7 +65681,7 @@ const Background = ({
         x2: 245.87,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65866,7 +65690,7 @@ const Background = ({
         x2: 243.733,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65875,7 +65699,7 @@ const Background = ({
         x2: 241.596,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65884,7 +65708,7 @@ const Background = ({
         x2: 239.459,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65893,7 +65717,7 @@ const Background = ({
         x2: 237.322,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65902,7 +65726,7 @@ const Background = ({
         x2: 235.185,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65911,7 +65735,7 @@ const Background = ({
         x2: 233.048,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65920,7 +65744,7 @@ const Background = ({
         x2: 230.911,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65929,7 +65753,7 @@ const Background = ({
         x2: 228.774,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65938,7 +65762,7 @@ const Background = ({
         x2: 226.637,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65947,7 +65771,7 @@ const Background = ({
         x2: 224.5,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65956,7 +65780,7 @@ const Background = ({
         x2: 222.363,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65965,7 +65789,7 @@ const Background = ({
         x2: 220.226,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65974,7 +65798,7 @@ const Background = ({
         x2: 218.089,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65983,7 +65807,7 @@ const Background = ({
         x2: 215.952,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -65992,7 +65816,7 @@ const Background = ({
         x2: 213.815,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66001,7 +65825,7 @@ const Background = ({
         x2: 211.678,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66010,7 +65834,7 @@ const Background = ({
         x2: 209.541,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66019,7 +65843,7 @@ const Background = ({
         x2: 207.404,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66028,7 +65852,7 @@ const Background = ({
         x2: 205.267,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66037,7 +65861,7 @@ const Background = ({
         x2: 203.13,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66046,7 +65870,7 @@ const Background = ({
         x2: 200.993,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66055,7 +65879,7 @@ const Background = ({
         x2: 198.856,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66064,7 +65888,7 @@ const Background = ({
         x2: 196.719,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66073,7 +65897,7 @@ const Background = ({
         x2: 194.582,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66082,7 +65906,7 @@ const Background = ({
         x2: 192.445,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66091,7 +65915,7 @@ const Background = ({
         x2: 190.308,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66100,7 +65924,7 @@ const Background = ({
         x2: 188.171,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66109,7 +65933,7 @@ const Background = ({
         x2: 186.034,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66118,7 +65942,7 @@ const Background = ({
         x2: 183.897,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66127,7 +65951,7 @@ const Background = ({
         x2: 181.76,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66136,7 +65960,7 @@ const Background = ({
         x2: 179.623,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66145,7 +65969,7 @@ const Background = ({
         x2: 177.486,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66154,7 +65978,7 @@ const Background = ({
         x2: 175.349,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66163,7 +65987,7 @@ const Background = ({
         x2: 173.212,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66172,7 +65996,7 @@ const Background = ({
         x2: 171.075,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66181,7 +66005,7 @@ const Background = ({
         x2: 168.938,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66190,7 +66014,7 @@ const Background = ({
         x2: 166.8,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66199,7 +66023,7 @@ const Background = ({
         x2: 164.663,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66208,7 +66032,7 @@ const Background = ({
         x2: 162.526,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66217,7 +66041,7 @@ const Background = ({
         x2: 160.389,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66226,7 +66050,7 @@ const Background = ({
         x2: 158.252,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66235,7 +66059,7 @@ const Background = ({
         x2: 156.115,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66244,7 +66068,7 @@ const Background = ({
         x2: 153.978,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66253,7 +66077,7 @@ const Background = ({
         x2: 151.841,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66262,7 +66086,7 @@ const Background = ({
         x2: 149.704,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66271,7 +66095,7 @@ const Background = ({
         x2: 147.567,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66280,7 +66104,7 @@ const Background = ({
         x2: 145.43,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66289,7 +66113,7 @@ const Background = ({
         x2: 143.293,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66298,7 +66122,7 @@ const Background = ({
         x2: 141.156,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66307,7 +66131,7 @@ const Background = ({
         x2: 139.019,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66316,7 +66140,7 @@ const Background = ({
         x2: 136.882,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66325,7 +66149,7 @@ const Background = ({
         x2: 134.745,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66334,7 +66158,7 @@ const Background = ({
         x2: 132.608,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66343,7 +66167,7 @@ const Background = ({
         x2: 130.471,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66352,7 +66176,7 @@ const Background = ({
         x2: 128.334,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66361,7 +66185,7 @@ const Background = ({
         x2: 126.197,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66370,7 +66194,7 @@ const Background = ({
         x2: 124.06,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66379,7 +66203,7 @@ const Background = ({
         x2: 121.923,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66388,7 +66212,7 @@ const Background = ({
         x2: 119.786,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66397,7 +66221,7 @@ const Background = ({
         x2: 117.649,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66406,7 +66230,7 @@ const Background = ({
         x2: 115.512,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66415,7 +66239,7 @@ const Background = ({
         x2: 113.375,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66424,7 +66248,7 @@ const Background = ({
         x2: 111.238,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66433,7 +66257,7 @@ const Background = ({
         x2: 109.101,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66442,7 +66266,7 @@ const Background = ({
         x2: 106.964,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66451,7 +66275,7 @@ const Background = ({
         x2: 104.827,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66460,7 +66284,7 @@ const Background = ({
         x2: 102.69,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66469,7 +66293,7 @@ const Background = ({
         x2: 100.553,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66478,7 +66302,7 @@ const Background = ({
         x2: 98.416,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66487,7 +66311,7 @@ const Background = ({
         x2: 96.279,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66496,7 +66320,7 @@ const Background = ({
         x2: 94.142,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66505,7 +66329,7 @@ const Background = ({
         x2: 92.005,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66514,7 +66338,7 @@ const Background = ({
         x2: 89.868,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66523,7 +66347,7 @@ const Background = ({
         x2: 87.731,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66532,7 +66356,7 @@ const Background = ({
         x2: 85.594,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66541,7 +66365,7 @@ const Background = ({
         x2: 83.457,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66550,7 +66374,7 @@ const Background = ({
         x2: 81.32,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66559,7 +66383,7 @@ const Background = ({
         x2: 79.183,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66568,7 +66392,7 @@ const Background = ({
         x2: 77.046,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66577,7 +66401,7 @@ const Background = ({
         x2: 74.909,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66586,7 +66410,7 @@ const Background = ({
         x2: 72.772,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66595,7 +66419,7 @@ const Background = ({
         x2: 70.635,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66604,7 +66428,7 @@ const Background = ({
         x2: 68.498,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66613,7 +66437,7 @@ const Background = ({
         x2: 66.361,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66622,7 +66446,7 @@ const Background = ({
         x2: 64.224,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66631,7 +66455,7 @@ const Background = ({
         x2: 62.087,
         y2: 380.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -66639,7 +66463,7 @@ const Background = ({
         cy: 355.062,
         rx: 1.25,
         ry: 3.75,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -66647,7 +66471,7 @@ const Background = ({
         cy: 95.062,
         rx: 1.25,
         ry: 3.75,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -66655,7 +66479,7 @@ const Background = ({
         cy: 105.062,
         rx: 1.25,
         ry: 3.75,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -66663,7 +66487,7 @@ const Background = ({
         cy: 135.062,
         rx: 1.25,
         ry: 3.75,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -66676,7 +66500,7 @@ const Background = ({
         cx: 237.562,
         cy: 107.764,
         r: 25,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -66685,7 +66509,7 @@ const Background = ({
         width: 50,
         height: 10,
         fill: "#202222",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -66694,7 +66518,7 @@ const Background = ({
         width: 20,
         height: 10,
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -66702,8 +66526,8 @@ const Background = ({
         y: 67.562,
         width: 20,
         height: 10,
-        fill: "#ef4e27",
-        stroke: "#000",
+        fill: OriginalOrange,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -66712,13 +66536,13 @@ const Background = ({
         width: 160,
         height: 60,
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M267.539,137.562h-60v-60h60v60Zm-2.5-4.375c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Z",
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSpeaker,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -66756,59 +66580,67 @@ const Background = ({
       }), jsxRuntimeExports$1.jsxs("g", {
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M63.401,102.039h-1.306v.431c0,1.194-.369,2.407-2,3.144-.081-.1-.213-.225-.325-.313,1.588-.688,1.881-1.8,1.881-2.825v-.438h-2.019v1.557h-.444v-1.557h-1.225v-.425h1.225v-1.357l.6,.037c-.006,.062-.062,.119-.156,.131v1.188h2.019v-1.438l.6,.037c-.006,.056-.056,.106-.156,.119v1.282h1.306v.425Z",
-          fill: "#f05323",
-          stroke: "#f05323",
+          fill: FontColorLogo2,
+          stroke: FontColorLogo2,
           strokeMiterlimit: 10,
           strokeWidth: 0.062
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M64.719,100.67c.65,.206,1.4,.531,1.863,.85l-.237,.394c-.45-.319-1.188-.65-1.825-.869l.2-.375Zm-.025,4.332c2.219-.688,3.694-1.932,4.444-3.663,.131,.106,.275,.188,.406,.256-.781,1.713-2.307,3.044-4.426,3.75-.006,.056-.044,.119-.088,.144l-.337-.487Z",
-          fill: "#f05323",
-          stroke: "#f05323",
+          fill: FontColorLogo2,
+          stroke: FontColorLogo2,
           strokeMiterlimit: 10,
           strokeWidth: 0.062
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M70.607,100.92h3.976l.037-.019,.425,.325c-.019,.025-.037,.044-.075,.056-.506,2.35-1.594,3.576-3.507,4.301-.069-.113-.194-.275-.281-.369,1.819-.669,2.869-1.831,3.275-3.863h-3.851v-.431Zm4.763-1.119c.375,0,.681,.306,.681,.688,0,.375-.306,.681-.681,.681-.381,0-.688-.306-.688-.681,0-.394,.319-.688,.688-.688Zm.475,.688c0-.269-.213-.481-.475-.481s-.481,.213-.481,.481c0,.262,.219,.481,.481,.481,.275,0,.475-.231,.475-.481Z",
-          fill: "#f05323",
-          stroke: "#f05323",
+          fill: FontColorLogo2,
+          stroke: FontColorLogo2,
           strokeMiterlimit: 10,
           strokeWidth: 0.062
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M81.464,102.195c-.012,.025-.044,.05-.081,.062-.513,1.888-1.557,2.807-3.426,3.326-.056-.113-.175-.269-.263-.363,1.7-.425,2.757-1.3,3.151-2.75h-4.138v-.425h4.326l.062-.037,.369,.188Zm-.588-1.338h-3.563v-.413h3.563v.413Z",
-          fill: "#f05323",
-          stroke: "#f05323",
+          fill: FontColorLogo2,
+          stroke: FontColorLogo2,
           strokeMiterlimit: 10,
           strokeWidth: 0.062
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M82.607,102.558h5.22v.444h-4.982c-.038,.062-.119,.106-.2,.119l-.038-.563Z",
-          fill: "#f05323",
-          stroke: "#f05323",
+          fill: FontColorLogo2,
+          stroke: FontColorLogo2,
           strokeMiterlimit: 10,
           strokeWidth: 0.062
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M64.951,97.138l-.796,.002v-.422l-4.23-3.887-.941,.725v3.584h-.796v-8.751h.796v4.163l4.886-3.766v-.398l.797,.002-.002,.792-4.101,3.157,4.385,4.029,.002,.771Z"
+          d: "M64.951,97.138l-.796,.002v-.422l-4.23-3.887-.941,.725v3.584h-.796v-8.751h.796v4.163l4.886-3.766v-.398l.797,.002-.002,.792-4.101,3.157,4.385,4.029,.002,.771Z",
+          fill: FontColorLogo1
         }), jsxRuntimeExports$1.jsx("path", {
-          d: "M66.2,97.14v-.903h.796v.903h-.796Z"
+          d: "M66.2,97.14v-.903h.796v.903h-.796Z",
+          fill: FontColorLogo1
         }), jsxRuntimeExports$1.jsx("path", {
-          d: "M75.012,91.273v2.983c0,1.59-1.294,2.884-2.884,2.884h-.994c-1.59,0-2.884-1.294-2.884-2.884v-2.983c0-1.59,1.294-2.884,2.884-2.884h.994c1.59,0,2.884,1.294,2.884,2.884Zm-.796,0c0-1.152-.937-2.088-2.088-2.088h-.994c-1.151,0-2.088,.937-2.088,2.088v2.983c0,1.151,.937,2.088,2.088,2.088h.994c1.151,0,2.088-.937,2.088-2.088v-2.983Z"
+          d: "M75.012,91.273v2.983c0,1.59-1.294,2.884-2.884,2.884h-.994c-1.59,0-2.884-1.294-2.884-2.884v-2.983c0-1.59,1.294-2.884,2.884-2.884h.994c1.59,0,2.884,1.294,2.884,2.884Zm-.796,0c0-1.152-.937-2.088-2.088-2.088h-.994c-1.151,0-2.088,.937-2.088,2.088v2.983c0,1.151,.937,2.088,2.088,2.088h.994c1.151,0,2.088-.937,2.088-2.088v-2.983Z",
+          fill: FontColorLogo1
         }), jsxRuntimeExports$1.jsx("path", {
-          d: "M75.762,97.14v-.903h.796v.903h-.796Z"
+          d: "M75.762,97.14v-.903h.796v.903h-.796Z",
+          fill: FontColorLogo1
         }), jsxRuntimeExports$1.jsx("path", {
-          d: "M81.687,97.14v-8.751h.796v8.751h-.796Z"
+          d: "M81.687,97.14v-8.751h.796v8.751h-.796Z",
+          fill: FontColorLogo1
         }), jsxRuntimeExports$1.jsx("path", {
-          d: "M84.487,97.14v-8.751h.796v8.751h-.796Z"
+          d: "M84.487,97.14v-8.751h.796v8.751h-.796Z",
+          fill: FontColorLogo1
         })]
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 79.952,
         y: 88.394,
         width: 7.137,
-        height: 0.684
+        height: 0.684,
+        fill: FontColorLogo1
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 79.952,
         y: 96.447,
         width: 7.137,
-        height: 0.684
+        height: 0.684,
+        fill: FontColorLogo1
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "277.562 207.562 267.562 197.562 267.562 137.562 277.562 147.562 277.562 207.562",
         fill: "#000005",
@@ -66817,8 +66649,8 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "270.062 140.062 267.562 137.562 267.562 77.562 270.062 80.062 270.062 140.062",
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSpeaker,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
@@ -66829,14 +66661,14 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "120.062 77.562 117.562 77.562 117.562 67.562 120.062 70.062 120.062 77.562",
-        fill: "#ef4e27",
-        stroke: "#000",
+        fill: OriginalOrange,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "80.062 77.562 77.562 77.562 77.562 67.562 80.062 70.062 80.062 77.562",
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66844,8 +66676,8 @@ const Background = ({
         y1: 78.83,
         x2: 270.062,
         y2: 81.33,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66853,8 +66685,8 @@ const Background = ({
         y1: 80.097,
         x2: 270.062,
         y2: 82.597,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66862,8 +66694,8 @@ const Background = ({
         y1: 81.365,
         x2: 270.062,
         y2: 83.865,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66871,8 +66703,8 @@ const Background = ({
         y1: 82.632,
         x2: 270.062,
         y2: 85.132,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66880,8 +66712,8 @@ const Background = ({
         y1: 83.9,
         x2: 270.062,
         y2: 86.4,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66889,8 +66721,8 @@ const Background = ({
         y1: 85.167,
         x2: 270.062,
         y2: 87.667,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66898,8 +66730,8 @@ const Background = ({
         y1: 86.435,
         x2: 270.062,
         y2: 88.935,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66907,8 +66739,8 @@ const Background = ({
         y1: 87.702,
         x2: 270.062,
         y2: 90.202,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66916,8 +66748,8 @@ const Background = ({
         y1: 88.97,
         x2: 270.062,
         y2: 91.47,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66925,8 +66757,8 @@ const Background = ({
         y1: 90.237,
         x2: 270.062,
         y2: 92.737,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66934,8 +66766,8 @@ const Background = ({
         y1: 91.505,
         x2: 270.062,
         y2: 94.005,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66943,8 +66775,8 @@ const Background = ({
         y1: 92.772,
         x2: 270.062,
         y2: 95.272,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66952,8 +66784,8 @@ const Background = ({
         y1: 94.039,
         x2: 270.062,
         y2: 96.539,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66961,8 +66793,8 @@ const Background = ({
         y1: 95.307,
         x2: 270.062,
         y2: 97.807,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66970,8 +66802,8 @@ const Background = ({
         y1: 96.574,
         x2: 270.062,
         y2: 99.074,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66979,8 +66811,8 @@ const Background = ({
         y1: 97.842,
         x2: 270.062,
         y2: 100.342,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66988,8 +66820,8 @@ const Background = ({
         y1: 99.109,
         x2: 270.062,
         y2: 101.609,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -66997,8 +66829,8 @@ const Background = ({
         y1: 100.377,
         x2: 270.062,
         y2: 102.877,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67006,8 +66838,8 @@ const Background = ({
         y1: 101.644,
         x2: 270.062,
         y2: 104.144,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67015,8 +66847,8 @@ const Background = ({
         y1: 102.912,
         x2: 270.062,
         y2: 105.412,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67024,8 +66856,8 @@ const Background = ({
         y1: 104.179,
         x2: 270.062,
         y2: 106.679,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67033,8 +66865,8 @@ const Background = ({
         y1: 105.447,
         x2: 270.062,
         y2: 107.947,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67042,8 +66874,8 @@ const Background = ({
         y1: 106.714,
         x2: 270.062,
         y2: 109.214,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67051,8 +66883,8 @@ const Background = ({
         y1: 107.981,
         x2: 270.062,
         y2: 110.481,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67060,8 +66892,8 @@ const Background = ({
         y1: 109.249,
         x2: 270.062,
         y2: 111.749,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67069,8 +66901,8 @@ const Background = ({
         y1: 110.516,
         x2: 270.062,
         y2: 113.016,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67078,8 +66910,8 @@ const Background = ({
         y1: 111.784,
         x2: 270.062,
         y2: 114.284,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67087,8 +66919,8 @@ const Background = ({
         y1: 113.051,
         x2: 270.062,
         y2: 115.551,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67096,8 +66928,8 @@ const Background = ({
         y1: 114.319,
         x2: 270.062,
         y2: 116.819,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67105,8 +66937,8 @@ const Background = ({
         y1: 115.586,
         x2: 270.062,
         y2: 118.086,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67114,8 +66946,8 @@ const Background = ({
         y1: 116.854,
         x2: 270.062,
         y2: 119.354,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67123,8 +66955,8 @@ const Background = ({
         y1: 118.121,
         x2: 270.062,
         y2: 120.621,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67132,8 +66964,8 @@ const Background = ({
         y1: 119.389,
         x2: 270.062,
         y2: 121.889,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67141,8 +66973,8 @@ const Background = ({
         y1: 120.656,
         x2: 270.062,
         y2: 123.156,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67150,8 +66982,8 @@ const Background = ({
         y1: 121.924,
         x2: 270.062,
         y2: 124.424,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67159,8 +66991,8 @@ const Background = ({
         y1: 123.191,
         x2: 270.062,
         y2: 125.691,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67168,8 +67000,8 @@ const Background = ({
         y1: 124.458,
         x2: 270.062,
         y2: 126.958,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67177,8 +67009,8 @@ const Background = ({
         y1: 125.726,
         x2: 270.062,
         y2: 128.226,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67186,8 +67018,8 @@ const Background = ({
         y1: 126.993,
         x2: 270.062,
         y2: 129.493,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67195,8 +67027,8 @@ const Background = ({
         y1: 128.261,
         x2: 270.062,
         y2: 130.761,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67204,8 +67036,8 @@ const Background = ({
         y1: 129.528,
         x2: 270.062,
         y2: 132.028,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67213,8 +67045,8 @@ const Background = ({
         y1: 130.796,
         x2: 270.062,
         y2: 133.296,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67222,8 +67054,8 @@ const Background = ({
         y1: 132.063,
         x2: 270.062,
         y2: 134.563,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67231,8 +67063,8 @@ const Background = ({
         y1: 133.331,
         x2: 270.062,
         y2: 135.831,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67240,8 +67072,8 @@ const Background = ({
         y1: 134.598,
         x2: 270.062,
         y2: 137.098,
-        fill: "#818e95",
-        stroke: "#000",
+        fill: ColorSecondary,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67250,13 +67082,13 @@ const Background = ({
         x2: 270.062,
         y2: 138.366,
         fill: "#818e95",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M255.063,66.312c-2.071,0-3.75,.56-3.75,1.25v2.5h7.5v-2.5c0-.69-1.679-1.25-3.75-1.25Z",
-        fill: "#ef4e27",
-        stroke: "#000",
+        fill: OriginalOrange,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67265,21 +67097,21 @@ const Background = ({
         width: 20,
         height: 10,
         fill: "#818e95",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "230.062 77.562 227.562 77.562 227.562 67.562 230.062 70.062 230.062 77.562",
         fill: "#818e95",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(213.982 73.812)",
-        fill: "#e5e6e6",
-        fontSize: 3.438,
+        transform: "translate(210.982 73.812)",
+        fill: FontColorLight,
+        fontSize: 5.5,
         letterSpacing: ".08em",
-        stroke: "#e5e6e6",
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -67292,7 +67124,7 @@ const Background = ({
         cy: 345.062,
         rx: 1.25,
         ry: 3.75,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
@@ -67356,7 +67188,7 @@ const Background = ({
         height: 45,
         rx: 1.25,
         ry: 1.25,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67384,7 +67216,7 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#ef4f2a"
+        fill: ColorButtons
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 240.062,
         y: 250.062,
@@ -67419,7 +67251,7 @@ const Background = ({
         y: 270.062,
         width: 20,
         height: 10,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67437,13 +67269,13 @@ const Background = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#ef4f2a"
+        fill: ColorButtons
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 210.039,
         y: 300.062,
         width: 20,
         height: 20,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67467,7 +67299,7 @@ const Background = ({
         y: 300.062,
         width: 20,
         height: 20,
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67524,15 +67356,15 @@ const Background = ({
         cy: 220.062,
         r: 10,
         fill: "#252625",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 220.062,
         cy: 220.062,
         r: 10,
-        fill: "#ef522f",
-        stroke: "#000",
+        fill: ColorButtons,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67540,7 +67372,7 @@ const Background = ({
         cy: 220.062,
         r: 10,
         fill: "#dfdfdf",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
@@ -67554,7 +67386,7 @@ const Background = ({
         cy: 325.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67562,7 +67394,7 @@ const Background = ({
         cy: 325.466,
         r: 1.25,
         fill: "#372424",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
       }), jsxRuntimeExports$1.jsx("line", {
@@ -67571,7 +67403,7 @@ const Background = ({
         x2: 78.813,
         y2: 305.062,
         fill: "none",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.25
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67579,7 +67411,7 @@ const Background = ({
         cy: 217.562,
         r: 5,
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67587,7 +67419,7 @@ const Background = ({
         cy: 217.562,
         r: 4.375,
         fill: "#dbdddb",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.109
       }), jsxRuntimeExports$1.jsx("path", {
@@ -67613,7 +67445,7 @@ const Background = ({
         cy: 302.562,
         r: 5,
         fill: "#818e95",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67621,15 +67453,15 @@ const Background = ({
         cy: 302.562,
         r: 4.375,
         fill: "#818e95",
-        stroke: "#000",
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 217.562,
         cy: 217.562,
         r: 5,
-        fill: "#ef4f2a",
-        stroke: "#000",
+        fill: ColorButtons,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67644,8 +67476,8 @@ const Background = ({
         cx: 217.562,
         cy: 217.562,
         r: 4.375,
-        fill: "#ef522f",
-        stroke: "#000",
+        fill: ColorButtons,
+        stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67699,7 +67531,7 @@ const Background = ({
           y: 220.062,
           width: 20,
           height: 10,
-          fill: "#ef4f2a",
+          fill: ColorButtons,
           stroke: "#000005",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -67757,17 +67589,17 @@ const Background = ({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(243.418 202.562)",
-          fill: "#e5e6e6",
+          transform: "translate(242.3 202.562)",
+          fill: FontColorLight,
           fontSize: 6.875,
           letterSpacing: ".005em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "OUT"
+            children: "END"
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -67778,22 +67610,22 @@ const Background = ({
           y: 195.062,
           width: 20,
           height: 10,
-          fill: "#ef4e27",
+          fill: OriginalOrange,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(217.079 202.562)",
-          fill: "#e5e6e6",
+          transform: "translate(216.079 202.562)",
+          fill: FontColorLight,
           fontSize: 6.875,
           letterSpacing: ".095em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "IN"
+            children: "ST"
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -67803,22 +67635,22 @@ const Background = ({
           y: 130.062,
           width: 45,
           height: 10,
-          fill: "#ef4e27",
+          fill: ColorMain,
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(62.632 137.562)",
-          fill: "#e5e6e6",
+          fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".06em",
-          stroke: "#e5e6e6",
+          stroke: FontColorLight,
           strokeMiterlimit: 10,
           strokeWidth: 0.125,
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "SOUND EDIT"
+            children: "Sound Edit"
           })
         })]
       })]
