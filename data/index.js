@@ -48269,11 +48269,11 @@ const LibraryUI = ({
           x: 0,
           y: 0,
           letterSpacing: ".08em",
-          children: "EP-133 Current Library"
+          children: "EP-133 Content Library"
         })]
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(422.66 76.312)",
-        fontSize: 3.438,
+        transform: "translate(420.66 76.312)",
+        fontSize: 6,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48284,9 +48284,9 @@ const LibraryUI = ({
           children: (_ == null ? undefined : _.device) && formatSize(nt)
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(446.317 76.312)",
+        transform: "translate(450.317 76.312)",
         fill: "#e5e6e6",
-        fontSize: 3.438,
+        fontSize: 4.5,
         letterSpacing: ".08em",
         stroke: "#e5e6e6",
         strokeMiterlimit: 10,
@@ -48355,9 +48355,9 @@ const LibraryUI = ({
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
-        x1: 440.062,
+        x1: 449.062,
         y1: 70.062,
-        x2: 440.062,
+        x2: 449.062,
         y2: 80.062,
         fill: "#f05323",
         stroke: "#000",
@@ -48867,7 +48867,7 @@ const UploadProgress = () => {
     return jsxRuntimeExports$1.jsxs("g", {
       id: "progress-indicator",
       children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 290.062,
+        x: 50.062,
         y: 20.062,
         width: 187.5,
         height: 30,
@@ -48876,8 +48876,8 @@ const UploadProgress = () => {
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
-        x: 300.062,
-        y: 25.062,
+        x: 53.062,
+        y: 22.062,
         width: 170,
         height: 10,
         fill: "#d2d3d4",
@@ -48885,8 +48885,8 @@ const UploadProgress = () => {
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
-        x: 300.062,
-        y: 25.062,
+        x: 53.062,
+        y: 22.062,
         width: nt,
         height: 10,
         fill: "#000005",
@@ -48894,8 +48894,8 @@ const UploadProgress = () => {
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
-        x: 290.062,
-        y: 40.062,
+        x: 53.062,
+        y: 37.062,
         width: 160,
         height: 10,
         fill: "#d2d3d4",
@@ -63512,9 +63512,9 @@ const GreyBackground = ({
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
-      x1: 440.062,
+      x1: 449.062,
       y1: 70.062,
-      x2: 440.062,
+      x2: 449.062,
       y2: 80.062,
       fill: "none",
       stroke: "#d2d3d4",
