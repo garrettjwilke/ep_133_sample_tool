@@ -33299,7 +33299,7 @@ function createSVGGhostParent() {
   const s = "http://www.w3.org/2000/svg";
   const a = document.createElementNS(s, "svg");
   a.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  a.setAttribute("viewBox", "40 65 475 340");
+  a.setAttribute("viewBox", "40 65 485 340");
   const o = document.createElementNS(s, "g");
   o.setAttribute("id", "drag_drop_multiple");
   o.setAttribute("data-name", "drag drop multiple");
@@ -46385,17 +46385,17 @@ const Tabs = reactExports.memo(({
         style: j("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank9"),
-          d: "M490.001,190.062h20.687c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-20.687v-10h0Z",
-          fill: "#000005",
-          stroke: "#8a959a",
+          d: "M490.001,190.062h28.687c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.687v-10h0Z",
+          fill: "#d2d3d4",
+          stroke: "#000000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(495.162 196.313)",
-          fill: "#d2d3d4",
-          fontSize: 3.438,
+          fill: "#000000",
+          fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#d2d3d4",
+          stroke: "#000000",
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46418,14 +46418,14 @@ const Tabs = reactExports.memo(({
         style: j("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user2"),
-          d: "M490.001,180.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
-          fill: "#9aa0a9",
+          d: "M490.001,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(493.124 186.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46441,14 +46441,14 @@ const Tabs = reactExports.memo(({
         style: j("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user1"),
-          d: "M488.812,170.063h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
-          fill: "#9aa0a9",
+          d: "M488.812,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(491.936 176.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46464,14 +46464,14 @@ const Tabs = reactExports.memo(({
         style: j("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank6"),
-          d: "M487.562,160.063h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M487.562,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(490.687 166.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46487,14 +46487,14 @@ const Tabs = reactExports.memo(({
         style: j("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank5"),
-          d: "M486.312,150.063h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M486.312,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(489.437 156.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46510,14 +46510,14 @@ const Tabs = reactExports.memo(({
         style: j("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank4"),
-          d: "M485.062,140.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M485.062,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(488.186 146.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46533,14 +46533,14 @@ const Tabs = reactExports.memo(({
         style: j("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank3"),
-          d: "M483.812,130.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M483.812,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(486.936 136.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46556,14 +46556,14 @@ const Tabs = reactExports.memo(({
         style: j("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank2"),
-          d: "M482.562,120.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M482.562,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(485.687 126.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46579,14 +46579,14 @@ const Tabs = reactExports.memo(({
         style: j("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank1"),
-          d: "M481.312,110.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M481.312,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 116.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46602,7 +46602,7 @@ const Tabs = reactExports.memo(({
         style: j("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank0"),
-          d: "M480.062,100.062h18.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+          d: "M480.062,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
           fill: "#d2d3d4",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46610,7 +46610,7 @@ const Tabs = reactExports.memo(({
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(483.187 106.312)",
           fill: "#000005",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000005",
           strokeMiterlimit: 10,
@@ -46632,14 +46632,14 @@ const Tabs = reactExports.memo(({
         "data-name": "bank9",
         style: _("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.376,190.062h19.437c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.437",
+          d: "M479.376,190.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.537 196.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46664,14 +46664,14 @@ const Tabs = reactExports.memo(({
         "data-name": "user_4",
         style: _("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.376,180.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.376,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.374 186.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46697,14 +46697,14 @@ const Tabs = reactExports.memo(({
         "data-name": "user_3",
         style: _("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.438,170.063h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.438,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.436 176.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46730,14 +46730,14 @@ const Tabs = reactExports.memo(({
         "data-name": "user_2",
         style: _("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.438,160.063h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.438,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 166.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46763,14 +46763,14 @@ const Tabs = reactExports.memo(({
         "data-name": "user_1",
         style: _("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,150.063h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 156.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46796,14 +46796,14 @@ const Tabs = reactExports.memo(({
         "data-name": "loops",
         style: _("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,140.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.436 146.313)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46829,14 +46829,14 @@ const Tabs = reactExports.memo(({
         "data-name": "bank3",
         style: _("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,130.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.436 136.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46862,14 +46862,14 @@ const Tabs = reactExports.memo(({
         "data-name": "bank4",
         style: _("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,120.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#000",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 126.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46895,14 +46895,14 @@ const Tabs = reactExports.memo(({
         "data-name": "bank3",
         style: _("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,110.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 116.312)",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000",
           strokeMiterlimit: 10,
@@ -46928,7 +46928,7 @@ const Tabs = reactExports.memo(({
         "data-name": "drums",
         style: _("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,100.062h19.375c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-19.375",
+          d: "M479.437,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: "#e5e6e6",
           stroke: "#221f1f",
           strokeMiterlimit: 10,
@@ -46936,7 +46936,7 @@ const Tabs = reactExports.memo(({
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 106.312)",
           fill: "#000005",
-          fontSize: 3.438,
+          fontSize: 6,
           letterSpacing: ".08em",
           stroke: "#000005",
           strokeMiterlimit: 10,
@@ -48124,8 +48124,8 @@ const LibraryUI = ({
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 106.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 106.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48133,11 +48133,11 @@ const LibraryUI = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "1-99"
+          children: "001-099"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 116.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 116.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48148,8 +48148,8 @@ const LibraryUI = ({
           children: "100-199"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 126.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 126.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48160,8 +48160,8 @@ const LibraryUI = ({
           children: "200-299"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 136.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 136.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48172,8 +48172,8 @@ const LibraryUI = ({
           children: "300-399"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 146.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 146.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48184,8 +48184,8 @@ const LibraryUI = ({
           children: "400-499"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 156.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 156.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48196,8 +48196,8 @@ const LibraryUI = ({
           children: "500-599"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 166.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 166.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48208,8 +48208,8 @@ const LibraryUI = ({
           children: "600-699"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(514.95 176.35)",
-        fontSize: 3.438,
+        transform: "translate(525.062 176.35)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48220,8 +48220,8 @@ const LibraryUI = ({
           children: "700-799"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 196.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 196.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48232,8 +48232,8 @@ const LibraryUI = ({
           children: "900-999"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(515.062 186.312)",
-        fontSize: 3.438,
+        transform: "translate(525.062 186.312)",
+        fontSize: 5,
         letterSpacing: ".08em",
         stroke: "#000",
         strokeMiterlimit: 10,
@@ -48269,22 +48269,7 @@ const LibraryUI = ({
           x: 0,
           y: 0,
           letterSpacing: ".08em",
-          children: "sam"
-        }), jsxRuntimeExports$1.jsx("tspan", {
-          x: 14.212,
-          y: 0,
-          letterSpacing: ".05em",
-          children: "p"
-        }), jsxRuntimeExports$1.jsx("tspan", {
-          x: 18.531,
-          y: 0,
-          letterSpacing: ".065em",
-          children: "l"
-        }), jsxRuntimeExports$1.jsx("tspan", {
-          x: 22.443,
-          y: 0,
-          letterSpacing: ".08em",
-          children: "e library"
+          children: "EP-133 Current Library"
         })]
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(422.66 76.312)",
@@ -48710,15 +48695,9 @@ const DeleteModal = ({
           height: 420,
           fill: "url(#_10_lpi_40_2)",
           strokeWidth: 0
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "480.062 52.562 477.562 50.062 477.562 20.062 480.062 22.562 480.062 52.562",
-          fill: "#000005",
-          stroke: "#8a959a",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 290.062,
-          y: 20.062,
+          y: 200.062,
           width: 187.5,
           height: 30,
           fill: "#ef4e27",
@@ -48726,7 +48705,7 @@ const DeleteModal = ({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(325.063 30.063)",
+          transform: "translate(325.063 210.063)",
           fill: "#e5e6e6",
           fontSize: 6.25,
           letterSpacing: ".08em",
@@ -48738,15 +48717,9 @@ const DeleteModal = ({
             y: 0,
             children: `DELETING ${a.length} FILES.`
           })
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "292.562 52.562 290.062 50.062 477.562 50.062 480.062 52.562 292.562 52.562",
-          fill: "#000005",
-          stroke: "#8a959a",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 290.062,
-          y: 20.062,
+          y: 200.062,
           width: 30,
           height: 30,
           fill: "#dbdddb",
@@ -48759,18 +48732,18 @@ const DeleteModal = ({
           children: jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("line", {
               x1: 305.062,
-              y1: 27.563,
+              y1: 207.563,
               x2: 305.062,
-              y2: 38.813,
+              y2: 218.813,
               fill: "none",
               stroke: "#000",
               strokeLinecap: "square",
               strokeWidth: 2
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 305.062,
-              y1: 42.562,
+              y1: 222.562,
               x2: 305.062,
-              y2: 41.813,
+              y2: 221.813,
               fill: "none",
               stroke: "#000",
               strokeLinecap: "square",
@@ -48782,7 +48755,7 @@ const DeleteModal = ({
           "data-name": "label-out",
           children: [jsxRuntimeExports$1.jsx("rect", {
             x: 452.563,
-            y: 35.063,
+            y: 215.063,
             width: 20,
             height: 10,
             fill: "#000005",
@@ -48790,7 +48763,7 @@ const DeleteModal = ({
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(458.139 42.562)",
+            transform: "translate(458.139 222.562)",
             fill: "#e5e6e6",
             fontSize: 6.875,
             letterSpacing: ".005em",
@@ -48808,7 +48781,7 @@ const DeleteModal = ({
           "data-name": "label-in",
           children: [jsxRuntimeExports$1.jsx("rect", {
             x: 427.562,
-            y: 35.063,
+            y: 215.063,
             width: 20,
             height: 10,
             fill: "#ef4e27",
@@ -48816,7 +48789,7 @@ const DeleteModal = ({
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(432.939 42.562)",
+            transform: "translate(432.939 222.562)",
             fill: "#e5e6e6",
             fontSize: 6.875,
             letterSpacing: ".095em",
@@ -48833,7 +48806,7 @@ const DeleteModal = ({
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "reject",
         x: 427.562,
-        y: 35.063,
+        y: 215.063,
         width: 20,
         height: 10,
         onClick: () => {
@@ -48842,7 +48815,7 @@ const DeleteModal = ({
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "confirm",
         x: 452.563,
-        y: 35.063,
+        y: 215.063,
         width: 20,
         height: 10,
         onClick: async () => {
@@ -48893,19 +48866,7 @@ const UploadProgress = () => {
   } else {
     return jsxRuntimeExports$1.jsxs("g", {
       id: "progress-indicator",
-      children: [jsxRuntimeExports$1.jsx("polygon", {
-        points: "480.062 52.562 477.562 50.062 477.562 20.062 480.062 22.562 480.062 52.562",
-        fill: "#abb5ba",
-        stroke: "#000005",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("polygon", {
-        points: "292.562 52.563 290.063 50.063 477.563 50.062 480.062 52.563 292.562 52.563",
-        fill: "#abb5ba",
-        stroke: "#000005",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
+      children: [jsxRuntimeExports$1.jsx("rect", {
         x: 290.062,
         y: 20.062,
         width: 187.5,
@@ -57184,7 +57145,7 @@ const GreyBackground = ({
   children: s
 }) => jsxRuntimeExports$1.jsxs("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "40 65 475 340",
+  viewBox: "40 65 485 340",
   className: styles$1.background,
   children: [jsxRuntimeExports$1.jsxs("g", {
     id: "extras",
@@ -57265,7 +57226,7 @@ const GreyBackground = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "bank9"
+          children: "SAMPLE"
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(124.238 40.062)",
@@ -63909,7 +63870,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "user_4",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m490.001,180.062h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m490.001,180.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -63931,7 +63892,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "user_3",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m488.813,170.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m488.813,170.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -63953,7 +63914,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "user_2",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m487.563,160.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m487.563,160.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -63975,7 +63936,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "user_1",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m486.312,150.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m486.312,150.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -63997,7 +63958,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "loops",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m485.062,140.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m485.062,140.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -64019,7 +63980,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "keys",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m483.812,130.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m483.812,130.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -64041,7 +64002,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "bank4",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m482.562,120.063h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m482.562,120.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -64063,7 +64024,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "bank3",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m481.312,110.062h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m481.312,110.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -64085,7 +64046,7 @@ const GreyBackground = ({
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "drums",
       children: [jsxRuntimeExports$1.jsx("path", {
-        d: "m480.062,100.062h18.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-18.75v-10h0Z",
+        d: "m480.062,100.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
         fill: "#abb5ba",
         stroke: "#d2d3d4",
         strokeMiterlimit: 10,
@@ -64983,7 +64944,7 @@ const Help = () => {
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "MOVE UP & DOWN WITH KEYBOARD ARROWS"
+            children: "move up/down with arrow keys"
           })
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "318.812 143.714 303.812 153.714 305.062 154.964 320.062 144.964 318.812 143.714",
@@ -65148,7 +65109,7 @@ const Background = ({
   } = useUIState();
   return jsxRuntimeExports$1.jsxs("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "40 65 475 340",
+    viewBox: "40 65 485 340",
     className: styles$1.background,
     children: [jsxRuntimeExports$1.jsx("defs", {
       children: jsxRuntimeExports$1.jsx("pattern", {
@@ -65504,7 +65465,7 @@ const Background = ({
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "bank9"
+            children: "SAMPLE"
           })
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(124.238 40.062)",
@@ -67838,7 +67799,7 @@ const Background = ({
       }), jsxRuntimeExports$1.jsxs("g", {
         id: "label-sample-edit",
         children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 58.812,
+          x: 60.812,
           y: 130.062,
           width: 45,
           height: 10,
