@@ -1,39 +1,111 @@
 var VersionNumber = "v 1.1.0 - offline";
-var OriginalOrange = "#eb3622";
+var CustomColors = true;
+var OriginalOrange = "#EF4E34";
 var ColorSound = "#FF00E0";
 var ColorSpeaker = "#b3a1b7";
 var ColorButtons = "#ef4e27";
+var ColorButtons2 = "#000000";
 var ColorMain = "#d95d5d";
 var ColorSecondary = "#a282a8";
 var ColorTertiary = "#96abde";
+var ColorSlate = "#dbdddb";
+var ColorCharcoal = "#232424";
+var ColorLightCharcoal = "#b0babe";
+var ColorLightGray = "#dcdcdc";
+var ColorBlack = "#000000"
 var Color0 = "#8c959f";
+var ColorMarker0 = Color0;
 var Color1 = "#218bff";
+var ColorMarker1 = Color1;
 var Color2 = "#2da44e";
+var ColorMarker2 = Color2;
 var Color3 = "#faff4a";
+var ColorMarker3 = Color3;
 var Color4 = "#47f3e3";
+var ColorMarker4 = Color4;
 var Color5 = "#fa4549";
+var ColorMarker5 = Color5;
 var Color6 = "#a475f9";
+var ColorMarker6 = Color6;
 var Color7 = "#ff00dc";
+var ColorMarker7 = Color7;
 var Color8 = "#ffaa00";
+var ColorMarker8 = Color8;
 var Color9 = "#000000";
+var ColorMarker9 = Color9;
 var GridColor = "#c7be8b";
 var FontColorLight = "#e5e6e6";
 var FontColorDark = "#000000";
 var FontColorLogo1 = "#FF0000";
 var FontColorLogo2 = "#32e013";
 
-var Bank0 = "Kick";
-var Bank1 = "Snare";
-var Bank2 = "Cymb";
-var Bank3 = "Perc";
-var Bank4 = "Bass";
-var Bank5 = "Melod";
-var Bank6 = "Loop";
-var Bank7 = "User 1";
-var Bank8 = "User 2";
-var Bank9 = "SFX";
+var Bank0 = "Bank0";
+var Bank1 = "Bank1";
+var Bank2 = "Bank2";
+var Bank3 = "Bank3";
+var Bank4 = "Bank4";
+var Bank5 = "Bank5";
+var Bank6 = "Bank6";
+var Bank7 = "Bank7";
+var Bank8 = "Bank8";
+var Bank9 = "Bank9";
+var StartIn = "ST";
+var EndOut = "END";
+var LibraryTitle = "EP-133 Library";
+var FakeSerial = "EP-133"
+var HideSerial = true;
 
-var LibraryTitle = "EP-133 Library"
+var CustomNames = true;
+if (CustomNames == false) {
+  Bank0 = "KICK";
+  Bank1 = "SNARE";
+  Bank2 = "CYMB";
+  Bank3 = "PERC";
+  Bank4 = "BASS";
+  Bank5 = "MELOD";
+  Bank6 = "LOOP";
+  Bank7 = "USER 1";
+  Bank8 = "USER 2";
+  Bank9 = "SFX";
+  StartIn = "IN";
+  EndOut = "OUT";
+  LibraryTitle = "SAMPLE LIBRARY";
+  FakeSerial = null
+};
+
+if (CustomColors == false) {
+  ColorMain = OriginalOrange;
+  ColorSound = "#00a69c";
+  ColorSpeaker = ColorLightCharcoal;
+  ColorButtons = "#ef4e27";
+  ColorSecondary = ColorSpeaker;
+  ColorTertiary = "#dbdddb";
+  Color0 = ColorLightGray;
+  Color1 = ColorLightGray;
+  Color2 = ColorLightGray;
+  Color3 = ColorLightGray;
+  Color4 = ColorLightGray;
+  Color5 = ColorLightGray;
+  Color6 = ColorLightGray;
+  Color7 = ColorLightCharcoal;
+  Color8 = ColorLightCharcoal;
+  Color9 = "#000000";
+  ColorMarker0 = OriginalOrange;
+  ColorMarker1 = OriginalOrange;
+  ColorMarker2 = OriginalOrange;
+  ColorMarker3 = OriginalOrange;
+  ColorMarker4 = OriginalOrange;
+  ColorMarker5 = OriginalOrange;
+  ColorMarker6 = OriginalOrange;
+  ColorMarker7 = OriginalOrange;
+  ColorMarker8 = OriginalOrange;
+  ColorMarker9 = OriginalOrange;
+  GridColor = "#4f4059";
+  FontColorLight = "#e5e6e6";
+  FontColorDark = "#000000";
+  FontColorLogo1 = "#000000";
+  FontColorLogo2 = ColorButtons;
+};
 
 var Ir = Object.defineProperty;
 var Tr = (s, a, o) => a in s ? Ir(s, a, {
@@ -3109,7 +3181,7 @@ var Nd = {
   32: " ",
   33: "PageUp",
   34: "PageDown",
-  35: "End",
+  35: "end",
   36: "Home",
   37: "ArrowLeft",
   38: "ArrowUp",
@@ -28345,6 +28417,7 @@ function addXhrInstrumentationHandler(s) {
   maybeInstrument(a, instrumentXHR);
 }
 function instrumentXHR() {
+  return;
   if (!WINDOW$1.XMLHttpRequest) {
     return;
   }
@@ -28404,6 +28477,7 @@ function instrumentXHR() {
     };
   });
   fill(s, "send", function (a) {
+    return;
     return function (...o) {
       const _ = this[SENTRY_XHR_DATA_KEY];
       if (!_) {
@@ -28969,6 +29043,7 @@ function createClientReportEnvelope(s, a, o) {
 }
 const DEFAULT_RETRY_AFTER = 60000;
 function parseRetryAfterHeader(s, a = Date.now()) {
+  return;
   const o = parseInt(`${s}`, 10);
   if (!isNaN(o)) {
     return o * 1000;
@@ -29057,11 +29132,13 @@ function makeSession(s) {
     toJSON: () => sessionToJSON(o)
   };
   if (s) {
+    return;
     updateSession(o, s);
   }
   return o;
 }
 function updateSession(s, a = {}) {
+  return;
   if (a.user) {
     if (!s.ipAddress && a.user.ip_address) {
       s.ipAddress = a.user.ip_address;
@@ -29130,6 +29207,7 @@ function closeSession(s, a) {
   updateSession(s, o);
 }
 function sessionToJSON(s) {
+  return;
   return dropUndefinedKeys({
     sid: `${s.sid}`,
     init: s.init,
@@ -29718,7 +29796,7 @@ function applyFingerprintToEvent(s, a) {
     delete s.fingerprint;
   }
 }
-const DEFAULT_MAX_BREADCRUMBS = 100;
+const DEFAULT_MAX_BREADCRUMBS = 1;
 let globalScope;
 class Scope {
   constructor() {
@@ -29785,6 +29863,7 @@ class Scope {
     return this;
   }
   setUser(a) {
+    return;
     this._user = a || {
       email: undefined,
       id: undefined,
@@ -29891,6 +29970,7 @@ class Scope {
     return this._session;
   }
   update(a) {
+    return;
     if (!a) {
       return this;
     }
@@ -29975,6 +30055,7 @@ class Scope {
   }
   addBreadcrumb(a, o) {
     const _ = typeof o == "number" ? o : DEFAULT_MAX_BREADCRUMBS;
+    return;
     if (_ <= 0) {
       return this;
     }
@@ -29997,6 +30078,7 @@ class Scope {
     return this;
   }
   addAttachment(a) {
+    return;
     this._attachments.push(a);
     return this;
   }
@@ -30504,6 +30586,7 @@ function createEventEnvelope(s, a, o, _) {
 }
 const SENTRY_API_VERSION = "7";
 function getBaseApiEndpoint(s) {
+  return;
   const a = s.protocol ? `${s.protocol}:` : "";
   const o = s.port ? `:${s.port}` : "";
   return `${a}//${s.host}${o}${s.path ? `/${s.path}` : ""}/api/`;
@@ -30512,6 +30595,7 @@ function _getIngestEndpoint(s) {
   return `${getBaseApiEndpoint(s)}${s.projectId}/envelope/`;
 }
 function _encodedAuth(s, a) {
+  return
   return urlEncode({
     sentry_key: s.publicKey,
     sentry_version: SENTRY_API_VERSION,
@@ -30526,6 +30610,7 @@ function getEnvelopeEndpointWithUrlEncodedAuth(s, a = {}) {
   return o || `${_getIngestEndpoint(s)}?${_encodedAuth(s, _)}`;
 }
 function getReportDialogEndpoint(s, a) {
+  return "";
   const o = makeDsn(s);
   if (!o) {
     return "";
@@ -30688,6 +30773,7 @@ function createMetricEnvelopeItem(s) {
 const ALREADY_SEEN_ERROR = "Not capturing exception because it's already been captured.";
 class BaseClient {
   constructor(a) {
+    return;
     this._options = a;
     this._integrations = {};
     this._integrationsInitialized = false;
@@ -30844,6 +30930,7 @@ class BaseClient {
     this._sendEnvelope(o);
   }
   recordDroppedEvent(a, o, _) {
+    return;
     if (this._options.sendClientReports) {
       const j = `${a}:${o}`;
       if (DEBUG_BUILD$2) {
@@ -31326,6 +31413,7 @@ function _getPossibleEventMessages(s) {
   return a;
 }
 function _isSentryError(s) {
+  return;
   try {
     return s.exception.values[0].type === "SentryError";
   } catch {}
@@ -31667,11 +31755,13 @@ function createUserFeedbackEnvelope(s, {
   return createEnvelope(j, [$]);
 }
 function createUserFeedbackEnvelopeItem(s) {
+  return "";
   return [{
     type: "user_report"
   }, s];
 }
 class BrowserClient extends BaseClient {
+  return;
   constructor(a) {
     const o = WINDOW.SENTRY_SDK_SOURCE || getSDKSource();
     applySdkMetadata(a, "browser", ["browser"], o);
@@ -31726,7 +31816,7 @@ class BrowserClient extends BaseClient {
       logger.log("Sending outcomes:", a);
     }
     const o = createClientReportEnvelope(a, this._options.tunnel && dsnToString(this._dsn));
-    this._sendEnvelope(o);
+    //this._sendEnvelope(o);
   }
 }
 let cachedFetchImpl;
@@ -31798,6 +31888,7 @@ function makeFetchTransport(s, a = getNativeFetchImplementation()) {
 }
 const XHR_READYSTATE_DONE = 4;
 function makeXHRTransport(s) {
+  return;
   function a(o) {
     return new SyncPromise((_, j) => {
       const $ = new XMLHttpRequest();
@@ -32583,6 +32674,8 @@ function init$1(s = {}) {
     s.defaultIntegrations = getDefaultIntegrations();
   }
   if (s.release === undefined) {
+    s.release = undefined;
+    return;
     if (typeof __SENTRY_RELEASE__ == "string") {
       s.release = __SENTRY_RELEASE__;
     }
@@ -32591,10 +32684,10 @@ function init$1(s = {}) {
     }
   }
   if (s.autoSessionTracking === undefined) {
-    s.autoSessionTracking = true;
+    s.autoSessionTracking = false;
   }
   if (s.sendClientReports === undefined) {
-    s.sendClientReports = true;
+    s.sendClientReports = false;
   }
   const a = {
     ...s,
@@ -32618,14 +32711,12 @@ const showReportDialog = (s = {}, a = getCurrentHub()) => {
     client: o,
     scope: _
   } = a.getStackTop();
-  const j = s.dsn || o && o.getDsn();
+  const j = null
   if (!j) {
-    if (DEBUG_BUILD$1) {
-      logger.error("DSN not configured for showReportDialog call");
-    }
     return;
   }
   if (_) {
+    return;
     s.user = {
       ..._.getUser(),
       ...s.user
@@ -32633,7 +32724,7 @@ const showReportDialog = (s = {}, a = getCurrentHub()) => {
   }
   s.eventId ||= a.lastEventId();
   const $ = WINDOW.document.createElement("script");
-  $.async = true;
+  $.async = false;
   $.crossOrigin = "anonymous";
   $.src = getReportDialogEndpoint(j, s);
   if (s.onLoad) {
@@ -32645,6 +32736,7 @@ const showReportDialog = (s = {}, a = getCurrentHub()) => {
   if (_e) {
     const et = rt => {
       if (rt.data === "__sentry_reportdialog_closed__") {
+        return;
         try {
           _e();
         } finally {
@@ -32652,10 +32744,12 @@ const showReportDialog = (s = {}, a = getCurrentHub()) => {
         }
       }
     };
+    return;
     WINDOW.addEventListener("message", et);
   }
   const tt = WINDOW.document.head || WINDOW.document.body;
   if (tt) {
+    return;
     tt.appendChild($);
   } else if (DEBUG_BUILD$1) {
     logger.error("Not injecting report dialog. No injection point found in HTML");
@@ -32686,6 +32780,7 @@ function startSessionTracking() {
   });
 }
 function init(s) {
+  return;
   const a = {
     ...s
   };
@@ -32724,6 +32819,7 @@ var w = b ? Symbol.for("react.fundamental") : 60117;
 var x = b ? Symbol.for("react.responder") : 60118;
 var y = b ? Symbol.for("react.scope") : 60119;
 function z(s) {
+  return;
   if (typeof s == "object" && s !== null) {
     var a = s.$$typeof;
     switch (a) {
@@ -32913,6 +33009,7 @@ class ErrorBoundary extends reactExports.Component {
       if ($) {
         this._lastEventId = et;
         if (this._openFallbackReportDialog) {
+          return;
           showReportDialog({
             ..._e,
             eventId: et
@@ -33253,7 +33350,7 @@ const createTotalElement = (s, a, o) => {
   $.setAttribute("width", "10");
   $.setAttribute("height", "5");
   $.setAttribute("fill", ColorMain);
-  $.setAttribute("stroke", "#221f1f");
+  $.setAttribute("stroke", ColorCharcoal);
   $.setAttribute("stroke-miterlimit", "10");
   $.setAttribute("stroke-width", ".125");
   $.setAttribute("opacity", "1");
@@ -33289,7 +33386,7 @@ function createSVGElement({
   st.setAttribute("transform", `translate(${$ + 1.176} ${_e + 3.75})`);
   st.setAttribute("font-size", "3.438");
   st.setAttribute("letter-spacing", ".08em");
-  st.setAttribute("stroke", "#000");
+  st.setAttribute("stroke", ColorBlack);
   st.setAttribute("stroke-miterlimit", "10");
   st.setAttribute("stroke-width", ".062");
   const at = document.createTextNode(o);
@@ -33300,7 +33397,7 @@ function createSVGElement({
   nt.setAttribute("width", rt.toString());
   nt.setAttribute("height", "5");
   nt.setAttribute("fill", FontColorLight);
-  nt.setAttribute("stroke", "#221f1f");
+  nt.setAttribute("stroke", ColorCharcoal);
   nt.setAttribute("stroke-miterlimit", "10");
   nt.setAttribute("stroke-width", ".125");
   et.appendChild(nt);
@@ -33312,8 +33409,8 @@ function createSVGElement({
   ut.setAttribute("y", a);
   ut.setAttribute("width", "10");
   ut.setAttribute("height", "5");
-  ut.setAttribute("fill", "#9aa0a9");
-  ut.setAttribute("stroke", "#000");
+  ut.setAttribute("fill", ColorLightCharcoal);
+  ut.setAttribute("stroke", ColorBlack);
   ut.setAttribute("stroke-miterlimit", "10");
   ut.setAttribute("stroke-width", ".125");
   const Et = document.createElementNS(j, "text");
@@ -33336,7 +33433,7 @@ function createSVGGhostParent() {
   const s = "http://www.w3.org/2000/svg";
   const a = document.createElementNS(s, "svg");
   a.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  a.setAttribute("viewBox", "40 65 485 340");
+  a.setAttribute("viewBox", "35 65 490 340");
   const o = document.createElementNS(s, "g");
   o.setAttribute("id", "drag_drop_multiple");
   o.setAttribute("data-name", "drag drop multiple");
@@ -39029,6 +39126,7 @@ class AESDecryptionStream extends TransformStream {
         if (rt) {
           await createDecryptionKeys(et, st, rt, subarray(_e, 0, SALT_LENGTH[st] + 2));
           _e = subarray(_e, SALT_LENGTH[st] + 2);
+          console.log(rt);
           if ($) {
             tt.error(new Error(ERR_ABORT_CHECK_PASSWORD));
           } else {
@@ -39265,6 +39363,7 @@ class ZipCryptoDecryptionStream extends TransformStream {
       transform(j, $) {
         const _e = this;
         if (_e.password) {
+          console.log(_e.password)
           const tt = decrypt(_e, j.subarray(0, HEADER_LENGTH));
           _e.password = null;
           if (tt[HEADER_LENGTH - 1] != _e.passwordVerification) {
@@ -42500,8 +42599,9 @@ const BackupProvider = ({
       j(true);
       const gt = new ZipWriter(new BlobWriter("application/zip"));
       const St = $.filter(jt => jt.file);
-      const bt = new Date().toISOString().split("T")[0];
-      const Nt = `EP-133_${s.device.serial}_${bt}_backup`;
+      const bt = new Date().toISOString().split("T", 1)[0];
+      const Nt = `EP-133_${bt}`;
+      //const Nt = `EP-133_backup_`;
       const xt = true;
       const It = [];
       if (xt) {
@@ -42583,8 +42683,8 @@ const BackupProvider = ({
         failedProjects: kt,
         totalProjects: Ft
       };
-      reportFailedItemsToSentry(It, "sounds");
-      reportFailedItemsToSentry(kt, "projects");
+      //reportFailedItemsToSentry(It, "sounds");
+      //reportFailedItemsToSentry(kt, "projects");
       const vt = {
         info: "teenage engineering - pak file",
         pak_version: 1,
@@ -43150,8 +43250,8 @@ const Buttons = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -43160,10 +43260,10 @@ const Buttons = ({
           cursor: "pointer"
         },
         transform: "translate(122.04 217)",
-        fill: "#d9dbda",
+        fill: ColorLightGray,
         fontSize: 5.5,
         letterSpacing: ".08em",
-        stroke: "#d9dbda",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -43191,7 +43291,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -43203,13 +43303,13 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#b0babe"
+        fill: ColorLightCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off",
         cx: 95.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43220,7 +43320,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 325.468,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43251,7 +43351,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -43263,14 +43363,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#b0babe"
+        fill: ColorLightCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-2",
         "data-name": "led-off",
         cx: 95.039,
         cy: 295.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43281,7 +43381,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 295.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43312,7 +43412,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -43324,14 +43424,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#b0babe"
+        fill: ColorLightCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-3",
         "data-name": "led-off",
         cx: 95.039,
         cy: 265.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43342,7 +43442,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 265.464,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43373,7 +43473,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -43385,8 +43485,8 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -43395,7 +43495,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 235.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43406,7 +43506,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 235.463,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43428,7 +43528,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -43438,7 +43538,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "141.313 260.062 141.313 261.312 140.063 261.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43447,14 +43547,14 @@ const Buttons = ({
             x2: 120.688,
             y2: 261.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "120.063 261.312 118.813 261.312 118.813 260.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43463,14 +43563,14 @@ const Buttons = ({
             x2: 118.813,
             y2: 240.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "118.813 240.062 118.813 238.812 120.063 238.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43479,14 +43579,14 @@ const Buttons = ({
             x2: 139.438,
             y2: 238.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "140.063 238.812 141.313 238.812 141.313 240.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43495,7 +43595,7 @@ const Buttons = ({
             x2: 141.313,
             y2: 259.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -43509,14 +43609,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-5",
         "data-name": "led-off",
         cx: 125.041,
         cy: 235.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43526,7 +43626,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 235.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43542,15 +43642,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-7",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M124.068,247.563h-.398v-.364l2.663-3.614h-3.061v-.398h3.58v.363l-2.784,3.779v.233Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -43565,7 +43665,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -43575,7 +43675,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "171.312 260.062 171.312 261.312 170.062 261.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43584,14 +43684,14 @@ const Buttons = ({
             x2: 150.688,
             y2: 261.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "150.062 261.312 148.812 261.312 148.812 260.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43600,14 +43700,14 @@ const Buttons = ({
             x2: 148.812,
             y2: 240.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "148.812 240.062 148.812 238.812 150.062 238.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43616,14 +43716,14 @@ const Buttons = ({
             x2: 169.438,
             y2: 238.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "170.062 238.812 171.312 238.812 171.312 240.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43632,7 +43732,7 @@ const Buttons = ({
             x2: 171.312,
             y2: 259.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -43647,14 +43747,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-6",
         "data-name": "led-off",
         cx: 155.043,
         cy: 235.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43664,7 +43764,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 235.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43680,15 +43780,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-8",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M156.853,246.37c0,.658-.535,1.193-1.193,1.193h-1.194c-.658,0-1.193-.535-1.193-1.193,0-.415,.214-.781,.536-.994-.322-.214-.536-.58-.536-.995,0-.658,.535-1.193,1.193-1.193h1.194c.658,0,1.193,.535,1.193,1.193,0,.415-.214,.781-.536,.995,.322,.214,.536,.579,.536,.994Zm-.398,0c0-.439-.357-.795-.796-.795h-1.193c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795h1.193c.439,0,.796-.357,.796-.795Zm-1.989-1.194h1.194c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -43703,7 +43803,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -43713,7 +43813,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "201.312 260.062 201.312 261.312 200.062 261.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43722,14 +43822,14 @@ const Buttons = ({
             x2: 180.688,
             y2: 261.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "180.062 261.312 178.812 261.312 178.812 260.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43738,14 +43838,14 @@ const Buttons = ({
             x2: 178.812,
             y2: 240.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "178.812 240.062 178.812 238.812 180.062 238.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43754,14 +43854,14 @@ const Buttons = ({
             x2: 199.438,
             y2: 238.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "200.062 238.812 201.312 238.812 201.312 240.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43770,7 +43870,7 @@ const Buttons = ({
             x2: 201.312,
             y2: 259.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -43785,14 +43885,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-7",
         "data-name": "led-off",
         cx: 185.045,
         cy: 235.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43802,7 +43902,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 235.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43818,14 +43918,14 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("path", {
           id: "legend-9",
           d: "M186.56,245.165l-.041,.039c-.016,.016-.032,.031-.048,.046l-2.204,2.114v.199h-.398v-.384l1.685-1.605h-1.088c-.658,0-1.193-.535-1.193-1.194s.535-1.193,1.193-1.193h1.194c.658,0,1.193,.535,1.193,1.193,0,.299-.115,.57-.297,.779l.005,.005Zm-.376-.191l.055-.053c.133-.142,.215-.331,.215-.54,0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795h1.193c.202,0,.385-.078,.525-.202Z",
-          fill: "#f1f2f2"
+          fill: ColorLightGray
         })]
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -43839,7 +43939,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -43849,7 +43949,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "201.312 290.062 201.312 291.312 200.062 291.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43858,14 +43958,14 @@ const Buttons = ({
             x2: 180.688,
             y2: 291.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "180.062 291.312 178.812 291.312 178.812 290.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43874,14 +43974,14 @@ const Buttons = ({
             x2: 178.812,
             y2: 270.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "178.812 270.062 178.812 268.812 180.062 268.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43890,14 +43990,14 @@ const Buttons = ({
             x2: 199.438,
             y2: 268.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "200.062 268.812 201.312 268.812 201.312 270.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43906,7 +44006,7 @@ const Buttons = ({
             x2: 201.312,
             y2: 289.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -43921,14 +44021,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-8",
         "data-name": "led-off",
         cx: 185.045,
         cy: 265.468,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -43938,7 +44038,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 265.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43954,15 +44054,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-6",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M186.33,274.579v-.199c0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795v1.106c.211-.191,.488-.31,.795-.31h1.193c.658,0,1.193,.535,1.193,1.194s-.535,1.193-1.193,1.193h-1.193c-.59,0-1.078-.431-1.173-.994h-.02v-2.188c0-.658,.535-1.193,1.193-1.193h1.193c.658,0,1.193,.535,1.193,1.193v.199h-.398Zm-2.784,1.79c0,.438,.357,.795,.795,.795h1.193c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.193c-.438,0-.795,.357-.795,.795Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -43977,7 +44077,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -43987,7 +44087,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "171.312 290.062 171.312 291.312 170.062 291.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -43996,14 +44096,14 @@ const Buttons = ({
             x2: 150.688,
             y2: 291.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "150.062 291.312 148.812 291.312 148.812 290.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44012,14 +44112,14 @@ const Buttons = ({
             x2: 148.812,
             y2: 270.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "148.812 270.062 148.812 268.812 150.062 268.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44028,14 +44128,14 @@ const Buttons = ({
             x2: 169.438,
             y2: 268.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "170.062 268.812 171.312 268.812 171.312 270.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44044,7 +44144,7 @@ const Buttons = ({
             x2: 171.312,
             y2: 289.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44059,14 +44159,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-9",
         "data-name": "led-off",
         cx: 155.043,
         cy: 265.468,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44076,7 +44176,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 265.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44092,15 +44192,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-5",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M156.728,276.37c0,.658-.535,1.193-1.193,1.193h-2.387v-.398h2.387c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795,.357-.795,.795v.199h-.398v-3.381h3.381v.398h-2.983v1.901c.212-.191,.489-.31,.795-.31h1.194c.658,0,1.193,.535,1.193,1.194Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44115,7 +44215,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44125,7 +44225,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "141.312 290.062 141.312 291.312 140.062 291.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44134,14 +44234,14 @@ const Buttons = ({
             x2: 120.688,
             y2: 291.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "120.062 291.312 118.812 291.312 118.812 290.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44150,14 +44250,14 @@ const Buttons = ({
             x2: 118.812,
             y2: 270.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "118.812 270.062 118.812 268.812 120.062 268.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44166,14 +44266,14 @@ const Buttons = ({
             x2: 139.438,
             y2: 268.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "140.062 268.812 141.312 268.812 141.312 270.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44182,7 +44282,7 @@ const Buttons = ({
             x2: 141.312,
             y2: 289.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44197,14 +44297,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-10",
         "data-name": "led-off",
         cx: 125.041,
         cy: 265.468,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44214,7 +44314,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 265.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44230,15 +44330,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-4",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M126.28,277.563h-.398v-1.292h-2.784v-.483l2.705-2.601h.478v2.685h.497v.398h-.497v1.293Zm-2.697-1.691h2.298v-2.21l-2.298,2.21Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44253,7 +44353,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44263,7 +44363,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "201.312 320.062 201.312 321.312 200.062 321.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44272,14 +44372,14 @@ const Buttons = ({
             x2: 180.688,
             y2: 321.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "180.062 321.312 178.812 321.312 178.812 320.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44288,14 +44388,14 @@ const Buttons = ({
             x2: 178.812,
             y2: 300.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "178.812 300.062 178.812 298.812 180.062 298.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44304,14 +44404,14 @@ const Buttons = ({
             x2: 199.438,
             y2: 298.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "200.062 298.812 201.312 298.812 201.312 300.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44320,7 +44420,7 @@ const Buttons = ({
             x2: 201.312,
             y2: 319.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44335,14 +44435,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-11",
         "data-name": "led-off",
         cx: 185.045,
         cy: 295.47,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44352,7 +44452,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 295.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44368,15 +44468,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-3",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M186.728,306.369c0,.658-.535,1.193-1.193,1.193h-1.193c-.658,0-1.193-.535-1.193-1.193v-.199h.398v.199c0,.438,.357,.795,.795,.795h1.193c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.392v-.398h1.392c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795v.199h-.398v-.199c0-.658,.535-1.193,1.193-1.193h1.193c.658,0,1.193,.535,1.194,1.193,0,.415-.214,.781-.536,.995,.323,.214,.536,.579,.536,.994Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44391,7 +44491,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44401,7 +44501,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "171.312 320.062 171.312 321.312 170.062 321.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44410,14 +44510,14 @@ const Buttons = ({
             x2: 150.688,
             y2: 321.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "150.062 321.312 148.812 321.312 148.812 320.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44426,14 +44526,14 @@ const Buttons = ({
             x2: 148.812,
             y2: 300.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "148.812 300.062 148.812 298.812 150.062 298.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44442,14 +44542,14 @@ const Buttons = ({
             x2: 169.438,
             y2: 298.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "170.062 298.812 171.312 298.812 171.312 300.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44458,7 +44558,7 @@ const Buttons = ({
             x2: 171.312,
             y2: 319.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44473,14 +44573,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-12",
         "data-name": "led-off",
         cx: 155.043,
         cy: 295.47,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44490,7 +44590,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 295.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44506,15 +44606,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-2",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M156.744,307.563h-3.58v-.508l2.425-1.517c.596-.345,.757-.55,.757-.959,0-.548-.455-.994-1.013-.994h-.777c-.573,0-1.023,.437-1.023,.994v.199h-.398v-.199c0-.781,.624-1.392,1.421-1.392h.777c.778,0,1.411,.625,1.411,1.392,0,.63-.334,.943-.95,1.299l-2.055,1.286h3.006v.398Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44529,7 +44629,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44539,7 +44639,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "141.312 320.062 141.312 321.312 140.062 321.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44548,14 +44648,14 @@ const Buttons = ({
             x2: 120.688,
             y2: 321.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "120.062 321.312 118.812 321.312 118.812 320.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44564,14 +44664,14 @@ const Buttons = ({
             x2: 118.812,
             y2: 300.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "118.812 300.062 118.812 298.812 120.062 298.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44580,14 +44680,14 @@ const Buttons = ({
             x2: 139.438,
             y2: 298.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "140.062 298.812 141.312 298.812 141.312 300.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44596,7 +44696,7 @@ const Buttons = ({
             x2: 141.312,
             y2: 319.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44611,14 +44711,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-13",
         "data-name": "led-off",
         cx: 125.041,
         cy: 295.47,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44628,7 +44728,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 295.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44644,15 +44744,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-1",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M124.739,307.563v-4.376h.398v4.376h-.398Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44667,7 +44767,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44677,7 +44777,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "171.312 350.062 171.312 351.312 170.062 351.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44686,14 +44786,14 @@ const Buttons = ({
             x2: 150.688,
             y2: 351.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "150.062 351.312 148.812 351.312 148.812 350.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44702,14 +44802,14 @@ const Buttons = ({
             x2: 148.812,
             y2: 330.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "148.812 330.062 148.812 328.812 150.062 328.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44718,14 +44818,14 @@ const Buttons = ({
             x2: 169.438,
             y2: 328.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "170.062 328.812 171.312 328.812 171.312 330.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44734,7 +44834,7 @@ const Buttons = ({
             x2: 171.312,
             y2: 349.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44749,14 +44849,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-14",
         "data-name": "led-off",
         cx: 155.043,
         cy: 325.472,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44766,7 +44866,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44782,15 +44882,15 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
           id: "legend-0",
           children: jsxRuntimeExports$1.jsx("path", {
             d: "M154.938,337.563c-.987,0-1.79-.803-1.79-1.79v-.795c0-.987,.803-1.79,1.79-1.79s1.79,.803,1.79,1.79v.795c0,.987-.803,1.79-1.79,1.79Zm0-3.978c-.768,0-1.392,.624-1.392,1.392v.795c0,.768,.624,1.392,1.392,1.392s1.392-.624,1.392-1.392v-.795c0-.768-.624-1.392-1.392-1.392Z",
-            fill: "#f1f2f2"
+            fill: ColorLightGray
           })
         })]
       })]
@@ -44805,7 +44905,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44815,7 +44915,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "141.312 350.062 141.312 351.312 140.062 351.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44824,14 +44924,14 @@ const Buttons = ({
             x2: 120.688,
             y2: 351.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "120.062 351.312 118.812 351.312 118.812 350.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44840,14 +44940,14 @@ const Buttons = ({
             x2: 118.812,
             y2: 330.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "118.812 330.062 118.812 328.812 120.062 328.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44856,14 +44956,14 @@ const Buttons = ({
             x2: 139.438,
             y2: 328.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "140.062 328.812 141.312 328.812 141.312 330.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44872,7 +44972,7 @@ const Buttons = ({
             x2: 141.312,
             y2: 349.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -44887,14 +44987,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-15",
         "data-name": "led-off",
         cx: 125.041,
         cy: 325.472,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -44904,7 +45004,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44920,8 +45020,8 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("circle", {
@@ -44929,7 +45029,7 @@ const Buttons = ({
           cx: 125.062,
           cy: 335.062,
           r: 0.625,
-          fill: "#f1f2f2"
+          fill: ColorLightGray
         })]
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -44943,7 +45043,7 @@ const Buttons = ({
         width: 22.5,
         height: 22.5,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("g", {
@@ -44953,7 +45053,7 @@ const Buttons = ({
           children: [jsxRuntimeExports$1.jsx("polyline", {
             points: "201.312 350.062 201.312 351.312 200.062 351.312",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44962,14 +45062,14 @@ const Buttons = ({
             x2: 180.688,
             y2: 351.312,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "180.062 351.312 178.812 351.312 178.812 350.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44978,14 +45078,14 @@ const Buttons = ({
             x2: 178.812,
             y2: 330.688,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "178.812 330.062 178.812 328.812 180.062 328.812",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -44994,14 +45094,14 @@ const Buttons = ({
             x2: 199.438,
             y2: 328.812,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("polyline", {
             points: "200.062 328.812 201.312 328.812 201.312 330.062",
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.313
           }), jsxRuntimeExports$1.jsx("line", {
@@ -45010,7 +45110,7 @@ const Buttons = ({
             x2: 201.312,
             y2: 349.438,
             fill: "none",
-            stroke: "#f1f2f2",
+            stroke: ColorLightGray,
             strokeDasharray: "0 0 2.5 1.25",
             strokeMiterlimit: 10,
             strokeWidth: 0.313
@@ -45025,14 +45125,14 @@ const Buttons = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         id: "led-off-16",
         "data-name": "led-off",
         cx: 185.045,
         cy: 325.472,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -45042,7 +45142,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -45058,8 +45158,8 @@ const Buttons = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("g", {
@@ -45067,32 +45167,32 @@ const Buttons = ({
           children: jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("path", {
               d: "M183.811,334.031v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-              fill: "#f1f2f2",
-              stroke: "#f1f2f2",
+              fill: ColorLightGray,
+              stroke: ColorLightGray,
               strokeMiterlimit: 10,
               strokeWidth: 0.062
             }), jsxRuntimeExports$1.jsx("path", {
               d: "M187.657,333.812v2.407h-.338l-1.193-2.17v2.17h-.219v-2.407h.338l1.194,2.17v-2.17h.219Z",
-              fill: "#f1f2f2",
-              stroke: "#f1f2f2",
+              fill: ColorLightGray,
+              stroke: ColorLightGray,
               strokeMiterlimit: 10,
               strokeWidth: 0.062
             }), jsxRuntimeExports$1.jsx("path", {
               d: "M189.978,333.812v.219h-.82v2.188h-.219v-2.188h-.82v-.219h1.86Z",
-              fill: "#f1f2f2",
-              stroke: "#f1f2f2",
+              fill: ColorLightGray,
+              stroke: ColorLightGray,
               strokeMiterlimit: 10,
               strokeWidth: 0.062
             }), jsxRuntimeExports$1.jsx("path", {
               d: "M190.678,334.031v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-              fill: "#f1f2f2",
-              stroke: "#f1f2f2",
+              fill: ColorLightGray,
+              stroke: ColorLightGray,
               strokeMiterlimit: 10,
               strokeWidth: 0.062
             }), jsxRuntimeExports$1.jsx("path", {
               d: "M193.789,335.126l.651,.837v.202h-.219v-.127l-.71-.913h-.658v1.094h-.219v-2.407h1.204c.362,0,.656,.295,.656,.656s-.294,.657-.656,.657h-.05Zm-.108-.219h.22c.241,0,.437-.196,.437-.438s-.196-.438-.438-.438h-.985v.875h.765Z",
-              fill: "#f1f2f2",
-              stroke: "#f1f2f2",
+              fill: ColorLightGray,
+              stroke: ColorLightGray,
               strokeMiterlimit: 10,
               strokeWidth: 0.062
             })]
@@ -46147,8 +46247,8 @@ const Display$1 = reactExports.memo(({
         ref: et,
         width: 220,
         height: 60,
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })
@@ -46174,7 +46274,7 @@ const Display$1 = reactExports.memo(({
       }), jsxRuntimeExports$1.jsx("g", {
         id: "sound-duration",
         children: jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(206.955 191.312)",
+          transform: "translate(200.955 191.312)",
           fill: FontColorLight,
           fontSize: 5.5,
           letterSpacing: ".08em",
@@ -46337,7 +46437,7 @@ const Display$1 = reactExports.memo(({
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "ST"
+            children: StartIn
           })
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -46374,9 +46474,87 @@ const Display$1 = reactExports.memo(({
           children: jsxRuntimeExports$1.jsx("tspan", {
             x: 0,
             y: 0,
-            children: "END"
+            children: EndOut
           })
         })]
+      })]
+    }),
+    jsxRuntimeExports$1.jsxs("g", {
+      id: "label-out-2",
+      "data-name": "label-out",
+      children: [jsxRuntimeExports$1.jsx("rect", {
+        x: 240.062,
+        y: 195.062,
+        width: 20,
+        height: 10,
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(242.3 202.562)",
+        fill: FontColorLight,
+        fontSize: 6.875,
+        letterSpacing: ".005em",
+        stroke: FontColorLight,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: EndOut
+        })
+      })]
+    }), jsxRuntimeExports$1.jsxs("g", {
+      id: "label-in-2",
+      "data-name": "label-in",
+      children: [jsxRuntimeExports$1.jsx("rect", {
+        x: 210.062,
+        y: 195.062,
+        width: 20,
+        height: 10,
+        fill: OriginalOrange,
+        stroke: ColorCharcoal,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(216.079 202.562)",
+        fill: FontColorLight,
+        fontSize: 6.875,
+        letterSpacing: ".095em",
+        stroke: FontColorLight,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: StartIn
+        })
+      })]
+    }), jsxRuntimeExports$1.jsxs("g", {
+      id: "label-sample-edit",
+      children: [jsxRuntimeExports$1.jsx("rect", {
+        x: 60.812,
+        y: 130.062,
+        width: 45,
+        height: 10,
+        fill: ColorMain,
+        stroke: ColorCharcoal,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(62.632 137.562)",
+        fill: FontColorLight,
+        fontSize: 6.25,
+        letterSpacing: ".06em",
+        stroke: FontColorLight,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: "Sound Edit"
+        })
       })]
     })]
   });
@@ -46445,7 +46623,7 @@ const Tabs = reactExports.memo(({
           y1: 200.157,
           x2: 490,
           y2: 190.062,
-          fill: "#9aa0a9",
+          fill: ColorLightCharcoal,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -46671,7 +46849,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.376,190.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46691,8 +46869,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 195.062,
           r: 2.25,
-          fill: Color9,
-          stroke: "#221f1f",
+          fill: ColorMarker9,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46703,7 +46881,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.376,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46724,8 +46902,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 185.062,
           r: 2.25,
-          fill: Color8,
-          stroke: "#221f1f",
+          fill: ColorMarker8,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46736,7 +46914,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.438,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46757,8 +46935,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 175.062,
           r: 2.25,
-          fill: Color7,
-          stroke: "#221f1f",
+          fill: ColorMarker7,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46769,7 +46947,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.438,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46790,8 +46968,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 165.062,
           r: 2.25,
-          fill: Color6,
-          stroke: "#221f1f",
+          fill: ColorMarker6,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46802,7 +46980,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46823,8 +47001,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 155.062,
           r: 2.25,
-          fill: Color5,
-          stroke: "#221f1f",
+          fill: ColorMarker5,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46835,7 +47013,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46856,8 +47034,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 145.062,
           r: 2.25,
-          fill: Color4,
-          stroke: "#221f1f",
+          fill: ColorMarker4,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46868,7 +47046,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46889,8 +47067,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 135.062,
           r: 2.25,
-          fill: Color3,
-          stroke: "#221f1f",
+          fill: ColorMarker3,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46922,8 +47100,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 125.062,
           r: 2.25,
-          fill: Color2,
-          stroke: "#221f1f",
+          fill: ColorMarker2,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46934,7 +47112,7 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46955,8 +47133,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 115.062,
           r: 2.25,
-          fill: Color1,
-          stroke: "#221f1f",
+          fill: ColorMarker1,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -46967,15 +47145,15 @@ const Tabs = reactExports.memo(({
         children: [jsxRuntimeExports$1.jsx("path", {
           d: "M479.437,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
           fill: FontColorLight,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
           transform: "translate(484.437 106.312)",
-          fill: "#000005",
+          fill: ColorBlack,
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: "#000005",
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -46989,8 +47167,8 @@ const Tabs = reactExports.memo(({
           cx: 481.063,
           cy: 105.062,
           r: 2.25,
-          fill: Color0,
-          stroke: "#221f1f",
+          fill: ColorMarker0,
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -47123,8 +47301,8 @@ const ScrollBar = reactExports.memo(() => {
       height: ut,
       rx: 2.5,
       ry: 2.5,
-      fill: "#000005",
-      stroke: "#8a959a",
+      fill: ColorBlack,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("foreignObject", {
@@ -47172,7 +47350,7 @@ const UploadStatus = ({
       })
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "432.925 276.561 434.895 273.983 436.866 276.561 432.925 276.561",
-      fill: "#f05323",
+      fill: OriginalOrange,
       strokeWidth: 0
     })]
   }), jsxRuntimeExports$1.jsxs("g", {
@@ -47183,10 +47361,10 @@ const UploadStatus = ({
     transform: "translate(0 -210)",
     children: [jsxRuntimeExports$1.jsx("text", {
       transform: "translate(441.535 296.522)",
-      fill: "#abb5ba",
+      fill: ColorLightCharcoal,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#abb5ba",
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47196,7 +47374,7 @@ const UploadStatus = ({
       })
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "432.925 296.521 434.895 293.944 436.866 296.521 432.925 296.521",
-      fill: "#abb5ba",
+      fill: ColorLightCharcoal,
       strokeWidth: 0
     })]
   }), ";", jsxRuntimeExports$1.jsxs("g", {
@@ -47235,7 +47413,7 @@ const UploadStatus = ({
       })]
     }), jsxRuntimeExports$1.jsx("path", {
       d: "m436.077,243.47h-2.363l-1.181,2.046,1.181,2.046h2.363l1.181-2.046-1.181-2.046Zm-1.037,3.335h-.289v-.429h.289v.429Zm0-.7h-.289v-1.863h.289v1.863Z",
-      fill: "#f05323",
+      fill: OriginalOrange,
       strokeWidth: 0
     })]
   }), ";"]
@@ -47337,7 +47515,20 @@ const MessageBox = ({
   fontSize: j = "medium"
 }) => jsxRuntimeExports$1.jsxs("g", {
   id: "message",
-  children: [jsxRuntimeExports$1.jsx("style", {
+  children: [jsxRuntimeExports$1.jsx("rect", {
+    x: 45,
+    y: 65,
+    width: 240,
+    height: 315,
+    fill: ColorSlate
+  }),jsxRuntimeExports$1.jsx("rect", {
+    x: -2000,
+    y: -2000,
+    width: 4000,
+    height: 4000,
+    fill: "url(#warning_stripes)",
+    strokeWidth: 0
+  }),jsxRuntimeExports$1.jsx("style", {
     children: `
      g#exclamation { animation: flash 850ms infinite linear }
 
@@ -47353,8 +47544,8 @@ const MessageBox = ({
      
      `
   }), jsxRuntimeExports$1.jsx("rect", {
-    x: 50.062,
-    y: 88.062,
+    x: 50.062 + 25,
+    y: 88.062 + 125,
     width: 187.5,
     height: 30,
     fill: ColorMain,
@@ -47362,7 +47553,7 @@ const MessageBox = ({
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsxs("text", {
-    transform: "translate(85.063 98.063)",
+    transform: "translate(110 223)",
     fill: FontColorLight,
     fontSize: fontsizes[j],
     letterSpacing: ".08em",
@@ -47386,11 +47577,11 @@ const MessageBox = ({
       children: o
     })]
   }), jsxRuntimeExports$1.jsx("rect", {
-    x: 50.062,
-    y: 88.062,
+    x: 50.062 + 25,
+    y: 88.062 + 125,
     width: 30,
     height: 30,
-    fill: "#dbdddb",
+    fill: ColorSlate,
     stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
@@ -47399,19 +47590,19 @@ const MessageBox = ({
     "data-name": "!",
     children: jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("line", {
-        x1: 65.062,
-        y1: 95.563,
-        x2: 65.062,
-        y2: 106.813,
+        x1: 65.062 + 25,
+        y1: 95.563 + 125,
+        x2: 65.062 + 25,
+        y2: 106.813 + 125,
         fill: "none",
         stroke: FontColorDark,
         strokeLinecap: "square",
         strokeWidth: 2
       }), jsxRuntimeExports$1.jsx("line", {
-        x1: 65.062,
-        y1: 110.562,
-        x2: 65.062,
-        y2: 109.813,
+        x1: 65.062 + 25,
+        y1: 110.562 + 125,
+        x2: 65.062 + 25,
+        y2: 109.813 + 125,
         fill: "none",
         stroke: FontColorDark,
         strokeLinecap: "square",
@@ -47657,7 +47848,7 @@ const Row = reactExports.memo(({
       document.removeEventListener("keydown", Kt);
     };
   }, [zt, pt == null ? undefined : pt.path, Vt, Gt, mt, jt.row, o.id, o.path]);
-  const Er = o.file ? $ != null ? ColorMain : getAllFilesWithProperties(kt, "status", ["complete"]).some(Kt => Kt.id === o.id) ? ColorSound : "#b0babe" : "transparent";
+  const Er = o.file ? $ != null ? ColorMain : getAllFilesWithProperties(kt, "status", ["complete"]).some(Kt => Kt.id === o.id) ? ColorSound : ColorLightCharcoal : "transparent";
   let qt = "";
   if ((Pt == null ? undefined : Pt.status) === "failed") {
     qt = Pt.file.name;
@@ -47686,7 +47877,7 @@ const Row = reactExports.memo(({
         width: 170,
         height: 10.011,
         fill: bt ? "grey" : ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), Ct && jsxRuntimeExports$1.jsx("rect", {
@@ -47696,7 +47887,7 @@ const Row = reactExports.memo(({
         width: 170,
         height: 10.011,
         fill: "grey",
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), a && jsxRuntimeExports$1.jsxs("g", {
@@ -47713,13 +47904,13 @@ const Row = reactExports.memo(({
                 y: 140.062,
                 width: 10,
                 height: 10,
-                fill: "#8a959a"
+                fill: ColorLightCharcoal
               }), jsxRuntimeExports$1.jsx("rect", {
                 x: 450.062,
                 y: 140.062,
                 width: 10,
                 height: 10,
-                fill: "#f05323"
+                fill: OriginalOrange
               }), jsxRuntimeExports$1.jsx("polyline", {
                 points: "467.205 145.063 464.711 147.557 462.216 145.062",
                 fill: "none",
@@ -47766,8 +47957,8 @@ const Row = reactExports.memo(({
           }), ot.length > 1 ? jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("polygon", {
               points: "287.339 141.312 287.339 148.812 295.062 148.812 298.812 145.062 295.062 141.312 287.339 141.312",
-              fill: "#dbdddb",
-              stroke: "#221f1f",
+              fill: ColorSlate,
+              stroke: ColorCharcoal,
               strokeMiterlimit: 10,
               strokeWidth: 0.125
             }), jsxRuntimeExports$1.jsxs("g", {
@@ -47796,7 +47987,7 @@ const Row = reactExports.memo(({
           }) : jsxRuntimeExports$1.jsx("polygon", {
             points: "291.312 141.312 291.312 148.812 295.062 148.812 298.812 145.062 295.062 141.312 291.312 141.312",
             fill: ColorTertiary,
-            stroke: "#221f1f",
+            stroke: ColorCharcoal,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -47850,10 +48041,10 @@ const Row = reactExports.memo(({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(313.812 87.562)",
-        fill: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#221f1f",
+        fill: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : ColorCharcoal,
         fontSize: 6.25,
         letterSpacing: ".08em",
-        stroke: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#221f1f",
+        stroke: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -47874,7 +48065,7 @@ const Row = reactExports.memo(({
         cy: 85.062,
         r: 2.5,
         fill: Er,
-        stroke: o.file ? at && !a ? "#000" : "" : "#b0babe",
+        stroke: o.file ? at && !a ? ColorBlack : "" : ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.706
       })]
@@ -47931,7 +48122,7 @@ const Row = reactExports.memo(({
               value: tt,
               className: handleClassName([styles$5.name, styles$5.uploaded]),
               style: {
-                color: (gr = o.meta) != null && gr.name ? "#000" : "#9aa0a9",
+                color: (gr = o.meta) != null && gr.name ? ColorBlack : ColorLightCharcoal,
                 cursor: mt && a ? "text" : "auto"
               },
               onChange: Kt => {
@@ -47947,7 +48138,7 @@ const Row = reactExports.memo(({
             }) : jsxRuntimeExports$1.jsx("span", {
               className: handleClassName([styles$5.name]),
               style: {
-                color: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : "#9aa0a9"
+                color: (Pt == null ? undefined : Pt.status) === "failed" ? ColorMain : ColorLightCharcoal
               },
               children: qt
             })
@@ -48060,7 +48251,7 @@ const LibraryUI = ({
       id: "library",
       children: [jsxRuntimeExports$1.jsx("polygon", {
         points: "490.062 380.062 309.962 380.062 309.962 79.861 489.962 79.861 490.062 380.062",
-        fill: "#9aa0a9",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48069,7 +48260,7 @@ const LibraryUI = ({
         y: 78.812,
         width: 180,
         height: 300.202,
-        fill: "#9aa0a9",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48078,7 +48269,7 @@ const LibraryUI = ({
         y: 77.562,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48087,7 +48278,7 @@ const LibraryUI = ({
         y: 76.312,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48096,7 +48287,7 @@ const LibraryUI = ({
         y: 75.062,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48105,7 +48296,7 @@ const LibraryUI = ({
         y: 73.611,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48114,7 +48305,7 @@ const LibraryUI = ({
         y: 72.562,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48123,7 +48314,7 @@ const LibraryUI = ({
         y: 71.312,
         width: 180,
         height: 300.202,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48133,19 +48324,19 @@ const LibraryUI = ({
         width: 180,
         height: 300.202,
         fill: FontColorLight,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polyline", {
         points: "290.062 301.312 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polyline", {
         points: "290.062 301.312 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -48270,8 +48461,8 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "290.062 370.062 300.063 370.062 309.962 380.163 300.062 380.062 290.062 370.062",
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48280,7 +48471,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 80.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("text", {
@@ -48359,14 +48550,14 @@ const LibraryUI = ({
         cx: 415.062,
         cy: 75.062,
         r: 3.75,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         opacity: 0.4
       }), jsxRuntimeExports$1.jsx("line", {
         x1: 470.062,
         y1: 70.062,
         x2: 470.062,
         y2: 80.062,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48375,7 +48566,7 @@ const LibraryUI = ({
         y1: 70.062,
         x2: 460.062,
         y2: 80.062,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48384,7 +48575,7 @@ const LibraryUI = ({
         y1: 70.062,
         x2: 449.062,
         y2: 80.062,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48398,7 +48589,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 90.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48407,7 +48598,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 100.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48416,7 +48607,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 110.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48425,7 +48616,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 120.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48434,7 +48625,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 130.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48443,7 +48634,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 140.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48452,7 +48643,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 150.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48461,7 +48652,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 160.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48470,7 +48661,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 170.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48479,7 +48670,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 180.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48488,7 +48679,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 190.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48497,7 +48688,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 200.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48506,7 +48697,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 210.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48515,7 +48706,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 220.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48524,7 +48715,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 230.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48533,7 +48724,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 240.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48542,7 +48733,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 250.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48551,7 +48742,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 260.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48560,7 +48751,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 270.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48569,7 +48760,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 280.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48578,7 +48769,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 290.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48587,7 +48778,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 300.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48596,7 +48787,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 310.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48605,7 +48796,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 320.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48614,7 +48805,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 330.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48623,7 +48814,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 340.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48632,7 +48823,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 350.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48641,7 +48832,7 @@ const LibraryUI = ({
         x2: 300.062,
         y2: 360.063,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48650,7 +48841,7 @@ const LibraryUI = ({
         x2: 330.062,
         y2: 370.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48659,7 +48850,7 @@ const LibraryUI = ({
         x2: 410.062,
         y2: 370.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48668,7 +48859,7 @@ const LibraryUI = ({
         x2: 430.062,
         y2: 370.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48677,7 +48868,7 @@ const LibraryUI = ({
         x2: 470.062,
         y2: 370.062,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("line", {
@@ -48685,7 +48876,7 @@ const LibraryUI = ({
         y1: 80.062,
         x2: 300.062,
         y2: 80.062,
-        fill: "#f05323",
+        fill: OriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48714,15 +48905,21 @@ const DeleteModal = ({
         id: "deleting_modal",
         "data-name": "deleting modal",
         children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 0.063,
-          y: 0.062,
-          width: 540,
-          height: 420,
-          fill: "url(#_10_lpi_40_2)",
+          x: -2000,
+          y: -2000,
+          width: 4000,
+          height: 4000,
+          fill: ColorSlate
+        }),jsxRuntimeExports$1.jsx("rect", {
+          x: -2000,
+          y: -2000,
+          width: 4000,
+          height: 4000,
+          fill: "url(#warning_stripes)",
           strokeWidth: 0
         }), jsxRuntimeExports$1.jsx("rect", {
-          x: 50.062,
-          y: 88.062,
+          x: 50.062 + 135,
+          y: 88.062 + 125,
           width: 187.5,
           height: 30,
           fill: ColorMain,
@@ -48730,7 +48927,7 @@ const DeleteModal = ({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(85.063 98.063)",
+          transform: "translate(220 223)",
           fill: FontColorLight,
           fontSize: 6.25,
           letterSpacing: ".08em",
@@ -48743,11 +48940,11 @@ const DeleteModal = ({
             children: `DELETING ${a.length} FILES.`
           })
         }), jsxRuntimeExports$1.jsx("rect", {
-          x: 50.062,
-          y: 88.062,
+          x: 50.062 + 135,
+          y: 88.062 + 125,
           width: 30,
           height: 30,
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -48756,19 +48953,19 @@ const DeleteModal = ({
           "data-name": "!",
           children: jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("line", {
-              x1: 65.062,
-              y1: 95.563,
-              x2: 65.062,
-              y2: 106.813,
+              x1: 65.062 + 135,
+              y1: 95.563 + 125,
+              x2: 65.062 + 135,
+              y2: 106.813 + 125,
               fill: "none",
               stroke: FontColorDark,
               strokeLinecap: "square",
               strokeWidth: 2
             }), jsxRuntimeExports$1.jsx("line", {
-              x1: 65.062,
-              y1: 110.562,
-              x2: 65.062,
-              y2: 109.813,
+              x1: 65.062 + 135,
+              y1: 110.562 + 125,
+              x2: 65.062 + 135,
+              y2: 109.813 + 125,
               fill: "none",
               stroke: FontColorDark,
               strokeLinecap: "square",
@@ -48779,16 +48976,16 @@ const DeleteModal = ({
           id: "label-out-3",
           "data-name": "label-out",
           children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 212.563,
-            y: 103.063,
+            x: 212.563 + 135,
+            y: 103.063+ 125,
             width: 20,
             height: 10,
-            fill: "#000005",
-            stroke: "#8a959a",
+            fill: ColorBlack,
+            stroke: ColorLightCharcoal,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(218.139 110.562)",
+            transform: "translate(353 235)",
             fill: FontColorLight,
             fontSize: 6.875,
             letterSpacing: ".005em",
@@ -48805,16 +49002,16 @@ const DeleteModal = ({
           id: "label-in-3",
           "data-name": "label-in",
           children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 187.562,
-            y: 103.063,
+            x: 187.562 + 135,
+            y: 103.063 + 125,
             width: 20,
             height: 10,
             fill: ColorMain,
-            stroke: "#221f1f",
+            stroke: ColorCharcoal,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(192.939 110.562)",
+            transform: "translate(328 235)",
             fill: FontColorLight,
             fontSize: 6.875,
             letterSpacing: ".095em",
@@ -48830,8 +49027,8 @@ const DeleteModal = ({
         })]
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "reject",
-        x: 187.562,
-        y: 103.063,
+        x: 187.562 + 135,
+        y: 103.063 + 125,
         width: 20,
         height: 10,
         onClick: () => {
@@ -48839,8 +49036,8 @@ const DeleteModal = ({
         }
       }), jsxRuntimeExports$1.jsx("foreignObject", {
         id: "confirm",
-        x: 212.563,
-        y: 103.063,
+        x: 212.563 + 135,
+        y: 103.063 + 125,
         width: 20,
         height: 10,
         onClick: async () => {
@@ -48896,8 +49093,8 @@ const UploadProgress = () => {
         y: 88.062,
         width: 187.5,
         height: 30,
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48905,7 +49102,7 @@ const UploadProgress = () => {
         y: 90.062,
         width: 170,
         height: 10,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48914,8 +49111,8 @@ const UploadProgress = () => {
         y: 90.062,
         width: nt,
         height: 10,
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -48923,15 +49120,15 @@ const UploadProgress = () => {
         y: 105.062,
         width: 160,
         height: 10,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(55.063 112.522)",
         fontSize: 6,
-        stroke: et && et.error ? ColorMain : "#000",
-        fill: et && et.error ? ColorMain : "#000",
+        stroke: et && et.error ? ColorMain : ColorBlack,
+        fill: et && et.error ? ColorMain : ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48945,8 +49142,8 @@ const UploadProgress = () => {
         y: 105.062,
         width: 27.5,
         height: 10,
-        fill: _e && j ? "#9aa0a9" : ColorMain,
-        stroke: "#221f1f",
+        fill: _e && j ? ColorLightCharcoal : ColorMain,
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -48967,10 +49164,10 @@ const UploadProgress = () => {
           mixBlendMode: "difference"
         },
         transform: "translate(55.032 96.449)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 6,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48983,10 +49180,10 @@ const UploadProgress = () => {
           mixBlendMode: "difference"
         },
         transform: "translate(100.926 96.449)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 6,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -49020,14 +49217,14 @@ const DownloadProgress = () => {
     id: "progress-indicator",
     children: [jsxRuntimeExports$1.jsx("polygon", {
       points: "480.062 52.562 477.562 50.062 477.562 20.062 480.062 22.562 480.062 52.562",
-      fill: "#abb5ba",
-      stroke: "#000005",
+      fill: ColorLightCharcoal,
+      stroke: ColorBlack,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "292.562 52.563 290.063 50.063 477.563 50.062 480.062 52.563 292.562 52.563",
-      fill: "#abb5ba",
-      stroke: "#000005",
+      fill: ColorLightCharcoal,
+      stroke: ColorBlack,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -49035,8 +49232,8 @@ const DownloadProgress = () => {
       y: 20.062,
       width: 187.5,
       height: 30,
-      fill: "#abb5ba",
-      stroke: "#000005",
+      fill: ColorLightCharcoal,
+      stroke: ColorBlack,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -49044,7 +49241,7 @@ const DownloadProgress = () => {
       y: 25.062,
       width: 170,
       height: 10,
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
@@ -49053,8 +49250,8 @@ const DownloadProgress = () => {
       y: 25.062,
       width: o,
       height: 10,
-      fill: "#000005",
-      stroke: "#8a959a",
+      fill: ColorBlack,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -49062,7 +49259,7 @@ const DownloadProgress = () => {
       y: 40.062,
       width: 187.5,
       height: 10,
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
@@ -49083,10 +49280,10 @@ const DownloadProgress = () => {
         mixBlendMode: "difference"
       },
       transform: "translate(304.032 31.449)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -49099,10 +49296,10 @@ const DownloadProgress = () => {
         mixBlendMode: "difference"
       },
       transform: "translate(446.926 31.449)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -49415,6 +49612,9 @@ const Library = ({
     })]
   });
 };
+if (HideSerial == false) {
+  FakeSerial = null
+};
 const Version = ({
   display: s,
   os: a,
@@ -49422,8 +49622,8 @@ const Version = ({
 }) => s ? jsxRuntimeExports$1.jsxs("g", {
   id: "version-os",
   children: [jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(40.062 300.062) rotate(-90)",
-    fill: "#000",
+    transform: "translate(43.062 300.062) rotate(-90)",
+    fill: ColorBlack,
     fontSize: 6,
     letterSpacing: ".08em",
     stroke: FontColorDark,
@@ -49435,8 +49635,8 @@ const Version = ({
       children: `OS: ${a || "unknown"}`
     })
   }), jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(40.062 370.062) rotate(-90)",
-    fill: "#000",
+    transform: "translate(43.062 370.062) rotate(-90)",
+    fill: ColorBlack,
     fontSize: 6,
     letterSpacing: ".08em",
     stroke: FontColorDark,
@@ -49445,6096 +49645,28 @@ const Version = ({
     children: jsxRuntimeExports$1.jsx("tspan", {
       x: 0,
       y: 0,
-      children: `SERIAL: ${o || "EP-133"}`
+      children: `SERIAL: ${FakeSerial || o}`
+      //children: "EP-133"
     })
   })]
 }) : null;
 const BackupBackground = () => jsxRuntimeExports$1.jsxs("g", {
   id: "outline-no-library",
-  children: [jsxRuntimeExports$1.jsx("rect", {
+  children: [
+    /*
+    jsxRuntimeExports$1.jsx("rect", {
     x: 50.063,
     y: 70.062,
     width: 220,
     height: 300.202,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
+    fill: ColorSlate
+  }),jsxRuntimeExports$1.jsx("rect", {
     x: 50.063,
     y: 70.062,
     width: 220,
     height: 300.202,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m50.062,370.062l7.5,7.5h220V77.562l-7.5-7.5v300s-220,.427-220,0Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m57.563,377.562l2.5,2.5h220V80.062l-2.5-2.5v300s-220,.202-220,0Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 270.062,
-    y1: 370.062,
-    x2: 280.063,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.925,
-    y1: 370.062,
-    x2: 277.925,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 265.788,
-    y1: 370.062,
-    x2: 275.788,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 263.651,
-    y1: 370.062,
-    x2: 273.651,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 261.514,
-    y1: 370.062,
-    x2: 271.514,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 259.377,
-    y1: 370.062,
-    x2: 269.377,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 257.24,
-    y1: 370.062,
-    x2: 267.24,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 255.103,
-    y1: 370.062,
-    x2: 265.103,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 252.966,
-    y1: 370.062,
-    x2: 262.966,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 250.829,
-    y1: 370.062,
-    x2: 260.829,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 248.692,
-    y1: 370.062,
-    x2: 258.692,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 246.555,
-    y1: 370.062,
-    x2: 256.555,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 244.418,
-    y1: 370.062,
-    x2: 254.418,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 242.281,
-    y1: 370.062,
-    x2: 252.281,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 240.144,
-    y1: 370.062,
-    x2: 250.144,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 238.007,
-    y1: 370.062,
-    x2: 248.007,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 235.87,
-    y1: 370.062,
-    x2: 245.87,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 233.733,
-    y1: 370.062,
-    x2: 243.733,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 231.596,
-    y1: 370.062,
-    x2: 241.596,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 229.459,
-    y1: 370.062,
-    x2: 239.459,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 227.322,
-    y1: 370.062,
-    x2: 237.322,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 225.185,
-    y1: 370.062,
-    x2: 235.185,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 223.048,
-    y1: 370.062,
-    x2: 233.048,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 220.911,
-    y1: 370.062,
-    x2: 230.911,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 218.774,
-    y1: 370.062,
-    x2: 228.774,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 216.637,
-    y1: 370.062,
-    x2: 226.637,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 214.5,
-    y1: 370.062,
-    x2: 224.5,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 212.363,
-    y1: 370.062,
-    x2: 222.363,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 210.226,
-    y1: 370.062,
-    x2: 220.226,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 208.089,
-    y1: 370.062,
-    x2: 218.089,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 205.952,
-    y1: 370.062,
-    x2: 215.952,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 203.815,
-    y1: 370.062,
-    x2: 213.815,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 201.678,
-    y1: 370.062,
-    x2: 211.678,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 199.541,
-    y1: 370.062,
-    x2: 209.541,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 197.404,
-    y1: 370.062,
-    x2: 207.404,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 195.267,
-    y1: 370.062,
-    x2: 205.267,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 193.13,
-    y1: 370.062,
-    x2: 203.13,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 190.993,
-    y1: 370.062,
-    x2: 200.993,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 188.856,
-    y1: 370.062,
-    x2: 198.856,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 186.719,
-    y1: 370.062,
-    x2: 196.719,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 184.582,
-    y1: 370.062,
-    x2: 194.582,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 182.445,
-    y1: 370.062,
-    x2: 192.445,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 180.308,
-    y1: 370.062,
-    x2: 190.308,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 178.171,
-    y1: 370.062,
-    x2: 188.171,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 176.034,
-    y1: 370.062,
-    x2: 186.034,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 173.897,
-    y1: 370.062,
-    x2: 183.897,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 171.76,
-    y1: 370.062,
-    x2: 181.76,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 169.623,
-    y1: 370.062,
-    x2: 179.623,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 167.486,
-    y1: 370.062,
-    x2: 177.486,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 165.349,
-    y1: 370.062,
-    x2: 175.349,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 163.212,
-    y1: 370.062,
-    x2: 173.212,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 161.075,
-    y1: 370.062,
-    x2: 171.075,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 158.938,
-    y1: 370.062,
-    x2: 168.938,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 156.8,
-    y1: 370.062,
-    x2: 166.8,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 154.663,
-    y1: 370.062,
-    x2: 164.663,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 152.526,
-    y1: 370.062,
-    x2: 162.526,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 150.389,
-    y1: 370.062,
-    x2: 160.389,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 148.252,
-    y1: 370.062,
-    x2: 158.252,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 146.115,
-    y1: 370.062,
-    x2: 156.115,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 143.978,
-    y1: 370.062,
-    x2: 153.978,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 141.841,
-    y1: 370.062,
-    x2: 151.841,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 139.704,
-    y1: 370.062,
-    x2: 149.704,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 137.567,
-    y1: 370.062,
-    x2: 147.567,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 135.43,
-    y1: 370.062,
-    x2: 145.43,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 133.293,
-    y1: 370.062,
-    x2: 143.293,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 131.156,
-    y1: 370.062,
-    x2: 141.156,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 129.019,
-    y1: 370.062,
-    x2: 139.019,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 126.882,
-    y1: 370.062,
-    x2: 136.882,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 124.745,
-    y1: 370.062,
-    x2: 134.745,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 122.608,
-    y1: 370.062,
-    x2: 132.608,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 120.471,
-    y1: 370.062,
-    x2: 130.471,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 118.334,
-    y1: 370.062,
-    x2: 128.334,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 116.197,
-    y1: 370.062,
-    x2: 126.197,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 114.06,
-    y1: 370.062,
-    x2: 124.06,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 111.923,
-    y1: 370.062,
-    x2: 121.923,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 109.786,
-    y1: 370.062,
-    x2: 119.786,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 107.649,
-    y1: 370.062,
-    x2: 117.649,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 105.512,
-    y1: 370.062,
-    x2: 115.512,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 103.375,
-    y1: 370.062,
-    x2: 113.375,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 101.238,
-    y1: 370.062,
-    x2: 111.238,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 99.101,
-    y1: 370.062,
-    x2: 109.101,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 96.964,
-    y1: 370.062,
-    x2: 106.964,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 94.827,
-    y1: 370.062,
-    x2: 104.827,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 92.69,
-    y1: 370.062,
-    x2: 102.69,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 90.553,
-    y1: 370.062,
-    x2: 100.553,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 88.416,
-    y1: 370.062,
-    x2: 98.416,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 86.279,
-    y1: 370.062,
-    x2: 96.279,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 84.142,
-    y1: 370.062,
-    x2: 94.142,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 82.005,
-    y1: 370.062,
-    x2: 92.005,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 79.868,
-    y1: 370.062,
-    x2: 89.868,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 77.731,
-    y1: 370.062,
-    x2: 87.731,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 75.594,
-    y1: 370.062,
-    x2: 85.594,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 73.457,
-    y1: 370.062,
-    x2: 83.457,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 71.32,
-    y1: 370.062,
-    x2: 81.32,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 69.183,
-    y1: 370.062,
-    x2: 79.183,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 67.046,
-    y1: 370.062,
-    x2: 77.046,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 64.909,
-    y1: 370.062,
-    x2: 74.909,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 62.772,
-    y1: 370.062,
-    x2: 72.772,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 60.635,
-    y1: 370.062,
-    x2: 70.635,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 58.498,
-    y1: 370.062,
-    x2: 68.498,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 56.361,
-    y1: 370.062,
-    x2: 66.361,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 54.224,
-    y1: 370.062,
-    x2: 64.224,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 52.087,
-    y1: 370.062,
-    x2: 62.087,
-    y2: 380.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("ellipse", {
-    cx: 273.812,
-    cy: 355.062,
-    rx: 1.25,
-    ry: 3.75,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("ellipse", {
-    cx: 273.812,
-    cy: 95.062,
-    rx: 1.25,
-    ry: 3.75,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("ellipse", {
-    cx: 273.812,
-    cy: 105.062,
-    rx: 1.25,
-    ry: 3.75,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 207.539,
-    y: 77.562,
-    width: 60,
-    height: 60,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 237.562,
-    cy: 107.764,
-    r: 25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 127.562,
-    y: 67.562,
-    width: 50,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 57.563,
-    y: 67.562,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 97.562,
-    y: 67.562,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 47.562,
-    y: 77.562,
-    width: 160,
-    height: 60,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m267.539,137.562h-60v-60h60v60Zm-2.5-4.375c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 52.563,
-    cy: 82.562,
-    r: 2.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 52.563,
-    cy: 132.562,
-    r: 2.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 202.562,
-    cy: 82.562,
-    r: 2.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 202.562,
-    cy: 132.562,
-    r: 2.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsx("path", {
-      d: "m63.401,102.039h-1.306v.431c0,1.194-.369,2.407-2,3.144-.081-.1-.213-.225-.325-.313,1.588-.688,1.881-1.8,1.881-2.825v-.438h-2.019v1.557h-.444v-1.557h-1.225v-.425h1.225v-1.357l.6.037c-.006.062-.062.119-.156.131v1.188h2.019v-1.438l.6.037c-.006.056-.056.106-.156.119v1.282h1.306v.425Z",
-      fill: "#dfdfdf",
-      stroke: "#dfdfdf",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m64.719,100.67c.65.206,1.4.531,1.863.85l-.237.394c-.45-.319-1.188-.65-1.825-.869l.2-.375Zm-.025,4.332c2.219-.688,3.694-1.932,4.444-3.663.131.106.275.188.406.256-.781,1.713-2.307,3.044-4.426,3.75-.006.056-.044.119-.088.144l-.337-.487Z",
-      fill: "#dfdfdf",
-      stroke: "#dfdfdf",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m70.607,100.92h3.976l.037-.019.425.325c-.019.025-.037.044-.075.056-.506,2.35-1.594,3.576-3.507,4.301-.069-.113-.194-.275-.281-.369,1.819-.669,2.869-1.831,3.275-3.863h-3.851v-.431Zm4.763-1.119c.375,0,.681.306.681.688,0,.375-.306.681-.681.681-.381,0-.688-.306-.688-.681,0-.394.319-.688.688-.688Zm.475.688c0-.269-.213-.481-.475-.481s-.481.213-.481.481c0,.262.219.481.481.481.275,0,.475-.231.475-.481Z",
-      fill: "#dfdfdf",
-      stroke: "#dfdfdf",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m81.464,102.195c-.012.025-.044.05-.081.062-.513,1.888-1.557,2.807-3.426,3.326-.056-.113-.175-.269-.263-.363,1.7-.425,2.757-1.3,3.151-2.75h-4.138v-.425h4.326l.062-.037.369.188Zm-.588-1.338h-3.563v-.413h3.563v.413Z",
-      fill: "#dfdfdf",
-      stroke: "#dfdfdf",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m82.607,102.558h5.22v.444h-4.982c-.038.062-.119.106-.2.119l-.038-.563Z",
-      fill: "#dfdfdf",
-      stroke: "#dfdfdf",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    })]
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsx("path", {
-      d: "m64.951,97.138l-.796.002v-.422s-4.23-3.887-4.23-3.887l-.941.725v3.584h-.796v-8.751h.796v4.163l4.886-3.766v-.398s.797.002.797.002l-.002.792-4.101,3.157,4.385,4.029.002.771Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m66.2,97.14v-.903h.796v.903h-.796Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m75.012,91.273v2.983c0,1.59-1.294,2.884-2.884,2.884h-.994c-1.59,0-2.884-1.294-2.884-2.884v-2.983c0-1.59,1.294-2.884,2.884-2.884h.994c1.59,0,2.884,1.294,2.884,2.884Zm-.796,0c0-1.152-.937-2.088-2.088-2.088h-.994c-1.151,0-2.088.937-2.088,2.088v2.983c0,1.151.937,2.088,2.088,2.088h.994c1.151,0,2.088-.937,2.088-2.088v-2.983Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m75.762,97.14v-.903h.796v.903h-.796Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m81.687,97.14v-8.751h.796v8.751h-.796Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m84.487,97.14v-8.751h.796v8.751h-.796Z",
-      fill: "#dfdfdf",
-      strokeWidth: 0
-    })]
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 79.952,
-    y: 88.394,
-    width: 7.137,
-    height: 0.684,
-    fill: "#dfdfdf",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 79.952,
-    y: 96.447,
-    width: 7.137,
-    height: 0.684,
-    fill: "#dfdfdf",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "277.562 207.562 267.562 197.562 267.562 137.562 277.562 147.562 277.562 207.562",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "270.062 140.062 267.562 137.562 267.562 77.562 270.062 80.062 270.062 140.062",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "180.062 77.562 177.562 77.562 177.562 67.562 180.062 70.062 180.062 77.562",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "120.062 77.562 117.562 77.562 117.562 67.562 120.062 70.062 120.062 77.562",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "80.062 77.562 77.562 77.562 77.562 67.562 80.062 70.062 80.062 77.562",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 78.83,
-    x2: 270.062,
-    y2: 81.33,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 80.097,
-    x2: 270.062,
-    y2: 82.597,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 81.365,
-    x2: 270.062,
-    y2: 83.865,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 82.632,
-    x2: 270.062,
-    y2: 85.132,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 83.9,
-    x2: 270.062,
-    y2: 86.4,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 85.167,
-    x2: 270.062,
-    y2: 87.667,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 86.435,
-    x2: 270.062,
-    y2: 88.935,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 87.702,
-    x2: 270.062,
-    y2: 90.202,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 88.97,
-    x2: 270.062,
-    y2: 91.47,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 90.237,
-    x2: 270.062,
-    y2: 92.737,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 91.505,
-    x2: 270.062,
-    y2: 94.005,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 92.772,
-    x2: 270.062,
-    y2: 95.272,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 94.039,
-    x2: 270.062,
-    y2: 96.539,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 95.307,
-    x2: 270.062,
-    y2: 97.807,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 96.574,
-    x2: 270.062,
-    y2: 99.074,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 97.842,
-    x2: 270.062,
-    y2: 100.342,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 99.109,
-    x2: 270.062,
-    y2: 101.609,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 100.377,
-    x2: 270.062,
-    y2: 102.877,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 101.644,
-    x2: 270.062,
-    y2: 104.144,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 102.912,
-    x2: 270.062,
-    y2: 105.412,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 104.179,
-    x2: 270.062,
-    y2: 106.679,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 105.447,
-    x2: 270.062,
-    y2: 107.947,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 106.714,
-    x2: 270.062,
-    y2: 109.214,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 107.981,
-    x2: 270.062,
-    y2: 110.481,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 109.249,
-    x2: 270.062,
-    y2: 111.749,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 110.516,
-    x2: 270.062,
-    y2: 113.016,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 111.784,
-    x2: 270.062,
-    y2: 114.284,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 113.051,
-    x2: 270.062,
-    y2: 115.551,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 114.319,
-    x2: 270.062,
-    y2: 116.819,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 115.586,
-    x2: 270.062,
-    y2: 118.086,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 116.854,
-    x2: 270.062,
-    y2: 119.354,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 118.121,
-    x2: 270.062,
-    y2: 120.621,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 119.389,
-    x2: 270.062,
-    y2: 121.889,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 120.656,
-    x2: 270.062,
-    y2: 123.156,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 121.924,
-    x2: 270.062,
-    y2: 124.424,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 123.191,
-    x2: 270.062,
-    y2: 125.691,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 124.458,
-    x2: 270.062,
-    y2: 126.958,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 125.726,
-    x2: 270.062,
-    y2: 128.226,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 126.993,
-    x2: 270.062,
-    y2: 129.493,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 128.261,
-    x2: 270.062,
-    y2: 130.761,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 129.528,
-    x2: 270.062,
-    y2: 132.028,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 130.796,
-    x2: 270.062,
-    y2: 133.296,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 132.063,
-    x2: 270.062,
-    y2: 134.563,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 133.331,
-    x2: 270.062,
-    y2: 135.831,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 134.598,
-    x2: 270.062,
-    y2: 137.098,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 267.562,
-    y1: 135.866,
-    x2: 270.062,
-    y2: 138.366,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m255.063,66.312c-2.071,0-3.75.56-3.75,1.25v2.5h7.5v-2.5c0-.69-1.679-1.25-3.75-1.25Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 207.562,
-    y: 67.562,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "230.062 77.562 227.562 77.562 227.562 67.562 230.062 70.062 230.062 77.562",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(213.982 73.812)",
-    fill: FontColorLight,
-    fontSize: 3.438,
-    letterSpacing: ".08em",
-    stroke: FontColorLight,
-    strokeMiterlimit: 10,
-    strokeWidth: 0.062,
-    children: jsxRuntimeExports$1.jsx("tspan", {
-      x: 0,
-      y: 0,
-      children: "USB"
-    })
-  }), jsxRuntimeExports$1.jsx("ellipse", {
-    cx: 273.812,
-    cy: 345.062,
-    rx: 1.25,
-    ry: 3.75,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("polygon", {
-    points: "270.062 200.062 50.062 200.062 47.563 197.562 267.562 197.562 270.062 200.062",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 60.062,
-    y: 340.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.062,
-    y: 330.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.062,
-    y: 240.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.062,
-    y: 240.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.062,
-    y: 270.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.062,
-    y: 330.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 60.062,
-    y: 240.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 60.062,
-    y: 260.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 90.063,
-    y: 210.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 120.062,
-    y: 210.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 150.039,
-    y: 210.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 68.789,
-    y: 282.966,
-    width: 2.5,
-    height: 45,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.062,
-    y: 280.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.039,
-    y: 280.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 211.312,
-    y: 241.312,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.062,
-    y: 250.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.062,
-    y: 250.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 211.289,
-    y: 271.312,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.062,
-    y: 270.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 241.289,
-    y: 271.312,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 211.312,
-    y: 331.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 210.039,
-    y: 300.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 211.312,
-    y: 301.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 241.312,
-    y: 331.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 240.039,
-    y: 300.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 241.312,
-    y: 301.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 61.313,
-    y: 241.514,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 61.313,
-    y: 261.514,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 61.313,
-    y: 341.312,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 241.289,
-    y: 241.312,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 90.063,
-    y: 220.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 120.062,
-    y: 220.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 91.312,
-    y: 211.514,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 121.312,
-    y: 211.514,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 150.039,
-    y: 220.062,
-    width: 20,
-    height: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 151.289,
-    y: 211.514,
-    width: 17.5,
-    height: 7.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 250.062,
-    cy: 220.062,
-    r: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 220.062,
-    cy: 220.062,
-    r: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 70.063,
-    cy: 220.062,
-    r: 10,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m71.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267.472,2.423,1.25,3.304.266.301,3.114,3.157,3.75,3.526.735.426,1.589.671,2.5.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 215.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d9dbda",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.441
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 225.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d9dbda",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.441
-  }), jsxRuntimeExports$1.jsx("line", {
-    x1: 61.313,
-    y1: 305.062,
-    x2: 78.813,
-    y2: 305.062,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsx("path", {
-      d: "m244.803,274.124v.875h1.258v.219h-1.258s0,.875,0,.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-      fill: "#d9dbda",
-      stroke: "#d9dbda",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m247.982,275.219l.651.837v.202h-.219v-.127l-.71-.913h-.658v1.094h-.219v-2.407h1.204c.362,0,.656.295.656.656s-.294.657-.656.657h-.05Zm-.171-.219h.22c.241,0,.437-.196.437-.438s-.196-.438-.438-.438h-.985v.875h.465s.3,0,.3,0Z",
-      fill: "#d9dbda",
-      stroke: "#d9dbda",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m251.165,276.127v.186h-.219v-.143l-.278-.678h-1.122l-.296.679v.141h-.219v-.187l.968-2.22h.255l.911,2.221Zm-.587-.854l-.454-1.107-.482,1.107h.936Z",
-      fill: "#d9dbda",
-      stroke: "#d9dbda",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m253.367,274.671h-.219v-.109c0-.241-.197-.438-.438-.438h-.547c-.242,0-.438.196-.438.438,0,.043.011.09.03.134.038.085.123.152.227.18l.943.256c.189.051.341.182.407.35.023.059.035.118.035.173,0,.362-.295.657-.657.657h-.546c-.362,0-.657-.295-.657-.657v-.109h.219v.109c0,.242.196.438.438.438h.546c.242,0,.438-.196.438-.438,0-.028-.007-.06-.02-.094-.04-.103-.137-.185-.26-.218l-.943-.256c-.169-.046-.304-.156-.369-.301-.032-.072-.05-.149-.05-.224,0-.362.295-.656.657-.656h.547c.362,0,.657.295.657.656v.109Z",
-      fill: "#d9dbda",
-      stroke: "#d9dbda",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m254.066,274.124v.875h1.258v.219h-1.258s0,.875,0,.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-      fill: "#d9dbda",
-      stroke: "#d9dbda",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    })]
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsx("line", {
-      x1: 250.063,
-      y1: 307.764,
-      x2: 250.063,
-      y2: 312.764,
-      fill: "none",
-      stroke: "#d9dbda",
-      strokeLinecap: "square",
-      strokeWidth: 0.5
-    }), jsxRuntimeExports$1.jsx("line", {
-      x1: 247.563,
-      y1: 310.264,
-      x2: 252.563,
-      y2: 310.264,
-      fill: "none",
-      stroke: "#d9dbda",
-      strokeLinecap: "square",
-      strokeWidth: 0.5
-    })]
-  }), jsxRuntimeExports$1.jsxs("text", {
-    transform: "translate(245.564 336.312)",
-    fill: "#f1f2f2",
-    fontSize: 3.438,
-    stroke: "#f1f2f2",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.062,
-    children: [jsxRuntimeExports$1.jsx("tspan", {
-      x: 0,
-      y: 0,
-      letterSpacing: ".08em",
-      children: "p"
-    }), jsxRuntimeExports$1.jsx("tspan", {
-      x: 2.479,
-      y: 0,
-      children: "l"
-    }), jsxRuntimeExports$1.jsx("tspan", {
-      x: 4.407,
-      y: 0,
-      letterSpacing: ".02em",
-      children: "a"
-    }), jsxRuntimeExports$1.jsx("tspan", {
-      x: 6.951,
-      y: 0,
-      letterSpacing: ".08em",
-      children: "y"
-    })]
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 67.562,
-    cy: 217.562,
-    r: 5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 67.562,
-    cy: 217.562,
-    r: 4.375,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m71.313,299.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267.472,2.423,1.25,3.304.266.301,3.114,3.157,3.75,3.526.735.426,1.589.671,2.5.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m221.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267.472,2.423,1.25,3.304.266.301,3.114,3.157,3.75,3.526.735.426,1.589.671,2.5.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m251.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267.472,2.423,1.25,3.304.266.301,3.114,3.157,3.75,3.526.735.426,1.589.671,2.5.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 67.562,
-    cy: 302.562,
-    r: 5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 67.563,
-    cy: 302.562,
-    r: 4.375,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 217.562,
-    cy: 217.562,
-    r: 5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 247.562,
-    cy: 217.562,
-    r: 5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 217.563,
-    cy: 217.562,
-    r: 4.375,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 247.562,
-    cy: 217.562,
-    r: 4.375,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 90.063,
-    y: 270.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 90.063,
-    y: 300.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 90.063,
-    y: 330.062,
-    width: 20,
-    height: 20,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 88.812,
-    y: 238.812,
-    width: 22.5,
-    height: 22.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 118.812,
-    y: 238.812,
-    width: 22.5,
-    height: 22.5,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 238.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 268.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 298.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 148.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 178.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 118.812,
-        y: 328.812,
-        width: 22.5,
-        height: 22.5,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    })]
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 91.312,
-    y: 271.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 91.312,
-    y: 301.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 91.312,
-    y: 331.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 91.312,
-    y: 241.312,
-    width: 17.5,
-    height: 17.5,
-    rx: 1.25,
-    ry: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 271.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 271.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 271.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 271.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 301.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 331.716,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 121.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 151.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 181.289,
-        y: 241.514,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    })]
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 270.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        strokeWidth: 0
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 270.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 270.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 270.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 300.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 330.264,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 120.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 150.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("rect", {
-        x: 180.062,
-        y: 240.062,
-        width: 17.5,
-        height: 17.5,
-        rx: 1.25,
-        ry: 1.25,
-        fill: "none",
-        stroke: "#d2d3d4",
-        strokeMiterlimit: 10,
-        strokeWidth: 0.125
-      })]
-    })]
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 95.039,
-    cy: 265.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.039,
-    cy: 265.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 155.039,
-    cy: 265.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 185.039,
-    cy: 265.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 95.039,
-    cy: 295.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.039,
-    cy: 295.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 155.039,
-    cy: 295.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 185.039,
-    cy: 295.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 95.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 155.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 185.039,
-    cy: 325.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 95.039,
-    cy: 235.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.039,
-    cy: 235.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 155.039,
-    cy: 235.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 185.039,
-    cy: 235.466,
-    r: 1.25,
-    fill: "#abb5ba",
-    stroke: "#d2d3d4",
-    strokeMiterlimit: 10,
-    strokeWidth: 0.125
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.062,
-    cy: 335.062,
-    r: 0.625,
-    fill: FontColorLight,
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 120.062,
-    y: 330.062,
-    width: 10,
-    height: 10,
-    fill: "none",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m97.004,247.226v.338h-.398v-.26l-.505-1.232h-2.039l-.538,1.234v.257h-.398v-.34l1.759-4.036h.463l1.656,4.039Zm-1.067-1.552l-.825-2.012-.877,2.012h1.702Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m96.629,276.369c0,.658-.535,1.193-1.194,1.193h-2.188v-4.376h2.188c.658,0,1.193.535,1.193,1.193,0,.415-.214.781-.536.995.322.214.536.579.536.994Zm-2.983-1.194h1.591s0,0,0,0h.2c.438,0,.794-.357.794-.795s-.357-.795-.795-.795h-1.79v1.591Zm2.585,1.194c0-.438-.356-.795-.794-.795h-1.791v1.59h1.79c.439,0,.796-.357.796-.795Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m96.243,306.135l.39.079-.04.195c-.135.668-.73,1.154-1.413,1.154h-.497c-.795,0-1.442-.647-1.442-1.442v-1.492c0-.795.647-1.442,1.442-1.442h.497c.4,0,.785.168,1.057.462.181.194.304.434.356.692l.04.195-.39.079-.04-.195c-.038-.187-.127-.36-.258-.501-.197-.212-.476-.334-.766-.334h-.497c-.576,0-1.044.469-1.044,1.044v1.491c0,.576.469,1.044,1.044,1.044h.497c.495,0,.925-.351,1.023-.835l.039-.195Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m96.629,334.63v1.491c0,.795-.647,1.442-1.442,1.442h-1.939v-4.376h1.939c.795,0,1.442.647,1.442,1.442Zm-.398,0c0-.576-.469-1.044-1.044-1.044h-1.541v3.58h1.541c.576,0,1.044-.469,1.044-1.044v-1.491Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m124.068,247.563h-.398v-.364l2.663-3.614h-3.061v-.398h3.58v.363l-2.784,3.779v.233Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m156.853,246.37c0,.658-.535,1.193-1.193,1.193h-1.194c-.658,0-1.193-.535-1.193-1.193,0-.415.214-.781.536-.994-.322-.214-.536-.58-.536-.995,0-.658.535-1.193,1.193-1.193h1.194c.658,0,1.193.535,1.193,1.193,0,.415-.214.781-.536.995.322.214.536.579.536.994Zm-.398,0c0-.439-.357-.795-.796-.795h-1.193c-.439,0-.795.357-.795.795s.357.795.795.795h1.193c.439,0,.796-.357.796-.795Zm-1.989-1.194h1.194c.439,0,.795-.357.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795.357-.795.795s.357.795.795.795Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m186.56,245.165l-.041.039c-.016.016-.032.031-.048.046l-2.204,2.114v.199h-.398v-.384l1.685-1.605h-1.088c-.658,0-1.193-.535-1.193-1.194s.535-1.193,1.193-1.193h1.194c.658,0,1.193.535,1.193,1.193,0,.299-.115.57-.297.779l.005.005Zm-.376-.191l.055-.053c.133-.142.215-.331.215-.54,0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795.357-.795.795s.357.795.795.795h1.193c.202,0,.385-.078.525-.202Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m154.938,337.563c-.987,0-1.79-.803-1.79-1.79v-.795c0-.987.803-1.79,1.79-1.79s1.79.803,1.79,1.79v.795c0,.987-.803,1.79-1.79,1.79Zm0-3.978c-.768,0-1.392.624-1.392,1.392v.795c0,.768.624,1.392,1.392,1.392s1.392-.624,1.392-1.392v-.795c0-.768-.624-1.392-1.392-1.392Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsxs("g", {
-    children: [jsxRuntimeExports$1.jsx("path", {
-      d: "m184.811,334.031v.875h1.258v.219h-1.258s0,.875,0,.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-      fill: "#f1f2f2",
-      stroke: "#f1f2f2",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m188.657,333.812v2.407h-.338l-1.193-2.17v2.17h-.219v-2.407h.338l1.194,2.17v-2.17h.219Z",
-      fill: "#f1f2f2",
-      stroke: "#f1f2f2",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m190.978,333.812v.219h-.82v2.188h-.219v-2.188h-.82v-.219h1.86Z",
-      fill: "#f1f2f2",
-      stroke: "#f1f2f2",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m191.678,334.031v.875h1.258v.219h-1.258s0,.875,0,.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-      fill: "#f1f2f2",
-      stroke: "#f1f2f2",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    }), jsxRuntimeExports$1.jsx("path", {
-      d: "m194.789,335.126l.651.837v.202h-.219v-.127l-.71-.913h-.658v1.094h-.219v-2.407h1.204c.362,0,.656.295.656.656s-.294.657-.656.657h-.05Zm-.108-.219h.22c.241,0,.437-.196.437-.438s-.196-.438-.438-.438h-.985v.875h.465s.3,0,.3,0Z",
-      fill: "#f1f2f2",
-      stroke: "#f1f2f2",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.062
-    })]
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m126.28,277.563h-.398v-1.292h-2.784v-.483l2.705-2.601h.478v2.685h.497v.398h-.497v1.293Zm-2.697-1.691h2.298v-2.21l-2.298,2.21Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m156.728,276.37c0,.658-.535,1.193-1.193,1.193h-2.387v-.398h2.387c.439,0,.795-.357.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795.357-.795.795v.199h-.398v-3.381h3.381v.398h-2.983v1.901c.212-.191.489-.31.795-.31h1.194c.658,0,1.193.535,1.193,1.194Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m186.33,274.579v-.199c0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795.357-.795.795v1.106c.211-.191.488-.31.795-.31h1.193c.658,0,1.193.535,1.193,1.194s-.535,1.193-1.193,1.193h-1.193c-.59,0-1.078-.431-1.173-.994h-.02v-2.188c0-.658.535-1.193,1.193-1.193h1.193c.658,0,1.193.535,1.193,1.193v.199h-.398Zm-2.784,1.79c0,.438.357.795.795.795h1.193c.439,0,.795-.357.795-.795s-.357-.795-.795-.795h-1.193c-.438,0-.795.357-.795.795Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m124.739,307.563v-4.376h.398v4.376h-.398Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m156.744,307.563h-3.58v-.508l2.425-1.517c.596-.345.757-.55.757-.959,0-.548-.455-.994-1.013-.994h-.777c-.573,0-1.023.437-1.023.994v.199h-.398v-.199c0-.781.624-1.392,1.421-1.392h.777c.778,0,1.411.625,1.411,1.392,0,.63-.334.943-.95,1.299l-2.055,1.286h3.006v.398Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("path", {
-    d: "m186.728,306.369c0,.658-.535,1.193-1.193,1.193h-1.193c-.658,0-1.193-.535-1.193-1.193v-.199h.398v.199c0,.438.357.795.795.795h1.193c.439,0,.795-.357.795-.795s-.357-.795-.795-.795h-1.392v-.398h1.392c.439,0,.795-.357.795-.795s-.357-.795-.795-.795h-1.193c-.439,0-.795.357-.795.795v.199h-.398v-.199c0-.658.535-1.193,1.193-1.193h1.193c.658,0,1.193.535,1.194,1.193,0,.415-.214.781-.536.995.323.214.536.579.536.994Z",
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("circle", {
-    cx: 125.062,
-    cy: 335.062,
-    r: 0.625,
-    fill: "#f1f2f2",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsx("rect", {
-    x: 120.062,
-    y: 330.062,
-    width: 10,
-    height: 10,
-    fill: "none",
-    strokeWidth: 0
-  }), jsxRuntimeExports$1.jsxs("g", {
-    id: "background-2",
-    "data-name": "background",
-    children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 47.563,
-      y: 137.562,
-      width: 220,
-      height: 60,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125
-    }), jsxRuntimeExports$1.jsxs("g", {
-      children: [jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 142.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 147.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 152.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 157.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 162.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 167.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 77.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 82.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 87.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 92.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 97.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 102.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 107.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 112.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 117.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 122.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 127.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 132.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 137.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 142.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 147.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 152.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 157.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 162.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 167.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 172.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 177.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 182.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 187.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 192.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 197.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 202.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 207.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 212.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 217.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 222.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 227.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 172.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 232.563,
-          y: 177.562,
-          width: 5,
-          height: 5,
-          fill: "none",
-          stroke: "#d2d3d4",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      })]
-    })]
-  }), jsxRuntimeExports$1.jsxs("g", {
-    id: "label-out-2",
-    "data-name": "label-out",
-    children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 240.062,
-      y: 195.062,
-      width: 20,
-      height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125
-    }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(243.418 202.562)",
-      fill: FontColorLight,
-      fontSize: 6.875,
-      letterSpacing: ".005em",
-      stroke: FontColorLight,
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125,
-      children: jsxRuntimeExports$1.jsx("tspan", {
-        x: 0,
-        y: 0,
-        children: "OUT"
-      })
-    })]
-  }), jsxRuntimeExports$1.jsxs("g", {
-    id: "label-in-2",
-    "data-name": "label-in",
-    children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 210.062,
-      y: 195.062,
-      width: 20,
-      height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125
-    }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(217.079 202.562)",
-      fill: FontColorLight,
-      fontSize: 6.875,
-      letterSpacing: ".095em",
-      stroke: FontColorLight,
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125,
-      children: jsxRuntimeExports$1.jsx("tspan", {
-        x: 0,
-        y: 0,
-        children: "IN"
-      })
-    })]
-  })]
+    fill: "url(#warning_stripes)"
+  })*/]
 });
 const placeholder = "_placeholder_9zr17_1";
 const btn = "_btn_9zr17_9";
@@ -55557,25 +49689,25 @@ const BackupRestoreButton = ({
       y: 387.562,
       width: 77.5,
       height: 10,
-      fill: "#9aa0a9",
+      fill: ColorLightCharcoal,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "480.062 400.062 477.562 397.563 477.562 387.562 480.062 390.063 480.062 400.062",
-      fill: "#9aa0a9",
+      fill: ColorLightCharcoal,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "400.062 397.562 402.562 400.062 480.062 400.062 477.562 397.562 410.062 397.562",
-      fill: "#9aa0a9",
+      fill: ColorLightCharcoal,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(406.413 395.062)",
-      fill: "#000",
+      fill: ColorBlack,
       fontSize: 6.25,
       letterSpacing: ".06em",
       stroke: FontColorDark,
@@ -55592,8 +49724,8 @@ const BackupRestoreButton = ({
     y: 387.562,
     width: 80,
     height: 12.5,
-    fill: "url(#_10_lpi_40_2)",
-    stroke: "#8a959a",
+    fill: "url(#warning_stripes)",
+    stroke: ColorLightCharcoal,
     strokeMiterlimit: 10,
     strokeWidth: 0.125,
     style: {
@@ -55614,20 +49746,20 @@ const BackButton = ({
       y: 387.562,
       width: 47.5,
       height: 10,
-      fill: ColorSecondary,
-      stroke: "#8a959a",
+      fill: ColorButtons2,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "480.062 400.062 477.562 397.563 477.562 387.562 480.062 390.063 480.062 400.062",
-      fill: "#000005",
-      stroke: "#8a959a",
+      fill: ColorBlack,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "430.062 397.562 432.562 400.062 480.062 400.062 477.562 397.562 430.062 397.562",
-      fill: "#000005",
-      stroke: "#8a959a",
+      fill: ColorBlack,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
@@ -55649,8 +49781,8 @@ const BackButton = ({
     y: 387.562,
     width: 50,
     height: 12.5,
-    fill: "url(#_10_lpi_40_2)",
-    stroke: "#8a959a",
+    fill: "url(#warning_stripes)",
+    stroke: ColorLightCharcoal,
     strokeMiterlimit: 10,
     strokeWidth: 0.125,
     style: {
@@ -55664,13 +49796,13 @@ const FactoryRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
   children: [jsxRuntimeExports$1.jsx("polyline", {
     points: "296.423 136.138 300.173 134.263 300.173 136.138 303.923 134.263 303.923 136.138 307.673 134.263 307.673 136.138 313.898 136.138 313.898 141.763 296.423 141.763 296.423 136.138",
     fill: ColorMain,
-    stroke: "#221f1f",
+    stroke: ColorCharcoal,
     strokeMiterlimit: 10,
     strokeWidth: 0.094
   }), jsxRuntimeExports$1.jsx("polygon", {
     points: "312.235 126.763 309.336 126.763 308.698 135.114 312.873 135.114 312.235 126.763",
     fill: ColorMain,
-    stroke: "#221f1f",
+    stroke: ColorCharcoal,
     strokeMiterlimit: 10,
     strokeWidth: 0.094
   })]
@@ -55723,10 +49855,10 @@ const LocalRestoreIcon = () => jsxRuntimeExports$1.jsxs("g", {
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("text", {
     transform: "translate(299.825 182.54)",
-    fill: "#000005",
+    fill: ColorBlack,
     fontSize: 3.438,
     letterSpacing: ".08em",
-    stroke: "#000005",
+    stroke: ColorBlack,
     strokeMiterlimit: 10,
     strokeWidth: 0.062,
     children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55745,7 +49877,7 @@ const LocalBackupIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 96.329,
       fill: "none",
-      stroke: "#dbdddb",
+      stroke: ColorSlate,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55755,7 +49887,7 @@ const LocalBackupIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 102.979,
       fill: "none",
-      stroke: "#dbdddb",
+      stroke: ColorSlate,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55765,7 +49897,7 @@ const LocalBackupIcon = () => jsxRuntimeExports$1.jsxs("g", {
       x2: 304.884,
       y2: 102.979,
       fill: "none",
-      stroke: "#dbdddb",
+      stroke: ColorSlate,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       strokeWidth: 0.5
@@ -55777,16 +49909,16 @@ const LocalBackupIcon = () => jsxRuntimeExports$1.jsxs("g", {
     height: 6.437,
     rx: 0.691,
     ry: 0.691,
-    fill: "#dbdddb",
+    fill: ColorSlate,
     stroke: FontColorDark,
     strokeMiterlimit: 10,
     strokeWidth: 0.125
   }), jsxRuntimeExports$1.jsx("text", {
     transform: "translate(297.205 92.54)",
-    fill: "#000005",
+    fill: ColorBlack,
     fontSize: 3.438,
     letterSpacing: ".08em",
-    stroke: "#000005",
+    stroke: ColorBlack,
     strokeMiterlimit: 10,
     strokeWidth: 0.062,
     children: jsxRuntimeExports$1.jsx("tspan", {
@@ -55929,21 +50061,21 @@ const COLORS = {
   },
   orange: {
     background: ColorMain,
-    subtitle: "#dbdddb",
-    text: "#dbdddb"
+    subtitle: ColorSlate,
+    text: ColorSlate
   },
   grey: {
     background: ColorSecondary,
-    subtitle: "#dbdddb",
-    text: "#dbdddb"
+    subtitle: ColorSlate,
+    text: ColorSlate
   },
   confirmed: {
-    background: "#dbdddb",
-    text: "#000005"
+    background: ColorSlate,
+    text: ColorBlack
   },
   unconfirmed: {
-    background: "#abb5ba",
-    text: "#9aa0a9"
+    background: ColorLightCharcoal,
+    text: ColorLightCharcoal
   }
 };
 function removeExtension(s, a) {
@@ -56042,15 +50174,15 @@ const ConfirmationModal = ({
         id: "deleting_modal",
         "data-name": "deleting modal",
         onClick: a,
-        children: jsxRuntimeExports$1.jsx("rect", {
+        children: [jsxRuntimeExports$1.jsx("rect", {
           id: "deleting_overlay",
           x: -4000,
           y: -4000,
           width: 8000,
           height: 8000,
-          fill: "url(#_10_lpi_40_2)",
+          fill: "url(#warning_stripes)",
           strokeWidth: 0
-        })
+        })]
       }), jsxRuntimeExports$1.jsxs("g", {
         id: "final_warning",
         "data-name": "final warning",
@@ -56058,8 +50190,8 @@ const ConfirmationModal = ({
           id: "final_warning_inner",
           children: [jsxRuntimeExports$1.jsx("polygon", {
             points: "362.562 252.562 360.062 250.062 360.062 150.063 362.562 152.563 362.562 252.562",
-            fill: "#000005",
-            stroke: "#8a959a",
+            fill: ColorBlack,
+            stroke: ColorLightCharcoal,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -56111,8 +50243,8 @@ const ConfirmationModal = ({
             })]
           }), jsxRuntimeExports$1.jsx("polygon", {
             points: "195.062 252.563 192.562 250.063 360.062 250.062 362.562 252.563 195.062 252.563",
-            fill: "#000005",
-            stroke: "#8a959a",
+            fill: ColorBlack,
+            stroke: ColorLightCharcoal,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -56120,7 +50252,7 @@ const ConfirmationModal = ({
             y: 150.063,
             width: 30,
             height: 30,
-            fill: "#dbdddb",
+            fill: ColorSlate,
             stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
@@ -56153,8 +50285,8 @@ const ConfirmationModal = ({
             y1: 180.062,
             x2: 360.062,
             y2: 180.062,
-            fill: "#000005",
-            stroke: "#000005",
+            fill: ColorBlack,
+            stroke: ColorBlack,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -56162,7 +50294,7 @@ const ConfirmationModal = ({
             y: 225.062,
             width: 95,
             height: 20,
-            fill: "#dbdddb",
+            fill: ColorSlate,
             stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
@@ -56193,7 +50325,7 @@ const ConfirmationModal = ({
             y: 235.062,
             width: 30,
             height: 10,
-            fill: "#d2d3d4",
+            fill: ColorLightGray,
             stroke: FontColorDark,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
@@ -56309,8 +50441,8 @@ const BackupProgress = ({
       id: "shadow-2",
       "data-name": "shadow",
       points: "480.062 162.562 292.562 162.562 290.062 160.062 477.562 120.062 480.062 122.562 480.062 162.562",
-      fill: "#000005",
-      stroke: "#8a959a",
+      fill: ColorBlack,
+      stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -56337,7 +50469,7 @@ const BackupProgress = ({
         y: 125.062,
         width: 177.5,
         height: 10,
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -56348,7 +50480,7 @@ const BackupProgress = ({
         y: 125.062,
         width: tt,
         height: 10,
-        fill: "#000005",
+        fill: ColorBlack,
         strokeWidth: 0
       })]
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -56357,7 +50489,7 @@ const BackupProgress = ({
       y: 150.062,
       width: 187.5,
       height: 10,
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
@@ -56369,7 +50501,7 @@ const BackupProgress = ({
           transform: "translate(295.063 156.522)",
           fontSize: 5.5,
           letterSpacing: ".08em",
-          stroke: et || $.status === "failed" ? ColorMain : "#000",
+          stroke: et || $.status === "failed" ? ColorMain : ColorBlack,
           fill: et || $.status === "failed" ? ColorMain : "",
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
@@ -56468,7 +50600,7 @@ const BackupProgress = ({
         width: 27.5,
         height: 10,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -56574,8 +50706,8 @@ const Display = ({
         children: [jsxRuntimeExports$1.jsx("polygon", {
           className: "shadow",
           points: "480.062 112.562 292.563 112.562 290.063 110.062 477.562 80.062 480.062 82.562 480.062 112.562",
-          fill: "#000005",
-          stroke: "#8a959a",
+          fill: ColorBlack,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -56633,7 +50765,7 @@ const Display = ({
           y: 80.062,
           width: 30,
           height: 30,
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), ICONS[_]]
@@ -56651,13 +50783,13 @@ const Display = ({
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "480.063 132.562 477.563 130.062 477.563 120.062 480.063 122.562 480.063 132.562",
-          fill: COLORS[_e].background,
+          fill: ColorBlack,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "430.062 130.062 432.562 132.562 480.063 132.562 477.562 130.062 430.062 130.062",
-          fill: COLORS[_e].background,
+          fill: ColorBlack,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -57171,7 +51303,7 @@ const GreyBackground = ({
   children: s
 }) => jsxRuntimeExports$1.jsxs("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "40 65 485 340",
+  viewBox: "35 65 490 340",
   className: styles$1.background,
   children: [jsxRuntimeExports$1.jsxs("g", {
     id: "extras",
@@ -57179,10 +51311,10 @@ const GreyBackground = ({
       id: "version",
       children: jsxRuntimeExports$1.jsx("text", {
         transform: "translate(56.055 56.312)",
-        fill: "#000005",
+        fill: ColorBlack,
         fontSize: 3.438,
         letterSpacing: ".095em",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -57202,12 +51334,12 @@ const GreyBackground = ({
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "50.063 50.063 47.563 47.563 107.562 47.563 110.062 50.063 50.063 50.063",
         fill: OriginalOrange,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "110.062 50.063 107.562 47.563 157.562 47.563 160.062 50.063 110.062 50.063",
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -57216,14 +51348,14 @@ const GreyBackground = ({
         y: 17.562,
         width: 50,
         height: 10,
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "160.062 30.062 157.562 27.562 157.562 17.562 160.062 20.062 160.062 30.062",
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -57231,13 +51363,13 @@ const GreyBackground = ({
         y: 27.562,
         width: 50,
         height: 20,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "160.062 50.062 157.562 47.562 157.562 27.562 160.062 30.062 160.062 50.062",
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -57272,7 +51404,7 @@ const GreyBackground = ({
         width: 60,
         height: 30,
         fill: ColorMain,
-        stroke: "#221f1f",
+        stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("text", {
@@ -57298,7 +51430,7 @@ const GreyBackground = ({
         cy: 22.563,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57306,7 +51438,7 @@ const GreyBackground = ({
         cy: 42.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57314,7 +51446,7 @@ const GreyBackground = ({
         cy: 22.563,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57322,7 +51454,7 @@ const GreyBackground = ({
         cy: 22.563,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57330,7 +51462,7 @@ const GreyBackground = ({
         cy: 22.563,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57338,7 +51470,7 @@ const GreyBackground = ({
         cy: 32.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57346,7 +51478,7 @@ const GreyBackground = ({
         cy: 32.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57354,7 +51486,7 @@ const GreyBackground = ({
         cy: 42.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57362,7 +51494,7 @@ const GreyBackground = ({
         cy: 42.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -57370,7 +51502,7 @@ const GreyBackground = ({
         cy: 42.562,
         r: 2.5,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })]
@@ -57382,8 +51514,8 @@ const GreyBackground = ({
       y: 70.062,
       width: 220,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -57391,20 +51523,20 @@ const GreyBackground = ({
       y: 70.062,
       width: 220,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M50.062,370.062l7.5,7.5h220V77.562l-7.5-7.5V370.062s-220,.427-220,0Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M57.563,377.562l2.5,2.5h220V80.062l-2.5-2.5V377.562s-220,.202-220,0Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57412,8 +51544,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 280.063,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57421,8 +51553,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 277.925,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57430,8 +51562,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 275.788,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57439,8 +51571,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 273.651,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57448,8 +51580,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 271.514,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57457,8 +51589,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 269.377,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57466,8 +51598,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 267.24,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57475,8 +51607,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 265.103,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57484,8 +51616,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 262.966,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57493,8 +51625,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 260.829,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57502,8 +51634,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 258.692,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57511,8 +51643,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 256.555,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57520,8 +51652,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 254.418,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57529,8 +51661,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 252.281,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57538,8 +51670,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 250.144,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57547,8 +51679,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 248.007,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57556,8 +51688,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 245.87,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57565,8 +51697,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 243.733,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57574,8 +51706,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 241.596,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57583,8 +51715,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 239.459,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57592,8 +51724,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 237.322,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57601,8 +51733,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 235.185,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57610,8 +51742,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 233.048,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57619,8 +51751,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 230.911,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57628,8 +51760,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 228.774,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57637,8 +51769,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 226.637,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57646,8 +51778,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 224.5,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57655,8 +51787,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 222.363,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57664,8 +51796,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 220.226,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57673,8 +51805,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 218.089,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57682,8 +51814,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 215.952,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57691,8 +51823,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 213.815,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57700,8 +51832,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 211.678,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57709,8 +51841,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 209.541,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57718,8 +51850,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 207.404,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57727,8 +51859,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 205.267,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57736,8 +51868,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 203.13,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57745,8 +51877,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 200.993,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57754,8 +51886,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 198.856,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57763,8 +51895,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 196.719,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57772,8 +51904,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 194.582,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57781,8 +51913,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 192.445,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57790,8 +51922,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 190.308,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57799,8 +51931,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 188.171,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57808,8 +51940,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 186.034,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57817,8 +51949,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 183.897,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57826,8 +51958,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 181.76,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57835,8 +51967,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 179.623,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57844,8 +51976,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 177.486,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57853,8 +51985,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 175.349,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57862,8 +51994,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 173.212,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57871,8 +52003,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 171.075,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57880,8 +52012,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 168.938,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57889,8 +52021,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 166.8,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57898,8 +52030,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 164.663,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57907,8 +52039,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 162.526,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57916,8 +52048,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 160.389,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57925,8 +52057,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 158.252,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57934,8 +52066,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 156.115,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57943,8 +52075,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 153.978,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57952,8 +52084,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 151.841,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57961,8 +52093,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 149.704,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57970,8 +52102,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 147.567,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57979,8 +52111,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 145.43,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57988,8 +52120,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 143.293,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -57997,8 +52129,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 141.156,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58006,8 +52138,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 139.019,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58015,8 +52147,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 136.882,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58024,8 +52156,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 134.745,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58033,8 +52165,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 132.608,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58042,8 +52174,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 130.471,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58051,8 +52183,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 128.334,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58060,8 +52192,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 126.197,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58069,8 +52201,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 124.06,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58078,8 +52210,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 121.923,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58087,8 +52219,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 119.786,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58096,8 +52228,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 117.649,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58105,8 +52237,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 115.512,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58114,8 +52246,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 113.375,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58123,8 +52255,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 111.238,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58132,8 +52264,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 109.101,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58141,8 +52273,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 106.964,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58150,8 +52282,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 104.827,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58159,8 +52291,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 102.69,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58168,8 +52300,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 100.553,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58177,8 +52309,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 98.416,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58186,8 +52318,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 96.279,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58195,8 +52327,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 94.142,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58204,8 +52336,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 92.005,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58213,8 +52345,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 89.868,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58222,8 +52354,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 87.731,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58231,8 +52363,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 85.594,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58240,8 +52372,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 83.457,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58249,8 +52381,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 81.32,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58258,8 +52390,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 79.183,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58267,8 +52399,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 77.046,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58276,8 +52408,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 74.909,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58285,8 +52417,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 72.772,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58294,8 +52426,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 70.635,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58303,8 +52435,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 68.498,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58312,8 +52444,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 66.361,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58321,8 +52453,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 64.224,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58330,8 +52462,8 @@ const GreyBackground = ({
       y1: 370.062,
       x2: 62.087,
       y2: 380.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -58339,8 +52471,8 @@ const GreyBackground = ({
       cy: 355.062,
       rx: 1.25,
       ry: 3.75,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -58348,8 +52480,8 @@ const GreyBackground = ({
       cy: 95.062,
       rx: 1.25,
       ry: 3.75,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("ellipse", {
@@ -58357,8 +52489,8 @@ const GreyBackground = ({
       cy: 105.062,
       rx: 1.25,
       ry: 3.75,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58366,16 +52498,16 @@ const GreyBackground = ({
       y: 77.562,
       width: 60,
       height: 60,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 237.562,
       cy: 107.764,
       r: 25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58383,8 +52515,8 @@ const GreyBackground = ({
       y: 67.562,
       width: 50,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58392,8 +52524,8 @@ const GreyBackground = ({
       y: 67.562,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58401,8 +52533,8 @@ const GreyBackground = ({
       y: 67.562,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58410,140 +52542,140 @@ const GreyBackground = ({
       y: 77.562,
       width: 160,
       height: 60,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M267.539,137.562h-60v-60h60v60Zm-2.5-4.375c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm55-5c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Zm-5,0c-1.036,0-1.875,.839-1.875,1.875s.839,1.875,1.875,1.875,1.875-.839,1.875-1.875-.839-1.875-1.875-1.875Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 52.563,
       cy: 82.562,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 52.563,
       cy: 132.562,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 202.562,
       cy: 82.562,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 202.562,
       cy: 132.562,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "M63.401,102.039h-1.306v.431c0,1.194-.369,2.407-2,3.144-.081-.1-.213-.225-.325-.313,1.588-.688,1.881-1.8,1.881-2.825v-.438h-2.019v1.557h-.444v-1.557h-1.225v-.425h1.225v-1.357l.6,.037c-.006,.062-.062,.119-.156,.131v1.188h2.019v-1.438l.6,.037c-.006,.056-.056,.106-.156,.119v1.282h1.306v.425Z",
-        fill: "#dfdfdf",
-        stroke: "#dfdfdf",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M64.719,100.67c.65,.206,1.4,.531,1.863,.85l-.237,.394c-.45-.319-1.188-.65-1.825-.869l.2-.375Zm-.025,4.332c2.219-.688,3.694-1.932,4.444-3.663,.131,.106,.275,.188,.406,.256-.781,1.713-2.307,3.044-4.426,3.75-.006,.056-.044,.119-.088,.144l-.337-.487Z",
-        fill: "#dfdfdf",
-        stroke: "#dfdfdf",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M70.607,100.92h3.976l.037-.019,.425,.325c-.019,.025-.037,.044-.075,.056-.506,2.35-1.594,3.576-3.507,4.301-.069-.113-.194-.275-.281-.369,1.819-.669,2.869-1.831,3.275-3.863h-3.851v-.431Zm4.763-1.119c.375,0,.681,.306,.681,.688,0,.375-.306,.681-.681,.681-.381,0-.688-.306-.688-.681,0-.394,.319-.688,.688-.688Zm.475,.688c0-.269-.213-.481-.475-.481s-.481,.213-.481,.481c0,.262,.219,.481,.481,.481,.275,0,.475-.231,.475-.481Z",
-        fill: "#dfdfdf",
-        stroke: "#dfdfdf",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M81.464,102.195c-.012,.025-.044,.05-.081,.062-.513,1.888-1.557,2.807-3.426,3.326-.056-.113-.175-.269-.263-.363,1.7-.425,2.757-1.3,3.151-2.75h-4.138v-.425h4.326l.062-.037,.369,.188Zm-.588-1.338h-3.563v-.413h3.563v.413Z",
-        fill: "#dfdfdf",
-        stroke: "#dfdfdf",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M82.607,102.558h5.22v.444h-4.982c-.038,.062-.119,.106-.2,.119l-.038-.563Z",
-        fill: "#dfdfdf",
-        stroke: "#dfdfdf",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       })]
     }), jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "M64.951,97.138l-.796,.002v-.422l-4.23-3.887-.941,.725v3.584h-.796v-8.751h.796v4.163l4.886-3.766v-.398l.797,.002-.002,.792-4.101,3.157,4.385,4.029,.002,.771Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M66.2,97.14v-.903h.796v.903h-.796Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M75.012,91.273v2.983c0,1.59-1.294,2.884-2.884,2.884h-.994c-1.59,0-2.884-1.294-2.884-2.884v-2.983c0-1.59,1.294-2.884,2.884-2.884h.994c1.59,0,2.884,1.294,2.884,2.884Zm-.796,0c0-1.152-.937-2.088-2.088-2.088h-.994c-1.151,0-2.088,.937-2.088,2.088v2.983c0,1.151,.937,2.088,2.088,2.088h.994c1.151,0,2.088-.937,2.088-2.088v-2.983Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M75.762,97.14v-.903h.796v.903h-.796Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M81.687,97.14v-8.751h.796v8.751h-.796Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M84.487,97.14v-8.751h.796v8.751h-.796Z",
-        fill: "#dfdfdf"
+        fill: ColorLightGray
       })]
     }), jsxRuntimeExports$1.jsx("rect", {
       x: 79.952,
       y: 88.394,
       width: 7.137,
       height: 0.684,
-      fill: "#dfdfdf"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("rect", {
       x: 79.952,
       y: 96.447,
       width: 7.137,
       height: 0.684,
-      fill: "#dfdfdf"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "277.562 207.562 267.562 197.562 267.562 137.562 277.562 147.562 277.562 207.562",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "270.062 140.062 267.562 137.562 267.562 77.562 270.062 80.062 270.062 140.062",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "180.062 77.562 177.562 77.562 177.562 67.562 180.062 70.062 180.062 77.562",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "120.062 77.562 117.562 77.562 117.562 67.562 120.062 70.062 120.062 77.562",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "80.062 77.562 77.562 77.562 77.562 67.562 80.062 70.062 80.062 77.562",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58551,8 +52683,8 @@ const GreyBackground = ({
       y1: 78.83,
       x2: 270.062,
       y2: 81.33,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58560,8 +52692,8 @@ const GreyBackground = ({
       y1: 80.097,
       x2: 270.062,
       y2: 82.597,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58569,8 +52701,8 @@ const GreyBackground = ({
       y1: 81.365,
       x2: 270.062,
       y2: 83.865,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58578,8 +52710,8 @@ const GreyBackground = ({
       y1: 82.632,
       x2: 270.062,
       y2: 85.132,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58587,8 +52719,8 @@ const GreyBackground = ({
       y1: 83.9,
       x2: 270.062,
       y2: 86.4,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58596,8 +52728,8 @@ const GreyBackground = ({
       y1: 85.167,
       x2: 270.062,
       y2: 87.667,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58605,8 +52737,8 @@ const GreyBackground = ({
       y1: 86.435,
       x2: 270.062,
       y2: 88.935,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58614,8 +52746,8 @@ const GreyBackground = ({
       y1: 87.702,
       x2: 270.062,
       y2: 90.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58623,8 +52755,8 @@ const GreyBackground = ({
       y1: 88.97,
       x2: 270.062,
       y2: 91.47,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58632,8 +52764,8 @@ const GreyBackground = ({
       y1: 90.237,
       x2: 270.062,
       y2: 92.737,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58641,8 +52773,8 @@ const GreyBackground = ({
       y1: 91.505,
       x2: 270.062,
       y2: 94.005,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58650,8 +52782,8 @@ const GreyBackground = ({
       y1: 92.772,
       x2: 270.062,
       y2: 95.272,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58659,8 +52791,8 @@ const GreyBackground = ({
       y1: 94.039,
       x2: 270.062,
       y2: 96.539,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58668,8 +52800,8 @@ const GreyBackground = ({
       y1: 95.307,
       x2: 270.062,
       y2: 97.807,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58677,8 +52809,8 @@ const GreyBackground = ({
       y1: 96.574,
       x2: 270.062,
       y2: 99.074,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58686,8 +52818,8 @@ const GreyBackground = ({
       y1: 97.842,
       x2: 270.062,
       y2: 100.342,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58695,8 +52827,8 @@ const GreyBackground = ({
       y1: 99.109,
       x2: 270.062,
       y2: 101.609,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58704,8 +52836,8 @@ const GreyBackground = ({
       y1: 100.377,
       x2: 270.062,
       y2: 102.877,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58713,8 +52845,8 @@ const GreyBackground = ({
       y1: 101.644,
       x2: 270.062,
       y2: 104.144,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58722,8 +52854,8 @@ const GreyBackground = ({
       y1: 102.912,
       x2: 270.062,
       y2: 105.412,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58731,8 +52863,8 @@ const GreyBackground = ({
       y1: 104.179,
       x2: 270.062,
       y2: 106.679,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58740,8 +52872,8 @@ const GreyBackground = ({
       y1: 105.447,
       x2: 270.062,
       y2: 107.947,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58749,8 +52881,8 @@ const GreyBackground = ({
       y1: 106.714,
       x2: 270.062,
       y2: 109.214,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58758,8 +52890,8 @@ const GreyBackground = ({
       y1: 107.981,
       x2: 270.062,
       y2: 110.481,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58767,8 +52899,8 @@ const GreyBackground = ({
       y1: 109.249,
       x2: 270.062,
       y2: 111.749,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58776,8 +52908,8 @@ const GreyBackground = ({
       y1: 110.516,
       x2: 270.062,
       y2: 113.016,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58785,8 +52917,8 @@ const GreyBackground = ({
       y1: 111.784,
       x2: 270.062,
       y2: 114.284,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58794,8 +52926,8 @@ const GreyBackground = ({
       y1: 113.051,
       x2: 270.062,
       y2: 115.551,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58803,8 +52935,8 @@ const GreyBackground = ({
       y1: 114.319,
       x2: 270.062,
       y2: 116.819,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58812,8 +52944,8 @@ const GreyBackground = ({
       y1: 115.586,
       x2: 270.062,
       y2: 118.086,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58821,8 +52953,8 @@ const GreyBackground = ({
       y1: 116.854,
       x2: 270.062,
       y2: 119.354,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58830,8 +52962,8 @@ const GreyBackground = ({
       y1: 118.121,
       x2: 270.062,
       y2: 120.621,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58839,8 +52971,8 @@ const GreyBackground = ({
       y1: 119.389,
       x2: 270.062,
       y2: 121.889,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58848,8 +52980,8 @@ const GreyBackground = ({
       y1: 120.656,
       x2: 270.062,
       y2: 123.156,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58857,8 +52989,8 @@ const GreyBackground = ({
       y1: 121.924,
       x2: 270.062,
       y2: 124.424,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58866,8 +52998,8 @@ const GreyBackground = ({
       y1: 123.191,
       x2: 270.062,
       y2: 125.691,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58875,8 +53007,8 @@ const GreyBackground = ({
       y1: 124.458,
       x2: 270.062,
       y2: 126.958,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58884,8 +53016,8 @@ const GreyBackground = ({
       y1: 125.726,
       x2: 270.062,
       y2: 128.226,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58893,8 +53025,8 @@ const GreyBackground = ({
       y1: 126.993,
       x2: 270.062,
       y2: 129.493,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58902,8 +53034,8 @@ const GreyBackground = ({
       y1: 128.261,
       x2: 270.062,
       y2: 130.761,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58911,8 +53043,8 @@ const GreyBackground = ({
       y1: 129.528,
       x2: 270.062,
       y2: 132.028,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58920,8 +53052,8 @@ const GreyBackground = ({
       y1: 130.796,
       x2: 270.062,
       y2: 133.296,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58929,8 +53061,8 @@ const GreyBackground = ({
       y1: 132.063,
       x2: 270.062,
       y2: 134.563,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58938,8 +53070,8 @@ const GreyBackground = ({
       y1: 133.331,
       x2: 270.062,
       y2: 135.831,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58947,8 +53079,8 @@ const GreyBackground = ({
       y1: 134.598,
       x2: 270.062,
       y2: 137.098,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -58956,14 +53088,14 @@ const GreyBackground = ({
       y1: 135.866,
       x2: 270.062,
       y2: 138.366,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M255.063,66.312c-2.071,0-3.75,.56-3.75,1.25v2.5h7.5v-2.5c0-.69-1.679-1.25-3.75-1.25Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -58971,14 +53103,14 @@ const GreyBackground = ({
       y: 67.562,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "230.062 77.562 227.562 77.562 227.562 67.562 230.062 70.062 230.062 77.562",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
@@ -58994,19 +53126,19 @@ const GreyBackground = ({
         y: 0,
         children: "USB"
       })
-    }), jsxRuntimeExports$1.jsx("ellipse", {
+    }),jsxRuntimeExports$1.jsx("ellipse", {
       cx: 273.812,
       cy: 345.062,
       rx: 1.25,
       ry: 3.75,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "270.062 200.062 50.062 200.062 47.563 197.562 267.562 197.562 270.062 200.062",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59014,8 +53146,8 @@ const GreyBackground = ({
       y: 340.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59023,8 +53155,8 @@ const GreyBackground = ({
       y: 330.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59032,8 +53164,8 @@ const GreyBackground = ({
       y: 240.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59041,8 +53173,8 @@ const GreyBackground = ({
       y: 240.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59050,8 +53182,8 @@ const GreyBackground = ({
       y: 270.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59059,8 +53191,8 @@ const GreyBackground = ({
       y: 330.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59068,8 +53200,8 @@ const GreyBackground = ({
       y: 240.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59077,8 +53209,8 @@ const GreyBackground = ({
       y: 260.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59086,8 +53218,8 @@ const GreyBackground = ({
       y: 210.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59095,8 +53227,8 @@ const GreyBackground = ({
       y: 210.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59104,8 +53236,8 @@ const GreyBackground = ({
       y: 210.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59115,8 +53247,8 @@ const GreyBackground = ({
       height: 45,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59124,8 +53256,8 @@ const GreyBackground = ({
       y: 280.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59133,8 +53265,8 @@ const GreyBackground = ({
       y: 280.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59144,8 +53276,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59153,8 +53285,8 @@ const GreyBackground = ({
       y: 250.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59162,8 +53294,8 @@ const GreyBackground = ({
       y: 250.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59173,8 +53305,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59182,8 +53314,8 @@ const GreyBackground = ({
       y: 270.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59193,8 +53325,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59204,8 +53336,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59213,8 +53345,8 @@ const GreyBackground = ({
       y: 300.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59224,8 +53356,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59235,8 +53367,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59244,8 +53376,8 @@ const GreyBackground = ({
       y: 300.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59255,8 +53387,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59266,8 +53398,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59277,8 +53409,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59288,8 +53420,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59299,8 +53431,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59308,8 +53440,8 @@ const GreyBackground = ({
       y: 220.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59317,8 +53449,8 @@ const GreyBackground = ({
       y: 220.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59328,8 +53460,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59339,8 +53471,8 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59348,8 +53480,8 @@ const GreyBackground = ({
       y: 220.062,
       width: 20,
       height: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59359,54 +53491,54 @@ const GreyBackground = ({
       height: 7.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 250.062,
       cy: 220.062,
       r: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 220.062,
       cy: 220.062,
       r: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 70.063,
       cy: 220.062,
       r: 10,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M71.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 215.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d9dbda",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.441
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 225.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d9dbda",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.441
     }), jsxRuntimeExports$1.jsx("line", {
@@ -59414,39 +53546,39 @@ const GreyBackground = ({
       y1: 305.062,
       x2: 78.813,
       y2: 305.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "M244.803,274.124v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-        fill: "#d9dbda",
-        stroke: "#d9dbda",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M247.982,275.219l.651,.837v.202h-.219v-.127l-.71-.913h-.658v1.094h-.219v-2.407h1.204c.362,0,.656,.295,.656,.656s-.294,.657-.656,.657h-.05Zm-.171-.219h.22c.241,0,.437-.196,.437-.438s-.196-.438-.438-.438h-.985v.875h.765Z",
-        fill: "#d9dbda",
-        stroke: "#d9dbda",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M251.165,276.127v.186h-.219v-.143l-.278-.678h-1.122l-.296,.679v.141h-.219v-.187l.968-2.22h.255l.911,2.221Zm-.587-.854l-.454-1.107-.482,1.107h.936Z",
-        fill: "#d9dbda",
-        stroke: "#d9dbda",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M253.367,274.671h-.219v-.109c0-.241-.197-.438-.438-.438h-.547c-.242,0-.438,.196-.438,.438,0,.043,.011,.09,.03,.134,.038,.085,.123,.152,.227,.18l.943,.256c.189,.051,.341,.182,.407,.35,.023,.059,.035,.118,.035,.173,0,.362-.295,.657-.657,.657h-.546c-.362,0-.657-.295-.657-.657v-.109h.219v.109c0,.242,.196,.438,.438,.438h.546c.242,0,.438-.196,.438-.438,0-.028-.007-.06-.02-.094-.04-.103-.137-.185-.26-.218l-.943-.256c-.169-.046-.304-.156-.369-.301-.032-.072-.05-.149-.05-.224,0-.362,.295-.656,.657-.656h.547c.362,0,.657,.295,.657,.656v.109Z",
-        fill: "#d9dbda",
-        stroke: "#d9dbda",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M254.066,274.124v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-        fill: "#d9dbda",
-        stroke: "#d9dbda",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       })]
@@ -59457,7 +53589,7 @@ const GreyBackground = ({
         x2: 250.063,
         y2: 312.764,
         fill: "none",
-        stroke: "#d9dbda",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       }), jsxRuntimeExports$1.jsx("line", {
@@ -59466,15 +53598,15 @@ const GreyBackground = ({
         x2: 252.563,
         y2: 310.264,
         fill: "none",
-        stroke: "#d9dbda",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       })]
     }), jsxRuntimeExports$1.jsxs("text", {
       transform: "translate(245.564 336.312)",
-      fill: "#f1f2f2",
+      fill: ColorLightGray,
       fontSize: 3.438,
-      stroke: "#f1f2f2",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -59501,82 +53633,82 @@ const GreyBackground = ({
       cx: 67.562,
       cy: 217.562,
       r: 5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 67.562,
       cy: 217.562,
       r: 4.375,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M71.313,299.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M221.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M251.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 67.562,
       cy: 302.562,
       r: 5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 67.563,
       cy: 302.562,
       r: 4.375,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 217.562,
       cy: 217.562,
       r: 5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 247.562,
       cy: 217.562,
       r: 5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 217.563,
       cy: 217.562,
       r: 4.375,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 247.562,
       cy: 217.562,
       r: 4.375,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59584,8 +53716,8 @@ const GreyBackground = ({
       y: 270.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59593,8 +53725,8 @@ const GreyBackground = ({
       y: 300.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59602,8 +53734,8 @@ const GreyBackground = ({
       y: 330.062,
       width: 20,
       height: 20,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59611,8 +53743,8 @@ const GreyBackground = ({
       y: 238.812,
       width: 22.5,
       height: 22.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59620,8 +53752,8 @@ const GreyBackground = ({
       y: 238.812,
       width: 22.5,
       height: 22.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -59631,67 +53763,67 @@ const GreyBackground = ({
           y: 238.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 178.812,
           y: 238.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 148.812,
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 178.812,
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 118.812,
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 148.812,
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 178.812,
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 118.812,
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 148.812,
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 178.812,
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 118.812,
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
         children: [jsxRuntimeExports$1.jsx("rect", {
@@ -59699,8 +53831,8 @@ const GreyBackground = ({
           y: 238.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59708,8 +53840,8 @@ const GreyBackground = ({
           y: 238.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59717,8 +53849,8 @@ const GreyBackground = ({
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59726,8 +53858,8 @@ const GreyBackground = ({
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59735,8 +53867,8 @@ const GreyBackground = ({
           y: 268.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59744,8 +53876,8 @@ const GreyBackground = ({
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59753,8 +53885,8 @@ const GreyBackground = ({
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59762,8 +53894,8 @@ const GreyBackground = ({
           y: 298.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59771,8 +53903,8 @@ const GreyBackground = ({
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59780,8 +53912,8 @@ const GreyBackground = ({
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59789,8 +53921,8 @@ const GreyBackground = ({
           y: 328.812,
           width: 22.5,
           height: 22.5,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -59801,7 +53933,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59810,7 +53942,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59819,7 +53951,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59828,7 +53960,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59837,7 +53969,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59846,7 +53978,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59855,7 +53987,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59864,7 +53996,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59873,7 +54005,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59882,7 +54014,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -59891,7 +54023,7 @@ const GreyBackground = ({
           width: 22.5,
           height: 22.5,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -59903,8 +54035,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59914,8 +54046,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59925,8 +54057,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -59936,8 +54068,8 @@ const GreyBackground = ({
       height: 17.5,
       rx: 1.25,
       ry: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -59949,7 +54081,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 151.289,
           y: 271.514,
@@ -59957,7 +54089,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 181.289,
           y: 271.716,
@@ -59965,7 +54097,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 121.289,
           y: 301.514,
@@ -59973,7 +54105,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 151.289,
           y: 301.514,
@@ -59981,7 +54113,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 181.289,
           y: 301.514,
@@ -59989,7 +54121,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 121.289,
           y: 331.716,
@@ -59997,7 +54129,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 151.289,
           y: 331.716,
@@ -60005,7 +54137,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 181.289,
           y: 331.716,
@@ -60013,7 +54145,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 121.289,
           y: 241.514,
@@ -60021,7 +54153,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 151.289,
           y: 241.514,
@@ -60029,7 +54161,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 181.289,
           y: 241.514,
@@ -60037,7 +54169,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
         children: [jsxRuntimeExports$1.jsx("rect", {
@@ -60047,8 +54179,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60058,8 +54190,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60069,8 +54201,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60080,8 +54212,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60091,8 +54223,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60102,8 +54234,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60113,8 +54245,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60124,8 +54256,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60135,8 +54267,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60146,8 +54278,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60157,8 +54289,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60168,8 +54300,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -60182,7 +54314,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60193,7 +54325,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60204,7 +54336,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60215,7 +54347,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60226,7 +54358,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60237,7 +54369,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60248,7 +54380,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60259,7 +54391,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60270,7 +54402,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60281,7 +54413,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60292,7 +54424,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60303,7 +54435,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -60317,7 +54449,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 150.062,
           y: 270.062,
@@ -60325,7 +54457,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 180.062,
           y: 270.264,
@@ -60333,7 +54465,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 120.062,
           y: 300.062,
@@ -60341,7 +54473,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 150.062,
           y: 300.062,
@@ -60349,7 +54481,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 180.062,
           y: 300.062,
@@ -60357,7 +54489,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 120.062,
           y: 330.264,
@@ -60365,7 +54497,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 150.062,
           y: 330.264,
@@ -60373,7 +54505,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 180.062,
           y: 330.264,
@@ -60381,7 +54513,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 120.062,
           y: 240.062,
@@ -60389,7 +54521,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 150.062,
           y: 240.062,
@@ -60397,7 +54529,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         }), jsxRuntimeExports$1.jsx("rect", {
           x: 180.062,
           y: 240.062,
@@ -60405,7 +54537,7 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba"
+          fill: ColorLightCharcoal
         })]
       }), jsxRuntimeExports$1.jsxs("g", {
         children: [jsxRuntimeExports$1.jsx("rect", {
@@ -60415,8 +54547,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60426,8 +54558,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60437,8 +54569,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60448,8 +54580,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60459,8 +54591,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60470,8 +54602,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60481,8 +54613,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60492,8 +54624,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60503,8 +54635,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60514,8 +54646,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60525,8 +54657,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60536,8 +54668,8 @@ const GreyBackground = ({
           height: 17.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#abb5ba",
-          stroke: "#d2d3d4",
+          fill: ColorLightCharcoal,
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -60550,7 +54682,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60561,7 +54693,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60572,7 +54704,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60583,7 +54715,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60594,7 +54726,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60605,7 +54737,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60616,7 +54748,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60627,7 +54759,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60638,7 +54770,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60649,7 +54781,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60660,7 +54792,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("rect", {
@@ -60671,7 +54803,7 @@ const GreyBackground = ({
           rx: 1.25,
           ry: 1.25,
           fill: "none",
-          stroke: "#d2d3d4",
+          stroke: ColorLightGray,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -60680,128 +54812,128 @@ const GreyBackground = ({
       cx: 95.039,
       cy: 265.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 125.039,
       cy: 265.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 155.039,
       cy: 265.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 185.039,
       cy: 265.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 95.039,
       cy: 295.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 125.039,
       cy: 295.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 155.039,
       cy: 295.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 185.039,
       cy: 295.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 95.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 125.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 155.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 185.039,
       cy: 325.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 95.039,
       cy: 235.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 125.039,
       cy: 235.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 155.039,
       cy: 235.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 185.039,
       cy: 235.466,
       r: 1.25,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
@@ -60817,83 +54949,83 @@ const GreyBackground = ({
       fill: "none"
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M97.004,247.226v.338h-.398v-.26l-.505-1.232h-2.039l-.538,1.234v.257h-.398v-.34l1.759-4.036h.463l1.656,4.039Zm-1.067-1.552l-.825-2.012-.877,2.012h1.702Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M96.629,276.369c0,.658-.535,1.193-1.194,1.193h-2.188v-4.376h2.188c.658,0,1.193,.535,1.193,1.193,0,.415-.214,.781-.536,.995,.322,.214,.536,.579,.536,.994Zm-2.983-1.194h1.791c.438,0,.794-.357,.794-.795s-.357-.795-.795-.795h-1.79v1.591Zm2.585,1.194c0-.438-.356-.795-.794-.795h-1.791v1.59h1.79c.439,0,.796-.357,.796-.795Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M96.243,306.135l.39,.079-.04,.195c-.135,.668-.73,1.154-1.413,1.154h-.497c-.795,0-1.442-.647-1.442-1.442v-1.492c0-.795,.647-1.442,1.442-1.442h.497c.4,0,.785,.168,1.057,.462,.181,.194,.304,.434,.356,.692l.04,.195-.39,.079-.04-.195c-.038-.187-.127-.36-.258-.501-.197-.212-.476-.334-.766-.334h-.497c-.576,0-1.044,.469-1.044,1.044v1.491c0,.576,.469,1.044,1.044,1.044h.497c.495,0,.925-.351,1.023-.835l.039-.195Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M96.629,334.63v1.491c0,.795-.647,1.442-1.442,1.442h-1.939v-4.376h1.939c.795,0,1.442,.647,1.442,1.442Zm-.398,0c0-.576-.469-1.044-1.044-1.044h-1.541v3.58h1.541c.576,0,1.044-.469,1.044-1.044v-1.491Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M124.068,247.563h-.398v-.364l2.663-3.614h-3.061v-.398h3.58v.363l-2.784,3.779v.233Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M156.853,246.37c0,.658-.535,1.193-1.193,1.193h-1.194c-.658,0-1.193-.535-1.193-1.193,0-.415,.214-.781,.536-.994-.322-.214-.536-.58-.536-.995,0-.658,.535-1.193,1.193-1.193h1.194c.658,0,1.193,.535,1.193,1.193,0,.415-.214,.781-.536,.995,.322,.214,.536,.579,.536,.994Zm-.398,0c0-.439-.357-.795-.796-.795h-1.193c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795h1.193c.439,0,.796-.357,.796-.795Zm-1.989-1.194h1.194c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M186.56,245.165l-.041,.039c-.016,.016-.032,.031-.048,.046l-2.204,2.114v.199h-.398v-.384l1.685-1.605h-1.088c-.658,0-1.193-.535-1.193-1.194s.535-1.193,1.193-1.193h1.194c.658,0,1.193,.535,1.193,1.193,0,.299-.115,.57-.297,.779l.005,.005Zm-.376-.191l.055-.053c.133-.142,.215-.331,.215-.54,0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795s.357,.795,.795,.795h1.193c.202,0,.385-.078,.525-.202Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M154.938,337.563c-.987,0-1.79-.803-1.79-1.79v-.795c0-.987,.803-1.79,1.79-1.79s1.79,.803,1.79,1.79v.795c0,.987-.803,1.79-1.79,1.79Zm0-3.978c-.768,0-1.392,.624-1.392,1.392v.795c0,.768,.624,1.392,1.392,1.392s1.392-.624,1.392-1.392v-.795c0-.768-.624-1.392-1.392-1.392Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "M184.811,334.031v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-        fill: "#f1f2f2",
-        stroke: "#f1f2f2",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M188.657,333.812v2.407h-.338l-1.193-2.17v2.17h-.219v-2.407h.338l1.194,2.17v-2.17h.219Z",
-        fill: "#f1f2f2",
-        stroke: "#f1f2f2",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M190.978,333.812v.219h-.82v2.188h-.219v-2.188h-.82v-.219h1.86Z",
-        fill: "#f1f2f2",
-        stroke: "#f1f2f2",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M191.678,334.031v.875h1.258v.219h-1.258v.875h1.477v.219h-1.696v-2.407h1.696v.219h-1.477Z",
-        fill: "#f1f2f2",
-        stroke: "#f1f2f2",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M194.789,335.126l.651,.837v.202h-.219v-.127l-.71-.913h-.658v1.094h-.219v-2.407h1.204c.362,0,.656,.295,.656,.656s-.294,.657-.656,.657h-.05Zm-.108-.219h.22c.241,0,.437-.196,.437-.438s-.196-.438-.438-.438h-.985v.875h.765Z",
-        fill: "#f1f2f2",
-        stroke: "#f1f2f2",
+        fill: ColorLightGray,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062
       })]
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M126.28,277.563h-.398v-1.292h-2.784v-.483l2.705-2.601h.478v2.685h.497v.398h-.497v1.293Zm-2.697-1.691h2.298v-2.21l-2.298,2.21Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M156.728,276.37c0,.658-.535,1.193-1.193,1.193h-2.387v-.398h2.387c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.194c-.439,0-.795,.357-.795,.795v.199h-.398v-3.381h3.381v.398h-2.983v1.901c.212-.191,.489-.31,.795-.31h1.194c.658,0,1.193,.535,1.193,1.194Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M186.33,274.579v-.199c0-.438-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795v1.106c.211-.191,.488-.31,.795-.31h1.193c.658,0,1.193,.535,1.193,1.194s-.535,1.193-1.193,1.193h-1.193c-.59,0-1.078-.431-1.173-.994h-.02v-2.188c0-.658,.535-1.193,1.193-1.193h1.193c.658,0,1.193,.535,1.193,1.193v.199h-.398Zm-2.784,1.79c0,.438,.357,.795,.795,.795h1.193c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.193c-.438,0-.795,.357-.795,.795Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M124.739,307.563v-4.376h.398v4.376h-.398Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M156.744,307.563h-3.58v-.508l2.425-1.517c.596-.345,.757-.55,.757-.959,0-.548-.455-.994-1.013-.994h-.777c-.573,0-1.023,.437-1.023,.994v.199h-.398v-.199c0-.781,.624-1.392,1.421-1.392h.777c.778,0,1.411,.625,1.411,1.392,0,.63-.334,.943-.95,1.299l-2.055,1.286h3.006v.398Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("path", {
       d: "M186.728,306.369c0,.658-.535,1.193-1.193,1.193h-1.193c-.658,0-1.193-.535-1.193-1.193v-.199h.398v.199c0,.438,.357,.795,.795,.795h1.193c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.392v-.398h1.392c.439,0,.795-.357,.795-.795s-.357-.795-.795-.795h-1.193c-.439,0-.795,.357-.795,.795v.199h-.398v-.199c0-.658,.535-1.193,1.193-1.193h1.193c.658,0,1.193,.535,1.194,1.193,0,.415-.214,.781-.536,.995,.323,.214,.536,.579,.536,.994Z",
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 125.062,
       cy: 335.062,
       r: 0.625,
-      fill: "#f1f2f2"
+      fill: ColorLightGray
     }), jsxRuntimeExports$1.jsx("rect", {
       x: 120.062,
       y: 330.062,
@@ -60907,8 +55039,8 @@ const GreyBackground = ({
         y: 137.562,
         width: 220,
         height: 60,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -60919,7 +55051,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60928,7 +55060,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60937,7 +55069,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60946,7 +55078,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -60957,7 +55089,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60966,7 +55098,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60975,7 +55107,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -60984,7 +55116,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -60995,7 +55127,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61004,7 +55136,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61013,7 +55145,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61022,7 +55154,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61033,7 +55165,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61042,7 +55174,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61051,7 +55183,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61060,7 +55192,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61071,7 +55203,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61080,7 +55212,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61089,7 +55221,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61098,7 +55230,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61109,7 +55241,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61118,7 +55250,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61127,7 +55259,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61136,7 +55268,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61147,7 +55279,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61156,7 +55288,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61165,7 +55297,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61174,7 +55306,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61185,7 +55317,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61194,7 +55326,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61203,7 +55335,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61212,7 +55344,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61223,7 +55355,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61232,7 +55364,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61241,7 +55373,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61250,7 +55382,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61261,7 +55393,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61270,7 +55402,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61279,7 +55411,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61288,7 +55420,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61299,7 +55431,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61308,7 +55440,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61317,7 +55449,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61326,7 +55458,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61337,7 +55469,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61346,7 +55478,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61355,7 +55487,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61364,7 +55496,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61375,7 +55507,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61384,7 +55516,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61393,7 +55525,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61402,7 +55534,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61413,7 +55545,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61422,7 +55554,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61431,7 +55563,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61440,7 +55572,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61451,7 +55583,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61460,7 +55592,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61469,7 +55601,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61478,7 +55610,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61489,7 +55621,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61498,7 +55630,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61507,7 +55639,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61516,7 +55648,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61527,7 +55659,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61536,7 +55668,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61545,7 +55677,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61554,7 +55686,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61565,7 +55697,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61574,7 +55706,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61583,7 +55715,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61592,7 +55724,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61603,7 +55735,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61612,7 +55744,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61621,7 +55753,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61630,7 +55762,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61641,7 +55773,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61650,7 +55782,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61659,7 +55791,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61668,7 +55800,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61679,7 +55811,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61688,7 +55820,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61697,7 +55829,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61706,7 +55838,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61717,7 +55849,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61726,7 +55858,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61735,7 +55867,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61744,7 +55876,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61755,7 +55887,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61764,7 +55896,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61773,7 +55905,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61782,7 +55914,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61793,7 +55925,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61802,7 +55934,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61811,7 +55943,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61820,7 +55952,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61831,7 +55963,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61840,7 +55972,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61849,7 +55981,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61858,7 +55990,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61869,7 +56001,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61878,7 +56010,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61887,7 +56019,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61896,7 +56028,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61907,7 +56039,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61916,7 +56048,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61925,7 +56057,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61934,7 +56066,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61945,7 +56077,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61954,7 +56086,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61963,7 +56095,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61972,7 +56104,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -61983,7 +56115,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -61992,7 +56124,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62001,7 +56133,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62010,7 +56142,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62021,7 +56153,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62030,7 +56162,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62039,7 +56171,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62048,7 +56180,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62059,7 +56191,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62068,7 +56200,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62077,7 +56209,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62086,7 +56218,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62097,7 +56229,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62106,7 +56238,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62115,7 +56247,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62124,7 +56256,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62135,7 +56267,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62144,7 +56276,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62153,7 +56285,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62162,7 +56294,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62173,7 +56305,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62182,7 +56314,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62191,7 +56323,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62200,7 +56332,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62211,7 +56343,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62220,7 +56352,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62229,7 +56361,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62238,7 +56370,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62249,7 +56381,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62258,7 +56390,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62267,7 +56399,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62276,7 +56408,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62287,7 +56419,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62296,7 +56428,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62305,7 +56437,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62314,7 +56446,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62325,7 +56457,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62334,7 +56466,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62343,7 +56475,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62352,7 +56484,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62363,7 +56495,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62372,7 +56504,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62381,7 +56513,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62390,7 +56522,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62401,7 +56533,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62410,7 +56542,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62419,7 +56551,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62428,7 +56560,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62439,7 +56571,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62448,7 +56580,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62457,7 +56589,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62466,7 +56598,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62477,7 +56609,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62486,7 +56618,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62495,7 +56627,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62504,7 +56636,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62515,7 +56647,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62524,7 +56656,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62533,7 +56665,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62542,7 +56674,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62553,7 +56685,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62562,7 +56694,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62571,7 +56703,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62580,7 +56712,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62591,7 +56723,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62600,7 +56732,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62609,7 +56741,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62618,7 +56750,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62629,7 +56761,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62638,7 +56770,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62647,7 +56779,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62656,7 +56788,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62667,7 +56799,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62676,7 +56808,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62685,7 +56817,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62694,7 +56826,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62705,7 +56837,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62714,7 +56846,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62723,7 +56855,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62732,7 +56864,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62743,7 +56875,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62752,7 +56884,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62761,7 +56893,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62770,7 +56902,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62781,7 +56913,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62790,7 +56922,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62799,7 +56931,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62808,7 +56940,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62819,7 +56951,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62828,7 +56960,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62837,7 +56969,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62846,7 +56978,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62857,7 +56989,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62866,7 +56998,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62875,7 +57007,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62884,7 +57016,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62895,7 +57027,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62904,7 +57036,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62913,7 +57045,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62922,7 +57054,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62933,7 +57065,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62942,7 +57074,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62951,7 +57083,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62960,7 +57092,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -62971,7 +57103,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62980,7 +57112,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62989,7 +57121,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -62998,7 +57130,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63009,7 +57141,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63018,7 +57150,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63027,7 +57159,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63036,7 +57168,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63047,7 +57179,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63056,7 +57188,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63065,7 +57197,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63074,7 +57206,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63085,7 +57217,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63094,7 +57226,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63103,7 +57235,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63112,7 +57244,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63123,7 +57255,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63132,7 +57264,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63141,7 +57273,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63150,7 +57282,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63161,7 +57293,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63170,7 +57302,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63179,7 +57311,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63188,7 +57320,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63199,7 +57331,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63208,7 +57340,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63217,7 +57349,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63226,7 +57358,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63237,7 +57369,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63246,7 +57378,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63255,7 +57387,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63264,7 +57396,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63275,7 +57407,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63284,7 +57416,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63293,7 +57425,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63302,7 +57434,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63313,7 +57445,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63322,7 +57454,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63331,7 +57463,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           }), jsxRuntimeExports$1.jsx("rect", {
@@ -63340,7 +57472,7 @@ const GreyBackground = ({
             width: 5,
             height: 5,
             fill: "none",
-            stroke: "#d2d3d4",
+            stroke: ColorLightGray,
             strokeMiterlimit: 10,
             strokeWidth: 0.125
           })]
@@ -63348,8 +57480,8 @@ const GreyBackground = ({
       })]
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "490.063 380.062 309.962 380.062 309.962 79.861 489.962 79.861 490.063 380.062",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63357,8 +57489,8 @@ const GreyBackground = ({
       y: 78.812,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63366,8 +57498,8 @@ const GreyBackground = ({
       y: 77.562,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63375,8 +57507,8 @@ const GreyBackground = ({
       y: 76.312,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63384,8 +57516,8 @@ const GreyBackground = ({
       y: 75.062,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63393,8 +57525,8 @@ const GreyBackground = ({
       y: 73.611,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63402,8 +57534,8 @@ const GreyBackground = ({
       y: 72.562,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63411,8 +57543,8 @@ const GreyBackground = ({
       y: 71.312,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("rect", {
@@ -63420,26 +57552,26 @@ const GreyBackground = ({
       y: 70.062,
       width: 180,
       height: 300.202,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polyline", {
       points: "290.062 301.312 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polyline", {
       points: "290.062 290.062 290.062 370.062 300.063 370.062 300.063 80.062 480.062 80.062 480.062 70.062 300.063 70.062 290.062 70.062 290.062 290.063",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "290.062 370.062 300.063 370.062 309.962 380.163 300.062 380.062 290.062 370.062",
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63447,16 +57579,16 @@ const GreyBackground = ({
       y1: 80.062,
       x2: 300.062,
       y2: 80.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(425.702 76.312)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63466,10 +57598,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(446.317 76.312)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 3.438,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.062,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63481,7 +57613,7 @@ const GreyBackground = ({
       children: [jsxRuntimeExports$1.jsx("polyline", {
         points: "462.562 75.062 465.062 72.562 467.562 75.063",
         fill: "none",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       }), jsxRuntimeExports$1.jsx("line", {
@@ -63490,7 +57622,7 @@ const GreyBackground = ({
         x2: 465.062,
         y2: 72.562,
         fill: "none",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       })]
@@ -63498,7 +57630,7 @@ const GreyBackground = ({
       children: [jsxRuntimeExports$1.jsx("polyline", {
         points: "477.562 75.063 475.062 77.562 472.562 75.062",
         fill: "none",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       }), jsxRuntimeExports$1.jsx("line", {
@@ -63507,7 +57639,7 @@ const GreyBackground = ({
         x2: 475.062,
         y2: 77.562,
         fill: "none",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeLinecap: "square",
         strokeWidth: 0.5
       })]
@@ -63516,7 +57648,7 @@ const GreyBackground = ({
       cy: 75.062,
       r: 3.75,
       fill: "none",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeLinecap: "square",
       strokeWidth: 0.5
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63525,7 +57657,7 @@ const GreyBackground = ({
       x2: 470.062,
       y2: 80.062,
       fill: "none",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63534,7 +57666,7 @@ const GreyBackground = ({
       x2: 460.062,
       y2: 80.062,
       fill: "none",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63543,7 +57675,7 @@ const GreyBackground = ({
       x2: 449.062,
       y2: 80.062,
       fill: "none",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63551,8 +57683,8 @@ const GreyBackground = ({
       y1: 90.062,
       x2: 300.062,
       y2: 90.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63560,8 +57692,8 @@ const GreyBackground = ({
       y1: 100.062,
       x2: 300.062,
       y2: 100.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63569,8 +57701,8 @@ const GreyBackground = ({
       y1: 110.062,
       x2: 300.062,
       y2: 110.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63578,8 +57710,8 @@ const GreyBackground = ({
       y1: 120.062,
       x2: 300.062,
       y2: 120.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63587,8 +57719,8 @@ const GreyBackground = ({
       y1: 130.062,
       x2: 300.062,
       y2: 130.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63596,8 +57728,8 @@ const GreyBackground = ({
       y1: 140.062,
       x2: 300.062,
       y2: 140.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63605,8 +57737,8 @@ const GreyBackground = ({
       y1: 150.063,
       x2: 300.062,
       y2: 150.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63614,8 +57746,8 @@ const GreyBackground = ({
       y1: 160.063,
       x2: 300.062,
       y2: 160.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63623,8 +57755,8 @@ const GreyBackground = ({
       y1: 170.063,
       x2: 300.062,
       y2: 170.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63632,8 +57764,8 @@ const GreyBackground = ({
       y1: 180.063,
       x2: 300.062,
       y2: 180.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63641,8 +57773,8 @@ const GreyBackground = ({
       y1: 190.063,
       x2: 300.062,
       y2: 190.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63650,8 +57782,8 @@ const GreyBackground = ({
       y1: 200.063,
       x2: 300.062,
       y2: 200.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63659,8 +57791,8 @@ const GreyBackground = ({
       y1: 210.063,
       x2: 300.062,
       y2: 210.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63668,8 +57800,8 @@ const GreyBackground = ({
       y1: 220.063,
       x2: 300.062,
       y2: 220.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63677,8 +57809,8 @@ const GreyBackground = ({
       y1: 230.063,
       x2: 300.062,
       y2: 230.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63686,8 +57818,8 @@ const GreyBackground = ({
       y1: 240.063,
       x2: 300.062,
       y2: 240.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63695,8 +57827,8 @@ const GreyBackground = ({
       y1: 250.063,
       x2: 300.062,
       y2: 250.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63704,8 +57836,8 @@ const GreyBackground = ({
       y1: 260.063,
       x2: 300.062,
       y2: 260.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63713,8 +57845,8 @@ const GreyBackground = ({
       y1: 270.063,
       x2: 300.062,
       y2: 270.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63722,8 +57854,8 @@ const GreyBackground = ({
       y1: 280.063,
       x2: 300.062,
       y2: 280.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63731,8 +57863,8 @@ const GreyBackground = ({
       y1: 290.063,
       x2: 300.062,
       y2: 290.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63740,8 +57872,8 @@ const GreyBackground = ({
       y1: 300.063,
       x2: 300.062,
       y2: 300.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63749,8 +57881,8 @@ const GreyBackground = ({
       y1: 310.063,
       x2: 300.062,
       y2: 310.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63758,8 +57890,8 @@ const GreyBackground = ({
       y1: 320.063,
       x2: 300.062,
       y2: 320.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63767,8 +57899,8 @@ const GreyBackground = ({
       y1: 330.063,
       x2: 300.062,
       y2: 330.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63776,8 +57908,8 @@ const GreyBackground = ({
       y1: 340.063,
       x2: 300.062,
       y2: 340.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63785,8 +57917,8 @@ const GreyBackground = ({
       y1: 350.063,
       x2: 300.062,
       y2: 350.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63794,8 +57926,8 @@ const GreyBackground = ({
       y1: 360.063,
       x2: 300.062,
       y2: 360.063,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63803,8 +57935,8 @@ const GreyBackground = ({
       y1: 80.062,
       x2: 330.062,
       y2: 370.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63812,8 +57944,8 @@ const GreyBackground = ({
       y1: 70.062,
       x2: 390.062,
       y2: 370.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63821,8 +57953,8 @@ const GreyBackground = ({
       y1: 70.062,
       x2: 420.062,
       y2: 370.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -63830,15 +57962,15 @@ const GreyBackground = ({
       y1: 80.062,
       x2: 470.062,
       y2: 370.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("text", {
       transform: "translate(305.062 77.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: [jsxRuntimeExports$1.jsx("tspan", {
@@ -63866,16 +57998,16 @@ const GreyBackground = ({
       id: "bank9",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m490.001,190.063h20.687c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-20.687v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(495.162 196.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63888,8 +58020,8 @@ const GreyBackground = ({
         y1: 200.157,
         x2: 490,
         y2: 190.062,
-        fill: "#9aa0a9",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })]
@@ -63897,16 +58029,16 @@ const GreyBackground = ({
       id: "user_4",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m490.001,180.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(493.124 186.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63919,16 +58051,16 @@ const GreyBackground = ({
       id: "user_3",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m488.813,170.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(491.936 176.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63941,16 +58073,16 @@ const GreyBackground = ({
       id: "user_2",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m487.563,160.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(490.687 166.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63963,16 +58095,16 @@ const GreyBackground = ({
       id: "user_1",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m486.312,150.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(489.437 156.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -63985,16 +58117,16 @@ const GreyBackground = ({
       id: "loops",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m485.062,140.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(488.186 146.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64007,16 +58139,16 @@ const GreyBackground = ({
       id: "keys",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m483.812,130.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(486.936 136.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64029,16 +58161,16 @@ const GreyBackground = ({
       id: "bank4",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m482.562,120.063h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(485.687 126.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64051,16 +58183,16 @@ const GreyBackground = ({
       id: "bank3",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m481.312,110.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(484.437 116.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64073,16 +58205,16 @@ const GreyBackground = ({
       id: "drums",
       children: [jsxRuntimeExports$1.jsx("path", {
         d: "m480.062,100.062h28.75c.69,0,1.25.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(483.187 106.313)",
-        fill: "#d2d3d4",
+        fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
-        stroke: "#d2d3d4",
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64095,208 +58227,208 @@ const GreyBackground = ({
       cx: 305.062,
       cy: 85.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 95.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 105.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 115.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 125.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 135.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 145.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 155.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 165.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 175.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 185.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 195.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 205.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 215.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 225.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 235.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 245.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 255.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 265.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 275.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 285.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 335.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 345.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 355.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
       cx: 305.062,
       cy: 365.062,
       r: 2.5,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 87.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64306,10 +58438,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 97.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64319,10 +58451,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 107.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64332,10 +58464,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 117.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64345,10 +58477,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 127.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64358,10 +58490,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 137.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64371,10 +58503,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 147.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64384,10 +58516,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 157.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64397,10 +58529,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 167.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64410,10 +58542,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 177.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64423,10 +58555,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 187.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64436,10 +58568,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 197.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64449,10 +58581,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 207.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64462,10 +58594,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 217.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64475,10 +58607,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 227.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64488,10 +58620,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 237.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64501,10 +58633,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 247.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64514,10 +58646,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 257.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64527,10 +58659,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 267.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64540,10 +58672,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 277.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64553,10 +58685,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 287.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64566,10 +58698,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 297.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64579,10 +58711,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 307.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64592,10 +58724,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 317.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64605,10 +58737,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 327.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64618,10 +58750,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 337.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64631,10 +58763,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 347.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64644,10 +58776,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 357.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64657,10 +58789,10 @@ const GreyBackground = ({
       })
     }), jsxRuntimeExports$1.jsx("text", {
       transform: "translate(313.812 367.562)",
-      fill: "#d2d3d4",
+      fill: ColorLightGray,
       fontSize: 6.25,
       letterSpacing: ".08em",
-      stroke: "#d2d3d4",
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125,
       children: jsxRuntimeExports$1.jsx("tspan", {
@@ -64673,8 +58805,8 @@ const GreyBackground = ({
       y1: 80.062,
       x2: 310.062,
       y2: 370.062,
-      fill: "#abb5ba",
-      stroke: "#d2d3d4",
+      fill: ColorLightCharcoal,
+      stroke: ColorLightGray,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsxs("g", {
@@ -64684,8 +58816,8 @@ const GreyBackground = ({
         y: 195.062,
         width: 20,
         height: 10,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -64709,8 +58841,8 @@ const GreyBackground = ({
         y: 195.062,
         width: 20,
         height: 10,
-        fill: "#abb5ba",
-        stroke: "#d2d3d4",
+        fill: ColorLightCharcoal,
+        stroke: ColorLightGray,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
@@ -64756,374 +58888,8 @@ const Help = () => {
       style: {
         display: a ? "block" : "none"
       },
-      id: "help-overlay",
-      children: [jsxRuntimeExports$1.jsxs("g", {
-        id: "library-row-selected",
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 460.062,
-          y: 140.062,
-          width: 10,
-          height: 10,
-          fill: "#8a959a",
-          strokeWidth: 0
-        }), jsxRuntimeExports$1.jsx("rect", {
-          x: 450.062,
-          y: 140.062,
-          width: 10,
-          height: 10,
-          fill: "#f05323",
-          strokeWidth: 0
-        }), jsxRuntimeExports$1.jsxs("g", {
-          children: [jsxRuntimeExports$1.jsx("polyline", {
-            points: "467.557 145.063 465.062 147.557 462.568 145.062",
-            fill: "none",
-            stroke: FontColorLight,
-            strokeLinecap: "square",
-            strokeWidth: 0.706
-          }), jsxRuntimeExports$1.jsx("line", {
-            x1: 465.062,
-            y1: 142.568,
-            x2: 465.062,
-            y2: 147.16,
-            fill: "none",
-            stroke: FontColorLight,
-            strokeLinecap: "square",
-            strokeWidth: 0.706
-          })]
-        }), jsxRuntimeExports$1.jsxs("g", {
-          children: [jsxRuntimeExports$1.jsx("line", {
-            x1: 452.568,
-            y1: 142.568,
-            x2: 457.557,
-            y2: 147.557,
-            fill: "none",
-            stroke: FontColorLight,
-            strokeLinecap: "square",
-            strokeWidth: 0.706
-          }), jsxRuntimeExports$1.jsx("line", {
-            x1: 452.568,
-            y1: 147.557,
-            x2: 457.557,
-            y2: 142.568,
-            fill: "none",
-            stroke: FontColorLight,
-            strokeLinecap: "square",
-            strokeWidth: 0.706
-          })]
-        }), jsxRuntimeExports$1.jsx("path", {
-          d: "m450.062,140.498v9.128h-149.575v-9.128h149.575m.425-.425h-150.425v9.979h150.425v-9.979h0Z",
-          fill: "#f05323",
-          strokeWidth: 0
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "291.312 141.312 291.312 148.812 295.062 148.812 298.812 145.062 295.062 141.312 291.312 141.312",
-          fill: "#dbdddb",
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        className: a ? styles["bounce-horizontal"] : "",
-        children: [jsxRuntimeExports$1.jsxs("g", {
-          children: [jsxRuntimeExports$1.jsx("polygon", {
-            points: "540.062 259.964 540.062 269.964 413.69 269.964 413.69 274.964 398.69 264.964 413.69 254.964 413.69 259.964 540.062 259.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "413.69 269.964 414.94 271.214 414.94 275.817 413.69 274.964 413.69 269.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "413.69 254.964 414.94 256.214 414.94 259.964 413.69 259.964 413.69 254.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "414.94 271.214 413.69 269.964 540.062 269.964 540.062 271.214 414.94 271.214",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          })]
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(415.062 266.964)",
-          fill: FontColorLight,
-          fontSize: 6.25,
-          letterSpacing: ".08em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "drag & drop to upload samples"
-          })
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        className: a ? styles["bounce-horizontal"] : "",
-        children: [jsxRuntimeExports$1.jsxs("g", {
-          children: [jsxRuntimeExports$1.jsx("polygon", {
-            points: "338.727 239.964 338.727 249.964 213.727 249.964 213.727 254.964 198.727 244.964 213.727 234.964 213.727 239.964 338.727 239.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "213.727 249.964 214.977 251.214 214.977 255.817 213.727 254.964 213.727 249.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "213.727 234.964 214.977 236.214 214.977 239.964 213.727 239.964 213.727 234.964",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "339.977 251.214 338.727 249.964 338.727 239.964 339.977 241.214 339.977 251.214",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "214.977 251.214 213.727 249.964 338.727 249.964 339.977 251.214 214.977 251.214",
-            fill: ColorMain,
-            stroke: "#221f1f",
-            strokeLinejoin: "round",
-            strokeWidth: 0.125
-          })]
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(215.099 246.964)",
-          fill: FontColorLight,
-          fontSize: 6.25,
-          letterSpacing: ".08em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "drag & drop to assign sample"
-          })
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        className: a ? styles["bounce-horizontal"] : "",
-        children: [jsxRuntimeExports$1.jsx("polygon", {
-          points: "396.312 109.964 395.062 108.714 460.062 108.714 461.312 109.964 396.312 109.964",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeLinejoin: "round",
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "460.062 113.714 460.062 108.714 395.062 108.714 395.062 98.714 460.062 98.714 460.062 93.714 475.062 103.714 460.062 113.714",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(400.062 105.714)",
-          fill: FontColorLight,
-          fontSize: 6.25,
-          letterSpacing: ".08em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "select library"
-          })
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "475.062 103.714 460.062 113.714 461.312 114.964 476.312 104.964 475.062 103.714",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        className: a ? styles["bounce-horizontal"] : "",
-        children: [jsxRuntimeExports$1.jsx("polygon", {
-          points: "156.312 149.964 155.062 148.714 303.812 148.714 305.062 149.964 156.312 149.964",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeLinejoin: "round",
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "303.812 153.714 303.812 148.714 155.062 148.714 155.062 138.714 303.812 138.714 303.812 133.714 318.812 143.714 303.812 153.714",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(160.062 145.714)",
-          fill: FontColorLight,
-          fontSize: 6.25,
-          letterSpacing: ".08em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "move up/down with arrow keys"
-          })
-        }), jsxRuntimeExports$1.jsx("polygon", {
-          points: "318.812 143.714 303.812 153.714 305.062 154.964 320.062 144.964 318.812 143.714",
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        children: [jsxRuntimeExports$1.jsxs("g", {
-          id: "label-listen-4",
-          "data-name": "label-listen",
-          children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 370.062,
-            y: 134.964,
-            width: 70,
-            height: 10,
-            fill: "#f05323",
-            stroke: "#221f1f",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(376.16 142.464)",
-            fill: FontColorLight,
-            fontSize: 6.25,
-            letterSpacing: ".06em",
-            stroke: FontColorLight,
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125,
-            children: jsxRuntimeExports$1.jsx("tspan", {
-              x: 0,
-              y: 0,
-              children: "SPACE TO LISTEN"
-            })
-          })]
-        }), jsxRuntimeExports$1.jsxs("g", {
-          id: "label-arrow-down-2",
-          "data-name": "label-arrow-down",
-          children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 320.062,
-            y: 149.964,
-            width: 10,
-            height: 10,
-            fill: "#f05323",
-            stroke: "#221f1f",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsxs("g", {
-            children: [jsxRuntimeExports$1.jsx("polyline", {
-              points: "327.562 154.964 325.062 157.464 322.562 154.964",
-              fill: "none",
-              stroke: FontColorLight,
-              strokeLinecap: "square",
-              strokeWidth: 0.707
-            }), jsxRuntimeExports$1.jsx("line", {
-              x1: 325.062,
-              y1: 152.464,
-              x2: 325.062,
-              y2: 157.464,
-              fill: "none",
-              stroke: FontColorLight,
-              strokeLinecap: "square",
-              strokeWidth: 0.707
-            })]
-          })]
-        }), jsxRuntimeExports$1.jsxs("g", {
-          id: "label-arrow-down-3",
-          "data-name": "label-arrow-down",
-          children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 320.062,
-            y: 129.964,
-            width: 10,
-            height: 10,
-            transform: "translate(650.125 269.928) rotate(-180)",
-            fill: "#f05323",
-            stroke: "#221f1f",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsxs("g", {
-            children: [jsxRuntimeExports$1.jsx("polyline", {
-              points: "322.562 134.964 325.062 132.464 327.562 134.964",
-              fill: "none",
-              stroke: FontColorLight,
-              strokeLinecap: "square",
-              strokeWidth: 0.707
-            }), jsxRuntimeExports$1.jsx("line", {
-              x1: 325.062,
-              y1: 137.464,
-              x2: 325.062,
-              y2: 132.464,
-              fill: "none",
-              stroke: FontColorLight,
-              strokeLinecap: "square",
-              strokeWidth: 0.707
-            })]
-          })]
-        })]
-      })]
-    }), !s && jsxRuntimeExports$1.jsxs(jsxRuntimeExports$1.Fragment, {
-      children: [jsxRuntimeExports$1.jsx("g", {
-        id: "help-button",
-        transform: "translate(10 0)",
-        children: jsxRuntimeExports$1.jsxs("g", {
-          id: "back-btn-2",
-          "data-name": "back-btn",
-          children: [jsxRuntimeExports$1.jsx("rect", {
-            x: 50.062,
-            y: 390.062,
-            width: 47.5,
-            height: 10,
-            fill: "#abb5ba",
-            stroke: "#000005",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "100.062 402.562 97.562 400.063 97.562 390.062 100.062 392.563 100.062 402.562",
-            fill: "#abb5ba",
-            stroke: "#000005",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("polygon", {
-            points: "50.062 400.062 52.562 402.562 100.062 402.562 97.562 400.062 50.062 400.062",
-            fill: "#abb5ba",
-            stroke: "#000005",
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125
-          }), jsxRuntimeExports$1.jsx("text", {
-            transform: "translate(65.412 397.562)",
-            fill: FontColorLight,
-            fontSize: 6.25,
-            letterSpacing: ".08em",
-            stroke: FontColorLight,
-            strokeMiterlimit: 10,
-            strokeWidth: 0.125,
-            children: jsxRuntimeExports$1.jsx("tspan", {
-              x: 0,
-              y: 0,
-              children: "help"
-            })
-          })]
-        })
-      }), jsxRuntimeExports$1.jsx("foreignObject", {
-        x: 50.062,
-        y: 390.062,
-        width: 50,
-        height: 12.5,
-        style: {
-          cursor: "pointer"
-        },
-        onClick: _,
-        transform: "translate(10 0)"
-      })]
-    })]
+      id: "help-overlay"
+    }), !s && jsxRuntimeExports$1.jsxs(jsxRuntimeExports$1.Fragment, {})]
   });
 };
 const Background = ({
@@ -65135,17 +58901,17 @@ const Background = ({
   } = useUIState();
   return jsxRuntimeExports$1.jsxs("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "40 65 485 340",
+    viewBox: "35 65 490 340",
     className: styles$1.background,
     children: [jsxRuntimeExports$1.jsx("defs", {
       children: jsxRuntimeExports$1.jsx("pattern", {
-        id: "_10_lpi_40_2",
-        "data-name": "10 lpi 40% 2",
+        id: "warning_stripes",
+        "data-name": "WarningStripes",
         x: 0,
         y: 0,
         width: 72,
         height: 72,
-        patternTransform: "translate(-4777.568 -7616.657) rotate(-45) scale(.25)",
+        patternTransform: "translate(-4777.568 -7616.657) rotate(-45) scale(.35)",
         patternUnits: "userSpaceOnUse",
         viewBox: "0 0 72 72",
         children: jsxRuntimeExports$1.jsxs("g", {
@@ -65161,7 +58927,7 @@ const Background = ({
               x2: 144.25,
               y2: 68.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65169,7 +58935,7 @@ const Background = ({
               x2: 144.25,
               y2: 54,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65177,7 +58943,7 @@ const Background = ({
               x2: 144.25,
               y2: 39.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65185,7 +58951,7 @@ const Background = ({
               x2: 144.25,
               y2: 25.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65193,7 +58959,7 @@ const Background = ({
               x2: 144.25,
               y2: 10.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65201,7 +58967,7 @@ const Background = ({
               x2: 144.25,
               y2: 61.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65209,7 +58975,7 @@ const Background = ({
               x2: 144.25,
               y2: 46.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65217,7 +58983,7 @@ const Background = ({
               x2: 144.25,
               y2: 32.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65225,7 +58991,7 @@ const Background = ({
               x2: 144.25,
               y2: 18,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: 71.75,
@@ -65233,7 +58999,7 @@ const Background = ({
               x2: 144.25,
               y2: 3.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             })]
           }), jsxRuntimeExports$1.jsxs("g", {
@@ -65243,7 +59009,7 @@ const Background = ({
               x2: 72.25,
               y2: 68.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65251,7 +59017,7 @@ const Background = ({
               x2: 72.25,
               y2: 54,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65259,7 +59025,7 @@ const Background = ({
               x2: 72.25,
               y2: 39.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65267,7 +59033,7 @@ const Background = ({
               x2: 72.25,
               y2: 25.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65275,7 +59041,7 @@ const Background = ({
               x2: 72.25,
               y2: 10.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65283,7 +59049,7 @@ const Background = ({
               x2: 72.25,
               y2: 61.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65291,7 +59057,7 @@ const Background = ({
               x2: 72.25,
               y2: 46.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65299,7 +59065,7 @@ const Background = ({
               x2: 72.25,
               y2: 32.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65307,7 +59073,7 @@ const Background = ({
               x2: 72.25,
               y2: 18,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -0.25,
@@ -65315,7 +59081,7 @@ const Background = ({
               x2: 72.25,
               y2: 3.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             })]
           }), jsxRuntimeExports$1.jsxs("g", {
@@ -65325,7 +59091,7 @@ const Background = ({
               x2: 0.25,
               y2: 68.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65333,7 +59099,7 @@ const Background = ({
               x2: 0.25,
               y2: 54,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65341,7 +59107,7 @@ const Background = ({
               x2: 0.25,
               y2: 39.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65349,7 +59115,7 @@ const Background = ({
               x2: 0.25,
               y2: 25.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65357,7 +59123,7 @@ const Background = ({
               x2: 0.25,
               y2: 10.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65365,7 +59131,7 @@ const Background = ({
               x2: 0.25,
               y2: 61.2,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65373,7 +59139,7 @@ const Background = ({
               x2: 0.25,
               y2: 46.8,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65381,7 +59147,7 @@ const Background = ({
               x2: 0.25,
               y2: 32.4,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65389,7 +59155,7 @@ const Background = ({
               x2: 0.25,
               y2: 18,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             }), jsxRuntimeExports$1.jsx("line", {
               x1: -72.25,
@@ -65397,7 +59163,7 @@ const Background = ({
               x2: 0.25,
               y2: 3.6,
               fill: "none",
-              stroke: "#abb5ba",
+              stroke: ColorLightCharcoal,
               strokeWidth: 2.88
             })]
           })]
@@ -65406,9 +59172,9 @@ const Background = ({
     }), jsxRuntimeExports$1.jsx("g", {
       id: "page",
       children: jsxRuntimeExports$1.jsx("rect", {
-        x: 40,
+        x: 35,
         y: 65,
-        width: 475,
+        width: 490,
         height: 340,
         fill: "none"
       })
@@ -65416,7 +59182,9 @@ const Background = ({
       id: "usb-cable",
       transform: "translate(0, -25)",
       className: handleClassName([styles$1["usb-cable"], s ? styles$1.connected : ""]),
-      children: [jsxRuntimeExports$1.jsxs("g", {
+      children: [
+        /*
+        jsxRuntimeExports$1.jsxs("g", {
         id: "usb-cable-2",
         "data-name": "usb-cable",
         children: [jsxRuntimeExports$1.jsx("rect", {
@@ -65424,13 +59192,13 @@ const Background = ({
           y: 52.562,
           width: 12.5,
           height: 17.5,
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "225.062 70.062 225.062 52.562 227.562 55.062 227.562 72.562 225.062 70.062",
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
@@ -65439,32 +59207,32 @@ const Background = ({
           y1: 51.312,
           x2: 220.062,
           y2: -10000.062,
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 3.75
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M220.063,38.812c-2.071,0-3.75,.56-3.75,1.25v17.5h5v-5h2.5v-12.5c0-.69-1.679-1.25-3.75-1.25Z",
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("polygon", {
           points: "212.562 70.062 215.062 72.563 227.562 72.562 225.062 70.062 212.562 70.062",
-          fill: "#dbdddb",
+          fill: ColorSlate,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M215.688,71.666h0c0-.524,.725-.948,1.619-.948h5.227c.894,0,1.619,.425,1.619,.948h0v5.393h-8.465v-5.393h0Z",
-          fill: "#abb5ba",
-          stroke: "#000005",
+          fill: ColorLightCharcoal,
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("path", {
           d: "M217.307,78.007c-.894,0-1.619-.425-1.619-.948h0c0-.524,.725-.948,1.619-.948h5.227c.894,0,1.619,.425,1.619,.948h0c0,.524-.725,.948-1.619,.948h-5.227Z",
-          fill: "#abb5ba",
-          stroke: "#000005",
+          fill: ColorLightCharcoal,
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -65476,7 +59244,7 @@ const Background = ({
           width: 40,
           height: 5,
           fill: ColorMain,
-          stroke: "#221f1f",
+          stroke: ColorCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsxs("text", {
@@ -65498,7 +59266,9 @@ const Background = ({
             children: "!"
           })]
         })]
-      })]
+      })
+    */
+    ]
     }), jsxRuntimeExports$1.jsxs("g", {
       id: "bg-synth",
       children: [jsxRuntimeExports$1.jsx("rect", {
@@ -65506,8 +59276,8 @@ const Background = ({
         y: 70.062,
         width: 220,
         height: 300.202,
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -65516,18 +59286,18 @@ const Background = ({
         width: 220,
         height: 300.202,
         fill: "none",
-        stroke: "#000005",
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M50.062,370.062l7.5,7.5h220V77.562l-7.5-7.5V370.062s-220,.427-220,0Z",
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M57.562,377.562l2.5,2.5h220V80.062l-2.5-2.5V377.562s-220,.202-220,0Z",
-        fill: "#424143",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -66495,7 +60265,7 @@ const Background = ({
         y: 77.562,
         width: 60,
         height: 60,
-        fill: "#41464a"
+        fill: ColorCharcoal
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 237.562,
         cy: 107.764,
@@ -66508,7 +60278,7 @@ const Background = ({
         y: 67.562,
         width: 50,
         height: 10,
-        fill: "#202222",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -66517,7 +60287,7 @@ const Background = ({
         y: 67.562,
         width: 20,
         height: 10,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -66535,7 +60305,7 @@ const Background = ({
         y: 77.562,
         width: 160,
         height: 60,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -66550,7 +60320,7 @@ const Background = ({
         cy: 82.562,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -66558,7 +60328,7 @@ const Background = ({
         cy: 132.562,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -66566,7 +60336,7 @@ const Background = ({
         cy: 82.562,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -66574,7 +60344,7 @@ const Background = ({
         cy: 132.562,
         r: 2.5,
         fill: "none",
-        stroke: "#abb5ba",
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("g", {
@@ -66643,8 +60413,8 @@ const Background = ({
         fill: FontColorLogo1
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "277.562 207.562 267.562 197.562 267.562 137.562 277.562 147.562 277.562 207.562",
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
@@ -66655,8 +60425,8 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "180.062 77.562 177.562 77.562 177.562 67.562 180.062 70.062 180.062 77.562",
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
@@ -66667,7 +60437,7 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "80.062 77.562 77.562 77.562 77.562 67.562 80.062 70.062 80.062 77.562",
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67081,7 +60851,7 @@ const Background = ({
         y1: 135.866,
         x2: 270.062,
         y2: 138.366,
-        fill: "#818e95",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67096,17 +60866,17 @@ const Background = ({
         y: 67.562,
         width: 20,
         height: 10,
-        fill: "#818e95",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "230.062 77.562 227.562 77.562 227.562 67.562 230.062 70.062 230.062 77.562",
-        fill: "#818e95",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
-      }), jsxRuntimeExports$1.jsx("text", {
+      }), /*jsxRuntimeExports$1.jsx("text", {
         transform: "translate(210.982 73.812)",
         fill: FontColorLight,
         fontSize: 5.5,
@@ -67119,7 +60889,7 @@ const Background = ({
           y: 0,
           children: "USB"
         })
-      }), jsxRuntimeExports$1.jsx("ellipse", {
+      }), */jsxRuntimeExports$1.jsx("ellipse", {
         cx: 273.812,
         cy: 345.062,
         rx: 1.25,
@@ -67129,8 +60899,8 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "270.062 200.062 50.062 200.062 47.562 197.562 267.562 197.562 270.062 200.062",
-        fill: "#000005",
-        stroke: "#8a959a",
+        fill: ColorBlack,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })]
@@ -67196,8 +60966,8 @@ const Background = ({
         y: 280.062,
         width: 20,
         height: 10,
-        fill: "#d9dbda",
-        stroke: "#000005",
+        fill: ColorLightGray,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67205,8 +60975,8 @@ const Background = ({
         y: 280.062,
         width: 20,
         height: 10,
-        fill: "#d9dbda",
-        stroke: "#000005",
+        fill: ColorLightGray,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67222,8 +60992,8 @@ const Background = ({
         y: 250.062,
         width: 20,
         height: 10,
-        fill: "#d9dbda",
-        stroke: "#000005",
+        fill: ColorLightGray,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67231,8 +61001,8 @@ const Background = ({
         y: 250.062,
         width: 20,
         height: 10,
-        fill: "#d9dbda",
-        stroke: "#000005",
+        fill: ColorLightGray,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67242,8 +61012,8 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67261,7 +61031,7 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#dbdcd8"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 211.312,
         y: 331.312,
@@ -67285,7 +61055,7 @@ const Background = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#dbdcd8"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 241.312,
         y: 331.312,
@@ -67293,7 +61063,7 @@ const Background = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#818e95"
+        fill: ColorLightCharcoal
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 240.039,
         y: 300.062,
@@ -67309,7 +61079,7 @@ const Background = ({
         height: 17.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#dbdcd8"
+        fill: ColorLightGray
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 61.312,
         y: 241.514,
@@ -67317,8 +61087,8 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67328,8 +61098,8 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("rect", {
@@ -67339,7 +61109,7 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#b0babe"
+        fill: ColorLightCharcoal
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 241.289,
         y: 241.312,
@@ -67347,15 +61117,15 @@ const Background = ({
         height: 7.5,
         rx: 1.25,
         ry: 1.25,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 250.062,
         cy: 220.062,
         r: 10,
-        fill: "#252625",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67371,21 +61141,21 @@ const Background = ({
         cx: 70.062,
         cy: 220.062,
         r: 10,
-        fill: "#dfdfdf",
+        fill: ColorLightGray,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M71.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 215.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -67393,7 +61163,7 @@ const Background = ({
         cx: 225.039,
         cy: 325.466,
         r: 1.25,
-        fill: "#372424",
+        fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.441
@@ -67410,7 +61180,7 @@ const Background = ({
         cx: 67.562,
         cy: 217.562,
         r: 5,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67418,33 +61188,33 @@ const Background = ({
         cx: 67.562,
         cy: 217.562,
         r: 4.375,
-        fill: "#dbdddb",
+        fill: ColorSlate,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.109
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M71.313,299.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M221.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M251.313,214.26c-.916-1.04-2.255-1.697-3.75-1.697-2.761,0-5,2.239-5,5,0,1.267,.472,2.423,1.25,3.304,.266,.301,3.114,3.157,3.75,3.526,.735,.426,1.589,.671,2.5,.671,2.761,0,5-2.239,5-5,0-.911-.244-1.765-.671-2.5-.369-.636-2.953-3.16-3.079-3.303Z",
-        fill: "#abb5ba",
-        stroke: "#000005",
+        fill: ColorLightCharcoal,
+        stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
         cx: 67.562,
         cy: 302.562,
         r: 5,
-        fill: "#818e95",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67452,7 +61222,7 @@ const Background = ({
         cx: 67.562,
         cy: 302.562,
         r: 4.375,
-        fill: "#818e95",
+        fill: ColorLightCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -67468,8 +61238,8 @@ const Background = ({
         cx: 247.562,
         cy: 217.562,
         r: 5,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("circle", {
@@ -67484,8 +61254,8 @@ const Background = ({
         cx: 247.562,
         cy: 217.562,
         r: 4.375,
-        fill: "#232424",
-        stroke: "#8a959a",
+        fill: ColorCharcoal,
+        stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       })]
@@ -67499,8 +61269,8 @@ const Background = ({
           y: 220.062,
           width: 20,
           height: 10,
-          fill: "#818e95",
-          stroke: "#000005",
+          fill: ColorLightCharcoal,
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsxs("g", {
@@ -67518,8 +61288,8 @@ const Background = ({
           height: 7.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -67532,7 +61302,7 @@ const Background = ({
           width: 20,
           height: 10,
           fill: ColorButtons,
-          stroke: "#000005",
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })
@@ -67544,8 +61314,8 @@ const Background = ({
           y: 220.062,
           width: 20,
           height: 10,
-          fill: "#d9dbda",
-          stroke: "#000005",
+          fill: ColorLightGray,
+          stroke: ColorBlack,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsxs("g", {
@@ -67565,8 +61335,8 @@ const Background = ({
           height: 7.5,
           rx: 1.25,
           ry: 1.25,
-          fill: "#232424",
-          stroke: "#8a959a",
+          fill: ColorCharcoal,
+          stroke: ColorLightCharcoal,
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         })]
@@ -67576,84 +61346,7 @@ const Background = ({
       style: {
         display: o ? "none" : ""
       },
-      children: [jsxRuntimeExports$1.jsxs("g", {
-        id: "label-out-2",
-        "data-name": "label-out",
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 240.062,
-          y: 195.062,
-          width: 20,
-          height: 10,
-          fill: "#000005",
-          stroke: "#8a959a",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(242.3 202.562)",
-          fill: FontColorLight,
-          fontSize: 6.875,
-          letterSpacing: ".005em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "END"
-          })
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        id: "label-in-2",
-        "data-name": "label-in",
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 210.062,
-          y: 195.062,
-          width: 20,
-          height: 10,
-          fill: OriginalOrange,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(216.079 202.562)",
-          fill: FontColorLight,
-          fontSize: 6.875,
-          letterSpacing: ".095em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "ST"
-          })
-        })]
-      }), jsxRuntimeExports$1.jsxs("g", {
-        id: "label-sample-edit",
-        children: [jsxRuntimeExports$1.jsx("rect", {
-          x: 60.812,
-          y: 130.062,
-          width: 45,
-          height: 10,
-          fill: ColorMain,
-          stroke: "#221f1f",
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125
-        }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(62.632 137.562)",
-          fill: FontColorLight,
-          fontSize: 6.25,
-          letterSpacing: ".06em",
-          stroke: FontColorLight,
-          strokeMiterlimit: 10,
-          strokeWidth: 0.125,
-          children: jsxRuntimeExports$1.jsx("tspan", {
-            x: 0,
-            y: 0,
-            children: "Sound Edit"
-          })
-        })]
-      })]
+      children: []
     }), jsxRuntimeExports$1.jsx(Help, {})]
   });
 };

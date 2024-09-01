@@ -6,7 +6,7 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1180,
-    height: 900,
+    height: 890,
     title: "EP-133 Sample Tool",
     icon: path.join(__dirname + 'icon.ico'),
     webPreferences: {
