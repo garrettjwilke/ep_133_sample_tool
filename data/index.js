@@ -1,8 +1,15 @@
 var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = true;
-var OriginalOrange = "#EF4E34";
+var CustomColors = false;
+var HideSerial = true;
+var CustomNames = true;
+
+// COLORS
+var ColorOriginalOrange = "#EF4E34";
 var ColorSound = "#FF00E0";
 var ColorSpeaker = "#b3a1b7";
+var ColorBackupRestoreBtn = "#ffffff";
+var ColorBatteryCover = "#ffffff";
+var ColorEPFace = "#000000"
 var ColorButtons = "#ef4e27";
 var ColorButtons2 = "#000000";
 var ColorMain = "#d95d5d";
@@ -39,6 +46,7 @@ var FontColorDark = "#000000";
 var FontColorLogo1 = "#FF0000";
 var FontColorLogo2 = "#32e013";
 
+// NAMES
 var Bank0 = "Bank0";
 var Bank1 = "Bank1";
 var Bank2 = "Bank2";
@@ -53,9 +61,8 @@ var StartIn = "ST";
 var EndOut = "END";
 var LibraryTitle = "EP-133 Library";
 var FakeSerial = "EP-133"
-var HideSerial = true;
 
-var CustomNames = true;
+// SET ORIGINAL NAMES BACK IF USER DOESN'T WANT CUSTOM NAMES
 if (CustomNames == false) {
   Bank0 = "KICK";
   Bank1 = "SNARE";
@@ -73,10 +80,14 @@ if (CustomNames == false) {
   FakeSerial = null
 };
 
+// SET ORIGINAL COLORS BACK IF USER DOESN'T WANT CUSTOM COLORS
 if (CustomColors == false) {
-  ColorMain = OriginalOrange;
+  ColorMain = ColorOriginalOrange;
   ColorSound = "#00a69c";
   ColorSpeaker = ColorLightCharcoal;
+  ColorBatteryCover = ColorSlate;
+  ColorEPFace = ColorLightCharcoal;
+  ColorBackupRestoreBtn = ColorOriginalOrange;
   ColorButtons = "#ef4e27";
   ColorSecondary = ColorSpeaker;
   ColorTertiary = "#dbdddb";
@@ -90,16 +101,16 @@ if (CustomColors == false) {
   Color7 = ColorLightCharcoal;
   Color8 = ColorLightCharcoal;
   Color9 = "#000000";
-  ColorMarker0 = OriginalOrange;
-  ColorMarker1 = OriginalOrange;
-  ColorMarker2 = OriginalOrange;
-  ColorMarker3 = OriginalOrange;
-  ColorMarker4 = OriginalOrange;
-  ColorMarker5 = OriginalOrange;
-  ColorMarker6 = OriginalOrange;
-  ColorMarker7 = OriginalOrange;
-  ColorMarker8 = OriginalOrange;
-  ColorMarker9 = OriginalOrange;
+  ColorMarker0 = ColorOriginalOrange;
+  ColorMarker1 = ColorOriginalOrange;
+  ColorMarker2 = ColorOriginalOrange;
+  ColorMarker3 = ColorOriginalOrange;
+  ColorMarker4 = ColorOriginalOrange;
+  ColorMarker5 = ColorOriginalOrange;
+  ColorMarker6 = ColorOriginalOrange;
+  ColorMarker7 = ColorOriginalOrange;
+  ColorMarker8 = ColorOriginalOrange;
+  ColorMarker9 = ColorOriginalOrange;
   GridColor = "#4f4059";
   FontColorLight = "#e5e6e6";
   FontColorDark = "#000000";
@@ -107,6 +118,7 @@ if (CustomColors == false) {
   FontColorLogo2 = ColorButtons;
 };
 
+// everything below is the minified js. very difficult to parse
 var Ir = Object.defineProperty;
 var Tr = (s, a, o) => a in s ? Ir(s, a, {
   enumerable: true,
@@ -33433,7 +33445,7 @@ function createSVGGhostParent() {
   const s = "http://www.w3.org/2000/svg";
   const a = document.createElementNS(s, "svg");
   a.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  a.setAttribute("viewBox", "35 65 490 340");
+  a.setAttribute("viewBox", "45 65 478 318");
   const o = document.createElementNS(s, "g");
   o.setAttribute("id", "drag_drop_multiple");
   o.setAttribute("data-name", "drag drop multiple");
@@ -43056,8 +43068,8 @@ for (const s in buttons) {
   style.push(`#buttons-synth-interactive.${s}-on     g#${s} circle[data-name="led-on"] { display: block; }`);
   style.push(`#buttons-synth-interactive.${s}-red    g#${s} rect[data-name="red"] { display: block; }`);
   style.push(`#buttons-synth-interactive.${s}-select g#${s} g[data-name="select"] { display: block; }`);
-  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] polyline { stroke: OriginalOrange; }`);
-  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] line { stroke: OriginalOrange; }`);
+  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] polyline { stroke: ColorOriginalOrange; }`);
+  style.push(`#buttons-synth-interactive.${s}-assign g#${s} g[data-name="select"] line { stroke: ColorOriginalOrange; }`);
 }
 const STYLE = style.join(`
 `);
@@ -43320,7 +43332,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 325.468,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43381,7 +43393,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 295.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43442,7 +43454,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 265.464,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43506,7 +43518,7 @@ const Buttons = ({
         cx: 95.039,
         cy: 235.463,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43626,7 +43638,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 235.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43764,7 +43776,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 235.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -43902,7 +43914,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 235.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44038,7 +44050,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 265.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44176,7 +44188,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 265.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44314,7 +44326,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 265.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44452,7 +44464,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 295.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44590,7 +44602,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 295.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44728,7 +44740,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 295.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -44866,7 +44878,7 @@ const Buttons = ({
         cx: 155.039,
         cy: 325.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -45004,7 +45016,7 @@ const Buttons = ({
         cx: 125.039,
         cy: 325.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -45142,7 +45154,7 @@ const Buttons = ({
         cx: 185.039,
         cy: 325.466,
         r: 1.25,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -46412,7 +46424,7 @@ const Display$1 = reactExports.memo(({
           y: 142.562,
           width: 11,
           height: 6,
-          fill: OriginalOrange,
+          fill: ColorOriginalOrange,
           onPointerDown: at,
           onPointerUp: lt,
           onPointerMove: nt
@@ -46421,8 +46433,8 @@ const Display$1 = reactExports.memo(({
           y1: 142.562,
           x2: 77.562,
           y2: 182.562,
-          fill: OriginalOrange,
-          stroke: OriginalOrange,
+          fill: ColorOriginalOrange,
+          stroke: ColorOriginalOrange,
           strokeMiterlimit: 10,
           strokeWidth: 0.441
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46449,7 +46461,7 @@ const Display$1 = reactExports.memo(({
           y: 142.562,
           width: 11,
           height: 6,
-          fill: OriginalOrange,
+          fill: ColorOriginalOrange,
           onPointerDown: at,
           onPointerUp: lt,
           onPointerMove: nt
@@ -46458,8 +46470,8 @@ const Display$1 = reactExports.memo(({
           y1: 142.562,
           x2: 237.562,
           y2: 182.562,
-          fill: OriginalOrange,
-          stroke: OriginalOrange,
+          fill: ColorOriginalOrange,
+          stroke: ColorOriginalOrange,
           strokeMiterlimit: 10,
           strokeWidth: 0.441
         }), jsxRuntimeExports$1.jsx("text", {
@@ -46513,7 +46525,7 @@ const Display$1 = reactExports.memo(({
         y: 195.062,
         width: 20,
         height: 10,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -47350,7 +47362,7 @@ const UploadStatus = ({
       })
     }), jsxRuntimeExports$1.jsx("polygon", {
       points: "432.925 276.561 434.895 273.983 436.866 276.561 432.925 276.561",
-      fill: OriginalOrange,
+      fill: ColorOriginalOrange,
       strokeWidth: 0
     })]
   }), jsxRuntimeExports$1.jsxs("g", {
@@ -47413,7 +47425,7 @@ const UploadStatus = ({
       })]
     }), jsxRuntimeExports$1.jsx("path", {
       d: "m436.077,243.47h-2.363l-1.181,2.046,1.181,2.046h2.363l1.181-2.046-1.181-2.046Zm-1.037,3.335h-.289v-.429h.289v.429Zm0-.7h-.289v-1.863h.289v1.863Z",
-      fill: OriginalOrange,
+      fill: ColorOriginalOrange,
       strokeWidth: 0
     })]
   }), ";"]
@@ -47516,9 +47528,9 @@ const MessageBox = ({
 }) => jsxRuntimeExports$1.jsxs("g", {
   id: "message",
   children: [jsxRuntimeExports$1.jsx("rect", {
-    x: 45,
-    y: 65,
-    width: 240,
+    x: 47,
+    y: 66,
+    width: 234,
     height: 315,
     fill: ColorSlate
   }),jsxRuntimeExports$1.jsx("rect", {
@@ -47910,7 +47922,7 @@ const Row = reactExports.memo(({
                 y: 140.062,
                 width: 10,
                 height: 10,
-                fill: OriginalOrange
+                fill: ColorOriginalOrange
               }), jsxRuntimeExports$1.jsx("polyline", {
                 points: "467.205 145.063 464.711 147.557 462.216 145.062",
                 fill: "none",
@@ -48340,7 +48352,7 @@ const LibraryUI = ({
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 106.312)",
+        transform: "translate(523.062 106.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48352,7 +48364,7 @@ const LibraryUI = ({
           children: "001-099"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 116.312)",
+        transform: "translate(523.062 116.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48364,7 +48376,7 @@ const LibraryUI = ({
           children: "100-199"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 126.312)",
+        transform: "translate(523.062 126.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48376,7 +48388,7 @@ const LibraryUI = ({
           children: "200-299"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 136.312)",
+        transform: "translate(523.062 136.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48388,7 +48400,7 @@ const LibraryUI = ({
           children: "300-399"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 146.312)",
+        transform: "translate(523.062 146.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48400,7 +48412,7 @@ const LibraryUI = ({
           children: "400-499"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 156.312)",
+        transform: "translate(523.062 156.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48412,7 +48424,7 @@ const LibraryUI = ({
           children: "500-599"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 166.312)",
+        transform: "translate(523.062 166.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48424,7 +48436,7 @@ const LibraryUI = ({
           children: "600-699"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 176.35)",
+        transform: "translate(523.062 176.35)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48436,7 +48448,7 @@ const LibraryUI = ({
           children: "700-799"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 196.312)",
+        transform: "translate(523.062 196.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48448,7 +48460,7 @@ const LibraryUI = ({
           children: "900-999"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(525.062 186.312)",
+        transform: "translate(523.062 186.312)",
         fontSize: 5,
         letterSpacing: ".08em",
         stroke: FontColorDark,
@@ -48475,7 +48487,7 @@ const LibraryUI = ({
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsxs("text", {
-        transform: "translate(305.062 77.562)",
+        transform: "translate(300 77.562)",
         fill: FontColorLight,
         fontSize: 6.25,
         stroke: FontColorLight,
@@ -48557,7 +48569,7 @@ const LibraryUI = ({
         y1: 70.062,
         x2: 470.062,
         y2: 80.062,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48566,7 +48578,7 @@ const LibraryUI = ({
         y1: 70.062,
         x2: 460.062,
         y2: 80.062,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48575,7 +48587,7 @@ const LibraryUI = ({
         y1: 70.062,
         x2: 449.062,
         y2: 80.062,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -48876,7 +48888,7 @@ const LibraryUI = ({
         y1: 80.062,
         x2: 300.062,
         y2: 80.062,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -49622,7 +49634,7 @@ const Version = ({
 }) => s ? jsxRuntimeExports$1.jsxs("g", {
   id: "version-os",
   children: [jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(43.062 300.062) rotate(-90)",
+    transform: "translate(60 366.062)",
     fill: ColorBlack,
     fontSize: 6,
     letterSpacing: ".08em",
@@ -49635,7 +49647,7 @@ const Version = ({
       children: `OS: ${a || "unknown"}`
     })
   }), jsxRuntimeExports$1.jsx("text", {
-    transform: "translate(43.062 370.062) rotate(-90)",
+    transform: "translate(60 358.062)",
     fill: ColorBlack,
     fontSize: 6,
     letterSpacing: ".08em",
@@ -49685,28 +49697,28 @@ const BackupRestoreButton = ({
     onClick: s,
     className: styles$3.btn,
     children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 400.062,
-      y: 387.562,
+      x: 400.062 - 212,
+      y: 382.562 - 28,
       width: 77.5,
       height: 10,
-      fill: ColorLightCharcoal,
+      fill: ColorBackupRestoreBtn,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "480.062 400.062 477.562 397.563 477.562 387.562 480.062 390.063 480.062 400.062",
-      fill: ColorLightCharcoal,
+      points: "268.062 367.062 265.562 364.563 265.562 354.562 268.062 357.063 268.062 367.062",
+      fill: ColorBackupRestoreBtn,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "400.062 397.562 402.562 400.062 480.062 400.062 477.562 397.562 410.062 397.562",
-      fill: ColorLightCharcoal,
+      points: "188.062 364.562 190.562 367.062 268.062 367.062 265.562 364.562 198.062 364.562",
+      fill: ColorBackupRestoreBtn,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(406.413 395.062)",
+      transform: "translate(194.413 362.062)",
       fill: ColorBlack,
       fontSize: 6.25,
       letterSpacing: ".06em",
@@ -49721,7 +49733,7 @@ const BackupRestoreButton = ({
     })]
   }), a && jsxRuntimeExports$1.jsx("rect", {
     x: 400.062,
-    y: 387.562,
+    y: 382.562,
     width: 80,
     height: 12.5,
     fill: "url(#warning_stripes)",
@@ -49743,7 +49755,7 @@ const BackButton = ({
     className: styles$3.btn,
     children: [jsxRuntimeExports$1.jsx("rect", {
       x: 430.062,
-      y: 387.562,
+      y: 362.562,
       width: 47.5,
       height: 10,
       fill: ColorButtons2,
@@ -49751,19 +49763,19 @@ const BackButton = ({
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "480.062 400.062 477.562 397.563 477.562 387.562 480.062 390.063 480.062 400.062",
+      points: "480.062 375.062 477.562 372.563 477.562 362.562 480.062 365.063 480.062 375.062",
       fill: ColorBlack,
       stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "430.062 397.562 432.562 400.062 480.062 400.062 477.562 397.562 430.062 397.562",
+      points: "430.062 372.562 432.562 375.062 480.062 375.062 477.562 372.562 430.062 372.562",
       fill: ColorBlack,
       stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(444.609 395.062)",
+      transform: "translate(444.609 370.062)",
       fill: FontColorLight,
       fontSize: 6.25,
       letterSpacing: ".08em",
@@ -51303,7 +51315,7 @@ const GreyBackground = ({
   children: s
 }) => jsxRuntimeExports$1.jsxs("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "35 65 490 340",
+  viewBox: "45 65 478 318",
   className: styles$1.background,
   children: [jsxRuntimeExports$1.jsxs("g", {
     id: "extras",
@@ -51333,7 +51345,7 @@ const GreyBackground = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "50.063 50.063 47.563 47.563 107.562 47.563 110.062 50.063 50.063 50.063",
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -58901,7 +58913,7 @@ const Background = ({
   } = useUIState();
   return jsxRuntimeExports$1.jsxs("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "35 65 490 340",
+    viewBox: "45 65 478 318",
     className: styles$1.background,
     children: [jsxRuntimeExports$1.jsx("defs", {
       children: jsxRuntimeExports$1.jsx("pattern", {
@@ -58911,7 +58923,7 @@ const Background = ({
         y: 0,
         width: 72,
         height: 72,
-        patternTransform: "translate(-4777.568 -7616.657) rotate(-45) scale(.35)",
+        patternTransform: "translate(-4777.568 -7616.657) rotate(-45) scale(.25)",
         patternUnits: "userSpaceOnUse",
         viewBox: "0 0 72 72",
         children: jsxRuntimeExports$1.jsxs("g", {
@@ -59276,7 +59288,7 @@ const Background = ({
         y: 70.062,
         width: 220,
         height: 300.202,
-        fill: ColorLightCharcoal,
+        fill: ColorEPFace,
         stroke: ColorBlack,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -60296,7 +60308,7 @@ const Background = ({
         y: 67.562,
         width: 20,
         height: 10,
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -60305,7 +60317,7 @@ const Background = ({
         y: 77.562,
         width: 160,
         height: 60,
-        fill: ColorSlate,
+        fill: ColorBatteryCover,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -60431,7 +60443,7 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "120.062 77.562 117.562 77.562 117.562 67.562 120.062 70.062 120.062 77.562",
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -60857,7 +60869,7 @@ const Background = ({
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("path", {
         d: "M255.063,66.312c-2.071,0-3.75,.56-3.75,1.25v2.5h7.5v-2.5c0-.69-1.679-1.25-3.75-1.25Z",
-        fill: OriginalOrange,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125

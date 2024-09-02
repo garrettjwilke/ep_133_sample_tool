@@ -55,11 +55,12 @@ margin:0 auto}._bounce-horizontal_1bmag_1{animation:_horizontalBounce_1bmag_1 .5
 --ep-darkgrey: #717d85;
 --ep-orange: #eb3622;
 --ep-pink: #e70069;
+--hmls-main: #ffffff;
 --unit: 23.52px}@font-face{font-family:UniversTE20T;
-src:url(font_2.otf)}@font-face{font-family:TechnoType-regular;
-src:url(font_2.otf)}@font-face{font-family:TechnoType-medium;
-src:url(font_2.otf)}@font-face{font-family:TechnoType-bold;
-src:url(font_2.otf)}*{margin:0;
+src:url(font_4.otf)}@font-face{font-family:TechnoType-regular;
+src:url(font_4.otf)}@font-face{font-family:TechnoType-medium;
+src:url(font_4.otf)}@font-face{font-family:TechnoType-bold;
+src:url(font_4.otf)}*{margin:0;
 padding:0;
 box-sizing:border-box}html,body{font-size:62.5%;
 -webkit-font-smoothing:antialiased}body{font-family:TechnoType-bold,sans-serif;
