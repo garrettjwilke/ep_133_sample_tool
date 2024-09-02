@@ -1,7 +1,7 @@
 var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = false;
+var CustomColors = true;
 var HideSerial = true;
-var CustomNames = true;
+var CustomNames = false;
 
 // COLORS
 var ColorOriginalOrange = "#EF4E34";
@@ -41,7 +41,7 @@ var Color7 = "#ff00dc";
 var ColorMarker7 = Color7;
 var Color8 = "#ffaa00";
 var ColorMarker8 = Color8;
-var Color9 = "#000000";
+var Color9 = "#64c0f9";
 var ColorMarker9 = Color9;
 var GridColor = "#c7be8b";
 var FontColorLight = "#e5e6e6";
@@ -83,45 +83,49 @@ if (CustomNames == false) {
   FakeSerial = null
 };
 
+function set_colors() {
+  if (CustomColors == false) {
+    ColorMain = ColorOriginalOrange;
+    ColorSound = "#00a69c";
+    ColorSpeaker = ColorLightCharcoal;
+    ColorBatteryCover = ColorSlate;
+    ColorEPFace = ColorLightCharcoal;
+    ColorStartKnob = ColorOriginalOrange;
+    ColorEndKnob = ColorCharcoal;
+    ColorBackupRestoreBtn = ColorSound;
+    ColorButtons = "#ef4e27";
+    ColorSecondary = ColorSpeaker;
+    ColorTertiary = "#dbdddb";
+    Color0 = ColorLightGray;
+    Color1 = ColorLightGray;
+    Color2 = ColorLightGray;
+    Color3 = ColorLightGray;
+    Color4 = ColorLightGray;
+    Color5 = ColorLightGray;
+    Color6 = ColorLightGray;
+    Color7 = ColorLightCharcoal;
+    Color8 = ColorLightCharcoal;
+    Color9 = "#000000";
+    ColorMarker0 = ColorOriginalOrange;
+    ColorMarker1 = ColorOriginalOrange;
+    ColorMarker2 = ColorOriginalOrange;
+    ColorMarker3 = ColorOriginalOrange;
+    ColorMarker4 = ColorOriginalOrange;
+    ColorMarker5 = ColorOriginalOrange;
+    ColorMarker6 = ColorOriginalOrange;
+    ColorMarker7 = ColorOriginalOrange;
+    ColorMarker8 = ColorOriginalOrange;
+    ColorMarker9 = ColorOriginalOrange;
+    GridColor = "#4f4059";
+    FontColorLight = "#e5e6e6";
+    FontColorDark = "#000000";
+    FontColorLogo1 = "#000000";
+    FontColorLogo2 = ColorButtons;
+  };
+}
+
 // SET ORIGINAL COLORS BACK IF USER DOESN'T WANT CUSTOM COLORS
-if (CustomColors == false) {
-  ColorMain = ColorOriginalOrange;
-  ColorSound = "#00a69c";
-  ColorSpeaker = ColorLightCharcoal;
-  ColorBatteryCover = ColorSlate;
-  ColorEPFace = ColorLightCharcoal;
-  ColorStartKnob = ColorOriginalOrange;
-  ColorEndKnob = ColorCharcoal;
-  ColorBackupRestoreBtn = ColorOriginalOrange;
-  ColorButtons = "#ef4e27";
-  ColorSecondary = ColorSpeaker;
-  ColorTertiary = "#dbdddb";
-  Color0 = ColorLightGray;
-  Color1 = ColorLightGray;
-  Color2 = ColorLightGray;
-  Color3 = ColorLightGray;
-  Color4 = ColorLightGray;
-  Color5 = ColorLightGray;
-  Color6 = ColorLightGray;
-  Color7 = ColorLightCharcoal;
-  Color8 = ColorLightCharcoal;
-  Color9 = "#000000";
-  ColorMarker0 = ColorOriginalOrange;
-  ColorMarker1 = ColorOriginalOrange;
-  ColorMarker2 = ColorOriginalOrange;
-  ColorMarker3 = ColorOriginalOrange;
-  ColorMarker4 = ColorOriginalOrange;
-  ColorMarker5 = ColorOriginalOrange;
-  ColorMarker6 = ColorOriginalOrange;
-  ColorMarker7 = ColorOriginalOrange;
-  ColorMarker8 = ColorOriginalOrange;
-  ColorMarker9 = ColorOriginalOrange;
-  GridColor = "#4f4059";
-  FontColorLight = "#e5e6e6";
-  FontColorDark = "#000000";
-  FontColorLogo1 = "#000000";
-  FontColorLogo2 = ColorButtons;
-};
+set_colors();
 
 // everything below is the minified js. very difficult to parse
 var Ir = Object.defineProperty;
@@ -46623,7 +46627,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 196.313)",
+          transform: "translate(492 196.313)",
           fill: FontColorLight,
           fontSize: 6,
           letterSpacing: ".08em",
@@ -46656,7 +46660,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 186.313)",
+          transform: "translate(492 186.313)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46679,7 +46683,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 176.313)",
+          transform: "translate(492 176.313)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46702,7 +46706,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 166.313)",
+          transform: "translate(492 166.313)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46725,7 +46729,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 156.313)",
+          transform: "translate(492 156.313)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46748,7 +46752,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 146.313)",
+          transform: "translate(492 146.313)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46771,7 +46775,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 136.312)",
+          transform: "translate(492 136.312)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46794,7 +46798,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 126.312)",
+          transform: "translate(492 126.312)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46817,7 +46821,7 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 116.312)",
+          transform: "translate(492 116.312)",
           fontSize: 6,
           letterSpacing: ".08em",
           stroke: FontColorDark,
@@ -46840,11 +46844,11 @@ const Tabs = reactExports.memo(({
           strokeMiterlimit: 10,
           strokeWidth: 0.125
         }), jsxRuntimeExports$1.jsx("text", {
-          transform: "translate(495 106.312)",
-          fill: FontColorLight,
+          transform: "translate(492 106.312)",
+          fill: FontColorDark,
           fontSize: 6,
           letterSpacing: ".08em",
-          stroke: FontColorLight,
+          stroke: FontColorDark,
           strokeMiterlimit: 10,
           strokeWidth: 0.062,
           children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48356,11 +48360,34 @@ const LibraryUI = ({
         stroke: ColorCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
+      }), jsxRuntimeExports$1.jsx("rect", {
+        x: 490,
+        y: 205,
+        width: 30,
+        height: 143,
+        fill: ColorCharcoal,
+        stroke: FontColorDark,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 106.312)",
+        transform: "translate(492 212)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker0,
+        stroke: ColorMarker0,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank0 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 219)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48369,10 +48396,24 @@ const LibraryUI = ({
           children: "001-099"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 116.312)",
+        transform: "translate(492 226)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker1,
+        stroke: ColorMarker1,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank1 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 233)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48381,10 +48422,24 @@ const LibraryUI = ({
           children: "100-199"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 126.312)",
+        transform: "translate(492 240)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker2,
+        stroke: ColorMarker2,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank2 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 247)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48393,10 +48448,24 @@ const LibraryUI = ({
           children: "200-299"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 136.312)",
+        transform: "translate(492 254)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker3,
+        stroke: ColorMarker3,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank3 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 261)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48405,10 +48474,24 @@ const LibraryUI = ({
           children: "300-399"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 146.312)",
+        transform: "translate(492 268)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker4,
+        stroke: ColorMarker4,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank4 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 275)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48417,10 +48500,24 @@ const LibraryUI = ({
           children: "400-499"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 156.312)",
+        transform: "translate(492 282)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker5,
+        stroke: ColorMarker5,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank5 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 289)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48429,10 +48526,24 @@ const LibraryUI = ({
           children: "500-599"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 166.312)",
+        transform: "translate(492 296)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker6,
+        stroke: ColorMarker6,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank6 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 303)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48441,10 +48552,24 @@ const LibraryUI = ({
           children: "600-699"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 176.35)",
+        transform: "translate(492 310)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker7,
+        stroke: ColorMarker7,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank7 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 317)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
@@ -48453,28 +48578,56 @@ const LibraryUI = ({
           children: "700-799"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 196.312)",
-        fontSize: 5,
+        transform: "translate(492 324)",
+        fontSize: 6,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: ColorMarker8,
+        stroke: ColorMarker8,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: "900-999"
+          children: Bank8 + ":"
         })
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(523.062 186.312)",
+        transform: "translate(492 331)",
         fontSize: 5,
         letterSpacing: ".08em",
-        stroke: FontColorDark,
+        fill: FontColorLight,
+        stroke: FontColorLight,
         strokeMiterlimit: 10,
         strokeWidth: 0.062,
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
           children: "800-899"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 338)",
+        fontSize: 6,
+        letterSpacing: ".08em",
+        fill: ColorMarker9,
+        stroke: ColorMarker9,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: Bank9 + ":"
+        })
+      }), jsxRuntimeExports$1.jsx("text", {
+        transform: "translate(492 345)",
+        fontSize: 5,
+        letterSpacing: ".08em",
+        fill: FontColorLight,
+        stroke: FontColorLight,
+        strokeMiterlimit: 10,
+        strokeWidth: 0.062,
+        children: jsxRuntimeExports$1.jsx("tspan", {
+          x: 0,
+          y: 0,
+          children: "900-999"
         })
       }), jsxRuntimeExports$1.jsx("polygon", {
         points: "290.062 370.062 300.063 370.062 309.962 380.163 300.062 380.062 290.062 370.062",
@@ -49702,28 +49855,16 @@ const BackupRestoreButton = ({
     onClick: s,
     className: styles$3.btn,
     children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 400.062 - 212,
-      y: 382.562 - 28,
+      x: 61,
+      y: 115,
       width: 77.5,
       height: 10,
       fill: ColorBackupRestoreBtn,
       stroke: FontColorDark,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
-    }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "268.062 367.062 265.562 364.563 265.562 354.562 268.062 357.063 268.062 367.062",
-      fill: ColorBackupRestoreBtn,
-      stroke: FontColorDark,
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125
-    }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "188.062 364.562 190.562 367.062 268.062 367.062 265.562 364.562 198.062 364.562",
-      fill: ColorBackupRestoreBtn,
-      stroke: FontColorDark,
-      strokeMiterlimit: 10,
-      strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(194.413 362.062)",
+      transform: "translate(67 122)",
       fill: ColorBlack,
       fontSize: 6.25,
       letterSpacing: ".06em",
