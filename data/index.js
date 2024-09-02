@@ -7,11 +7,14 @@ var CustomNames = true;
 var ColorOriginalOrange = "#EF4E34";
 var ColorSound = "#FF00E0";
 var ColorSpeaker = "#b3a1b7";
-var ColorBackupRestoreBtn = "#ffffff";
+var ColorBackupRestoreBtn = ColorSound;
 var ColorBatteryCover = "#ffffff";
-var ColorEPFace = "#000000"
+var ColorEPFace = "#8d9ea9";
+var ColorStartKnob = "#58ea44";
+var ColorEndKnob = "#ffffff";
 var ColorButtons = "#ef4e27";
 var ColorButtons2 = "#000000";
+
 var ColorMain = "#d95d5d";
 var ColorSecondary = "#a282a8";
 var ColorTertiary = "#96abde";
@@ -87,6 +90,8 @@ if (CustomColors == false) {
   ColorSpeaker = ColorLightCharcoal;
   ColorBatteryCover = ColorSlate;
   ColorEPFace = ColorLightCharcoal;
+  ColorStartKnob = ColorOriginalOrange;
+  ColorEndKnob = ColorCharcoal;
   ColorBackupRestoreBtn = ColorOriginalOrange;
   ColorButtons = "#ef4e27";
   ColorSecondary = ColorSpeaker;
@@ -53508,7 +53513,7 @@ const GreyBackground = ({
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("circle", {
-      cx: 250.062,
+      cx: 220.062,
       cy: 220.062,
       r: 10,
       fill: ColorLightCharcoal,
@@ -61137,7 +61142,7 @@ const Background = ({
         cx: 250.062,
         cy: 220.062,
         r: 10,
-        fill: ColorCharcoal,
+        fill: ColorEndKnob,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61145,7 +61150,7 @@ const Background = ({
         cx: 220.062,
         cy: 220.062,
         r: 10,
-        fill: ColorButtons,
+        fill: ColorStartKnob,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61242,7 +61247,7 @@ const Background = ({
         cx: 217.562,
         cy: 217.562,
         r: 5,
-        fill: ColorButtons,
+        fill: ColorStartKnob,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61250,7 +61255,7 @@ const Background = ({
         cx: 247.562,
         cy: 217.562,
         r: 5,
-        fill: ColorCharcoal,
+        fill: ColorEndKnob,
         stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61258,7 +61263,7 @@ const Background = ({
         cx: 217.562,
         cy: 217.562,
         r: 4.375,
-        fill: ColorButtons,
+        fill: ColorStartKnob,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61266,7 +61271,7 @@ const Background = ({
         cx: 247.562,
         cy: 217.562,
         r: 4.375,
-        fill: ColorCharcoal,
+        fill: ColorEndKnob,
         stroke: ColorLightCharcoal,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
