@@ -1,7 +1,7 @@
 var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = true;
+var CustomColors = false;
 var HideSerial = true;
-var CustomNames = true;
+var CustomNames = false;
 
 // COLORS
 var ColorOriginalOrange = "#EF4E34";
@@ -51,16 +51,16 @@ var FontColorLogo1 = "#FF0000";
 var FontColorLogo2 = ColorSound;
 
 // NAMES
-var Bank0 = "Bank0";
-var Bank1 = "Bank1";
-var Bank2 = "Bank2";
-var Bank3 = "Bank3";
-var Bank4 = "Bank4";
-var Bank5 = "Bank5";
-var Bank6 = "Bank6";
-var Bank7 = "Bank7";
-var Bank8 = "Bank8";
-var Bank9 = "Bank9";
+var Bank0 = "Bank 0";
+var Bank1 = "Bank 1";
+var Bank2 = "Bank 2";
+var Bank3 = "Bank 3";
+var Bank4 = "Bank 4";
+var Bank5 = "Bank 5";
+var Bank6 = "Bank 6";
+var Bank7 = "Bank 7";
+var Bank8 = "Bank 8";
+var Bank9 = "Bank 9";
 var StartIn = "ST";
 var EndOut = "END";
 var LibraryTitle = "EP-133 Library";
@@ -33456,7 +33456,7 @@ function createSVGGhostParent() {
   const s = "http://www.w3.org/2000/svg";
   const a = document.createElementNS(s, "svg");
   a.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  a.setAttribute("viewBox", "45 65 478 318");
+  a.setAttribute("viewBox", "45 65 488 318");
   const o = document.createElementNS(s, "g");
   o.setAttribute("id", "drag_drop_multiple");
   o.setAttribute("data-name", "drag drop multiple");
@@ -46623,7 +46623,7 @@ const Tabs = reactExports.memo(({
         style: j("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank9"),
-          d: "M490,190.062h28.687c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.687v-10h0Z",
+          d: "M500,190.062h28.687c.59,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.687v-10h0Z",
           fill: Color9,
           stroke: Color9,
           strokeMiterlimit: 10,
@@ -46656,7 +46656,7 @@ const Tabs = reactExports.memo(({
         style: j("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user2"),
-          d: "M490,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color8,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46679,7 +46679,7 @@ const Tabs = reactExports.memo(({
         style: j("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("user1"),
-          d: "M490,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color7,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46702,7 +46702,7 @@ const Tabs = reactExports.memo(({
         style: j("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank6"),
-          d: "M490,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color6,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46725,7 +46725,7 @@ const Tabs = reactExports.memo(({
         style: j("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank5"),
-          d: "M490,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color5,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46748,7 +46748,7 @@ const Tabs = reactExports.memo(({
         style: j("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank4"),
-          d: "M490,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color4,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46771,7 +46771,7 @@ const Tabs = reactExports.memo(({
         style: j("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank3"),
-          d: "M490,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color3,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46794,7 +46794,7 @@ const Tabs = reactExports.memo(({
         style: j("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank2"),
-          d: "M490,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color2,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46817,7 +46817,7 @@ const Tabs = reactExports.memo(({
         style: j("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank1"),
-          d: "M490,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color1,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46840,7 +46840,7 @@ const Tabs = reactExports.memo(({
         style: j("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
           onClick: () => a("bank0"),
-          d: "M490,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75v-10h0Z",
+          d: "M500,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75v-10h0Z",
           fill: Color0,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -46870,7 +46870,7 @@ const Tabs = reactExports.memo(({
         "data-name": "bank9",
         style: _("bank9"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.376,190.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,190.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -46902,7 +46902,7 @@ const Tabs = reactExports.memo(({
         "data-name": "user_4",
         style: _("user2"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.376,180.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,180.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -46935,7 +46935,7 @@ const Tabs = reactExports.memo(({
         "data-name": "user_3",
         style: _("user1"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.438,170.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,170.063h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -46968,7 +46968,7 @@ const Tabs = reactExports.memo(({
         "data-name": "user_2",
         style: _("bank6"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.438,160.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,160.063h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -47001,7 +47001,7 @@ const Tabs = reactExports.memo(({
         "data-name": "user_1",
         style: _("bank5"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,150.063h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,150.063h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -47034,7 +47034,7 @@ const Tabs = reactExports.memo(({
         "data-name": "loops",
         style: _("bank4"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,140.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,140.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -47067,7 +47067,7 @@ const Tabs = reactExports.memo(({
         "data-name": "bank3",
         style: _("bank3"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,130.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,130.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -47100,7 +47100,7 @@ const Tabs = reactExports.memo(({
         "data-name": "bank4",
         style: _("bank2"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,120.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,120.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: FontColorDark,
           strokeMiterlimit: 10,
@@ -47133,7 +47133,7 @@ const Tabs = reactExports.memo(({
         "data-name": "bank3",
         style: _("bank1"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,110.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,110.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -47166,7 +47166,7 @@ const Tabs = reactExports.memo(({
         "data-name": "drums",
         style: _("bank0"),
         children: [jsxRuntimeExports$1.jsx("path", {
-          d: "M479.437,100.062h28.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-28.75",
+          d: "M479.666,100.062h38.75c.69,0,1.25,.56,1.25,1.25v7.5c0,.69-.56,1.25-1.25,1.25h-38.75",
           fill: FontColorLight,
           stroke: ColorCharcoal,
           strokeMiterlimit: 10,
@@ -48365,8 +48365,8 @@ const LibraryUI = ({
       }), jsxRuntimeExports$1.jsx("rect", {
         x: 490,
         y: 205,
-        width: 30,
-        height: 143,
+        width: 40,
+        height: 144,
         fill: ColorCharcoal,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
@@ -48386,7 +48386,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 219)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48412,7 +48412,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 233)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48438,7 +48438,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 247)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48464,7 +48464,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 261)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48490,7 +48490,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 275)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48516,7 +48516,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 289)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48542,7 +48542,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 303)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48568,7 +48568,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 317)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48594,7 +48594,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 331)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -48620,7 +48620,7 @@ const LibraryUI = ({
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(492 345)",
-        fontSize: 5,
+        fontSize: 7.666,
         letterSpacing: ".08em",
         fill: FontColorLight,
         stroke: FontColorLight,
@@ -49902,7 +49902,7 @@ const BackButton = ({
     onClick: s,
     className: styles$3.btn,
     children: [jsxRuntimeExports$1.jsx("rect", {
-      x: 430.062,
+      x: 430.062 - 140,
       y: 362.562,
       width: 47.5,
       height: 10,
@@ -49911,19 +49911,19 @@ const BackButton = ({
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "480.062 375.062 477.562 372.563 477.562 362.562 480.062 365.063 480.062 375.062",
+      points: "340 375.062 337 372.563 337 362.562 340 365.063 340 375.062",
       fill: ColorBlack,
       stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("polygon", {
-      points: "430.062 372.562 432.562 375.062 480.062 375.062 477.562 372.562 430.062 372.562",
+      points: "290 372.562 292 375.062 340 375.062 337 372.562 290 372.562",
       fill: ColorBlack,
       stroke: ColorLightCharcoal,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("text", {
-      transform: "translate(444.609 370.062)",
+      transform: "translate(304 370.062)",
       fill: FontColorLight,
       fontSize: 6.25,
       letterSpacing: ".08em",
@@ -50204,6 +50204,7 @@ class Archive {
   }
 }
 const factoryContent = "ep-133-factory-content-DRyE_DHC.pak";
+const hmlsPak = "EP-133_hmls-base_01.hmls";
 const Modal = ({
   children: s
 }) => {
@@ -50269,6 +50270,14 @@ const CONTENT = {
       line3: "original factory content?"
     }
   },
+  "restore hmls": {
+    title: "hmls base",
+    description: {
+      line1: "are you sure you want to permanently",
+      line2: "erase all content and overwrite it with",
+      line3: "dope shit?"
+    }
+  },
   "restore local": {
     title: "restore local backup",
     description: {
@@ -50329,7 +50338,7 @@ const ConfirmationModal = ({
       window.removeEventListener("keydown", at);
     };
   }, [tt, a, o]);
-  if (s === "restore factory" || s === "restore local") {
+  if (s === "restore factory" || s === "restore local" || s === "restore hmls") {
     return jsxRuntimeExports$1.jsxs("g", {
       children: [jsxRuntimeExports$1.jsx("g", {
         id: "deleting_modal",
@@ -50792,6 +50801,7 @@ const BackupProgress = ({
 };
 const ICONS = {
   "restore factory": jsxRuntimeExports$1.jsx(FactoryRestoreIcon, {}),
+  "restore hmls": jsxRuntimeExports$1.jsx(LocalRestoreIcon, {}),
   "restore local": jsxRuntimeExports$1.jsx(LocalRestoreIcon, {}),
   "backup local": jsxRuntimeExports$1.jsx(LocalBackupIcon, {})
 };
@@ -50834,12 +50844,31 @@ const Display = ({
           captureException(dt);
         }
       });
+    };
+    if (_ === "restore hmls") {
+      (async () => {
+        const pt = await (await fetch(hmlsPak)).blob();
+        const mt = new File([pt], "zip-file");
+        const gt = new Archive(mt);
+        await gt.unarchive();
+        ut({
+          archive: gt
+        });
+      })().catch(dt => {
+        if (dt instanceof Error) {
+          console.error(dt.message, dt.cause);
+          captureException(dt);
+        }
+      });
     }
   }, [_]);
   reactExports.useEffect(() => {
     if (!rt) {
       ct(false);
       if (_ !== "restore factory") {
+        ut(null);
+      };
+      if (_ !== "restore hmls") {
         ut(null);
       }
     }
@@ -50850,7 +50879,7 @@ const Display = ({
   const it = reactExports.useCallback(async () => {
     if (!!lt && !!a) {
       ct(false);
-      if (_ === "restore factory") {
+      if (_ === "restore factory" || _ === "restore hmls") {
         await a(_, lt.archive, true);
       } else {
         await a(_, lt.archive, false, lt.filename);
@@ -50991,6 +51020,11 @@ const Display = ({
                   ct(true);
                 }
                 break;
+              case "restore hmls":
+                if (lt && a) {
+                  ct(true);
+                }
+                break;
               case "backup local":
                 if (s) {
                   await s(_);
@@ -51017,7 +51051,7 @@ const Display = ({
               overflow: "hidden"
             },
             type: "file",
-            accept: ".pak",
+            accept: [".pak", ".hmls"],
             onClick: ot => ot.target.value = "",
             onChange: async ot => {
               var mt;
@@ -51138,6 +51172,15 @@ const backupOptions = [{
     line1: "overwrite all samples and projects",
     line2: "with original factory content."
   }
+}, {
+  type: "restore hmls",
+  action: "restore",
+  title: "restore hmls base",
+  color: "white",
+  description: {
+    line1: "overwrite all samples and projects",
+    line2: "with dope shit."
+  }
 }];
 const Backup = ({
   deviceService: s
@@ -51209,7 +51252,7 @@ const Backup = ({
     return null;
   }
   {
-    const _t = backupOptions.filter(it => rt && it.type !== rt.type ? false : at === "restore-factory-content" && it.type === "restore factory" ? true : at != null ? at === "backup-and-restore" : true);
+    const _t = backupOptions.filter(it => rt && it.type !== rt.type ? false : at === "restore-factory-content" && it.type === "restore factory" ? true : at === "restore-factory-content" && it.type === "restore hmls" ? true : at != null ? at === "backup-and-restore" : true);
     return jsxRuntimeExports$1.jsxs(jsxRuntimeExports$1.Fragment, {
       children: [a && jsxRuntimeExports$1.jsx(BackupBackground, {}), a && jsxRuntimeExports$1.jsx(MessageBox, {
         line1: "BETA PREVIEW RELEASE",
@@ -51236,7 +51279,7 @@ const Backup = ({
       }), a && _t.map((it, ot) => jsxRuntimeExports$1.jsx(Display, {
         handleCreateBackup: Et,
         handleRestoreBackup: ct,
-        transformY: ot * 90,
+        transformY: ot * 70,
         type: it.type,
         action: it.action,
         title: it.title,
@@ -51464,7 +51507,7 @@ const GreyBackground = ({
   children: s
 }) => jsxRuntimeExports$1.jsxs("svg", {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "45 65 478 318",
+  viewBox: "45 65 488 318",
   className: styles$1.background,
   children: [jsxRuntimeExports$1.jsxs("g", {
     id: "extras",
@@ -58371,7 +58414,7 @@ const GreyBackground = ({
         strokeMiterlimit: 10,
         strokeWidth: 0.125
       }), jsxRuntimeExports$1.jsx("text", {
-        transform: "translate(483.187 106.313)",
+        transform: "translate(484.187 106.313)",
         fill: ColorLightGray,
         fontSize: 3.438,
         letterSpacing: ".08em",
@@ -59062,7 +59105,7 @@ const Background = ({
   } = useUIState();
   return jsxRuntimeExports$1.jsxs("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "45 65 478 318",
+    viewBox: "45 65 488 318",
     className: styles$1.background,
     children: [jsxRuntimeExports$1.jsx("defs", {
       children: jsxRuntimeExports$1.jsx("pattern", {
