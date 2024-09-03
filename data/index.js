@@ -1,21 +1,22 @@
 var VersionNumber = "v 1.1.0 - offline";
 var CustomColors = true;
 var HideSerial = true;
-var CustomNames = false;
+var CustomNames = true;
 
 // COLORS
 var ColorOriginalOrange = "#EF4E34";
 var ColorSound = "#FF00E0";
 var ColorSpeaker = "#b3a1b7";
 var ColorBackupRestoreBtn = ColorSound;
-var ColorBatteryCover = "#ffffff";
-var ColorEPFace = "#8d9ea9";
-var ColorStartKnob = "#58ea44";
-var ColorEndKnob = "#ffffff";
+var ColorBatteryCover = "#d6dae4";
+var ColorEPFace = "#9496a5";
+var ColorStartKnob = "#6b6f90";
+var ColorEndKnob = "#3f2e41";
 var ColorButtons = "#ef4e27";
 var ColorButtons2 = "#000000";
+var ColorGrid = "#c7be8b";
 
-var ColorMain = "#d95d5d";
+var ColorMain = "#b18fb1";
 var ColorSecondary = "#a282a8";
 var ColorTertiary = "#96abde";
 var ColorSlate = "#dbdddb";
@@ -25,29 +26,29 @@ var ColorLightGray = "#dcdcdc";
 var ColorBlack = "#000000"
 var Color0 = "#8c959f";
 var ColorMarker0 = Color0;
-var Color1 = "#218bff";
+var Color1 = "#82c9ec";
 var ColorMarker1 = Color1;
-var Color2 = "#2da44e";
+var Color2 = "#82ec88";
 var ColorMarker2 = Color2;
 var Color3 = "#faff4a";
 var ColorMarker3 = Color3;
 var Color4 = "#47f3e3";
 var ColorMarker4 = Color4;
-var Color5 = "#fa4549";
+var Color5 = "#f45050";
 var ColorMarker5 = Color5;
 var Color6 = "#a475f9";
 var ColorMarker6 = Color6;
-var Color7 = "#ff00dc";
+var Color7 = "#ee86e6";
 var ColorMarker7 = Color7;
 var Color8 = "#ffaa00";
 var ColorMarker8 = Color8;
-var Color9 = "#64c0f9";
+var Color9 = "#b88552";
 var ColorMarker9 = Color9;
-var GridColor = "#c7be8b";
+
 var FontColorLight = "#e5e6e6";
 var FontColorDark = "#000000";
 var FontColorLogo1 = "#FF0000";
-var FontColorLogo2 = "#32e013";
+var FontColorLogo2 = ColorSound;
 
 // NAMES
 var Bank0 = "Bank0";
@@ -116,7 +117,7 @@ function set_colors() {
     ColorMarker7 = ColorOriginalOrange;
     ColorMarker8 = ColorOriginalOrange;
     ColorMarker9 = ColorOriginalOrange;
-    GridColor = "#4f4059";
+    ColorGrid = "#4f4059";
     FontColorLight = "#e5e6e6";
     FontColorDark = "#000000";
     FontColorLogo1 = "#000000";
@@ -397,6 +398,7 @@ function R$1(s, a, o, _, j) {
     }
   }
   if (_e) {
+    logger.log('test');
     _e = s;
     j = j(_e);
     s = _ === "" ? "." + Q$1(_e, 0) : _;
@@ -45722,7 +45724,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 142.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45731,7 +45733,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 147.563,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45740,7 +45742,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 152.563,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45749,7 +45751,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 157.563,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45758,7 +45760,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 162.564,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45767,7 +45769,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 167.564,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45776,7 +45778,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 172.564,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45785,7 +45787,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 177.565,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45794,7 +45796,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.539,
       y2: 182.565,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45803,7 +45805,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 232.563,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45812,7 +45814,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 227.562,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45821,7 +45823,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 222.562,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45830,7 +45832,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 217.562,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45839,7 +45841,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 212.561,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45848,7 +45850,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 207.561,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45857,7 +45859,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 202.561,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45866,7 +45868,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 197.56,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45875,7 +45877,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 192.56,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45884,7 +45886,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 187.56,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45893,7 +45895,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 182.559,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45902,7 +45904,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 177.559,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45911,7 +45913,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 172.559,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45920,7 +45922,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 167.558,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45929,7 +45931,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 162.558,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45938,7 +45940,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 157.558,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45947,7 +45949,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 152.557,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45956,7 +45958,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 147.557,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45965,7 +45967,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 142.557,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45974,7 +45976,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 137.557,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45983,7 +45985,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 132.556,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -45992,7 +45994,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 127.556,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46001,7 +46003,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 122.556,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46010,7 +46012,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 117.555,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46019,7 +46021,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 112.555,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46028,7 +46030,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 107.555,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46037,7 +46039,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 102.554,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46046,7 +46048,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 97.554,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46055,7 +46057,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 92.554,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46064,7 +46066,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 87.553,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46073,7 +46075,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 82.553,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46082,7 +46084,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 77.553,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     }), jsxRuntimeExports$1.jsx("line", {
@@ -46091,7 +46093,7 @@ const Grid = reactExports.memo(() => jsxRuntimeExports$1.jsx(jsxRuntimeExports$1
       x2: 237.563,
       y2: 182.562,
       fill: "none",
-      stroke: GridColor,
+      stroke: ColorGrid,
       strokeMiterlimit: 10,
       strokeWidth: 0.125
     })]
@@ -47978,7 +47980,7 @@ const Row = reactExports.memo(({
           }), ot.length > 1 ? jsxRuntimeExports$1.jsxs("g", {
             children: [jsxRuntimeExports$1.jsx("polygon", {
               points: "287.339 141.312 287.339 148.812 295.062 148.812 298.812 145.062 295.062 141.312 287.339 141.312",
-              fill: ColorSlate,
+              fill: ColorTertiary,
               stroke: ColorCharcoal,
               strokeMiterlimit: 10,
               strokeWidth: 0.125
@@ -50165,6 +50167,7 @@ class Archive {
     if ((a == null ? undefined : a.getData) == null) {
       return;
     }
+    logger.log('test');
     const _ = a.filename.split("/").pop() ?? "";
     const j = _.split(".").pop();
     const $ = await a.getData(new BlobWriter());
@@ -50702,7 +50705,7 @@ const BackupProgress = ({
         children: jsxRuntimeExports$1.jsx("tspan", {
           x: 0,
           y: 0,
-          children: `${s} in progress. do not close browser window!`
+          children: `${s} in progress. Please Wait.`
         })
       }), jsxRuntimeExports$1.jsx("text", {
         transform: "translate(295.063 148.063)",
@@ -61283,7 +61286,7 @@ const Background = ({
         cx: 250.062,
         cy: 220.062,
         r: 10,
-        fill: ColorEndKnob,
+        fill: "#000000",
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125
@@ -61291,7 +61294,7 @@ const Background = ({
         cx: 220.062,
         cy: 220.062,
         r: 10,
-        fill: ColorStartKnob,
+        fill: ColorOriginalOrange,
         stroke: FontColorDark,
         strokeMiterlimit: 10,
         strokeWidth: 0.125

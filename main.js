@@ -10,7 +10,7 @@ function createWindow () {
     title: "EP-133 Sample Tool",
     icon: path.join(__dirname + 'icon.ico'),
     webPreferences: {
-      //devTools: false,
+      devTools: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
