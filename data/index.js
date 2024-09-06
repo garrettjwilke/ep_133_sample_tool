@@ -1,5 +1,5 @@
 var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = false;
+var CustomColors = true;
 var HideSerial = true;
 var CustomNames = false;
 
@@ -83,7 +83,15 @@ if (CustomNames == false) {
   LibraryTitle = "SAMPLE LIBRARY";
   FakeSerial = null
 };
-
+const changeEndianness = (string) => {
+  const result = [];
+  let len = string.length - 2;
+  while (len >= 0) {
+    result.push(string.substr(len, 2));
+    len -= 2;
+  }
+  return result.join('');
+}
 function set_colors() {
   if (CustomColors == false) {
     ColorMain = ColorOriginalOrange;
@@ -11824,7 +11832,8 @@ var MidiIO = class {
     $t(this, "outputs");
     $t(this, "inputs");
     this.midi = s;
-    this.debug = s.getDebug();
+    //this.debug = s.getDebug();
+    this.debug = true;
     this.outputs = new Map();
     this.inputs = new Map();
     this.ident = s.ident;
@@ -11836,7 +11845,8 @@ var MidiIO = class {
     }
   }
   setDebug(s) {
-    this.debug = s;
+    //this.debug = s;
+    this.debug = true;
   }
   addOutputIfNeeded(s) {
     if (!this.legacyWindowsEventDone) {
@@ -11919,6 +11929,9 @@ var TE_SYSEX = {
 };
 function as_hex(s) {
   return "[" + asHexArray(s).join(", ") + "]";
+}
+function hmls_hex(s) {
+  return asHexArray(s).join(" ");
 }
 function asHexArray(s) {
   const a = [];
@@ -12005,6 +12018,9 @@ var TeSysexTimeoutError = class extends Error {
     this.name = "TeSysexTimeoutError";
   }
 };
+//note
+// these are requested later to send sysex signals
+// convert the decimal to hex to get the sysex hex
 var BIT_IS_REQUEST = 64;
 var BIT_REQUEST_ID_AVAILABLE = 32;
 var MIDI_SYSEX_START = 240;
@@ -12022,7 +12038,8 @@ var SysexClient = class {
     $t(this, "device_requests");
     $t(this, "onIdentityResponse");
     $t(this, "dispatchMidiEvent");
-    this.debug = false;
+    //this.debug = false;
+    this.debug = true;
     this.onIdentityResponse = o;
     this.requests = new Map();
     this.devices = s;
@@ -12031,29 +12048,50 @@ var SysexClient = class {
     this.dispatchMidiEvent = a;
   }
   setDebug(s) {
-    this.debug = s;
+    //this.debug = s;
+    this.debug = true;
   }
   log(...s) {
     if (this.debug) {
       console.log("MIDI:SysexClient", ...s);
     }
   }
+  // note
+  // f0 00 20 76 33 40 6f 59 01 f7 
+  // this sends data directly to the device
   send(s, a, o, _ = []) {
+    // this technically is incorrect, as it adds 1 to the actual data length
     const j = _.length > 0 ? _.length + Math.ceil(_.length / 7) : 0;
+    // the $ array will be the total sysex message
     const $ = new Uint8Array(10 + j);
+    // this will increment by 1 after each message sent
     const _e = this.getNextRequestId(s.id);
+    // this sets the first byte of the message to F0
     $[0] = MIDI_SYSEX_START;
+    // the te midi ID (00 20 76)
     $[1] = TE_MIDI_ID_0;
     $[2] = TE_MIDI_ID_1;
     $[3] = TE_MIDI_ID_2;
+    // the device id number? it's always 51 with EP-133
     $[4] = a;
+    // not sure
     $[5] = MIDI_SYSEX_TE;
+    // i guess it sets this if the message requires a response?
     $[6] = BIT_IS_REQUEST | BIT_REQUEST_ID_AVAILABLE | _e >> 7 & 31;
+    // request number (counts up every message sent)
     $[7] = _e & 127;
+    // type of message being sent?
     $[8] = o;
+    // this will get the length of the message, then add F7
     $[$.length - 1] = MIDI_SYSEX_END;
     packToBuffer(_, $.subarray(9, 9 + j));
-    this.log(`sending te-sysex #${_e} to ${a}`, asHexArray($));
+    //this.log(`sending te-sysex #${_e} to ${a}`, asHexArray($));
+    //console.log("length: " + (j - 1));
+    console.log("--------");
+    console.log("- data chunk before encoding -\nlength: " + (j - 1) + "\ndata:\n" + hmls_hex(_));
+    console.log("test encrypt:\n" + changeEndianness(hmls_hex(_)));
+    console.log("- sysex encoded message -\n\n" + hmls_hex($));
+    console.log($[6]);
     s.send($);
     return _e;
   }
@@ -12087,7 +12125,7 @@ var SysexClient = class {
       };
       let nt = setTimeout(at, $);
       const lt = ut => {
-        this.log(`${(performance.now() - _e).toFixed(2)}ms got a message`, tt, ut);
+        //this.log(`${(performance.now() - _e).toFixed(2)}ms got a message`, tt, ut);
         clearTimeout(nt);
         if (ut.status === TE_SYSEX.STATUS_OK) {
           rt(ut);
@@ -12137,6 +12175,8 @@ var SysexClient = class {
       hex_command: "",
       string: ""
     };
+    //console.log("hmls");
+    //console.log(s[8]);
     if (s[6] & BIT_REQUEST_ID_AVAILABLE) {
       a.has_request_id = true;
       a.request_id = (s[6] & 31) << 7 | s[7] & 127;
@@ -12150,7 +12190,12 @@ var SysexClient = class {
       console.error(`cannot handle message with status ${a.status}`);
       return;
     }
+    // note
+    // i think this unpacks any message sent from the EP-133 back to the app
     a.data = unpackInPlace(s.subarray(o, s.length - 1));
+    var data_test = hmls_hex(a.data);
+    //console.log("hmls");
+    //console.log(data_test);
     a.string = bin_to_string(a.data);
     if (this.debug) {
       a.hex_data = as_hex(a.data);
@@ -12289,7 +12334,8 @@ var Device$1 = class {
     this.onDeviceLostTimeout = null;
     this.reboot_requested_at = null;
     this.deviceLostCb = null;
-    this.debug = false;
+    //this.debug = false;
+    this.debug = true;
     this.locked = false;
   }
   log(...a) {
@@ -12452,7 +12498,8 @@ var DeviceIdentification = class {
     $t(this, "active_device_id_cb");
     $t(this, "active_device_id_cb_timeout");
     $t(this, "debug");
-    this.debug = s.debug;
+    //this.debug = s.debug;
+    this.debug = true;
     this.ident_queue = [];
     this.midi = s;
     this.active_device_id_cb = null;
@@ -12460,11 +12507,13 @@ var DeviceIdentification = class {
   }
   log(...s) {
     if (this.debug) {
-      console.log("MIDI:Ident", ...s);
+      return;
+      //console.log("MIDI:Ident", ...s);
     }
   }
   setDebug(s) {
-    this.debug = s;
+    //this.debug = s;
+    this.debug = true;
   }
   queue(s) {
     this.ident_queue.push(s);
@@ -12569,7 +12618,8 @@ var Midi = class {
     $t(this, "inited");
     $t(this, "callbacks");
     this.inited = false;
-    this.debug = false;
+    //this.debug = false;
+    this.debug = true;
     this.devices = new Map();
     this.ident = new DeviceIdentification(this);
     this.io = new MidiIO(this);
@@ -12591,7 +12641,8 @@ var Midi = class {
   }
   log(...s) {
     if (this.debug) {
-      console.log("MIDI", ...s);
+      return;
+      //console.log("MIDI", ...s);
     }
   }
   addCallback(s, a) {
@@ -12626,7 +12677,8 @@ var Midi = class {
   init(s) {
     if (s) {
       if (s.debug !== undefined) {
-        this.debug = s.debug;
+        //this.debug = s.debug;
+        this.debug = true;
         this.client.setDebug(this.debug);
         this.ident.setDebug(this.debug);
         this.io.setDebug(this.debug);
@@ -27189,7 +27241,7 @@ function DeviceProvider({
       debug: o,
       onDeviceFound: lt => {
         if (!(a.length > 0) || !!a.includes(lt.sku)) {
-          console.log(lt);
+          //console.log(lt);
           at(ut => [...ut, lt]);
           tt(false);
         }
@@ -34036,7 +34088,8 @@ const mr = class mr extends EventTarget {
     this.device = o;
     this.fileHandler = _;
     this.resampler = j;
-    this.debug = $;
+    //this.debug = $;
+    this.debug = true;
     this.speedStats = new SpeedProfiler();
   }
   async uploadSound(o, _, j = 0, $ = {}) {
@@ -34055,6 +34108,7 @@ const mr = class mr extends EventTarget {
     } catch {
       throw new UnsupportedAudio("could not read audio meta");
     }
+    let hmls = rt.extra;
     let st = rt.channels;
     const nt = {
       ...prepareTeenageMeta(rt),
@@ -34091,6 +34145,9 @@ const mr = class mr extends EventTarget {
     }
     try {
       lt = await this.resampler.resampleAudioData(et, rt.sample_rate, DEVICE_SAMPLE_RATE, ut, "pcm", DEVICE_BIT_DEPTH, st);
+      console.log("------ hmls ---------");
+      console.log(lt);
+      console.log("------ hmls ---------");
     } catch (ot) {
       throw ot instanceof Error && ot.name == "EncodingError" ? new UnsupportedAudio("this browser does not support the supplied audio format.") : ot;
     }
@@ -34528,7 +34585,8 @@ const mr = class mr extends EventTarget {
   }
   log(o) {
     if (this.debug) {
-      console.log(o);
+      return;
+      //console.log(o);
     }
   }
 };
@@ -39967,6 +40025,8 @@ function sendMessage(s, {
     } = s;
     const et = [];
     if ($) {
+      console.log("wtf");
+      console.log($);
       if ($.byteLength < $.buffer.byteLength) {
         s.value = $.buffer.slice(0, $.byteLength);
       } else {
