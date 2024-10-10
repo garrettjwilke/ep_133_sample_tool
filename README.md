@@ -2,6 +2,12 @@
 
 ![sample tool](zoom_in.png)
 
+## Compatability
+
+Any EP-133 with firmware 1.2.2 or higher.
+
+I started this tool the day before the EP-1320 was released. The EP-1320 (Medieval) is not compatable with this tool. It wont even be recognized at all.
+
 ## Features
 
 **100% fully offline.** There have been previous attempts at an offline version [here.](https://www.reddit.com/r/teenageengineering/comments/1aylewn/offline_ep133_sample_tool/) The issue with this type of release is that it is not truly offline. It requires you to be online for the first cache. The other issue is that if Teenage Engineering decided to change something, you will be at the mercy of what they give you. This version is fully offline, and guaranteed to not change. The original Factory Sound Pack is included in this (which is part of the reason why the executable is over 100MB). Of course, this version will be updated if the original tool is ever updated.
@@ -27,6 +33,15 @@ You can set custom names for the sound groups:
 ![custom names](custom_names.png)
 
 **Debug MIDI-Sysex Messages.** You can open the developer tools in this application and view the raw MIDI-Sysex messages sent to your EP-133. This can be very valuable when trying to reverse engineer how the EP-133 works. In fact, I have done this myself in an attempt to learn how the EP-133 works. I have successfully reverse engineered how the sample tool sends files back and forth. You can send entire sound packs directly to the EP-133 without this tool right now. I just haven't built a nice GUI for this, so for now all of these tools are command-line/terminal only. You can check out my reverse engineering work [here.](https://github.com/garrettjwilke/ep_133_sysex_thingy)
+
+Click on `View > Toggle Developer Tools` to see raw MIDI-SYSEX messages:
+![debug](debug.png)
+
+---
+
+## Troubleshooting
+
+If you ever have issues with connectivity, refresh the application (click on `View > Reload`).
 
 ---
 
