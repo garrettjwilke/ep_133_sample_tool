@@ -1,141 +1,4 @@
-var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = true;
-var HideSerial = true;
-var CustomNames = false;
-
-// COLORS
-var ColorOriginalOrange = "#EF4E34";
-var ColorSound = "#FF00E0";
-var ColorSpeaker = "#b3a1b7";
-var ColorBackupRestoreBtn = ColorSound;
-var ColorBatteryCover = "#d6dae4";
-var ColorEPFace = "#9496a5";
-var ColorStartKnob = "#6b6f90";
-var ColorEndKnob = "#3f2e41";
-var ColorButtons = "#ef4e27";
-var ColorButtons2 = "#000000";
-var ColorGrid = "#c7be8b";
-
-var ColorMain = "#b18fb1";
-var ColorSecondary = "#a282a8";
-var ColorTertiary = "#96abde";
-var ColorSlate = "#dbdddb";
-var ColorCharcoal = "#232424";
-var ColorLightCharcoal = "#b0babe";
-var ColorLightGray = "#dcdcdc";
-var ColorBlack = "#000000"
-var Color0 = "#8c959f";
-var ColorMarker0 = Color0;
-var Color1 = "#82c9ec";
-var ColorMarker1 = Color1;
-var Color2 = "#82ec88";
-var ColorMarker2 = Color2;
-var Color3 = "#faff4a";
-var ColorMarker3 = Color3;
-var Color4 = "#47f3e3";
-var ColorMarker4 = Color4;
-var Color5 = "#f45050";
-var ColorMarker5 = Color5;
-var Color6 = "#a475f9";
-var ColorMarker6 = Color6;
-var Color7 = "#ee86e6";
-var ColorMarker7 = Color7;
-var Color8 = "#ffaa00";
-var ColorMarker8 = Color8;
-var Color9 = "#b88552";
-var ColorMarker9 = Color9;
-
-var FontColorLight = "#e5e6e6";
-var FontColorDark = "#000000";
-var FontColorLogo1 = "#FF0000";
-var FontColorLogo2 = ColorSound;
-
-// NAMES
-var Bank0 = "Bank 0";
-var Bank1 = "Bank 1";
-var Bank2 = "Bank 2";
-var Bank3 = "Bank 3";
-var Bank4 = "Bank 4";
-var Bank5 = "Bank 5";
-var Bank6 = "Bank 6";
-var Bank7 = "Bank 7";
-var Bank8 = "Bank 8";
-var Bank9 = "Bank 9";
-var StartIn = "ST";
-var EndOut = "END";
-var LibraryTitle = "EP-133 Library";
-var FakeSerial = "EP-133"
-
-// SET ORIGINAL NAMES BACK IF USER DOESN'T WANT CUSTOM NAMES
-if (CustomNames == false) {
-  Bank0 = "KICK";
-  Bank1 = "SNARE";
-  Bank2 = "CYMB";
-  Bank3 = "PERC";
-  Bank4 = "BASS";
-  Bank5 = "MELOD";
-  Bank6 = "LOOP";
-  Bank7 = "USER 1";
-  Bank8 = "USER 2";
-  Bank9 = "SFX";
-  StartIn = "IN";
-  EndOut = "OUT";
-  LibraryTitle = "SAMPLE LIBRARY";
-  FakeSerial = null
-};
-const changeEndianness = (string) => {
-  const result = [];
-  let len = string.length - 2;
-  while (len >= 0) {
-    result.push(string.substr(len, 2));
-    len -= 2;
-  }
-  return result.join('');
-}
-function set_colors() {
-  if (CustomColors == false) {
-    ColorMain = ColorOriginalOrange;
-    ColorSound = "#00a69c";
-    ColorSpeaker = ColorLightCharcoal;
-    ColorBatteryCover = ColorSlate;
-    ColorEPFace = ColorLightCharcoal;
-    ColorStartKnob = ColorOriginalOrange;
-    ColorEndKnob = ColorCharcoal;
-    ColorBackupRestoreBtn = ColorSound;
-    ColorButtons = "#ef4e27";
-    ColorSecondary = ColorSpeaker;
-    ColorTertiary = "#dbdddb";
-    Color0 = ColorLightGray;
-    Color1 = ColorLightGray;
-    Color2 = ColorLightGray;
-    Color3 = ColorLightGray;
-    Color4 = ColorLightGray;
-    Color5 = ColorLightGray;
-    Color6 = ColorLightGray;
-    Color7 = ColorLightCharcoal;
-    Color8 = ColorLightCharcoal;
-    Color9 = "#000000";
-    ColorMarker0 = ColorOriginalOrange;
-    ColorMarker1 = ColorOriginalOrange;
-    ColorMarker2 = ColorOriginalOrange;
-    ColorMarker3 = ColorOriginalOrange;
-    ColorMarker4 = ColorOriginalOrange;
-    ColorMarker5 = ColorOriginalOrange;
-    ColorMarker6 = ColorOriginalOrange;
-    ColorMarker7 = ColorOriginalOrange;
-    ColorMarker8 = ColorOriginalOrange;
-    ColorMarker9 = ColorOriginalOrange;
-    ColorGrid = "#4f4059";
-    FontColorLight = "#e5e6e6";
-    FontColorDark = "#000000";
-    FontColorLogo1 = "#000000";
-    FontColorLogo2 = ColorButtons;
-  };
-}
-
-// SET ORIGINAL COLORS BACK IF USER DOESN'T WANT CUSTOM COLORS
-set_colors();
-
+// check custom.js for variables
 // everything below is the minified js. very difficult to parse
 var Ir = Object.defineProperty;
 var Tr = (s, a, o) => a in s ? Ir(s, a, {
@@ -12089,7 +11952,6 @@ var SysexClient = class {
     //console.log("length: " + (j - 1));
     console.log("--------");
     console.log("- data chunk before encoding -\nlength: " + (j - 1) + "\ndata:\n" + hmls_hex(_));
-    console.log("test encrypt:\n" + changeEndianness(hmls_hex(_)));
     console.log("- sysex encoded message -\n\n" + hmls_hex($));
     console.log($[6]);
     s.send($);
@@ -26959,6 +26821,7 @@ class SysExFileHandler {
     if (_e == null) {
       throw new Error("could not send sysex message to device");
     }
+    //console.log(_e.string);
     return _e;
   }
   async *iterNodes(a, o) {
@@ -26970,6 +26833,8 @@ class SysExFileHandler {
         break;
       }
       const _e = ($.data[0] << 8 | $.data[1]) & 65535;
+      //console.log($.data);
+      //console.log(_e);
       if (_ != _e) {
         throw new Error(`unexpected page ${_e}, expected ${_}`);
       }
@@ -26993,6 +26858,7 @@ class SysExFileHandler {
     const j = await this.sendSysExFileRequest(a, _);
     const $ = new SysexFileInfoResponse(j.data);
     const _e = $.flags & TE_SYSEX_FILE_FILE_TYPE_FILE ? FileType.File : FileType.Directory;
+    console.log($.flags);
     return {
       id: $.nodeId,
       parentId: $.parentId,
@@ -42685,7 +42551,8 @@ const BackupProvider = ({
       const bt = new Date().toISOString().split("T", 1)[0];
       const Nt = `EP-133_${bt}`;
       //const Nt = `EP-133_backup_`;
-      const xt = true;
+      var xt = BackupSamples;
+      //const xt = false;
       const It = [];
       if (xt) {
         for (const [jt, Lt] of St.entries()) {
@@ -42766,18 +42633,21 @@ const BackupProvider = ({
         failedProjects: kt,
         totalProjects: Ft
       };
-      //reportFailedItemsToSentry(It, "sounds");
-      //reportFailedItemsToSentry(kt, "projects");
+      TempSku = s.device.sku;
+      if (HideSerial == true) {
+        TempSku = ""
+      };
       const vt = {
         info: "teenage engineering - pak file",
         pak_version: 1,
         pak_type: "user",
         pak_release: "1.1.0",
         device_name: "EP-133",
-        device_sku: s.device.sku,
+        device_sku: TempSku,
+        //device_sku: s.device.sku,
         device_version: s.device.metadata.os_version,
         generated_at: new Date().toISOString(),
-        author: "computer"
+        author: ""
       };
       const yt = new Blob([JSON.stringify(vt, null, 2)], {
         type: "application/json"
@@ -42809,6 +42679,7 @@ const BackupProvider = ({
     value: _t,
     children: a
   });
+  //BackupSamples = true;
 };
 const ErrorContext = reactExports.createContext({
   error: null,
@@ -50863,6 +50734,7 @@ const ICONS = {
   "restore factory": jsxRuntimeExports$1.jsx(FactoryRestoreIcon, {}),
   "restore hmls": jsxRuntimeExports$1.jsx(LocalRestoreIcon, {}),
   "restore local": jsxRuntimeExports$1.jsx(LocalRestoreIcon, {}),
+  "backup projects": jsxRuntimeExports$1.jsx(LocalBackupIcon, {}),
   "backup local": jsxRuntimeExports$1.jsx(LocalBackupIcon, {})
 };
 const Display = ({
@@ -51085,7 +50957,14 @@ const Display = ({
                   ct(true);
                 }
                 break;
+              case "backup projects":
+                BackupSamples = false;
+                if (s) {
+                  await s(_);
+                }
+                break;
               case "backup local":
+                BackupSamples = true;
                 if (s) {
                   await s(_);
                 }
@@ -51205,14 +51084,23 @@ function handleCompletion(s, a) {
     console.log("-----------------------------");
   }
 }
-const backupOptions = [{
+var backupOptions = [{
   type: "backup local",
   action: "backup",
-  title: "create local backup",
+  title: "create full backup",
   color: "white",
   description: {
-    line1: "save all samples and projects to",
-    line2: "a file on your computer."
+    line1: "save all samples and projects",
+    line2: "to a file on your computer."
+  }
+}, {
+  type: "backup projects",
+  action: "backup",
+  title: "create projects only backup",
+  color: "white",
+  description: {
+    line1: "save projects only (no samples)",
+    line2: "to a file on your computer."
   }
 }, {
   type: "restore local",
@@ -51235,13 +51123,52 @@ const backupOptions = [{
 }, {
   type: "restore hmls",
   action: "restore",
-  title: "restore hmls base",
-  color: "white",
+  title: "restore hmls content",
+  color: "orange",
   description: {
     line1: "overwrite all samples and projects",
     line2: "with dope shit."
   }
 }];
+if (EnableHMLS == false) {
+  backupOptions = [{
+    type: "backup local",
+    action: "backup",
+    title: "create full backup",
+    color: "white",
+    description: {
+      line1: "save all samples and projects",
+      line2: "to a file on your computer."
+    }
+  }, {
+    type: "backup projects",
+    action: "backup",
+    title: "create projects only backup",
+    color: "white",
+    description: {
+      line1: "save projects only (no samples)",
+      line2: "to a file on your computer."
+    }
+  }, {
+    type: "restore local",
+    action: "restore",
+    title: "restore local backup",
+    color: "grey",
+    description: {
+      line1: "restore samples and projects with",
+      line2: "saved file from your computer."
+    }
+  }, {
+    type: "restore factory",
+    action: "restore",
+    title: "restore factory content",
+    color: "orange",
+    description: {
+      line1: "overwrite all samples and projects",
+      line2: "with original factory content."
+    }
+  }];
+};
 const Backup = ({
   deviceService: s
 }) => {
@@ -51339,7 +51266,7 @@ const Backup = ({
       }), a && _t.map((it, ot) => jsxRuntimeExports$1.jsx(Display, {
         handleCreateBackup: Et,
         handleRestoreBackup: ct,
-        transformY: ot * 70,
+        transformY: ot * OptionsDistance,
         type: it.type,
         action: it.action,
         title: it.title,
@@ -61724,7 +61651,7 @@ function App({
 init({
   dsn: "https://7d881b21ef1c7f617f7b85cf46614c91@o1134587.ingest.sentry.io/4506064467591168",
   tunnel: "/_api/err",
-  enabled: true,
+  enabled: false,
   environment: "production",
   beforeSend(s, a) {
     const o = {
