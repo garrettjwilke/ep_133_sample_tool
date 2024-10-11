@@ -1,4 +1,4 @@
-# ep-133 sample tool offline version
+# EP-133 Sample Tool - Offline Version
 
 ![sample tool](zoom_in.png)
 
@@ -17,7 +17,7 @@ I started this tool the day before the EP-1320 was released. The EP-1320 (Mediev
 There is a new option in the backup menu for Projects Only:
 ![backup options](backup.png)
 
-**Better Zooming and Visibility.** I think the ep-133 sample tool looks aesthetically beautiful. My biggest issue with the original tool is that you cannot zoom in to see better. There are many very small fonts that I simply cannot read. I looked through the css and js to modify the "zoom-in region" to allow you to zoom in to the parts that matter. This allows much better text readability. There are some UI buttons/elements that I have moved to different spots in order to allow zoom-in but still have access to UI buttons.
+**Better Zooming and Visibility.** I think the EP-133 sample tool looks aesthetically beautiful. My biggest issue with the original tool is that you cannot zoom in to see better. There are many very small fonts that I simply cannot read. I looked through the css and js to modify the "zoom-in region" to allow you to zoom in to the parts that matter. This allows much better text readability. There are some UI buttons/elements that I have moved to different spots in order to allow zoom-in but still have access to UI buttons.
 
 **Custom Color Schemes and Sound Group Names.** If you build from source, there are several ways to customize this tool to make it look better with your desktop theme. In the `data/custom.js` file, you can edit any color you want. You can also rename the sample groups on the side bar. (I never liked that they have 100 slots for kicks, and 100 slots for snares. I rename mine so kicks and snares are in the same group.)
 
