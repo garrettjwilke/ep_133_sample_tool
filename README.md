@@ -12,7 +12,7 @@ I started this tool the day before the EP-1320 was released. The EP-1320 (Mediev
 
 **100% fully offline.** This does not connect to the internet to fetch/cache. All of the web assembly is scraped and included. The original Factory Sound Pack is included in this (which is part of the reason why the executable is over 100MB). Of course, this version will be updated if the original tool is ever updated.
 
-**Option to Backup Projects Only.** The original tool released has a backup tool, which is great but there is one issue: it backs up all sounds and projects. This can be an issue if you have the same base/core sounds you use across all projects. There is a new button in the backup menu to allow you to backup only the projects. This saves a lot of time for backing up/restoring. The project backup feature takes about 1 minute. Restoring a backup of projects only will not erase any sounds on your EP-133.
+**Option to Backup Projects Only.** The original tool released has a backup tool, which is great but there is one issue: it backs up all sounds and projects. This can be an issue if you have the same base/core sounds you use across all projects. There is a new button in the backup menu to allow you to backup only the projects. This saves a lot of time for backing up/restoring. The project backup feature takes less than a minute to backup. Restoring a backup of projects only will not erase any sounds on your EP-133.
 
 There is a new option in the backup menu for Projects Only:
 ![backup options](backup.png)
