@@ -1,7 +1,7 @@
 var VersionNumber = "v 1.1.0 - offline";
 var CustomColors = false;
 var HideSerial = true;
-var CustomNames = true;
+var CustomNames = false;
 // if BackupSamples is set to true, it will save the sounds. disabling this creates quick project backups.
 // this is now set in the GUI. no need to manually set.
 var BackupSamples = true;
