@@ -4,9 +4,7 @@
 
 ## Compatability
 
-Any EP-133 with firmware 1.2.2 or higher.
-
-I started this tool the day before the EP-1320 was released. The EP-1320 (Medieval) is not compatable with this tool. It wont even be recognized at all.
+Any EP-133 or EP-1320
 
 ## Features
 
