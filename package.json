@@ -30,7 +30,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.4.0",
+    "electron": "^31.7.0",
     "electron-builder": "^24.13.3"
   }
 }

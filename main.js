@@ -5,7 +5,7 @@ const path = require('node:path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1200,
+    width: 1185,
     height: 800,
     title: "EP-133 Sample Tool",
     icon: path.join(__dirname + 'icon.ico'),

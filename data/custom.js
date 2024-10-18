@@ -1,15 +1,20 @@
 var VersionNumber = "v 1.1.0 - offline";
-var CustomColors = false;
+var CustomColors = true;
 var HideSerial = true;
 var CustomNames = false;
 // if BackupSamples is set to true, it will save the sounds. disabling this creates quick project backups.
 // this is now set in the GUI. no need to manually set.
 var BackupSamples = true;
-
+var BackupFileName = "EP-133_"
 // set EnableHMLS to true if you want a new menu option to restore custom sounds
 var EnableHMLS = false;
-var OptionsDistance = 72
+var OptionsDistance = 72;
 if (EnableHMLS == true) {OptionsDistance = 55};
+
+// set to fake as an EP-1320 Medieval (does nothing if you already have an EP-1320)
+var Fake1320 = false;
+// set to fake as an EP-133 (does nothing if you already have an EP-133)
+var Fake133 = false;
 
 var TempSku;
 
@@ -33,7 +38,12 @@ var ColorSlate = "#dbdddb";
 var ColorCharcoal = "#232424";
 var ColorLightCharcoal = "#b0babe";
 var ColorLightGray = "#dcdcdc";
-var ColorBlack = "#000000"
+var ColorBlack = "#000000";
+var ColorMedievalOrange = "#b22e20";
+var ColorMedievalLightBeige = "#dcd8ce";
+var ColorMedievalBeige = "#999269";
+var ColorMedievalDarkMaroon = "#372424";
+var ColorGrayTeal = "#8a959a";
 var Color0 = "#8c959f";
 var ColorMarker0 = Color0;
 var Color1 = "#82c9ec";
@@ -59,6 +69,8 @@ var FontColorLight = "#e5e6e6";
 var FontColorDark = "#000000";
 var FontColorLogo1 = "#FF0000";
 var FontColorLogo2 = ColorSound;
+
+var FontSizeSmall = 5;
 
 // NAMES
 var Bank0 = "Bank 0";
@@ -141,3 +153,6 @@ if (CustomColors == false) {
   FontColorLogo1 = "#000000";
   FontColorLogo2 = ColorButtons;
 };
+
+var MessageX = 53;
+var MessageY = 83;
