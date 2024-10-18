@@ -55,6 +55,11 @@ On the right side of this page is the `Releases` section. You can find this app 
 
 ## How to build from source
 
+**NOTE:** To build the version for the EP-1320 Medieval, after cloning the repo, run the following command to switch to the EP-1320 branch:
+```
+git switch ep-1320
+```
+
 ## Requirements
 
 `npm`
