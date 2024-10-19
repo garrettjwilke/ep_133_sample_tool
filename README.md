@@ -43,6 +43,8 @@ Click on `View > Toggle Developer Tools` to see raw MIDI-SYSEX messages:
 
 If you ever have issues with connectivity, refresh the application (click on `View > Reload`).
 
+If you have trouble getting the application to start, you can try the [lo-tech method](./#how-to-run-without-electron).
+
 ---
 
 ## Download
@@ -81,3 +83,34 @@ you do not need `electron-builder` to run. all you need is npm and electron inst
 ```
 npm start
 ```
+
+## How to run without electron
+
+### Requirements
+
+`python3`
+
+This guide is for MacOs or Linux. If you're on Windows and find a solution, please make a Pull Request with detailed instructions.
+
+```sh
+git clone https://github.com/garrettjwilke/ep_133_sample_tool.git
+cd ep_133_sample_tool
+```
+
+If you have problems using `git`, you can also click on the green "code" button on the Github page and chose "Download ZIP" and extract its content and change into the project directory:
+
+
+```sh
+cd ep_133_sample_tool-main
+```
+
+```sh
+cd data
+python3 -m http.server
+```
+
+You'll need to keep this application running while using the EP-133/1320 Sample tool!
+
+In your browser, visit: http://localhost:8000
+
+When you're done with using the application, you can shutdown the server using <kbd>Ctrl</kbd> + <kbd>c</kbd>.
