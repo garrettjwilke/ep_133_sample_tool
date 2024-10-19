@@ -86,6 +86,10 @@ npm start
 
 ## How to run without electron
 
+### Requirements
+
+`python3`
+
 This guide is for MacOs or Linux. If you're on Windows and find a solution, please make a Pull Request with detailed instructions.
 
 ```sh
