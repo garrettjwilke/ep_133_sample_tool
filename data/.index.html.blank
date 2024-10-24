@@ -5,6 +5,7 @@
     <meta name="description" content="EP-133 Sample Tool">
     <title>EP-133 Sample Tool - VERSION_NUMBER</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script type="module" crossorigin src="custom.js"></script>
     <script type="module" crossorigin src="index.js"></script>
     <link rel="stylesheet" crossorigin href="index.css">
   </head>
