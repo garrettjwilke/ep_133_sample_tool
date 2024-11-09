@@ -9671,7 +9671,7 @@ function parseMidiIdentityResponse(s) {
             if (Fake1320 == true) {TempSku = "TE032AS005"};
         };
         if (j == "TE032AS005") {
-            if (Enable133 == true) {TempSku = "TE032AS001"};
+            if (Fake133 == true) {TempSku = "TE032AS001"};
         }
         return {
             id: a[2],
