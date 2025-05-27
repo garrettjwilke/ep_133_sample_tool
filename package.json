@@ -1,8 +1,8 @@
 {
   "name": "ep133sampletool",
   "productName": "EP-133 Sample Tool",
-  "version": "1.1.0",
-  "description": "EP-133 Sample Tool - 1.1.0",
+  "version": "1.2.1",
+  "description": "EP-133 Sample Tool - 1.2.1",
   "main": "main.js",
   "scripts": {
     "start": "electron . --ozone-platform=wayland",
@@ -30,7 +30,7 @@
   ],
   "author": "homeless",
   "devDependencies": {
-    "electron": "^31.4.0",
-    "electron-builder": "^24.13.3"
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12"
   }
 }
