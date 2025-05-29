@@ -1,4 +1,5 @@
 name: Build Electron App
+run: npm run package -- --publish=never
 
 on:
   push:
@@ -27,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Build Electron app
-        run: npm run package
+        run: npm run package -- --publish=never
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
