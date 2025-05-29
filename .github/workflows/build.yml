@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Checkout repository
@@ -18,12 +18,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Match this with your development version if needed
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Electron app
+      - name: Build Electron app (no publish)
         run: npm run package -- --publish=never
 
       - name: Upload artifacts
@@ -31,7 +31,5 @@ jobs:
         with:
           name: ${{ matrix.os }}-build
           path: |
-            dist/*.zip
-            dist/*.AppImage
-            dist/*.deb
-            dist/*.exe
+            dist/*.*
+
