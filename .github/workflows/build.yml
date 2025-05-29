@@ -1,0 +1,40 @@
+name: Build Electron App
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # Match this with your development version if needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Electron app
+        run: npm run package
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.os }}-build
+          path: |
+            dist/*.zip
+            dist/*.AppImage
+            dist/*.deb
+            dist/*.exe
