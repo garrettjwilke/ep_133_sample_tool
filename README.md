@@ -1,3 +1,5 @@
+## working with latest firmware as of May 2025 :)
+
 # update from me
 
 my ep-133 along with several other things that i love were stolen from me. i no longer have an EP-133 and thus i cannot test the new firmware or update this software.
