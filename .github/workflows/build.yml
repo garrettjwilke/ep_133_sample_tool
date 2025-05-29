@@ -1,5 +1,4 @@
 name: Build Electron App
-run: npm run package -- --publish=never
 
 on:
   push:
