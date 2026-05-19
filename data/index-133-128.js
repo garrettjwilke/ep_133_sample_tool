@@ -59718,9 +59718,9 @@ const DeleteModal = ({ handleErase: a }) => {
       ],
     }),
   ep133factoryContent =
-    "/apps/ep-sample-tool/assets/ep-133-factory-content-DRyE_DHC.pak",
+    "ep-133-factory-content-DRyE_DHC.pak",
   ep40factoryContent =
-    "/apps/ep-sample-tool/assets/ep-40-factory-content-C42FyxWp.pak",
+    "ep-40-factory-content-C42FyxWp.pak",
   Modal = ({ children: a }) => {
     const s = document.getElementById("portal-root");
     return s ? ReactDOM.createPortal(a, s) : null;

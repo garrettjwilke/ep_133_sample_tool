@@ -182,7 +182,7 @@
 }
 
 html,body {
-    background-image: url(/apps/ep-sample-tool/assets/bg-SadZTHQA.png);
+    background-image: url(bg.png);
     background-repeat: repeat;
     background-position: center center;
     background-size: contain
@@ -190,7 +190,7 @@ html,body {
 
 @media (width >= 700px) {
     html,body {
-        background-image: url(/apps/ep-sample-tool/assets/bg_x2-Blvo_klN.png)
+        background-image: url(bg_x2.png)
     }
 }
 
@@ -359,7 +359,7 @@ html,body {
 }
 
 body.TE032AS005 {
-    background-image: url(/apps/ep-sample-tool/assets/bg_TE032AS005-CqdKLMpx.png);
+    background-image: url(bg_TE032AS005-CqdKLMpx.png);
     --primary: #999269;
     --accent: #b22e20;
     --ep-display-sample-size: #999269;
@@ -422,13 +422,13 @@ body.TE032AS005 {
 
 @media (width >= 700px) {
     body.TE032AS005 {
-        background-image: url(/apps/ep-sample-tool/assets/bg_x2_TE032AS005-oIt60Ar-.png)
+        background-image: url(bg_x2_TE032AS005-oIt60Ar-.png)
     }
 }
 
 body.TE032AS006 {
     --riddim-green: #00503a;
-    background-image: url(/apps/ep-sample-tool/assets/bg_TE032AS006-CMi2RekI.png);
+    background-image: url(bg_TE032AS006-CMi2RekI.png);
     --primary: #dbd0b9;
     --base-text: var(--primary);
     --dark: #5594b4;
@@ -580,7 +580,7 @@ body.TE032AS006 {
 
 @media (width >= 700px) {
     body.TE032AS006 {
-        background-image: url(/apps/ep-sample-tool/assets/bg_x2_TE032AS006-CnSi0gTZ.png)
+        background-image: url(bg_x2_TE032AS006-CnSi0gTZ.png)
     }
 }
 
@@ -652,22 +652,22 @@ body.TE032AS006 {
 
 @font-face {
     font-family: UniversTE20T;
-    src: url(/apps/ep-sample-tool/assets/TE20T-D0h3oeX9.woff) format("woff")
+    src: url(TE20T-D0h3oeX9.woff) format("woff")
 }
 
 @font-face {
     font-family: TechnoType-regular;
-    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Regular-B7Xbyv21.woff2) format("woff2")
+    src: url(Technotype34_EP_series-Regular-B7Xbyv21.woff2) format("woff2")
 }
 
 @font-face {
     font-family: TechnoType-medium;
-    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Medium-QwwBgryr.woff2) format("woff2")
+    src: url(Technotype34_EP_series-Medium-QwwBgryr.woff2) format("woff2")
 }
 
 @font-face {
     font-family: TechnoType-bold;
-    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Bold-CzOuNzV9.woff2) format("woff2")
+    src: url(Technotype34_EP_series-Bold-CzOuNzV9.woff2) format("woff2")
 }
 
 * {
