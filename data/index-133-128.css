@@ -1,0 +1,717 @@
+._blink_7myhe_1 {
+    animation: _blink_7myhe_1 .5s infinite;
+    display: block!important
+}
+
+@keyframes _blink_7myhe_1 {
+    0% {
+        opacity: 0
+    }
+
+    49% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+._name-container_6leb1_1 {
+    position: relative;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 10px
+}
+
+._name_6leb1_1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 6.25px;
+    line-height: 10px;
+    letter-spacing: .08em;
+    white-space: nowrap
+}
+
+._name_6leb1_1._uploaded_6leb1_22 {
+    position: absolute;
+    height: 10px;
+    font-size: 6.25px;
+    line-height: 0;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    outline: none;
+    background: transparent;
+    border: none
+}
+
+#_tx-icon_2u8sa_1,#_rx-icon_2u8sa_1 {
+    stroke: #e5e6e6;
+    opacity: .4
+}
+
+@keyframes _highlight_2u8sa_1 {
+    0%,to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .2
+    }
+}
+
+._active_2u8sa_12 {
+    animation: _highlight_2u8sa_1 .25s ease-in-out infinite
+}
+
+._active_2u8sa_12._rx_2u8sa_15 {
+    animation-duration: 275ms
+}
+
+._placeholder_1msuh_1::placeholder {
+    color: #abb5ba
+}
+
+._btn_1msuh_5,._btn_1msuh_5>*>* {
+    cursor: pointer
+}
+
+._root_10gah_2>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+
+._root_10gah_2>*:focus {
+    outline: none
+}
+
+._r1_yg7zb_1,._r2_yg7zb_8 {
+    fill: var(--ui-scheme-1-bg);
+    stroke: var(--ui-scheme-1-fg);
+    stroke-miterlimit: 10;
+    stroke-width: .13px
+}
+
+._text_yg7zb_15 {
+    font-size: 6.25px;
+    letter-spacing: .06em;
+    stroke: var(--ui-scheme-1-fg);
+    fill: var(--ui-scheme-1-fg);
+    stroke-miterlimit: 10;
+    stroke-width: .12px
+}
+
+._project_yg7zb_24 {
+    fill: var(--ui-scheme-1-fg);
+    stroke: var(--ui-scheme-1-border);
+    font-size: 6.25px;
+    letter-spacing: .08em;
+    stroke-miterlimit: 10;
+    stroke-width: .12px
+}
+
+._on_yg7zb_35 {
+    fill: var(--ui-scheme-1-accent);
+    stroke: var(--ui-scheme-1-fg);
+    stroke-miterlimit: 10;
+    stroke-width: .25px
+}
+
+._disabled_yg7zb_42 {
+    pointer-events: none;
+    fill: url(#_10_lpi_40_2)
+}
+
+._clickhandler_yg7zb_47 {
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+._clickhandler_yg7zb_47:disabled {
+    pointer-events: none
+}
+
+._p1_6kkgj_2 {
+    fill: var(--ui-scheme-1-bg);
+    stroke: var(--ui-scheme-1-border);
+    stroke-miterlimit: 10;
+    stroke-width: .13px
+}
+
+._p2_6kkgj_9 {
+    stroke: var(--ui-scheme-1-fg);
+    fill: var(--ui-scheme-1-fg);
+    stroke-miterlimit: 10;
+    stroke-width: .12px
+}
+
+._p3_6kkgj_16 {
+    stroke: var(--ui-scheme-3-border);
+    fill: var(--ui-scheme-3-bg);
+    stroke-miterlimit: 10;
+    stroke-width: .13px
+}
+
+._background_1xo52_1 {
+    height: 100%;
+    width: 100%;
+    overflow: visible
+}
+
+._usb-cable_1xo52_7._connected_1xo52_7 {
+    transform: translate(0)
+}
+
+html,body {
+    background-image: url(/apps/ep-sample-tool/assets/bg-SadZTHQA.png);
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: contain
+}
+
+@media (width >= 700px) {
+    html,body {
+        background-image: url(/apps/ep-sample-tool/assets/bg_x2-Blvo_klN.png)
+    }
+}
+
+@media (width >= 1400px) and (height >= 1089px) {
+    html,body {
+        background-size: 1400px
+    }
+}
+
+:root {
+    --base-txt: #e5e6e6;
+    --primary: #abb5ba;
+    --dark: #d2d3d4;
+    --accent: #f15a22;
+    --ep-display-sample-size: #00a69c;
+    --ep-display-txt: var(--base-txt);
+    --ep-logo-sample: var(--base-txt);
+    --ep-logo-sample-bg: #000005;
+    --ep-logo-sample-stroke: #abb5ba;
+    --ep-logo-ep-stroke: #221f1f;
+    --ep-logo-tool-bg: #dbdddb;
+    --ep-logo-tool-stroke: #221f1f;
+    --ep-logo-ep-text: var(--base-txt);
+    --ep-sync-midi: #202222;
+    --ep-record-led: #372424;
+    --ep-faceplate: #dbdddb;
+    --ep-output: #dbdddb;
+    --ep-usb: #818e95;
+    --ep-usb-text: var(--base-txt);
+    --ep-speaker-grille: #818e95;
+    --ep-side-panel: #dbdddb;
+    --ep-bottom-plate: #424143;
+    --ep-speaker-box: #41464a;
+    --ep-display: #000005;
+    --ep-slider-knob: #818e95;
+    --ep-volume: #dbdddb;
+    --ep-bpm: var(--accent);
+    --ep-bpm-contrast: #000005;
+    --ep-metronome: #252625;
+    --ep-metronome-contrast: #8a959a;
+    --ep-btn: #232424;
+    --ep-btn-divider: #000005;
+    --ep-btn-contrast: #8a959a;
+    --ep-btn-active: #221f1f;
+    --ep-btn-fx: #232424;
+    --ep-btn-keys: #232424;
+    --ep-btn-plus: #dbdcd8;
+    --ep-btn-minus: #dbdcd8;
+    --ep-btn-erase: #dbdcd8;
+    --ep-btn-fader: #232424;
+    --ep-btn-timing: var(--ep-btn);
+    --ep-btn-record: var(--accent);
+    --ep-btn-play: #818e95;
+    --ep-label-loop: #818e95;
+    --ep-btn-shift: #b0babe;
+    --ep-btn-system: #d9dbda;
+    --ep-btn-output: #d9dbda;
+    --ep-btn-correct: #d9dbda;
+    --ep-btn-chop: #d9dbda;
+    --ep-edges: #000000;
+    --ep-inside: #000000;
+    --ep-wave: #01a79d;
+    --ep-usb-cord: #000000;
+    --ep-btn-group: #b0babe;
+    --ep-btn-pad: #232424;
+    --ep-btn-pad-edge: #232424;
+    --ep-led-off-stroke: #372424;
+    --ep-led-off-fill: #000000;
+    --ep-led-on-stroke: var(--ep-edges);
+    --ep-led-on-fill: var(--accent);
+    --ep-usb-contact: #dbdddb;
+    --library-scrollbar-fill: #000005;
+    --library-scrollbar-stroke: #8a959a;
+    --library-line: #abb5ba;
+    --library-active-row-pointer: #dbdddb;
+    --library-active-row-pointer-stroke: #221f1f;
+    --library-active-row-pointer-txt: #000000;
+    --library-device-memory: #000000;
+    --library-edges: var(--ep-edges);
+    --library-download-sample: var(--primary);
+    --library-download-sample-txt: var(--base-txt);
+    --library-pages1: var(--base-txt);
+    --library-pages2: #d2d3d4;
+    --library-pages3: #d2d3d4;
+    --library-pages4: #d2d3d4;
+    --library-pages5: #d2d3d4;
+    --library-pages6: #d2d3d4;
+    --library-pages7: #d2d3d4;
+    --library-pages8: #9aa0a9;
+    --library-pages9: #9aa0a9;
+    --library-row-txt: #000000;
+    --library-row-txt-inactive: var(--primary);
+    --library-row-multi-selection: var(--accent);
+    --library-row-multi-selection-divider: #221f1f;
+    --library-row-txt-multi-selection: #000000;
+    --library-row-selected: var(--accent);
+    --library-dot: #b0babe;
+    --library-dot-assigned: var(--accent);
+    --library-dot-assigned-multi-selection: var(--accent);
+    --library-dot-multi-selection-unassigned: #000000;
+    --library-tab-stroke: #8a959a;
+    --library-tab0: #d2d3d4;
+    --library-tab1: #d2d3d4;
+    --library-tab2: #9aa0a9;
+    --library-tab3: #000005;
+    --library-tab-selected: var(--library-tab0);
+    --library-tab-selected-txt: var(--library-tab1-text);
+    --library-tab1-text: #000000;
+    --library-tab2-text: #000000;
+    --library-tab3-text: #ffffff;
+    --library-delete-icon: var(--base-txt);
+    --library-delete: var(--accent);
+    --library-heading: #e5e6e6;
+    --in-text: var(--base-txt);
+    --in-stroke: #221f1f;
+    --in-fill: var(--accent);
+    --out-text: var(--base-txt);
+    --out-fill: #000005;
+    --out-stroke: #8a959a;
+    --ui-back-btn: #000005;
+    --ui-back-btn-stroke: #8a959a;
+    --ui-back-btn-text: var(--base-txt);
+    --ui-help-btn: #abb5ba;
+    --ui-help-btn-txt: var(--base-txt);
+    --ui-help-btn-stroke: #000005;
+    --ui-backup-mode-btn: #9aa0a9;
+    --ui-backup-mode-btn-text: #000000;
+    --ui-backup-mode-btn-stroke: #000005;
+    --ui-text-on-bg: #000005;
+    --ui-progress-bar: #000005;
+    --ui-progress-bar-stroke: #000005;
+    --ui-progress-bar-bg: #d2d3d4;
+    --ui-progress-bar-txt: #d2d3d4;
+    --ui-progress-bar-txt-inverted: #000000;
+    --ui-progress-modal-shadow: #000000;
+    --ui-progress-modal-bg: #d2d3d4;
+    --ui-progress-modal-bottom: #d2d3d4;
+    --ui-progress-modal-bottom-txt: #000000;
+    --ui-progress-modal-stroke: #221f1f;
+    --ui-progress-modal-error: var(--accent);
+    --ui-progress-modal-abort: var(--accent);
+    --ui-sample-edit: var(--accent);
+    --ui-sample-edit-txt: var(--base-txt);
+    --ui-progress-modal-abort-txt: var(--base-txt);
+    --ui-scheme-1-bg: #dbdddb;
+    --ui-scheme-1-fg: #000000;
+    --ui-scheme-1-fg2: #818e95;
+    --ui-scheme-1-divider: #d2d3d4;
+    --ui-scheme-1-border: #000000;
+    --ui-scheme-1-shadow: #000005;
+    --ui-scheme-1-accent: var(--accent);
+    --ui-scheme-2-bg: #818e95;
+    --ui-scheme-2-fg: #000000;
+    --ui-scheme-2-fg2: #dbdddb;
+    --ui-scheme-2-divider: #d2d3d4;
+    --ui-scheme-2-border: #000000;
+    --ui-scheme-2-shadow: #000005;
+    --ui-scheme-2-accent: var(--accent);
+    --ui-scheme-3-bg: var(--accent);
+    --ui-scheme-3-fg: #000000;
+    --ui-scheme-3-fg2: #dbdddb;
+    --ui-scheme-3-divider: #d2d3d4;
+    --ui-scheme-3-border: #000000;
+    --ui-scheme-3-shadow: #000005;
+    --ui-scheme-3-accent: var(--accent)
+}
+
+body.TE032AS005 {
+    background-image: url(/apps/ep-sample-tool/assets/bg_TE032AS005-CqdKLMpx.png);
+    --primary: #999269;
+    --accent: #b22e20;
+    --ep-display-sample-size: #999269;
+    --ep-sync-midi: #0c3235;
+    --ep-faceplate: #0c3235;
+    --ep-usb: #3e1815;
+    --ep-speaker-grille: #3e1815;
+    --ep-side-panel: #bab496;
+    --ep-bottom-plate: #3e1815;
+    --ep-speaker-box: #29100e;
+    --ep-slider-knob: #0c3235;
+    --ep-metronome: #3e1815;
+    --ep-bpm: var(--accent);
+    --ep-bpm-contrast: #000005;
+    --ep-btn: #3e1815;
+    --ep-btn-active: #9c281c;
+    --ep-btn-fx: #072d2f;
+    --ep-btn-keys: #072d2f;
+    --ep-btn-timing: #3e1815;
+    --ep-btn-fader: #072d2f;
+    --ep-btn-play: #072d2f;
+    --ep-label-loop: #072d2f;
+    --ep-btn-shift: #999269;
+    --ep-btn-record: #b22e20;
+    --ep-wave: #942005;
+    --ep-btn-group: #dcd8cf;
+    --ep-btn-pad: #3e1815;
+    --in-fill: #b22e20;
+    --library-row-txt-inactive: var(--primary);
+    --library-pages1: #dcd8cf;
+    --library-pages2: #bab496;
+    --library-pages3: #bab496;
+    --library-pages4: #bab496;
+    --library-pages5: #bab496;
+    --library-pages6: #48472d;
+    --library-pages7: #48472d;
+    --library-pages8: #48472d;
+    --library-pages9: #48472d;
+    --library-dot: #bab69a;
+    --library-dot-assigned: var(--accent);
+    --library-tab0: #dcd8cf;
+    --library-tab1: #bab496;
+    --library-tab2: #48472d;
+    --library-tab3: #48472d;
+    --library-row-selected: var(--accent);
+    --library-row-multi-selection: var(--accent);
+    --library-delete-icon: var(#e5e6e6);
+    --library-delete: var(--accent);
+    --ui-backup-mode-btn: #b22e20;
+    --ui-backup-mode-btn-text: #e5e6e6;
+    --ui-sample-edit: var(--accent);
+    --ui-sample-edit-txt: var(--base-txt);
+    --ui-help-btn: #48472d;
+    --ui-scheme-1-accent: var(--accent);
+    --ui-scheme-2-accent: var(--accent);
+    --ui-scheme-3-bg: var(--accent);
+    --ui-scheme-3-fg: #ffffff;
+    --ui-scheme-3-accent: var(--accent)
+}
+
+@media (width >= 700px) {
+    body.TE032AS005 {
+        background-image: url(/apps/ep-sample-tool/assets/bg_x2_TE032AS005-oIt60Ar-.png)
+    }
+}
+
+body.TE032AS006 {
+    --riddim-green: #00503a;
+    background-image: url(/apps/ep-sample-tool/assets/bg_TE032AS006-CMi2RekI.png);
+    --primary: #dbd0b9;
+    --base-text: var(--primary);
+    --dark: #5594b4;
+    --accent: #ef522f;
+    --ep-display-sample-size: var(--primary);
+    --ep-output: var(--ep-faceplate);
+    --ep-display: var(--riddim-green);
+    --ep-display-txt: var(--primary);
+    --ep-sync-midi: var(--riddim-green);
+    --ep-faceplate: #e6e7e5;
+    --ep-usb: var(--primary);
+    --ep-usb-text: var(--riddim-green);
+    --ep-usb-cord: var(--riddim-green);
+    --ep-speaker-grille: var(--primary);
+    --ep-side-panel: #eae1d0;
+    --ep-bottom-plate: var(--riddim-green);
+    --ep-speaker-box: #41464a;
+    --ep-slider-knob: var(--primary);
+    --ep-volume: #dbdddb;
+    --ep-bpm: var(--accent);
+    --ep-bpm-contrast: var(--primary);
+    --ep-metronome: var(--riddim-green);
+    --ep-metronome-contrast: var(--primary);
+    --ep-btn: var(--primary);
+    --ep-btn-contrast: var(--primary);
+    --ep-btn-divider: var(--riddim-green);
+    --ep-btn-active: #9c281c;
+    --ep-btn-fx: var(--primary);
+    --ep-btn-erase: var(--primary);
+    --ep-btn-timing: var(--riddim-green);
+    --ep-btn-keys: var(--primary);
+    --ep-btn-fader: var(--primary);
+    --ep-btn-play: var(--riddim-green);
+    --ep-btn-plus: var(--primary);
+    --ep-btn-minus: var(--primary);
+    --ep-btn-shift: var(--primary);
+    --ep-label-loop: var(--riddim-green);
+    --ep-wave: #319967;
+    --ep-btn-group: var(--primary);
+    --ep-btn-pad: #eeefea;
+    --ep-btn-pad-edge: var(--riddim-green);
+    --ep-btn-correct: var(--riddim-green);
+    --ep-btn-chop: var(--accent);
+    --ep-edges: var(--riddim-green);
+    --ep-inside: var(--riddim-green);
+    --ep-logo-sample: var(--primary);
+    --ep-logo-sample-bg: var(--riddim-green);
+    --ep-logo-sample-stroke: var(--primary);
+    --ep-logo-ep-stroke: var(--primary);
+    --ep-logo-tool-bg: #e6e7e5;
+    --ep-logo-tool-stroke: var(--riddim-green);
+    --ep-logo-ep-text: var(--primary);
+    --ep-led-off-stroke: var(--riddim-green);
+    --ep-led-off-fill: none;
+    --ep-record-led: none;
+    --ep-usb-contact: #dbdddb;
+    --library-scrollbar-fill: var(--riddim-green);
+    --library-scrollbar-stroke: var(--riddim-green);
+    --library-active-row-pointer: var(--primary);
+    --library-active-row-pointer-stroke: var(--primary);
+    --library-active-row-pointer-txt: var(--riddim-green);
+    --library-download-sample: #dbdddb;
+    --library-download-sample-txt: var(--riddim-green);
+    --library-edges: var(--primary);
+    --library-device-memory: var(--primary);
+    --library-line: var(--riddim-green);
+    --library-pages1: #dbdddb;
+    --library-pages2: #d5cab1;
+    --library-pages3: #d5cab1;
+    --library-pages4: #d5cab1;
+    --library-pages5: #d5cab1;
+    --library-pages6: #d5cab1;
+    --library-pages7: #d5cab1;
+    --library-pages8: #b2aca1;
+    --library-pages9: #b2aca1;
+    --library-delete-icon: var(--primary);
+    --library-delete: var(--accent);
+    --library-dot: var(--primary);
+    --library-row-txt-inactive: #b2aca1;
+    --library-row-selected: var(--accent);
+    --library-row-txt: var(--riddim-green);
+    --library-row-txt-multi-selection: var(--primary);
+    --library-row-multi-selection: var(--accent);
+    --library-row-multi-selection-divider: var(--primary);
+    --library-row-multi-selection-text: var(--primary);
+    --library-dot-multi-selection-unassigned: var(--primary);
+    --library-tab0: var(--riddim-green);
+    --library-tab1: #d5cab1;
+    --library-tab2: var(--riddim-green);
+    --library-tab0-text: var(--primary);
+    --library-tab1-text: var(--riddim-green);
+    --library-tab2-text: var(--primary);
+    --library-tab-stroke: var(--riddim-green);
+    --library-tab-selected: #dbdddb;
+    --library-tab-selected-txt: var(--riddim-green);
+    --library-heading: var(--primary);
+    --in-text: var(--primary);
+    --in-stroke: var(--primary);
+    --out-text: var(--primary);
+    --out-fill: var(--riddim-green);
+    --out-stroke: var(--primary);
+    --ui-progress-bar-stroke: var(--primary);
+    --ui-progress-bar-bg: var(--primary);
+    --ui-progress-bar: var(--ep-wave);
+    --ui-progress-bar-txt: var(--riddim-green);
+    --ui-progress-bar-txt-inverted: var(--riddim-green);
+    --ui-progress-modal-shadow: var(--riddim-green);
+    --ui-progress-modal-bg: var(--riddim-green);
+    --ui-progress-modal-bottom: var(--riddim-green);
+    --ui-progress-modal-bottom-txt: var(--primary);
+    --ui-progress-modal-stroke: var(--primary);
+    --ui-progress-modal-error: var(--accent);
+    --ui-progress-modal-abort: var(--primary);
+    --ui-progress-modal-abort-txt: var(--riddim-green);
+    --ui-back-btn: var(--riddim-green);
+    --ui-back-btn-stroke: var(--primary);
+    --ui-back-btn-text: var(--primary);
+    --ui-help-btn: var(--accent);
+    --ui-help-btn-stroke: var(--primary);
+    --ui-help-btn-txt: var(--primary);
+    --ui-backup-mode-btn: var(--riddim-green);
+    --ui-backup-mode-btn-text: var(--primary);
+    --ui-backup-mode-btn-stroke: var(--primary);
+    --ui-sample-edit: var(--accent);
+    --ui-sample-edit-txt: var(--primary);
+    --ui-text-on-bg: var(--riddim-green);
+    --ui-scheme-1-bg: var(--riddim-green);
+    --ui-scheme-1-fg: var(--primary);
+    --ui-scheme-1-fg2: var(--primary);
+    --ui-scheme-1-divider: var(--riddim-green);
+    --ui-scheme-1-border: var(--primary);
+    --ui-scheme-1-shadow: var(--riddim-green);
+    --ui-scheme-1-accent: var(--accent);
+    --ui-scheme-2-bg: var(--riddim-green);
+    --ui-scheme-2-fg: var(--primary);
+    --ui-scheme-2-fg2: var(--primary);
+    --ui-scheme-2-divider: var(--riddim-green);
+    --ui-scheme-2-border: var(--primary);
+    --ui-scheme-2-shadow: var(--riddim-green);
+    --ui-scheme-2-accent: var(--accent);
+    --ui-scheme-3-bg: var(--riddim-green);
+    --ui-scheme-3-fg: var(--primary);
+    --ui-scheme-3-fg2: var(--primary);
+    --ui-scheme-3-divider: var(--riddim-green);
+    --ui-scheme-3-border: var(--primary);
+    --ui-scheme-3-shadow: var(--riddim-green);
+    --ui-scheme-3-accent: var(--accent)
+}
+
+@media (width >= 700px) {
+    body.TE032AS006 {
+        background-image: url(/apps/ep-sample-tool/assets/bg_x2_TE032AS006-CnSi0gTZ.png)
+    }
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto
+}
+
+.no-focus:focus {
+    outline: none
+}
+
+._bounce-horizontal_1bmag_1 {
+    animation: _horizontalBounce_1bmag_1 .5s infinite
+}
+
+._bounce-vertical_1bmag_4 {
+    animation: _verticalBounce_1bmag_1 .5s infinite
+}
+
+@keyframes _horizontalBounce_1bmag_1 {
+    0%,49%,to {
+        transform: translate(.5px)
+    }
+
+    50%,99% {
+        transform: translate(-.5px)
+    }
+}
+
+@keyframes _verticalBounce_1bmag_1 {
+    0%,49%,to {
+        transform: translateY(.5px)
+    }
+
+    50%,99% {
+        transform: translateY(-.5px)
+    }
+}
+
+:root {
+    --field-dark: #192a3c;
+    --field-white: #f5f5f5;
+    --field-beige: #f1ece1;
+    --field-light-blue: #0071bb;
+    --field-blue: #192a3c;
+    --field-green: rgb(0 104 55);
+    --field-light-grey: #e5e5e5;
+    --field-dark-grey: #5b6670;
+    --field-grey: #979ca0;
+    --field-brown: #ae804e;
+    --field-red: #e05526;
+    --field-black: #231f20;
+    --ep-red: #e05526;
+    --ep-white: #e0e1e4;
+    --ep-black: #020008;
+    --ep-lightgrey: #d5d5d5;
+    --ep-grey: #9ba7aa;
+    --ep-darkgrey: #717d85;
+    --ep-orange: #eb3622;
+    --ep-pink: #e70069;
+    --medieval-bg: #999269;
+    --medieval-bg-stroke: #dcd8cf;
+    --unit: 23.52px
+}
+
+@font-face {
+    font-family: UniversTE20T;
+    src: url(/apps/ep-sample-tool/assets/TE20T-D0h3oeX9.woff) format("woff")
+}
+
+@font-face {
+    font-family: TechnoType-regular;
+    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Regular-B7Xbyv21.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: TechnoType-medium;
+    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Medium-QwwBgryr.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: TechnoType-bold;
+    src: url(/apps/ep-sample-tool/assets/Technotype34_EP_series-Bold-CzOuNzV9.woff2) format("woff2")
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+html,body {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: TechnoType-bold,sans-serif;
+    font-size: 1.3rem;
+    color: var(--field-blue);
+    -webkit-user-select: none;
+    user-select: none
+}
+
+input {
+    font-family: TechnoType-bold,sans-serif
+}
+
+li {
+    list-style: none
+}
+
+button {
+    border: none
+}
+
+#root {
+    width: 100%;
+    height: 100%
+}
+
+.container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%
+}
