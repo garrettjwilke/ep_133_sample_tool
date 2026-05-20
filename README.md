@@ -1,6 +1,10 @@
-## working with latest firmware as of May 2025 :)
+## No longer maintained
 
-the features described below are currently broken. as of right now, the app is fully offline, but the zoom in feature and custom colors, etc are not working at all. sorry :)
+but there is still hope because others have more up to date versions.
+
+you can get updated versions here:
+
+https://github.com/pbarilla/ep_133_sample_tool
 
 ---
 
